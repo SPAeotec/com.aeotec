@@ -73,9 +73,9 @@
       {
         "id": "1",
         "label": {
-          "en": "Momentary switch",
-          "nl": "Pulsdruk schakelaar"
-        }
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus"
+                  }
       },
       {
         "id": "2",
@@ -87,8 +87,8 @@
       {
         "id": "3",
         "label": {
-          "en": "2-state switch mode",
-          "nl": "2-state schakel modus"
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar"
         }
       }
     ]
