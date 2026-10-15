@@ -1,0 +1,291 @@
+[
+   {
+    "id": "2",
+    "type": "number",
+    "label": {
+      "en": "Blinkmode",
+      "de": "Blinkmodus"
+    },
+    "hint": {
+      "en": "Parameter 2: Configuration Value 1：1-255. Configuration Value 1 is to Specify the time that Micro Smart Dimmer 2nd Edition need blink, the unit is Seconds.  Configuration Value 2：1-255 Configuration Value 2 is to Specify the Cycle of on/off the unit of it is 0.1 second.",
+      "de": "Parameter 2: Konfigurationswert 1：1-255. Konfigurationswert 1 soll die Zeit angeben, in der der Micro Smart Dimmer 2nd Edition blinken muss, die Einheit ist in Sekunden. Konfigurationswert 2：1-255. Konfigurationswert 2 soll den Ein-/Ausschaltzyklus angeben, die Einheit ist 0,1 Sekunden."
+    },
+    "zwave": {
+	  "signed": false,
+      "index": 2,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 65535
+    },
+    "value": 3850
+  },
+   {
+    "id": "90",
+    "value": false,
+    "label": {
+      "en": "Enable paramter 91 and 92",
+      "de": "Aktiviert Parameter 91 und 92"
+    },
+      "zwave": {
+      "index": 90,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "91",
+    "type": "number",
+    "label": {
+      "en": "Minimum wattage change needed before an update report is send",
+      "nl": "Minimale verandering in wattage nodig voor het verzenden van een update",
+	  "de": "Minimale erforderliche Watt-Änderung, bevor ein Aktualisierungsbericht gesendet wird"
+    },
+    "hint": {
+      "en": "Parameter 91: Determines the minimum value change before a report is being send to Homey.",
+      "nl": "Parameter 91: Bepaalt de minimale waardeverandering voordat er een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 91: Bestimmt die minimale Wertänderung, bevor ein Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 91,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 32000
+    },
+    "value": 25
+  },
+  {
+    "id": "92",
+    "type": "number",
+    "label": {
+      "en": "Minimum wattage change (%) needed before an update report is send",
+      "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update",
+	  "de": "Minimale Watt-Änderung (%), die erforderlich ist, bevor ein Aktualisierungsbericht gesendet wird"
+    },
+    "hint": {
+      "en": "Parameter 92: Determines the minimum percentage change before a report is being send to Homey.",
+      "nl": "Parameter 92: Bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey",
+	  "de": "Parameter 92: Bestimmt die minimale prozentuale Änderung, bevor ein Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 92,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "value": 30
+  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type",
+      "nl": "Schakelaar ",
+	  "de": "Schaltertyp"
+    },
+    "hint": {
+      "en": "Parameter 93: Determines the input device mode for input 1.",
+      "nl": "Parameter 93: Bepaalt de modus voor het invoer apparaat verbonden aan ingang 1.",
+	  "de": "Parameter 93: Legt den Modus des Eingabegeräts für Eingang 1 fest."
+    },
+    "zwave": {
+	  "signed": false, 
+      "index": 120,
+      "size": 1
+    },
+    "value": "255",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+      },
+       {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselschaltung"
+        }
+      },
+      {
+        "id": "255",
+        "label": {
+          "en": "Unidentified mode",
+          "nl": "Niet-geïdentificeerde modus",
+		  "de": "Undefiniert"
+        }
+	   }
+    ]
+  },
+  
+  {
+    "id": "101",
+    "type": "number",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type groep 1",
+	  "de": "Bericht an Gruppe 1"
+    },
+    "hint": {
+      "en": "Parameter 101: Determines the type of reports sent to devices in the 1st report group.",
+      "nl": "Parameter 101: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e groep.",
+	  "de": "Parameter 101: Bestimmt die Art der Berichte, die an die Geräte in der ersten Berichtsgruppe gesendet werden."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": 6
+  },
+  {
+    "id": "102",
+    "type": "number",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type groep 2",
+	  "de": "Bericht an Gruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 102: Determines the type of reports sent to devices in the 2nd report group.",
+      "nl": "Parameter 102: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e groep.",
+	  "de": "Parameter 102: Bestimmt die Art der Berichte, die an die Geräte in der zwiten Berichtsgruppe gesendet werden."
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": 1
+  },
+  {
+    "id": "103",
+    "type": "number",
+    "label": {
+      "en": "Report group 3 report type",
+      "nl": "Rapport type  groep 3",
+	  "de": "Bericht an Gruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 103: Determines the type of reports sent to devices in the 3rd report group.",
+      "nl": "Parameter 103: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e groep.",
+	  "de": "Parameter 103: Bestimmt die Art der Berichte, die an die Geräte in der dritten Berichtsgruppe gesendet werden."
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": 8
+  },
+  {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 1",
+      "nl": "Rapportage interval  groep 1",
+	  "de": "Berichtsintervall-Berichtsgruppe 1"
+    },
+    "hint": {
+      "en": "Parameter 111: Determines the interval for sending report to devices in report group 1.",
+      "nl": "Parameter 111: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep.",
+	  "de": "Parameter 111: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 1."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4
+    },
+    "value": 30
+  },
+  {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 2",
+      "nl": "Rapportage interval groep 2",
+	  "de": "Berichtsintervall-Berichtsgruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 112: Determines the interval for sending report to devices in report group 2.",
+      "nl": "Parameter 112: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e groep.",
+	  "de": "Parameter 112: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 2."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4
+    },
+    "value": 300
+  },
+  {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 3",
+      "nl": "Rapportage interval groep 3",
+	  "de": "Berichtsintervall-Berichtsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 113: Dtermines the interval for sending report to devices in report group 3.",
+      "nl": "Parameter 113: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e groep.",
+	  "de": "Parameter 113: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 3."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4
+    },
+    "value": 3600
+  },
+   {
+    "id": "255",
+    "type": "dropdown",
+    "label": {
+      "en": "Set Parameter to default",
+      "nl": "Stel de parameter in op standaard",
+	  "de": "Setzt die Parametereinstellung zurück"
+    },
+    "hint": {
+      "en": "Parameter 255: Resets all parameters to factory settings.",
+      "nl": "Parameter 255: Zet alle parameters terug naar de fabrieksinstellingen.",
+	  "de": "Parameter 255: Setzt alle Parameter auf die Werkseinstellungen zurück."
+    },
+    "zwave": {
+      "index": 255,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Niets",
+		  "de": "Nichts"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Reset Parameters",
+          "nl": "Reset Parameters",
+		  "de": "Zurücksetzen"
+        }
+      }
+    ]
+  }
+ 
+  
+  ]

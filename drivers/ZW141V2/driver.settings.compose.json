@@ -1,0 +1,212 @@
+[
+  
+
+  {
+    "id": "35",
+    "type": "number",
+    "label": {
+      "en": "Moving time",
+      "nl": "Bewegende tijd",
+	  "de": "Bewegungszeit"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) sets the time the roller blind needs to move from top to bottom.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) stelt de tijd in die het rolgordijn nodig heeft om van boven naar beneden te bewegen.",
+	  "de": "Diser Parameter ({{zwaveParameterIndex}}) legt die Zeit fest, welche der Rolladen benötigt von geöffnet zu geschlossen zu fahren."
+    },
+    "zwave": {
+      "index": 35,
+      "size": 1,
+	   "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 255
+    },
+    "value": 150
+  },
+	{
+    "id": "80",
+    "type": "dropdown",
+    "label": {
+      "en": "Instant Report",
+	  "de": "Sofortiger Bericht"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the report type of Nano Shutter when controlling from the external switches.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) definiert die Meldeart des Nano Shutters bei Ansteuerung über die externen Schalter."
+    },
+    "zwave": {
+      "index": 80,
+      "size": 1
+    },
+    "value": "1",
+    "values": [
+			  {
+				"id": "0",
+				"label": {
+				  "en": "No report",
+				  "de": "Kein Bericht"
+				}
+			  },
+			  {
+				"id": "1",
+				"label": {
+				  "en": "Basic report",
+				  "de": "Basic Report"
+				}
+			  },
+			  {
+				"id": "2",
+				"label": {
+				  "en": "Switch multilevel report",
+				  "de": "Switch multilevel report"
+				}
+			  }  
+		  ]
+	  },
+    {
+    "id": "85",
+    "type": "dropdown",
+    "label": {
+      "en": "Extern Button Operation Mode",
+      "nl": "Externe knop Bedieningswijze",
+	  "de": "Betriebsmodus der Angeschlossenen Taster/Schalter"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) defines the operating mode of the externally connected switches.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) definieert de bedrijfsmodus van de extern aangesloten schakelaars.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) definiert die Betriebsart der extern angeschlossenen Taster/Schalter."
+    },
+    "zwave": {
+      "index": 85,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "S1, S2 open, close and stop shutter",
+          "nl": "S1, S2 openen, sluiten en stoppen van, de sluiter",
+		  "de": "S1, S2 öffnen, schließen und stoppen den Rollladen"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "S1 Open/Stop, S2 Close/Stop",
+          "nl": "S1 Open/Stop, S2 Sluiten/Stop",
+		  "de": "S1 Open/Stop, S2 Close/Stop"
+        }
+      }
+            
+	  ]
+	  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input S1",
+      "nl": "Schakelaar type input S1",
+	  "de": "Typ des Schalters an Eingang S1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the input device mode for input S1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus voor het invoer apparaat verbonden aan ingang S1.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt den Eingangsgerätemodus für Eingang S1."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch",
+		  "de": "Automatische Erkennung"
+        }
+      },
+	  {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+        }
+      },
+            {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselschalter"
+        }
+      },
+      	  {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+		}
+    ]
+  },
+  {
+    "id": "121",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input S2",
+      "nl": "Schakelaar type input S2",
+	  "de": "Typ des Schalters an Eingang S2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the input device mode for input S2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de modus voor het invoer apparaat verbonden aan ingang S2.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt den Eingangsgerätemodus für Eingang S2."
+    },
+    "zwave": {
+      "index": 121,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch",
+		  "de": "Automatische Erkennung"
+        }
+      },
+	  {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+        }
+      },
+            {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselschalter"
+        }
+      },
+      	  {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+		}
+    ]
+  }
+]

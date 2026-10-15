@@ -1,0 +1,14 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Powered",
+    "nl": "Voeding",
+    "de": "Spannungsversorgt"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "insightsTitleTrue": { "en": "Powered", "nl": "Voeding", "de": "Spannungsversorgt" },
+  "insightsTitleFalse": { "en": "Battery-Mode", "nl": "Batterijvoeding", "de": "Batteriebetrieb" },
+  "icon": "/assets/pluggedin.svg"
+}

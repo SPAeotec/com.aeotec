@@ -1,0 +1,64 @@
+[
+    {
+    "id": "43",
+    "type": "checkbox",
+    "label": {
+      "en": "Buzzer Alarm",
+	  "de": "Alarmton"
+    },
+    "hint": {
+      "en": "Parameter 43: Enable/disable the buzzer alarm when battery is running low.",
+	  "de": "Parameter 43: Aktiviert/deaktiviert den Alarmton, wenn die Batterie zur Neige geht."
+    },
+    "zwave": {
+      "index": 43,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "id": "32",
+    "type": "number",
+    "label": {
+      "en": "Low battery level",
+      "nl": "Laag batterij niveau",
+	  "de": "Niedriges Batterielevel"
+    },
+    "hint": {
+      "en": "Parameter 32: Determines the percentage of battery value to at which the low battery alarm will go off.",
+      "nl": "Parameter 32: Bepaalt hoe laag het batterijpercentage moet zijn om het alarm af te laten gaan.",
+	  "de": "Parameter 32: Bestimmt den Prozentsatz des Batteriewertes, bei dem der Alarm bei niedriger Batteriespannung ausgelöst wird."
+    },
+    "zwave": {
+      "index": 32,
+      "size": 1
+    },
+    "value": 20,
+    "attr": {
+      "min": 10,
+      "max": 50
+    }
+  },
+   {
+    "id": "42",
+    "type": "number",
+    "label": {
+      "en": "Multilevel value",
+	  "de": "Multilevel Wert"
+    },
+    "hint": {
+      "en": "Parameter 42: Setting the duration value of the command switch multilevel.",
+	  "de": "Parameter 42: Legt den Wert für die Dauer des Dimmvorgangs fest."
+    },
+    "zwave": {
+      "index": 42,
+      "size": 1,
+	  "signed": false
+    },
+    "value": 255,
+    "attr": {
+      "min": 0,
+      "max": 255
+    }
+  } 
+]

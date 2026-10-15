@@ -1,0 +1,91 @@
+{
+  "triggers": [
+    {
+      "id": "ZWA004_scene",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Scene is activated",
+        "nl": "Scene is geactiveerd",
+		"de": "Szene wird aktiviert"
+      },
+	  "titleFormatted": {
+		"en": "Button[[button]] is [[scene]]",
+		"de": "Taste [[button]] wird [[scene]]"
+		},
+      "args": [
+        {
+          "name": "button",
+		  "title": {
+			  "en": "Select a button",
+			  "de": "Tastenauswahl"
+		  },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "1",
+                "nl": "1",
+				"de": "1"
+              }
+            }
+            
+          ]
+        },
+        {
+          "name": "scene",
+		  "platforms": [ "local", "cloud" ],
+		  "title": {
+			  "en": "Select a aktion",
+			  "de": "Aktionsauswahl"
+		  },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "Pressed 1x",
+                "nl": "1x gedrukt",
+				"de": "1x gedrückt"
+              }
+            },
+            {
+              "id": "Key Held Down",
+              "label": {
+                "en": "Hold press (5 seconds)",
+                "nl": "Lang drukken (5 seconden)",
+				"de": "Gedrückt gehalten"
+              }
+            },
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Press released",
+                "nl": "Drukken losgelaten",
+				"de": "Losgelassen"
+              }
+            }
+            
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "ZWA004_battery_full",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Battery fully charged",
+        "nl": "Batterij volledig opgeladen",
+		"de": "Batterie ist voll geladen"
+      },
+      "hint": {
+        "en": "This card will only trigger if the {{driverNameEn}} has been included as secure.",
+        "nl": "Deze kaart zal alleen activeren als de {{driverNameNl}} beveiligd is toevoegd.",
+		"de": "Diese Karte wird nur aktiviert, wenn die {{{driverNameEN}} sicher hinzugefügt wurde."
+      }
+    }
+  ],
+  "condition": [],
+  "actions": []
+}

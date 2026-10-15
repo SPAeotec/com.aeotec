@@ -4,7 +4,8 @@
     "type": "checkbox",
     "label": {
       "en": "Enable external switch to turn on/off the bulb",
-      "nl": "Laat externe knop de lamp aan en uit zetten"
+      "nl": "Laat externe knop de lamp aan en uit zetten",
+	  "de": "Externen Schalter zum Ein- und Ausschalten der Bulb aktivieren"
     },
     "value": false
   },
@@ -13,8 +14,55 @@
     "type": "checkbox",
     "label": {
       "en": "Enable external switch to change the color of the bulb",
-      "nl": "Laat externe knop de kleur van de lamp aanpassen"
+      "nl": "Laat externe knop de kleur van de lamp aanpassen",
+	  "de": "Externen Schalter aktivieren, um die Farbe der Bulb zu ändern"
     },
     "value": true
-  }
+  },
+  {
+      "id": "112",
+      "zwave": {
+        "index": 112,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Dimmer mode",
+		"de": "Dimmmodus"
+      },
+      "hint": {
+        "en": "Set the behavior when the bulb is dimmed.",
+		"de": "Stellt das Verhalten ein, wenn die Bulb gedimmt wird."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Parabolic curve",
+			"de": "Parabelförmige Kurve"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Index curve",
+			"de": "Index-Kurve"
+          }
+        },
+		{
+          "id": "2",
+          "label": {
+			"en": "(Parabolic + Index)/2.",
+			"de": "(Parabel + Index)/2."
+          }
+        },
+		{
+          "id": "3",
+          "label": {
+			"en": "Linear",
+			"de": "Linear"
+          }
+        }
+      ]
+    }
 ]

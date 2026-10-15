@@ -1,0 +1,88 @@
+[
+{
+    "id": "1",
+    "type": "dropdown",
+    "label": {
+      "en": "Basic Set Group 2",
+	  "de": "Basic Set Gruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 1: Defines how Basic Set is to be sent in association group 2.",
+      "de": "Parameter 1: Legt fest wie Basic Set in Assoziationsgruppe 2 gesendet werden soll."
+    },
+    "zwave": {
+      "index": 1,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "ON/OFF",
+		  "de": "EIN/AUS"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Only ON",
+		  "de": "Nur EIN"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Only OFF",
+		  "de": "Nur AUS"
+        }
+      }
+    ]
+  },
+    {
+      "id": "2",
+      "zwave": {
+        "index": 2,
+        "size": 1,
+		"signed": false
+      },
+      "value": 255,
+      "label": {
+        "en": "Basic Set Command in case of detected smoke alarm",
+		"de": "Basic Set Kommando bei erkanntem Rauchalarm "
+      },
+      "hint": {
+        "en": "Parameter 2: This value is sent as BASIC Set to Association Group 2 when an Smoke Alarm occurs.",
+		"de": "Parameter 2: Dieses Kommando wird in Assoziationgruppe 2 gesendet, wenn ein Rauchalarm erkannt wird. "
+      },
+	   "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "_size": 1,
+      "type": "number"
+    },
+    {
+      "id": "3",
+      "zwave": {
+        "index": 3,
+        "size": 1,
+		"signed": false
+      },
+      "value": 0,
+      "label": {
+        "en": "Basic Set Command for extinguished smoke alarm",
+		"de": "Basic Set Kommando bei erloschenen Rauchalarm"
+      },
+      "hint": {
+        "en": "Parameter 3: This value is sent as BASIC Set to Association Group 2 when an Smoke Alarm is cleared.",
+		"de": "Parameter 3: Dieses Kommando wird in Assoziationgruppe 2 gesendet, wenn ein Rauchalarm gelöscht wurde."
+      },
+	   "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "_size": 1,
+      "type": "number"
+    }
+  ]

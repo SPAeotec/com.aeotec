@@ -1,0 +1,101 @@
+{
+  "id": "ZWA006",
+    "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Smart Boost Timer Switch"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "onoff",
+	"measure_voltage",
+	"measure_current",
+	"button.reset_meter"
+  ],
+   "capabilitiesOptions": {
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    }
+  },
+  
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      3,
+      515,
+	  259
+    ],
+    "productId": [
+      180
+    ],
+    "zwaveAllianceProductId": 3067,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/3067/Smart%20Boost%20Timer%20Switch%20User%20Manual-V1.9.pdf",
+    "learnmode": {
+    "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+	    "en": "Press Smart Boost Timer Switch 3 times quickly.",
+        "nl": "Druk 3 keer snel op de Smart Boost Timer Switch.",
+		"de": "Drücken Sie den Smart Boost Timer Switch 3 mal schnell hintereinander."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+	"defaultConfiguration": [
+      {
+        "id": 20,
+        "value": 1,
+        "size": 2
+      },
+      {
+        "id": 21,
+        "size": 2,
+        "value": 1
+      },
+	  {
+        "id": 22,
+        "value": 5,
+        "size": 2
+      },
+      {
+        "id": 23,
+        "size": 4,
+        "value": 0
+      },
+	  {
+        "id": 24,
+        "value": 0,
+        "size": 4
+      },
+	  {
+        "id": 25,
+        "size": 4,
+        "value": 300
+      },
+	  {
+        "id": 26,
+        "value": 0,
+        "size": 4
+      },
+	  {
+        "id": 1,
+        "value": 0,
+        "size": 1
+      }
+	  ]
+   }
+}

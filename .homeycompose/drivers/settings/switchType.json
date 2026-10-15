@@ -1,0 +1,28 @@
+{
+  "value": "toggle",
+  "type": "dropdown",
+  "label": {
+    "en": "Switch type",
+	"de": "Schaltertyp"
+  },
+  "hint": {
+    "en": "Configures the connected switch type: use toggle for normal switches, use momentary for impulse switches.",
+	"de": "Konfiguriert den angeschlossenen Schaltertyp: Kippschalter für normale Schalter, Taster für Stromstoßschalter verwenden."
+  },
+  "values": [
+    {
+      "id": "toggle",
+      "label": {
+        "en": "Toggle",
+		"de": "Kippschalter"
+      }
+    },
+    {
+      "id": "momentary",
+      "label": {
+        "en": "Momentary",
+		"de": "Taster"
+      }
+    }
+  ]
+}

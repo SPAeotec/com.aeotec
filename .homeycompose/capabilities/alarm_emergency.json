@@ -1,0 +1,14 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Emergency Alarm",
+    "de": "Panic Alarm"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "insightsTitleTrue": { "en": "Emergency alarm", "de": "Panic Alarm" },
+  "insightsTitleFalse": { "en": "Alarm reset", "de": "Alarm zurückgesetzt" },
+  "icon": "/assets/alarm_incident.svg"
+}

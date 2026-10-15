@@ -1,0 +1,631 @@
+[
+  {
+    "id": "default_sound",
+    "type": "dropdown",
+    "label": {
+      "en": "Default sound",
+      "nl": "Standaard geluid",
+	  "de": "Standard Ton"
+    },
+    "hint": {
+      "en": "This setting determines which sound will be played when Homey turns on the alarm.",
+      "nl": "Deze instelling bepaalt welk geluid er wordt afgespeeld als Homey het alarm aan zet.",
+	  "de": "Diese Einstellung legt fest, welcher Ton abgespielt wird, wenn Homey den Alarm einschaltet."
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Test Alarm",
+          "nl": "Test Alarm",
+		  "de": "Testalarm"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Tamper Alarm",
+          "nl": "Sabotage Alarm",
+		  "de": "Sabotagealarm"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Doorbell 1",
+          "nl": "Deurbel 1",
+		  "de": "Türklingel 1"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Doorbell 2",
+          "nl": "Deurbel 2",
+		  "de": "Türklingel 2"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Doorbell 3",
+          "nl": "Deurbel 3",
+		  "de": "Türklingel 3"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Environment Alarm",
+          "nl": "Omgeving Alarm",
+		  "de": "Umgebungsalarm"
+        }
+      },
+      {
+        "id": "7",
+        "label": {
+          "en": "Security Alarm",
+          "nl": "Beveiligings Alarm",
+		  "de": "Sicherheitsalarm"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Emergency Alarm",
+          "nl": "Noodalarm",
+		  "de": "Notfallalarm"
+        }
+      }
+    ]
+  },
+  {
+    "id": "disable_action_button",
+    "type": "checkbox",
+    "label": {
+      "en": "Disable action button",
+      "nl": "Blokeer actie knop",
+	  "de": "Deaktiviert die Taste am Gerät"
+    },
+    "zwave": {
+      "index": 96,
+      "size": 1
+    },
+    "hint": {
+      "en": "This disables the action button, so that it won't activate an alarm anymore.",
+      "nl": "Dit blokeerd de actie knop, zodat deze geen alarm kan activeren.",
+	  "de": "Dadurch wird die Taste am Gerät deaktiviert, so dass sie keinen Alarm mehr auslöst."
+    },
+    "value": false
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Sound and light settings",
+      "nl": "Geluid en licht instellingen",
+	  "de": "Ton- und Lichteinstellungen"
+    },
+    "children": [
+      {
+        "type": "group",
+        "label": {
+          "en": "Test alarm settings",
+          "nl": "Test alarm instellingen",
+		  "de": "Einstellung für Testalarm"
+        },
+        "children": [
+          {
+            "$extends": "chimeTones",
+            "id": "tone_1",
+            "value": "6"
+          },
+          {
+            "$extends": "chimeToneVolume",
+            "id": "volume_1"
+          },
+          {
+            "id": "browse_play_mode",
+            "type": "checkbox",
+            "label": {
+              "en": "Loop playback",
+              "nl": "Herhaal het afspelen",
+			  "de": "Wiederholte Wiedergabe"
+            },
+            "hint": {
+              "en": "Enable looped playback of the test alarm, until it is turned off.",
+              "nl": "Activeer het herhalen van het test alarm, tot het is uitgeschakeld.",
+			  "de": "Wiederholt den Testalarm, bis er ausgeschaltet wird."
+            },
+            "value": false
+          },
+          {
+            "$extends": "chimeLightEffects",
+            "id": "browse_light_effect",
+            "hint": {
+              "en": "Determine the light effect that is used during the test alarm.",
+              "nl": "Bepaal het licht effect dat wordt gebruikt bij de test alarm.",
+			  "de": "Bestimmen Sie den Lichteffekt, der während des Testalarms verwendet wird."
+            },
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Tamper settings",
+          "nl": "Sabotage instellingen",
+		  "de": "Einstellung für Sabotagealarm"
+        },
+        "children": [
+          {
+            "$extends": "chimeTones",
+            "id": "tone_2",
+            "value": "17"
+          },
+          {
+            "$extends": "chimeToneVolume",
+            "id": "volume_2"
+          },
+          {
+            "$extends": "chimeToneLength",
+            "id": "tone_length_2"
+          },
+          {
+            "$extends": "chimeToneInterval",
+            "id": "tone_interval_2"
+          },
+          {
+            "$extends": "chimeToneRepeat",
+            "id": "tone_repeat_2"
+          },
+          {
+            "$extends": "chimeLightEffects",
+            "id": "light_effect_2",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Doorbell 1 settings",
+          "nl": "Deurbel 1 instellingen",
+		  "de": "Einstellung für Türklingel 1"
+        },
+        "children": [
+          {
+            "$extends": "chimeTones",
+            "id": "tone_3",
+            "value": "1"
+          },
+          {
+            "$extends": "chimeToneVolume",
+            "id": "volume_3"
+          },
+          {
+            "$extends": "chimeToneLength",
+            "id": "tone_length_3"
+          },
+          {
+            "$extends": "chimeToneInterval",
+            "id": "tone_interval_3"
+          },
+          {
+            "$extends": "chimeToneRepeat",
+            "id": "tone_repeat_3"
+          },
+          {
+            "$extends": "chimeLightEffects",
+            "id": "light_effect_3",
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Doorbell 2 settings",
+          "nl": "Deurbel 2 instellingen",
+		  "de": "Einstellung für Türklingel 2"
+        },
+        "children": [
+          {
+            "$extends": "chimeTones",
+            "id": "tone_4",
+            "value": "3"
+          },
+          {
+            "$extends": "chimeToneVolume",
+            "id": "volume_4"
+          },
+          {
+            "$extends": "chimeToneLength",
+            "id": "tone_length_4"
+          },
+          {
+            "$extends": "chimeToneInterval",
+            "id": "tone_interval_4"
+          },
+          {
+            "$extends": "chimeToneRepeat",
+            "id": "tone_repeat_4"
+          },
+          {
+            "$extends": "chimeLightEffects",
+            "id": "light_effect_4",
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Doorbell 3 settings",
+          "nl": "Deurbel 3 instellingen",
+		  "de": "Einstellung für Türklingel 3"
+        },
+        "children": [
+          {
+            "$extends": "chimeTones",
+            "id": "tone_5",
+            "value": "5"
+          },
+          {
+            "$extends": "chimeToneVolume",
+            "id": "volume_5"
+          },
+          {
+            "$extends": "chimeToneLength",
+            "id": "tone_length_5"
+          },
+          {
+            "$extends": "chimeToneInterval",
+            "id": "tone_interval_5"
+          },
+          {
+            "$extends": "chimeToneRepeat",
+            "id": "tone_repeat_5"
+          },
+          {
+            "$extends": "chimeLightEffects",
+            "id": "light_effect_5",
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Environment alarm settings",
+          "nl": "Omgeving alarm instellingen",
+		  "de": "Einstellung für Umgebungsalarm"
+        },
+        "children": [
+          {
+            "$extends": "chimeTones",
+            "id": "tone_6",
+            "value": "9"
+          },
+          {
+            "$extends": "chimeToneVolume",
+            "id": "volume_6"
+          },
+          {
+            "$extends": "chimeToneLength",
+            "id": "tone_length_6"
+          },
+          {
+            "$extends": "chimeToneInterval",
+            "id": "tone_interval_6"
+          },
+          {
+            "$extends": "chimeToneRepeat",
+            "id": "tone_repeat_6",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffects",
+            "id": "light_effect_6",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Security alarm settings",
+          "nl": "Beveiligings alarm instellingen",
+		  "de": "Einstellung für Sicherheitsalarm"
+		  },
+        "children": [
+          {
+            "$extends": "chimeTones",
+            "id": "tone_7",
+            "value": "18"
+          },
+          {
+            "$extends": "chimeToneVolume",
+            "id": "volume_7"
+          },
+          {
+            "$extends": "chimeToneLength",
+            "id": "tone_length_7"
+          },
+          {
+            "$extends": "chimeToneInterval",
+            "id": "tone_interval_7"
+          },
+          {
+            "$extends": "chimeToneRepeat",
+            "id": "tone_repeat_7",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffects",
+            "id": "light_effect_7",
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Emergency alarm settings",
+          "nl": "Noodalarm instellingen",
+		  "de": "Einstellung für Notfallalarm"
+        },
+        "children": [
+          {
+            "$extends": "chimeTones",
+            "id": "tone_8",
+            "value": "11"
+          },
+          {
+            "$extends": "chimeToneVolume",
+            "id": "volume_8"
+          },
+          {
+            "$extends": "chimeToneLength",
+            "id": "tone_length_8"
+          },
+          {
+            "$extends": "chimeToneInterval",
+            "id": "tone_interval_8"
+          },
+          {
+            "$extends": "chimeToneRepeat",
+            "id": "tone_repeat_8",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffects",
+            "id": "light_effect_8",
+            "value": "4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Light effects",
+      "nl": "Licht effecten",
+	  "de": "Lichteffekte"
+    },
+    "children": [
+      {
+        "type": "group",
+        "label": {
+          "en": "Light effect #1",
+          "nl": "Licht effect #1",
+		  "de": "Lichteffekt #1"
+        },
+        "children": [
+          {
+            "$extends": "chimeLightEffectBrighten",
+            "id": "light_effect_1_brighten",
+            "value": 75
+          },
+          {
+            "$extends": "chimeLightEffectDim",
+            "id": "light_effect_1_dim",
+            "value": 25
+          },
+          {
+            "$extends": "chimeLightEffectOn",
+            "id": "light_effect_1_on",
+            "value": 20
+          },
+          {
+            "$extends": "chimeLightEffectOff",
+            "id": "light_effect_1_off",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Light effect #2",
+          "nl": "Licht effect #2",
+		  "de": "Lichteffekt #2"
+        },
+        "children": [
+          {
+            "$extends": "chimeLightEffectBrighten",
+            "id": "light_effect_2_brighten",
+            "value": 50
+          },
+          {
+            "$extends": "chimeLightEffectDim",
+            "id": "light_effect_2_dim",
+            "value": 50
+          },
+          {
+            "$extends": "chimeLightEffectOn",
+            "id": "light_effect_2_on",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectOff",
+            "id": "light_effect_2_off",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Light effect #3",
+          "nl": "Licht effect #3",
+		  "de": "Lichteffekt #3"
+        },
+        "children": [
+          {
+            "$extends": "chimeLightEffectBrighten",
+            "id": "light_effect_3_brighten",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectDim",
+            "id": "light_effect_3_dim",
+            "value": 33
+          },
+          {
+            "$extends": "chimeLightEffectOn",
+            "id": "light_effect_3_on",
+            "value": 1
+          },
+          {
+            "$extends": "chimeLightEffectOff",
+            "id": "light_effect_3_off",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Light effect #4",
+          "nl": "Licht effect #4",
+		  "de": "Lichteffekt #4"
+        },
+        "children": [
+          {
+            "$extends": "chimeLightEffectBrighten",
+            "id": "light_effect_4_brighten",
+            "value": 33
+          },
+          {
+            "$extends": "chimeLightEffectDim",
+            "id": "light_effect_4_dim",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectOn",
+            "id": "light_effect_4_on",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectOff",
+            "id": "light_effect_4_off",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Light effect #5",
+          "nl": "Licht effect #5",
+		  "de": "Lichteffekt #5"
+        },
+        "children": [
+          {
+            "$extends": "chimeLightEffectBrighten",
+            "id": "light_effect_5_brighten",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectDim",
+            "id": "light_effect_5_dim",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectOn",
+            "id": "light_effect_5_on",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectOff",
+            "id": "light_effect_5_off",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Light effect #6",
+          "nl": "Licht effect #6",
+		  "de": "Lichteffekt #6"
+        },
+        "children": [
+          {
+            "$extends": "chimeLightEffectBrighten",
+            "id": "light_effect_6_brighten",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectDim",
+            "id": "light_effect_6_dim",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectOn",
+            "id": "light_effect_6_on",
+            "value": 10
+          },
+          {
+            "$extends": "chimeLightEffectOff",
+            "id": "light_effect_6_off",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Light effect #7",
+          "nl": "Licht effect #7",
+		  "de": "Lichteffekt #7"
+        },
+        "children": [
+          {
+            "$extends": "chimeLightEffectBrighten",
+            "id": "light_effect_7_brighten",
+            "value": 33
+          },
+          {
+            "$extends": "chimeLightEffectDim",
+            "id": "light_effect_7_dim",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectOn",
+            "id": "light_effect_7_on",
+            "value": 0
+          },
+          {
+            "$extends": "chimeLightEffectOff",
+            "id": "light_effect_7_off",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  }
+]

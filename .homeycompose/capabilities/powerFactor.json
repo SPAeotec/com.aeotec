@@ -1,0 +1,19 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Power Factor",
+    "nl": "Power Factor",
+	"de": "Leistungsfaktor"
+  },
+  "decimals": 2,
+  "chartType": "spline",
+  "desc": {
+    "en": "Power Factor (CosPhi)",
+    "nl": "Power Factor (CosPhi)",
+	"de": "Leistungsfaktor (CosPhi)"
+  },
+  "icon": "/assets/measure_power.svg",
+  "getable": true,
+  "setable": false,
+  "insights": true
+}

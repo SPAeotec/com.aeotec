@@ -1,0 +1,14 @@
+07.09.20
+- Create driver
+- Add Parameters 1 - 4
+- Add flow Light effect
+- Add icon
+- Add learnmode icon
+- Add unlearnmode icon
+- fix Problems
+
+Attention!
+Files strobe_on.json and strobe_off.json must be in folder /.homeycompose/drivers/flow/actions/
+
+
+

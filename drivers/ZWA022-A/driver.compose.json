@@ -1,0 +1,86 @@
+{
+  "id": "ZWA022",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "WallMote 7 (US)"
+  },
+  "class": "button",
+  "capabilities": [
+    "measure_battery"
+   
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "CR2032"
+    ]
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      258
+      ],
+    "productId": [
+      22
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press a button once"
+      }
+    },
+    "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+       "en": "Press a button 6 times in quick succession."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "This is the Z-Wave Lifeline group, it is not recommended to change this."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the key 1 is triggered"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the key 1 is triggered."
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the key 2 is triggered."
+        }
+      },
+      "5": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the key 2 is triggered."
+        }
+      },
+      "6": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the key 3 is triggered."
+        }
+      },
+      "7": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the key 3 is triggered."
+      }
+      
+    }
+    
+   
+  }
+}
+}

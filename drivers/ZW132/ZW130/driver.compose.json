@@ -1,0 +1,126 @@
+{
+  "id": "ZW130",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Wallmote Quad"
+  },
+  "class": "button",
+  "capabilities": [
+    "measure_battery",
+    "alarm_battery"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "INTERNAL"
+    ]
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      2,
+      258,
+      513,
+      514
+    ],
+    "productId": [
+      130
+    ],
+	"requireSecure": false,
+    "zwaveAllianceProductId": 2153,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2153/Aeon Labs WallMote Quad manual.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}",
+		"de": "Drücken Sie einmal die Aktionstaste auf dem {{driverNameEn}}."
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}",
+		"de": "Drücken Sie einmal die Aktionstaste auf dem {{driverNameEn}}."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "This is the Z-Wave Lifeline group, it is not recommended to change this.",
+          "nl": "Dit is de Z-Wave Lifeline groep, het is niet aangeraden deze te veranderen.",
+		  "de": "Dies ist die Z-Wave Lifeline Gruppe, es wird nicht empfohlen, dies zu ändern."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Devices here will receive on and off commands from the topleft touch part.",
+          "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linksbovenste aanraak gedeelte.",
+		  "de": "Geräte erhalten hier Ein- und Ausschaltbefehle von der oberen linken Taste."
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Devices here will receive dimming commands from the topleft touch part.",
+          "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linksbovenste aanraak gedeelte.",
+		  "de": "Geräte, die hier stehen, erhalten Dimmbefehle vom der oberen linken Taste."
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "Devices here will receive on and off commands from the topright touch part.",
+          "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtsbovenste aanraak gedeelte.",
+		  "de": "Geräte erhalten hier Ein- und Ausschaltbefehle von der oberen rechten Taste."
+        }
+      },
+      "5": {
+        "hint": {
+          "en": "Devices here will receive dimming commands from the topright touch part.",
+          "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtsbovenste aanraak gedeelte.",
+		  "de": "Geräte, die hier stehen, erhalten Dimmbefehle vom der oberen rechten Taste."
+        }
+      },
+      "6": {
+        "hint": {
+          "en": "Devices here will receive on and off commands from the bottomleft touch part.",
+          "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linksonderste aanraak gedeelte.",
+		  "de": "Geräte erhalten hier Ein- und Ausschaltbefehle von der unteren linken Taste."
+        }
+      },
+      "7": {
+        "hint": {
+          "en": "Devices here will receive dimming commands from the bottomleft touch part.",
+          "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linksonderste aanraak gedeelte.",
+		  "de": "Geräte, die hier stehen, erhalten Dimmbefehle vom der unteren linken Taste."
+        }
+      },
+      "8": {
+        "hint": {
+          "en": "Devices here will receive on and off commands from the bottomright touch part.",
+          "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtsonderste aanraak gedeelte.",
+		  "de": "Geräte erhalten hier Ein- und Ausschaltbefehle von der unteren rechten Taste."
+        }
+      },
+      "9": {
+        "hint": {
+          "en": "Devices here will receive dimming commands from the bottomright touch part.",
+          "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtsonderste aanraak gedeelte.",
+		  "de": "Geräte, die hier stehen, erhalten Dimmbefehle vom der unteren rechten Taste."
+        }
+      }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 4,
+        "size": 1,
+        "value": 3
+      }
+    ]
+  }
+}

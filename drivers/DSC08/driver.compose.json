@@ -1,0 +1,70 @@
+{
+  "id": "DSC08",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Smart Energy Illuminator"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    }
+  },
+
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3,
+      515,
+	  259
+    ],
+    "productId": [
+      8
+    ],
+    "zwaveAllianceProductId": 769,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2135/Aeon Labs Nano Dimmer manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Short press the action button on the back of the Dimmer.",
+        "nl": "Druk kort op de actie knop op de achterkant van de Dimmer.",
+		"de": "Drücken Sie kurz die Aktionstaste auf der Rückseite des Dimmers."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 101,
+        "size": 4,
+        "value": 12
+      },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 300
+      },
+	  {
+        "id": 102,
+        "size": 4,
+        "value": 0
+      },
+	  {
+        "id": 112,
+        "size": 4,
+        "value": 3600
+      }
+    ]
+  }
+}

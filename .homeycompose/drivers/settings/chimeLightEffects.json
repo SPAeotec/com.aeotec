@@ -1,0 +1,73 @@
+{
+  "id": "chimeLightEffects",
+  "type": "dropdown",
+  "label": {
+    "en": "Light effect",
+    "nl": "Licht effect",
+	"de": "Lichteffekt"
+  },
+  "hint": {
+    "en": "Determine the light effect that is used for this alarm.",
+    "nl": "Bepaal het licht effect dat wordt gebruikt bij dit alarm.",
+	"de": "Bestimmen Sie den Lichteffekt, der für diesen Alarm verwendet wird."
+  },
+  "value": "1",
+  "values": [
+    {
+      "id": "1",
+      "label": {
+        "en": "Light effect #1",
+        "nl": "Licht effect #1",
+		"de": "Lichteffekt #1"
+      }
+    },
+    {
+      "id": "2",
+      "label": {
+        "en": "Light effect #2",
+        "nl": "Licht effect #2",
+		"de": "Lichteffekt #2"
+      }
+    },
+    {
+      "id": "4",
+      "label": {
+        "en": "Light effect #3",
+        "nl": "Licht effect #3",
+		"de": "Lichteffekt #3"
+      }
+    },
+    {
+      "id": "8",
+      "label": {
+        "en": "Light effect #4",
+        "nl": "Licht effect #4",
+		"de": "Lichteffekt #4"
+      }
+    },
+    {
+      "id": "16",
+      "label": {
+        "en": "Light effect #5",
+        "nl": "Licht effect #5",
+		"de": "Lichteffekt #5"
+      }
+    },
+    {
+      "id": "32",
+      "label": {
+        "en": "Light effect #6",
+        "nl": "Licht effect #6",
+		"de": "Lichteffekt #6"
+      }
+    },
+    {
+      "id": "64",
+      "label": {
+        "en": "Light effect #7",
+        "nl": "Licht effect #7",
+		"de": "Lichteffekt #7"
+      }
+    }
+  ]
+}

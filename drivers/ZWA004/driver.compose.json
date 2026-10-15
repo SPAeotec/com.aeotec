@@ -1,0 +1,79 @@
+{
+  "id": "ZWA004",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "NanoMote One",
+	"de": "NanoMote One",
+	"nl": "NanoMote One"
+  },
+  "class": "button",
+  "capabilities": [
+    "measure_battery"
+   
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "INTERNAL"
+    ]
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+	"security": ["none"],
+    "productTypeId": [
+      2,
+      258,
+      513,
+      514
+    ],
+    "productId": [
+      4
+    ],
+   "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button 3 times in quick succession.",
+        "nl": "Druk 3 keer snel achter elkaar op een knop.",
+		"de": "Drücken Sie die Taste 3x schnell hintereinander"
+      }
+    },
+    "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+       "en": "Press the button 3 times in quick succession.",
+        "nl": "Druk 3 keer snel achter elkaar op een knop.",
+		"de": "Drücken Sie die Taste 3x schnell hintereinander"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "This is the Z-Wave Lifeline group, it is not recommended to change this.",
+          "nl": "Dit is de Z-Wave Lifeline groep, het is niet aangeraden deze te veranderen.",
+	      "de": "Dies ist die Z-Wave Lifeline-Gruppe, es wird nicht empfohlen, dies zu ändern."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "NanoMote sends basic set command when the button is triggered",
+		  "de": "NanoMote sendet den Basic-Set-Befehl, wenn die Taste ausgelöst wird"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "NanoMote sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button is triggered.",
+		  "de": "NanoMote sendet beim Auslösen der Taste den Befehl für das beginnen und stoppen des Dimmvorgangs."
+        }
+      }
+    }
+    
+   
+  }
+}

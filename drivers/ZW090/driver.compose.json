@@ -1,0 +1,41 @@
+{
+  "id": "ZW090",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Z-Stick Gen5(+)"
+  },
+  "class": "other",
+  "capabilities": [],
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      1,
+	  257,
+	  513
+	],
+    "productId": [
+      90
+    ],
+    
+    "learnmode": {
+      "image": "/drivers/ZW090/assets/learnmode.svg",
+      "instruction": {
+        "en": "Start the controller learning mode in the software used",
+		"de": "Starten Sie in der verwendeten Software den Controller Lernmodus"
+      }
+    },
+    "associationGroups": [
+      1
+    ]
+  }
+}

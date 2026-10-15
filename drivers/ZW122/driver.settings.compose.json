@@ -1,14 +1,158 @@
 [
+
+	{
+    "id": "2",
+    "type": "checkbox",
+    "label": {
+      "en": "Wake Up for 10 Minutes",
+	  "de": "Aufwachen für 10 Minuten"
+    },
+    "hint": {
+      "en": "Parameter 2: Enable/disable wake up for 10 minutes state when re-power on the Sensor",
+	  "de": "Parameter 2: Aktivieren/Deaktivieren des Aufwachzustands für 10 Minuten beim erneuten Einschalten des Sensors"
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "value": false
+  },
+{
+    "id": "8",
+    "type": "number",
+    "label": {
+      "en": "Wake Up timeout",
+	  "de": "Schlafmodus Wake Up"
+    },
+    "hint": {
+      "en": "Parameter 8: Set the timeout to go into the sleep state after the Wake Up Notification was sent out.",
+	  "de": "Parameter 8: Legen Sie das Zeitlimit für den Übergang in den Ruhezustand fest, nachdem die Benachrichtigung über das Aufwachen gesendet wurde."
+    },
+    "zwave": {
+      "index": 8,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 15,
+      "max": 255
+    },
+    "value": 30
+  },
   {
+    "id": "39",
+    "type": "number",
+    "label": {
+      "en": "Low battery threshold",
+	  "de": "Batteriegrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 39: Set the low battery value./n Value in %",
+	  "de": "Parameter 39: Stellt den Wert für die schwache Batterie ein./nWert in %"
+    },
+    "zwave": {
+      "index": 39,
+      "size": 1
+    },
+    "attr": {
+      "min": 10,
+      "max": 50
+    },
+    "value": 20
+  },
+    {
+    "id": "49",
+    "type": "number",
+    "label": {
+      "en": "High temperature threshold",
+      "nl": "Drempel hoge temperatuur",
+	  "de": "Oberer Temperaturgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 49: Determines the temperature above which the high temperature alarm will be triggered.",
+      "nl": "Parameter 49: Bepaalt de temperatuur waarboven het hoge temperatuur alarm afgaat.",
+	  "de": "Parameter 49: Legt die Temperatur fest, ab der der Hitzealarm ausgelöst wird."
+    },
+    "zwave": {
+      "index": 49,
+      "size": 4
+    },
+    "attr": {
+      "min": 0,
+      "max": 2147483647
+    },
+    "value": 0
+  },
+  {
+    "id": "50",
+    "type": "number",
+    "label": {
+      "en": "Low temperature threshold",
+      "nl": "Drempel lage temperatuur",
+	  "de": "Unterer Temperaturgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 50: Betermines the temperature below which the low temperature alarm will be triggered.",
+      "nl": "Parameter 50: Bepaalt de temperatuur waaronder het lage temperatuur alarm afgaat.",
+	  "de": "Parameter 50: Bestimmt die Temperatur, unterhalb derer der Niedrigtemperaturalarm ausgelöst wird."
+    },
+    "zwave": {
+      "index": 50,
+      "size": 4
+    },
+    "attr": {
+      "min": 0,
+      "max": 2147483647
+    },
+    "value": 0
+  },
+  
+   {
+    "id": "64",
+    "type": "dropdown",
+    "label": {
+      "en": "Temperature unit",
+	  "de": "Temperatureinheit"
+    },
+    "hint": {
+      "en": "Parameter 64: Set the default temperature unit.",
+	  "de": "Parameter 64: Einstellen der Standard-Temperatureinheit."
+    },
+    "zwave": {
+      "index": 64,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "°C",
+          "nl": "°C",
+		  "de": "°C"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "°F"
+        }
+      }
+      
+    ],
+    "value": "0"
+  },
+   {
     "id": "86",
     "type": "checkbox",
     "label": {
       "en": "Enable the acoustic alarm",
-      "nl": "Schakel het akoestische alarm in"
+      "nl": "Schakel het akoestische alarm in",
+	  "de": "Akustischer Alarm"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the acoustic alarm is enabled.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het akoestische alarm ingeschakeld is."
+      "en": "Parameter 86: Determines whether or not the acoustic alarm is enabled.",
+      "nl": "Parameter 86: Bepaalt of het akoestische alarm ingeschakeld is.",
+	  "de": "Parameter 86: Aktiviert/deaktiviert den akustischen Alarm."
     },
     "zwave": {
       "index": 86,
@@ -21,11 +165,13 @@
     "type": "dropdown",
     "label": {
       "en": "Acoustic alarm triggers",
-      "nl": "Triggers voor het akoestische alarm"
+      "nl": "Triggers voor het akoestische alarm",
+	  "de": "Auslöser für akustischen Alarm"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines which events trigger the acoustic alarm.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke gebeurtenissen het akoestische alarm af laten gaan."
+      "en": "Parameter 87: Determines which events trigger the acoustic alarm.",
+      "nl": "Parameter 87: Bepaalt welke gebeurtenissen het akoestische alarm af laten gaan.",
+	  "de": "Parameter 87: Bestimmt welches Event des akustischen Alarm auslöst."
     },
     "zwave": {
       "index": 87,
@@ -36,50 +182,187 @@
         "id": "1",
         "label": {
           "en": "On water leakage",
-          "nl": "Wanneer er water lekt"
+          "nl": "Wanneer er water lekt",
+		  "de": "Bei erkennung von Flüssigkeiten"
         }
       },
       {
         "id": "2",
         "label": {
           "en": "On device vibration",
-          "nl": "Wanneer het apparaat geschud wordt"
+          "nl": "Wanneer het apparaat geschud wordt",
+		  "de": "Bei Vibration"
         }
       },
       {
         "id": "4",
         "label": {
           "en": "On device tilt",
-          "nl": "Wanneer het apparaat gekanteld wordt"
+          "nl": "Wanneer het apparaat gekanteld wordt",
+		  "de": "Beim kippen des Gerätes"
         }
       },
       {
         "id": "16",
         "label": {
           "en": "On temperature too low",
-          "nl": "Wanneer het apparaat te koud is"
+          "nl": "Wanneer het apparaat te koud is",
+		  "de": "Bei zu niedriger Temperatur"
         }
       },
       {
         "id": "32",
         "label": {
           "en": "On temperature too high",
-          "nl": "Wanneer het apparaat te warm is"
+          "nl": "Wanneer het apparaat te warm is",
+		  "de": "Bei zu hoher Temperatur"
         }
       }
     ],
     "value": "1"
   },
+   {
+    "id": "88",
+    "type": "dropdown",
+    "label": {
+      "en": "Basic Command Association Group 3",
+	  "de": "Basic Command Assoziationsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 88: Set which value of the Basic Set will be sent to the associated nodes in association Group 3 when the Sensor probe 1 is triggered.",
+	  "de": "Parameter 88: Legt fest, welcher Wert des Basic Set an die assoziierten Knoten in der Assoziationsgruppe 3 gesendet wird, wenn die Sensorsonde 1 ausgelöst wird."
+    },
+    "zwave": {
+      "index": 88,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disable",
+		  "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Send on alarm ON otherwise OFF",
+		  "de": "Senden bei Alarm EIN ansonsten AUS"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Send on alarm OFF otherwise ON",
+		  "de": "Senden bei Alarm AUS ansonsten EIN"
+        }
+      }
+      
+    ],
+    "value": "0"
+  },
+    {
+    "id": "89",
+    "type": "dropdown",
+    "label": {
+      "en": "Basic Command Association Group 3",
+	  "de": "Basic Command Assoziationsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 89: Set which value of the Basic Set will be sent to the associated nodes in association Group 4 when the Sensor probe 2 is triggered.",
+	  "de": "Parameter 89: Legt fest, welcher Wert des Basic Set an die assoziierten Knoten in der Assoziationsgruppe 4 gesendet wird, wenn die Sensorsonde 2 ausgelöst wird."
+    },
+    "zwave": {
+      "index": 89,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disable",
+		  "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Send on alarm ON otherwise OFF",
+		  "de": "Senden bei Alarm EIN ansonsten AUS"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Send on alarm OFF otherwise ON",
+		  "de": "Senden bei Alarm AUS ansonsten EIN"
+        }
+      }
+      
+    ],
+    "value": "0"
+  },
+     {
+    "id": "101",
+    "type": "dropdown",
+    "label": {
+      "en": "Reports",
+	  "de": "Berichte"
+    },
+    "hint": {
+      "en": "Parameter 101: To set what unsolicited report would be sent to the Lifeline group.",
+	  "de": "Legt fest, welcher unaufgeforderte Bericht an die Lifeline-Gruppe gesendet werden soll."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disable",
+		  "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Battery Report",
+		  "de": "Battereibericht"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Temperature Report",
+		  "de": "Temperaturbericht"
+        }
+      },
+	  {
+        "id": "3",
+        "label": {
+          "en": "Battery & Temperature reports",
+		  "de": "Batterie- und Temperaturbericht."
+        }
+      }
+      
+    ],
+    "value": "0"
+  }, 
   {
     "id": "111",
     "type": "number",
     "label": {
       "en": "Interval between reports",
-      "nl": "Rapportage interval"
+      "nl": "Rapportage interval",
+	  "de": "Berichtsintervall"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the time between reports to associated devices.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar geassocieerde apparaten."
+      "en": "Parameter 111: Determines the time between reports to associated devices.",
+      "nl": "Parameter 111: Bepaalt de tijd tussen rapportages naar geassocieerde apparaten.",
+	  "de": "Parameter 111: Bestimmt den zeitlichen Intervall zwichen den Berichten zu assoziierten Geräten."
     },
     "zwave": {
       "index": 111,
@@ -96,62 +379,22 @@
     "type": "number",
     "label": {
       "en": "Temperature sensor calibration",
-      "nl": "Kalibratie temperatuursensor"
+      "nl": "Kalibratie temperatuursensor",
+	  "de": "Temperatursensor kalibrieren"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the value added to the measured temperature to get to an accurate reading.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de waarde die wordt opgeteld bij de gemeten waarde om tot een correcte meting uit te komen."
+      "en": "Parameter 201: Determines the value added to the measured temperature to get to an accurate reading./nThis parameter consists of 2 bytes. Byte 1 = Temperature unit Byte 2 the calibration value./nE.g.: +2,0°C = Value 0x1400 = Value to be set: 5120",
+	  "de": "Parameter 201: Bestimmt den Wert, der zur gemessenen Temperatur addiert wird, um einen genauen Messwert zu erhalten./n Dieser Parameter beseteht aus 2 bytes. Byte 1 = Temperatureinheit Byte 2 der Kalibrierungswert./nBsp: +2,0°C = Wert 0x1400 = Einzustellender Wert: 5120" 
     },
     "zwave": {
       "index": 201,
       "size": 2
     },
     "attr": {
-      "min": -128,
-      "max": 127
-    },
-    "value": 0
-  },
-  {
-    "id": "50",
-    "type": "number",
-    "label": {
-      "en": "Low temperature threshold",
-      "nl": "Drempel lage temperatuur"
-    },
-    "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature below which the low temperature alarm will be triggered.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de temperatuur waaronder het lage temperatuur alarm afgaat."
-    },
-    "zwave": {
-      "index": 50,
-      "size": 4
-    },
-    "attr": {
-      "min": 0,
-      "max": 2147483647
-    },
-    "value": 0
-  },
-  {
-    "id": "49",
-    "type": "number",
-    "label": {
-      "en": "High temperature threshold",
-      "nl": "Drempel hoge temperatuur"
-    },
-    "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the temperature above which the high temperature alarm will be triggered.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de temperatuur waarboven het hoge temperatuur alarm afgaat."
-    },
-    "zwave": {
-      "index": 49,
-      "size": 4
-    },
-    "attr": {
-      "min": 0,
-      "max": 2147483647
+      "min": -32767,
+      "max": 32767
     },
     "value": 0
   }
+  
 ]

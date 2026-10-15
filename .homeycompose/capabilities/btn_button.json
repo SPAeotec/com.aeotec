@@ -1,0 +1,22 @@
+{
+ 
+      "type": "enum",
+	  "title": {
+			"en": "Button",
+			"nl": "Button",
+			"de": "Button"
+		  },
+      "values": [
+        { "id": "idle",   "title": { "de": "Leerlauf", "en": "Idle" } },
+        { "id": "single", "title": { "de": "Einmal",   "en": "Single" } },
+        { "id": "double", "title": { "de": "Doppelt",  "en": "Double" } },
+        { "id": "hold",   "title": { "de": "Halten",   "en": "Hold" } }
+      ],
+      "getable": true,
+      "setable": false,         
+      "uiComponent": "sensor",  
+      "insights": false,
+	  "icon": "/assets/button_btn.svg"
+    
+  
+}

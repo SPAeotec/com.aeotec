@@ -1,0 +1,892 @@
+[
+  {
+    "id": "1",
+    "type": "number",
+    "label": {
+      "en": "Motion Retrigger Time",
+	  "de": "Bewegung erneute Auslösezeit"
+      
+    },
+    "hint": {
+      "en": "Parameter 1: This parameter configures the delay time before PIR sensor can be triggered again to reset motion timeout counter. Value = 0 will disable PIR sensor from triggering until motion timeout has finished.",
+	  "de": "Parameter 1: Dieser Parameter konfiguriert die Verzögerungszeit, bevor der PIR-Sensor erneut ausgelöst werden kann, um den Bewegungszeitüberschreitungszähler zurückzusetzen. Wert = 0 deaktiviert die Auslösung des PIR-Sensors, bis der Bewegungs-Timeout abgelaufen ist."
+
+    },
+    "zwave": {
+      "index": 1,
+      "size": 2
+    },
+	"attr": {
+      "min": 0,
+      "max": 32767
+	  },
+    "value": 30
+  },
+  {
+    "id": "2",
+    "type": "number",
+    "label": {
+      "en": "Motion Clear Time",
+	  "de": "Bewegung Rücksetzzeit"
+    },
+    "hint": {
+      "en": "Parameter 2: This parameter configures the time to clear a motion event after a motion event detected.",
+      "de": "Parameter 2: Dieser Parameter konfiguriert die Zeit zum Löschen eines Bewegungsereignisses nach einem erkannten Bewegungsereignis."      
+    },
+    "zwave": {
+      "index": 2,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 32767
+    },
+    "value": 60
+  },
+  {
+    "id": "3",
+    "type": "dropdown",
+    "label": {
+      "en": "Motion Sensor Sensitivity",
+      "nl": "Gevoeligheid Bewegingssensor",
+	  "de": "Empfindlichkeit des Bewegunssensors"
+    },
+    "hint": {
+      "en": "Parameter 3: Determines sensitivity of the motion sensor.",
+      "nl": "Parameter 3: Bepaald de gevoeligheid van de bewegingssensor.",
+	  "de": "Parameter 3: estimmt die Empfindlichkeit des Bewegungssensors."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "value": "11",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Off",
+          "nl": "Uit",
+		  "de": "Aus"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Level 1 (minimum)",
+          "de": "Level 1 (minimum)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Level 2",
+          "de": "Level 2"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Level 3",
+          "de": "Level 3"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Level 4",
+          "de": "Level 4"
+        }
+	  },
+		 {
+        "id": "5",
+        "label": {
+          "en": "Level 5",
+          "de": "Level 5"
+        }
+      },
+	   {
+        "id": "6",
+        "label": {
+          "en": "Level 6",
+          "de": "Level 6"
+        }
+      },
+	   {
+        "id": "7",
+        "label": {
+          "en": "Level 7",
+          "de": "Level 7"
+        }
+      },
+	   {
+        "id": "8",
+        "label": {
+          "en": "Level 8",
+          "de": "Level 8"
+        }
+      },
+	   {
+        "id": "9",
+        "label": {
+          "en": "Level 9",
+          "de": "Level 9"
+        }
+      },
+	   {
+        "id": "10",
+        "label": {
+          "en": "Level 10",
+          "de": "Level 10"
+        }
+      },
+      {
+        "id": "11",
+        "label": {
+          "en": "Level 11 (maximum)",
+          "de": "Level 11 (maximum)"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "type": "dropdown",
+    "label": {
+      "en": "Disable BASIC_SET to Associated nodes",
+	  "de": "BASIC_SET für assoziierte Knoten deaktivieren"
+    },
+    "hint": {
+      "en": "Parameter 5: This parameter enables or disables sending the BASIC_SET command to nodes that are associated in group 2 and group 3.",
+	  "de": "Parameter 5: Dieser Parameter aktiviert oder deaktiviert das Senden des BASIC_SET-Befehls an Knoten, die in Gruppe 2 und Gruppe 3 zugeordnet sind."
+    },
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "value": "3",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled All Group Basic Set Command",
+		  "de": "Befehl für alle Gruppen deaktivieren"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Enabled Group 2 Basic Set Command",
+		  "de": "Aktiviert Gruppe 2 - Basis Set Command"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Enabled Group 3 Basic Set Command",
+		  "de": "Aktiviert Gruppe 3 - Basis Set Command"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Enabled Group 2 and Group 3 Basic Set Command",
+		  "de": "Aktiviert Gruppe 2 und 3 - Basis Set Command"
+        }
+      }
+  ]
+  },
+    {
+    "id": "6",
+    "type": "dropdown",
+    "label": {
+      "en": "Basic Set Value Settings for Group 2",
+	  "de": "Basic Set Einstellungen für Gruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 6: This parameter enables or disables sending the BASIC_SET command to nodes that are associated in group 2 and group 3.",
+	  "de": "Parameter 6: Dieser Parameter aktiviert oder deaktiviert das Senden des BASIC_SET-Befehls an Knoten, die in Gruppe 2 und Gruppe 3 zugeordnet sind."
+    },
+    "zwave": {
+      "index": 6,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Send ON/OFF when Motion triggered",
+		  "de": "EIN/AUS senden, wenn Bewegung ausgelöst wird"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Send OFF/ON when Motion triggered",
+		  "de": "AUS/EIN senden, wenn Bewegung ausgelöst wird"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Send only ON when Motion triggered",
+		  "de": "Nur EIN senden, wenn Bewegung ausgelöst wird"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Send only OFF when Motion triggered",
+		  "de": "Nur AUS senden, wenn Bewegung ausgelöst wird"
+        }
+      },
+	   {
+        "id": "4",
+        "label": {
+          "en": "Send only OFF when Motion cleared",
+		  "de": "Nur AUS senden, wenn Bewegung zurück gesetzt wurde"
+        }
+      },
+	   {
+        "id": "5",
+        "label": {
+          "en": "Send only ON when Motion cleared",
+		  "de": "Nur EIN senden, wenn Bewegung zurück gesetzt wurde"
+        }
+      }
+ ] 
+ }, 
+  {
+    "id": "7",
+    "type": "number",
+    "label": {
+      "en": "Temperature Alarm Value",
+	  "de": "Temperatur Alarmwert"
+    },
+    "hint": {
+      "en": "Parameter 7: This parameter configures the threshold value for the temperature alarm. When the current ambient temperature value is larger than the configured value, the device will send ON to all nodes associated in group 3. If the current temperature value is less than this value, the device will send OFF to all nodes associated in group 3.",
+	  "de": "Parameter 7: Mit diesem Parameter wird der Schwellenwert für den Temperaturalarm konfiguriert. Wenn der aktuelle Umgebungstemperaturwert größer als der konfigurierte Wert ist, sendet das Gerät EIN an alle Knoten, die in Gruppe 3 zugeordnet sind. Wenn der aktuelle Temperaturwert kleiner als dieser Wert ist, sendet das Gerät AUS an alle Knoten, die in Gruppe 3 zugeordnet sind."
+    },
+    "zwave": {
+      "index": 7,
+      "size": 2
+    },
+    "attr": {
+      "min": -400,
+      "max": 850
+    },
+    "value": 239
+  },
+  {
+    "id": "10",
+    "type": "checkbox",
+    "label": {
+      "en": "Led Indicate Disable",
+	  "de": "LED Anzeige deaktiviert"
+    },
+    "hint": {
+      "en": "Parameter 10: This parameter enables or disables the Led light.",
+	  "de": "Parameter 10: Dieser Parameter aktiviert oder deaktiviert die LED."
+	 
+    },
+    "zwave": {
+      "index": 10,
+      "size": 1
+    },
+    "value": true
+  },
+  
+    {
+    "id": "11",
+    "type": "dropdown",
+    "label": {
+      "en": "Motion Sensor Report Indicator",
+      "de": "Anzeige des Bewegungssensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 11: If LED is enabled, allow user to change the report color of motion sensor.",
+      "de": "Parameter 11: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Bewegungssensors ändern."
+    },
+    "zwave": {
+      "index": 11,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      }
+    ]
+  },
+   {
+    "id": "12",
+    "type": "dropdown",
+    "label": {
+      "en": "Temperature Sensor Report Indicator",
+      "de": "Anzeige des Temperaturesensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 12: If LED is enabled, allow user to change the report color of temperature sensor.",
+      "de": "Parameter 12: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Temperatursensors ändern."
+    },
+    "zwave": {
+      "index": 12,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      }
+    ]
+  },
+   
+   {
+    "id": "13",
+    "type": "dropdown",
+    "label": {
+      "en": "LUX Sensor Report Indicator",
+      "de": "Anzeige des Helligkeitssensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 13: If LED is enabled, allow user to change the report color of LUX sensor.",
+      "de": "Parameter 13: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Helligkeitssensors ändern."
+    },
+    "zwave": {
+      "index": 813,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "type": "dropdown",
+    "label": {
+      "en": "Battery Report Indicator",
+      "de": "Anzeige des Batterieberichts"
+    },
+    "hint": {
+      "en": "Parameter 14: If LED is enabled, allow user to change the report color of battery.",
+      "de": "Parameter 14: Wenn die LED aktiviert ist, kann der Benutzer die Farbe für den Batteriebericht ändern."
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      }
+    ]
+  },
+   {
+    "id": "15",
+    "type": "dropdown",
+    "label": {
+      "en": "Wakeup Report Indicator",
+      "de": "Anzeige des Wakeup-Berichtes"
+    },
+    "hint": {
+      "en": "Parameter 15: If LED is enabled, allow user to change the report color of wakeup.",
+      "de": "Parameter 15: Wenn die LED aktiviert ist, kann der Benutzer die Farbe des Wakeup-Berichtes ändern."
+    },
+    "zwave": {
+      "index": 15,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "type": "dropdown",
+    "label": {
+      "en": "Temperature Scale Setting",
+      "de": "Temperaturskala"
+    },
+    "hint": {
+      "en": "Parameter 20: Configure temperature sensor scale type, Temperature to report in Celsius or Fahrenheit.",
+      "de": "Parameter 20: Konfigurieren Sie den Skalentyp des Temperatursensors, Temperatur für die Meldung in Celsius oder Fahrenheit."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Celsius",
+          "de": "Celsius"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Fahrenheit",
+          "de": "Fahrenheit"
+        }
+      }
+	]
+  },
+  
+   {
+    "id": "21",
+    "type": "number",
+    "label": {
+      "en": "Temperature Sensor Report Threshold",
+	  "de": "Temperaurberichtsgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 21: Change threshold value for change in temperature to induce an automatic report for temperature sensor. Scale is identical setting in Parameter No.20.",
+	  "de": "Parameter 21: Ändern Sie den Schwellenwert für die Temperaturänderung, um eine automatische Meldung für den Temperatursensor zu veranlassen. Die Skala ist identisch mit der Einstellung in Parameter Nr.20."
+    },
+    "zwave": {
+      "index": 21,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 250
+    },
+    "value": 20
+  },
+   {
+    "id": "22",
+    "type": "number",
+    "label": {
+      "en": "Light Sensor Report Threshold",
+	  "de": "Lichtsensorberichtsgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 22: Change threshold value for change in light sensor to induce an automatic report for temperature sensor.",
+	  "de": "Parameter 22: Ändern Sie den Schwellenwert für die Änderung des Lichtsensors, um eine automatische Meldung für den Temperatursensor zu veranlassen."
+    },
+    "zwave": {
+      "index": 22,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 10000
+    },
+    "value": 100
+  },
+  {
+    "id": "23",
+    "type": "number",
+    "label": {
+      "en": "Temperature Sensor Report Interval",
+	  "de": "Temperaurberichtsintervall"
+    },
+    "hint": {
+      "en": "Parameter 23: This parameter configures the time interval for the temperature sensor report. The larger the value, the longer battery life will be.",
+	  "de": "Parameter 23: Mit diesem Parameter wird das Zeitintervall für den Temperatursensorbericht konfiguriert. Je größer der Wert, desto länger ist die Batterielebensdauer."
+    },
+    "zwave": {
+      "index": 23,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 32767
+    },
+    "value": 600
+  },
+  {
+    "id": "24",
+    "type": "number",
+    "label": {
+      "en": "Light Sensor Report Interval",
+	  "de": "Lichtsensorberichtsintervall"
+    },
+    "hint": {
+      "en": "Parameter 24: This parameter configures the time interval for the light sensor report. The larger the value, the longer battery life will be.",
+	  "de": "Parameter 24: Mit diesem Parameter wird das Zeitintervall für den Lichtsensorbericht konfiguriert. Je größer der Wert, desto länger ist die Batterielebensdauer."
+    },
+    "zwave": {
+      "index": 24,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 32767
+    },
+    "value": 1800
+  },
+  {
+    "id": "30",
+    "type": "number",
+    "label": {
+      "en": "Temperature Offset Value",
+	  "de": "Temperatur Offset-Wert"
+    },
+    "hint": {
+      "en": "Parameter 30: The measuring temperature value can be added or subtracted using this value setting.",
+	  "de": "Parameter 30: Der Temperaturmesswert kann mit dieser Werteinstellung addiert oder subtrahiert werden."
+    },
+    "zwave": {
+      "index": 30,
+      "size": 2
+    },
+    "attr": {
+      "min": -200,
+      "max": 200
+    },
+    "value": 0
+  },
+  {
+    "id": "31",
+    "type": "number",
+    "label": {
+      "en": "Light Intensity Offset Value",
+	  "de": "Lichtintensität Offset-Wert"
+    },
+    "hint": {
+      "en": "Parameter 31: The measuring light intensity value can be added or subtracted using this value setting.",
+	  "de": "Parameter 31: Der gemessene Lichtintensitätswert kann mit dieser Werteinstellung addiert oder subtrahiert werden."
+    },
+    "zwave": {
+      "index": 31,
+      "size": 2
+    },
+    "attr": {
+      "min": -1000,
+      "max": 1000
+    },
+    "value": 0
+  },
+  {
+    "id": "100",
+    "type": "number",
+    "label": {
+      "en": "Light Sensor Calibrated Coefficient",
+	  "de": "Kalibrierungskoeffizient des Lichtsensors"
+    },
+    "hint": {
+      "en": "Parameter 100: This configuration defines the calibrated scale for ambient light intensity. Please read the Aeotec manual.",
+	  "de": "Parameter 100: Diese Konfiguration definiert die kalibrierte Skala für die Umgebungslichtintensität. Bitte lesen Sie das Aeotec-Handbuch nach."
+    },
+    "zwave": {
+      "index": 100,
+      "size": 2
+    },
+    "attr": {
+      "min": 1,
+      "max": 32767
+    },
+    "value": 1024
+  }
+]

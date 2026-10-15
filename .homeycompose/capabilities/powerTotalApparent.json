@@ -1,0 +1,21 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Total Apparent Power",
+    "nl": "Totaal Schijnbaar Vermogen",
+	"de": "Gesamte Scheinleistung"
+  },
+  "decimals": 2,
+  "chartType": "spline",
+  "units": {
+    "en": "kVAh"
+  },
+  "desc": {
+    "en": "Total Apparent Power (kVAh)",
+    "nl": "Totaal Schijnbaar Vermogen (kVAh)",
+	"de": "Gesamtscheinleistung (kVAh)" 
+  },
+  "icon": "/assets/meter_power.svg",
+  "getable": true,
+  "setable": false
+}

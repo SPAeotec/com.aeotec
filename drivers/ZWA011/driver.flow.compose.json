@@ -1,0 +1,21 @@
+{
+  "triggers": [],
+  "conditions": [],
+  "actions": [			
+  {
+      "id": "ZWA011_disabletampercontact",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Switch off Tamper alert",
+	    "nl": "Het sabotagealarm uitschakelen",
+        "de": "Sabotage-Alarm ausschalten"
+      },
+      "hint": {
+        "en": "Tamper alert set to off",
+	    "nl": "Sabotage-alarm is ingesteld op Nee",
+        "de": "Sabotage-Alarm-Alarm wird auf Nein gesetzt"
+      },
+      "args": []
+    }
+	]
+}

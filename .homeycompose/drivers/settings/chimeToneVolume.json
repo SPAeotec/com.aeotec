@@ -1,0 +1,20 @@
+{
+  "id": "volume",
+  "type": "number",
+  "label": {
+    "en": "Volume",
+    "nl": "Volume",
+	"de": "Lautstärke"
+  },
+  "hint": {
+    "en": "Determine the volume of this alarm.",
+    "nl": "Bepaal het volume van dit alarm.",
+	"de": "Bestimmen Sie die Lautstärke dieses Alarms."
+  },
+  "attr": {
+    "min": 0,
+    "max": 100
+  },
+  "units": "%",
+  "value": -1
+}

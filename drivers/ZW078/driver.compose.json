@@ -1,5 +1,6 @@
 {
   "id": "DSC10",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Heavy Duty Smart Switch"
   },
@@ -7,16 +8,51 @@
   "capabilities": [
     "measure_power",
     "meter_power",
-    "onoff"
+	"measure_voltage",
+	"measure_current",
+    "onoff",
+	"measure_temperature",
+	"button.reset_meter"
   ],
+   "capabilitiesOptions": {
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    },
+   
+    "measure_temperature": {
+      "title": { 
+	  "en": "System temperature",
+	  "de": "Systemtemperatur",
+	  "no": "System Temperatur",
+	  "nl": "Temperatuur van het systeem",
+	  "fi": "Järjestelmän lämpötila",
+	  "it": "Temperatura del sistema",
+	  "fr": "Température du système",
+	  "es": "Temperatura del sistema"
+	  
+	  }
+    }
+	},
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
-      3
+      3,
+	  259,
+	  515,
+	  6659
     ],
     "productId": [
       78
@@ -26,7 +62,8 @@
     "learnmode": {
       "instruction": {
         "en": "Press the action button on the {{driverNameEn}}.",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}."
+        "nl": "Druk op de actie knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste am {{driverNameNl}}."
       }
     },
     "associationGroups": [
@@ -35,15 +72,51 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the switch is turned on or off using the action button, the switch will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n"
+          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the switch is turned on or off using the action button, the switch will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n",
+		  "de": "Die Gruppe 1 ist der Lifeline-Zuordnungsgruppe zugewiesen und jedes Gerät hat 5 Knoten zuzuordnen.\nWenn der Schalter über die Aktionstaste ein- oder ausgeschaltet wird, sendet der Schalter einen grundlegenden Bericht über seinen Status an die Knoten in der Zuordnungsgruppe 1. Um zu ändern, welche Art von Signal an die Knoten in Gruppe 1 gesendet wird, lesen Sie bitte die detaillierte Beschreibung des Konfigurationsparameters 80."
         }
       }
     },
     "defaultConfiguration": [
       {
+        "id": 3,
+        "size": 1,
+        "value": 1
+      },
+	  {
+        "id": 90,
+        "size": 1,
+        "value": 0
+      },
+	  {
         "id": 101,
         "size": 4,
-        "value": 12
+        "value": 6
+      },
+      {
+        "id": 111,
+        "size": 4,
+        "value": 30
+      },
+	  {
+        "id": 102,
+        "size": 4,
+        "value": 1
+      },
+      {
+        "id": 112,
+        "size": 4,
+        "value": 300
+      },
+	  {
+        "id": 103,
+        "size": 4,
+        "value": 8
+      },
+      {
+        "id": 113,
+        "size": 4,
+        "value": 3600
       }
     ]
   }

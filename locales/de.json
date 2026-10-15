@@ -1,0 +1,24 @@
+{
+  "momentary_toggle": "Bei Verwendung des Types Taster muss die Schalterfunktion auf Wechselnd eingestellt werden.",
+  "mode": {
+    "Off": "Aus",
+    "Heat": "Komfortabel",
+    "Energy Save Heat": "Ökonomisch",
+    "FULL POWER": "Boost",
+    "MANUFACTURER SPECIFC": "Manuelle Kontrolle"
+  },
+  "error": {
+    "valve": {
+      "0": "Fehler behoben",
+      "1": "Keine ventilbewegung möglich",
+      "2": "Kein ventil erkannt",
+      "3": "Schließpunkt nicht erkannt",
+      "4": "Kolbenpositionierung fehlgeschlagen"
+    }
+  },
+  "protection": {
+    "0": "Entsperrt",
+    "1": "Entsperrbar",
+    "2": "Gesperrt"
+  }
+}

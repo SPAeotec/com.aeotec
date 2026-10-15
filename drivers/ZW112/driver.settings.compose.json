@@ -4,11 +4,13 @@
     "type": "dropdown",
     "label": {
       "en": "Sensor behaviour",
-      "nl": "Sensor gedrag"
+      "nl": "Sensor gedrag",
+	  "de": "Verhalten des Sensors"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines when the sensor triggers the contact alarm.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wanneer het contact alarm van de sensor afgaat."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wanneer het contact alarm van de sensor afgaat.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt, wann der Sensor den Kontaktalarm auslöst."
     },
     "zwave": {
       "index": 1,
@@ -20,14 +22,16 @@
         "id": "0",
         "label": {
           "en": "No contact = on, contact = off",
-          "nl": "Geen contact = aan, contact = uit"
+          "nl": "Geen contact = aan, contact = uit",
+		  "de": "Kein Kontakt = AN, Kontakt = AUS"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "No contact = off, contact = on",
-          "nl": "Geen contact = uit, contact = aan"
+          "nl": "Geen contact = uit, contact = aan",
+		  "de": "Kein Kontakt = AUS, Kontakt = AN"
         }
       }
     ]
@@ -37,11 +41,13 @@
     "type": "checkbox",
     "label": {
       "en": "Low battery warning",
-      "nl": "Lege batterij waarschuwing"
+      "nl": "Lege batterij waarschuwing",
+	  "de": "Batteriewarnung"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the device sends battery warnings.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat batterij waarschuwingen verstuurd."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat batterij waarschuwingen verstuurd.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) legt fest, ob das Gerät Batteriewarnungen sendet oder nicht."
     },
     "zwave": {
       "index": 101,
@@ -54,11 +60,13 @@
     "type": "number",
     "label": {
       "en": "Low battery checking interval",
-      "nl": "Laag batterij niveau check interval"
+      "nl": "Laag batterij niveau check interval",
+	  "de": "Kontrollintervall für schwache Batterie"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines the interval at which the battery level will be checked. First 10 values are seconds, from there on out it adjusts per 4 minutes.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het interval waarop de battery wordt gecontroleerd. De eerste 10 waardes zijn in seconden, daarna past deze aan per 4 minuten."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het interval waarop de battery wordt gecontroleerd. De eerste 10 waardes zijn in seconden, daarna past deze aan per 4 minuten.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt das Intervall, in dem die Batterie überprüft wird. Die ersten 10 Werte sind in Sekunden, danach passt er sich alle 4 Minuten an."
     },
     "zwave": {
       "index": 111,
@@ -71,15 +79,17 @@
     "value": 86640
   },
   {
-    "id": 39,
+    "id": "39",
     "type": "number",
     "label": {
       "en": "Low battery value",
-      "nl": "Laag batterij niveau waarde"
+      "nl": "Laag batterij niveau waarde",
+	  "de": "Warnschwelle für Batteriewarnung"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines at which level the low battery alarm will go off.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welk batterijniveau het lage niveau alarm afgaat."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt op welk batterijniveau het lage niveau alarm afgaat.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) legt fest, bei welchem Batteriestand die Batteriewarnungen ausgelöst wird."
     },
     "zwave": {
       "index": 39,

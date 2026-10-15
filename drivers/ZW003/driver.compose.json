@@ -1,0 +1,56 @@
+{
+  "id": "ZW003",
+  "platforms": [ "local","cloud" ],
+  "name": {
+    "en": "Minimote"
+  },
+  "class": "button",
+ "capabilities": [],
+     
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      1,
+      513
+    ],
+    "productId": [
+      3
+    ],
+    "zwaveAllianceProductId": 142,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the Learn button Short\n\nOn successful inclusion, the blue LED will turn solid for 2 seconds.\nOn failture inclusion, the red LED will turn solid for 2 seconds.",
+		"de": "Drücken Sie die Taste Learn kurz\n\nBei erfolgreichem Hinzufügen leuchtet die blaue LED 2 Sekunden lang.\nBei einem Fehler leuchtet die rote LED 2 Sekunden lang."
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Press the Learn button Short",
+		"de": "Drücken Sie die Taste Learn kurz"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the Key Fob is in Scene Mode, pressing the control button, which will send the corresponding Scene id to the associated nodes. "
+        }
+      }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 250,
+        "size": 1,
+        "value": 1
+      }
+    ]
+  }
+}

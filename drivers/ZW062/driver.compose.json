@@ -1,21 +1,25 @@
 {
   "id": "ZW062",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Garage Door Controller Gen5"
   },
   "class": "lock",
   "capabilities": [
-    "locked"
+    
+	"locked"
   ],
   "images": {
     "large": "{{driverAssetsPath}}/images/large.jpg",
     "small": "{{driverAssetsPath}}/images/small.jpg"
   },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
       3,
-      515
+      515,
+	  259
     ],
     "productId": [
       62

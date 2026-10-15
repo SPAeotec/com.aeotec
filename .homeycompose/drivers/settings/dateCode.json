@@ -1,0 +1,10 @@
+{
+  "id": "dateCode",
+  "type": "label",
+  "label": {
+    "en": "Manufacturing date",
+    "nl": "Productiedatum",
+	"de": "Herstellungsdatum"
+  },
+  "value": "Unknown"
+}

@@ -1,0 +1,470 @@
+[
+  {
+    "id": "20",
+    "type": "dropdown",
+    "label": {
+      "en": "Motor behavior after Power ON",
+      "nl": "Motorisch gedrag na het inschakelen van de stroom",
+	  "de": "Motorverhalten nach dem Wiedereinschalten"
+    },
+    "hint": {
+      "en": "Parameter 20: Determines the behaviour of the device after power loss.",
+      "nl": "Parameter 20: Bepaalt het gedrag van het apparaat na stroom uitval.",
+	  "de": "Parameter 20: Bestimmt das Verhalten des Geräts nach einem Stromausfall."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Status before re-power",
+          "nl": "Status voor stroomonderbreking",
+		  "de": "Selber Status wie vor den Stromausfall"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Moves to 99%",
+          "nl": "Verplaatst naar 99%",
+		  "de": "Bewegt sich zu 99%"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Moves to 0%",
+          "nl": "Verplaatst naar 0%",
+		  "de": "Bewegt sich zu 0%"
+        }
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "type": "dropdown",
+    "label": {
+      "en": "Configure motor run direction",
+      "nl": "Configuratie van de looprichting van de motor",
+	  "de": "Motorlaufrichtung konfigurieren"
+    },
+    "hint": {
+      "en": "Parameter 22: Determines the behaviour of the motor control.",
+      "nl": "Parameter 22: Bepaalt het gedrag van de motorbesturing.",
+	  "de": "Parameter 22: Bestimmt das Verhalten der Motorsteuerung"
+    },
+    "zwave": {
+      "index": 22,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Both mode, motor run in default direction",
+          "nl": "Beide modi, de motor loopt in de standaardrichting",
+		  "de": "Beide Modi, Motorlauf in Standardrichtung"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Only Shutter Mode reverse direction",
+          "nl": "Alleen de sluitermodus in omgekeerde richting",
+		  "de": "Nur Shutter Mode kehrt die Richtung um"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Only Venetian Mode reverce direction",
+          "nl": "Alleen Venetiaanse Modus reverceerrichting",
+		  "de": "Nur der Jalousie Modus kehrt die Richtung um"
+        }
+      },
+	   {
+        "id": "3",
+        "label": {
+          "en": "Both mode, motor runs in reverse direction",
+          "nl": "Beide modi, de motor loopt in omgekeerde richting",
+		  "de": "Beide Modi, Motor läuft in umgekehrter Richtung"
+        }
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "type": "number",
+    "label": {
+      "en": "(venetian blinds) Blade turn time * 0.1",
+      "nl": "(Jaloezieën) Bladdraaitijd * 0,1",
+	  "de": "(Jalousien) Lamellenwendezeit * 0,1"
+    },
+    "hint": {
+      "en": "Parameter 34: Determines the maximum time for blade turn time.",
+      "nl": "Parameter 34: Bepaalt de maximale tijd voor het draaien van de messen.",
+	  "de": "Parameter 34: Legt die maximale Zeit fest, in der sich die Lammellen drehen."
+    },
+    "zwave": {
+      "index": 34,
+      "size": 2
+    },
+    "attr": {
+      "min": 10,
+      "max": 32767
+    },
+    "value": 150
+  },
+  {
+    "id": "35",
+    "type": "number",
+    "label": {
+      "en": "Blind up/down time * 0.01",
+      "nl": "Blinde op/neer tijd * 0,01",
+	  "de": "Rollladen auf/ab Zeit * 0,01"
+    },
+    "hint": {
+      "en": "Parameter 35: Determines the maximum time up/down time for motor.",
+      "nl": "Parameter 35: Bepaalt de maximale op/neer-tijd van de motor.",
+	  "de": "Parameter 35: Bestimmt die maximale Auf-/Abfahrzeit für den Motor."
+    },
+    "zwave": {
+      "index": 35,
+      "size": 2
+    },
+    "attr": {
+      "min": 500,
+      "max": 32767
+    },
+    "value": 15000
+  },
+   {
+    "id": "36",
+    "type": "dropdown",
+    "label": {
+      "en": "Enter Calibration",
+      "nl": "Voer Kalibratie in",
+	  "de": "Kalibrierung"
+    },
+    "hint": {
+      "en": "Parameter 36: Starts the calibration.",
+      "nl": "Parameter 36: Start de kalibratie.",
+	  "de": "Parameter 36: Startet die Kalibrierung."
+    },
+    "zwave": {
+      "index": 36,
+      "size": 1
+    },
+	"value": "0",
+    "values":[
+      {
+        "id": "0",
+        "label": {
+          "en": "Exit calibration",
+          "nl": "Kalibratie bij uitgang",
+		  "de": "Beende Kalibrierung"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Enter Shutter Mode Calibration",
+          "nl": "Ga naar de sluitertijdkalibratiemodus",
+		  "de": "Starte Kalibrierung des Rollladen Modus"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "Enter Venetian Mode Calibration",
+          "nl": "Voer de Venetiaanse modus kalibratie ins",
+		  "de": "Starte Kalibrierung des Jalousie Modus"
+        }
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "type": "dropdown",
+    "label": {
+      "en": "Set curtain mode",
+      "nl": "Stel de gordijnmodus in",
+	  "de": "Modus einstellen"
+    },
+    "hint": {
+      "en": "Parameter 39: Sets the curtain mode used.",
+      "nl": "Parameter 39: Stelt de gordijnmodus in gebruik.",
+	  "de": "Parameter 39: Legt den Modus des Nano Shutters fest."
+    },
+    "zwave": {
+      "index": 39,
+      "size": 1
+    },
+	"value": "0",
+    "values":[
+      {
+        "id": "0",
+        "label": {
+          "en": "Shutter Mode",
+          "nl": "sluitermodus",
+		  "de": "Rollladen Modus"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Venetian Mode",
+          "nl": "Venetiaanse mode",
+		  "de": "Jalousie Modus"
+        }
+      }
+    ]
+  },
+  {
+    "id": "85",
+    "type": "dropdown",
+    "label": {
+      "en": "Extern Button Operation Mode",
+      "nl": "Externe knop Bedieningswijze",
+	  "de": "Betriebsmodus des angeschlossenen Tasters/Schalters"
+    },
+    "hint": {
+      "en": "Parameter 85: Defines the operating mode of the externally connected switches.",
+      "nl": "Parameter 85: Definieert de bedrijfsmodus van de extern aangesloten schakelaars.",
+	  "de": "Parameter 85: Definiert die Betriebsart der extern angeschlossenen Taster/Schalter."
+    },
+    "zwave": {
+      "index": 85,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "S1, S2 open, close and stop shutter",
+          "nl": "S1, S2 openen, sluiten en stoppen van de sluiter",
+		  "de": "S1, S2 öffnen, schließen und stoppen den Rollladen"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "S1 Open/Stop, S2 Close/Stop",
+          "nl": "S1 Open/Stop, S2 Sluiten/Stop",
+		  "de": "S1 Auf/Stopp, S2 Zu/Stopp" 
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Venetian Control",
+          "nl": "Venetiaanse controle",
+		  "de": "Jalousiesteuerung"
+        }
+      }
+	  ]
+	  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input S1",
+      "nl": "Schakelaar type input S1",
+	  "de": "Schaltertyp an Eingang S1"
+    },
+    "hint": {
+      "en": "Parameter 120: Determines what type of input is connected to input S1.",
+      "nl": "Parameter 120: Bepaalt welk type input apparaat er is verbonden aan input S1.",
+	  "de": "Parameter 120: Legt fest, welcher Typ von Eingang an Eingang S1 angeschlossen ist."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch",
+		  "de": "Automatische Erkennung"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          
+		  "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselschalter"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+	  }
+      
+    ]
+  },
+  {
+    "id": "121",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input S2",
+      "nl": "Schakelaar type input S2",
+	  "de": "Schaltertyp an Eingang S2"
+    },
+    "hint": {
+      "en": "Parameter 121: Determines what type of input is connected to input S2.",
+      "nl": "Parameter 121: Bepaalt welk type input apparaat er is verbonden aan input S2.",
+	  "de": "Parameter 121: Legt fest, welcher Typ von Eingang an Eingang S2 angeschlossen ist."
+    },
+    "zwave": {
+      "index": 121,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch",
+		  "de": "Automatische Erkennung"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          
+		  "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselschalter"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+      }
+    ]
+  },
+    {
+     "type": "group",
+    "label": {
+      "en": "Following Setting reqired Version 3.06",
+      "nl": "Volgende instelling vereist V3.06",
+	  "de": "Folgende Einstellung sind ab Version 3.06 verfügbar"
+		},
+	"children": [ 
+  
+   {
+    "id": "51",
+    "type": "number",
+    "label": {
+      "en": "Blind up time * 0.01",
+      "nl": "Blinde op tijd * 0,01",
+	  "de": "Rollladen auf Zeit * 0,01"
+    },
+    "hint": {
+      "en": "Parameter 51: Determines the maximum time up time for motor.",
+      "nl": "Parameter 51: Bepaalt de maximale op-tijd van de motor.",
+	  "de": "Parameter 51: Bestimmt die maximale Auffahrzeit für den Motor."
+    },
+    "zwave": {
+      "index": 51,
+      "size": 2
+    },
+    "attr": {
+      "min": 500,
+      "max": 32767
+    },
+    "value": 15000
+  },
+
+	{
+    "id": "52",
+    "type": "checkbox",
+    "label": {
+      "en": "Trip time up/down is equal",
+      "nl": "De rijtijd op/neer is gelijk",
+	  "de": "Fahrzeit auf/ab ist gleich"
+    },
+    "hint": {
+      "en": "Parameter 52: Specifies whether the up and down travel times are equal or unequal.",
+      "nl": "Parameter 52: Bepaalt of de reistijden omhoog en omlaag gelijk of ongelijk zijn.",
+	  "de": "Parameter 52: Legt fest, ob die Fahrzeit auf und ab gleich oder ungleich sind."
+    },
+    "zwave": {
+      "index": 52,
+      "size": 1
+    },
+    "value": true
+  }
+    ]
+  },
+  {
+     "type": "group",
+    "label": {
+      "en": "Following Setting reqired Version 3.07",
+      "nl": "Volgende instelling vereist V3.07",
+	  "de": "Folgende Einstellung sind ab Version 3.07 verfügbar"
+		},
+	"children": [	
+  
+  {
+    "id": "53",
+    "type": "number",
+    "label": {
+      "en": "Over-run-time",
+      "nl": "Overlooptijd",
+	  "de": "Nachlaufzeit"
+    },
+    "hint": {
+      "en": "Parameter 53: Sets the overrun time in seconds.",
+      "nl": "Parameter 53: Stelt de overschrijdingstijd in seconden in.",
+	  "de": "Parameter 53: Legt die Nachlaufzeit in Sekunden fest."
+    },
+    "zwave": {
+      "index": 53,
+      "size": 1
+    },
+	"attr": {
+      "min": 0,
+      "max": 60
+    },
+    "value": 5
+   }
+  ]
+  }
+]

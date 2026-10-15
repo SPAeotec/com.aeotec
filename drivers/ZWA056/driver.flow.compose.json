@@ -1,0 +1,127 @@
+{
+  "triggers": [
+	{
+      "id": "ZWA056_mold_alarm_on",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "The mold alarm is on",
+		"nl": "Het schimmelalarm is aan",
+		"de": "Der Schimmel Alarm ist angegangen"
+      }
+    },
+    {
+      "id": "ZWA056_mold_alarm_off",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "The mold alarm is off",
+		"nl": "Het schimmelalarm is uit",
+		"de": "Der Schimmel Alarm ist ausgegangen"
+      }
+    },
+    	{
+      "id": "ZWA056_glass_break",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Glass breakage was recognised",
+	    "nl": "Glasbreuk werd herkend",
+	    "de": "Glasbruch wurde erkannt"
+      }
+    },
+	{
+      "id": "ZWA056_emergency",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Emercency Alarm was recognised",
+	    "nl": "Paniekalarm geactiveerd",
+	    "de": "Panic Alarm wurde ausglöst"
+      }
+    },
+	{
+      "id": "ZWA056_tilt_info_on",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Is tilted",
+	    "nl": "Is gekanteld",
+	    "de": "Ist gekippt worden"
+      }
+    },
+    {
+      "id": "ZWA056_tilt_info_off",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Is no longer tilted",
+	    "nl": "Is niet meer gekanteld",
+		"de": "Ist nicht mehr gekippt"
+      }
+    },
+	{
+      "id": "ZWA056_power_changed_trigger",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Power source changed",
+	    "nl": "Stroombron gewijzigd",
+	    "de": "Stromquelle wurde geändert"
+      }
+    },
+		{
+    "id": "ZWA056_dewpoint_value",
+	"platforms": [ "local", "cloud" ],
+    "title": {
+      "en": "The dew point has changed",
+      "nl": "Het dauwpunt is veranderd",
+	  "de": "Der Taupunkt hat sich geändert"
+    },
+	        "tokens": [
+          {
+            "name": "dewpoint",
+            "type": "number",
+            "title": {
+              "en": "Dew Point",
+              "nl": "Dauwpunt",
+			  "de": "Taupunkt"
+            }
+          }
+		]}
+  
+
+  ],
+    "conditions": [ 
+{
+        "id": "ZWA056_is_tilted",
+		"platforms": [ "local", "cloud" ],
+        "title": {
+          "en": "Is !{{|not}} tilted",
+		  "nl": "Heeft {{|niet}} gekanteld",
+          "de": "Ist !{{|nicht}} gekippt"
+        },
+        "args": []
+      },
+		{
+        "id": "ZWA056_mold_onoff",
+		 "platforms": ["local", "cloud"],
+        "title": {
+          "en": "Mold Alarm is !{{activated|off}}",
+		  "nl": "Schimmelalarm is !{{aan|uit}}",
+          "de": "Schimmelalarm ist !{{aktiv|aus}}"
+        },
+        "args": []
+      }
+],
+  "actions": [			
+  {
+      "id": "ZWA056_disabletampercontact",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Switch off Tamper alert",
+	    "nl": "Het sabotagealarm uitschakelen",
+        "de": "Sabotage-Alarm ausschalten"
+      },
+      "hint": {
+        "en": "Tamper alert set to off",
+	    "nl": "Sabotage-alarm is ingesteld op Nee",
+        "de": "Sabotage-Alarm-Alarm wird auf Nein gesetzt"
+      },
+      "args": []
+    }
+	]
+}

@@ -1,0 +1,78 @@
+{
+  "triggers": [],
+  "conditions": [],
+  "actions": [
+    {
+      "id": "ZWA046C3_reset_meter_import",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Reset meter values",
+		"de": "Gesamtverbrauch zurücksetzen"
+      },
+      "hint": {
+        "en": "Reset the accumulated power usage (kWh). Can not be reversed.",
+		"de": "Setzt den kumulierten Stromverbrauch (kWh) zurück. Dies kann nicht rückgängig gemacht werden."
+      },
+	  
+      "titleFormatted": {
+		"en": "Resets the total consumption",
+		"de": "Setzt den Gesamtverbrauch zurück"
+		},
+      "args": []
+    },
+ {
+      "id": "ZWA046C3_reset_meter_export",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Reset total yield",
+		"de": "Gesamtertrag zurücksetzen"
+      },
+      "hint": {
+        "en": "Resets the cumulative electricity yield (kWh). This cannot be reversed.",
+		"de": "Setzt den kumulierten Stromertrag (kWh) zurück. Dies kann nicht rückgängig gemacht werden."
+      },
+	  
+      "titleFormatted": {
+		"en": "Reset total yield",
+		"de": "Gesamtertrag zurücksetzen"
+		},
+      "args": []
+    },
+	    {
+      "id": "ZWA046C3_reset_meter_apparent_import",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Reset total power values (import)",
+		"de": "Gesamt Leistungswerte zurücksetzen (verbrauch)"
+      },
+      "hint": {
+        "en": "Resets the cumulative reactive and apparent power (kVAh, kVARh). This cannot be reversed.",
+		"de": "Setzt den kumulierte Blind und Scheinleistung (kVAh, kVARh) zurück. Dies kann nicht rückgängig gemacht werden."
+      },
+	  
+      "titleFormatted": {
+		"en": "Reset total power values (import)",
+		"de": "Gesamt Leistungswerte zurücksetzen (Verbrauch)"
+		},
+      "args": []
+    },
+ {
+      "id": "ZWA046C3_reset_meter_apparent_export",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Reset total power values (export)",
+		"de": "Gesamt Leistungswerte zurücksetzen (Produktion)"
+      },
+      "hint": {
+        "en": "Resets the cumulative reactive and apparent power (kVAh, kVARh). This cannot be reversed.",
+		"de": "Setzt den kumulierte Blind und Scheinleistung (kVAh, kVARh) zurück. Dies kann nicht rückgängig gemacht werden."
+      },
+	  
+      "titleFormatted": {
+		"en": "Reset total power values (export)",
+		"de": "Gesamt Leistungswerte zurücksetzen (Produktion)"
+		},
+      "args": []
+    }	
+	]
+}

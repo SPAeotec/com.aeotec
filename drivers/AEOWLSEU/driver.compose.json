@@ -1,0 +1,43 @@
+{
+    "id": "AeotecWater",
+	"platforms": [ "local", "cloud" ],
+    "name": {
+      "en": "Water Leak Sensor (IM6001) Aeotec SmartThings",
+	  "de": "Leckage Sensor (IM6001) Aeotec SmartThings"
+    },
+    "class": "sensor",
+    "capabilities": [
+      "measure_battery",
+      "alarm_water",
+      "measure_temperature"
+    ],
+    "energy": {
+      "batteries": [ "CR2" ]
+    },
+	"connectivity": ["zigbee"],
+    "zigbee": {
+      "manufacturerName": "Samjin",
+      "productId": [
+        "water"
+      ],
+      "deviceId": 1026,
+      "profileId": 260,
+      "endpoints": {
+        "1": {
+          "clusters": [0, 1, 1026, 1280, 2821],
+          "bindings": [0, 1, 1026, 1280, 2821]
+        }
+      },
+	"learnmode": {
+	  "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on the down side of the sensor for 5 seconds.",
+		"de": "Drücken Sie den Taster an der Unterseite des Sensors für 5 Sekunden."
+      }
+    }	  
+    },
+    "images": {
+      "large": "/drivers/AEOWLSEU/assets/images/large.png",
+      "small": "/drivers/AEOWLSEU/assets/images/small.png"
+    }
+  }

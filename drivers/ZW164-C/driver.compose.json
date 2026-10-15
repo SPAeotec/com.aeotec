@@ -1,0 +1,233 @@
+{
+  "id": "ZW164-C",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Indoor Siren 6",
+    "nl": "Binnen Sirene 6",
+	"de": "Innen Sirene 6"
+  },
+  "class": "homealarm",
+  "capabilities": [
+    "onoff.siren",
+    "alarm_tamper",
+    "button.pair_button_1",
+    "button.pair_button_2",
+    "button.pair_button_3",
+    "button.unpair_button_1",
+    "button.unpair_button_2",
+    "button.unpair_button_3"
+  ],
+  "capabilitiesOptions": {
+    "alarm_battery.button_1": {
+      "title": {
+        "en": "Battery alarm (button 1)",
+        "nl": "Batterij alarm (knop 1)",
+		"de": "Batterie Aalarm (Taste 1)"
+      }
+    },
+    "alarm_battery.button_2": {
+      "title": {
+        "en": "Battery alarm (button 2)",
+        "nl": "Batterij alarm (knop 2)",
+		"de": "Batterie Aalarm (Taste 2)"
+      }
+    },
+    "alarm_battery.button_3": {
+      "title": {
+        "en": "Battery alarm (button 3)",
+        "nl": "Batterij alarm (knop 3)",
+		"de": "Batterie Aalarm (Taste 3"
+      }
+    },
+    "button.pair_button_1": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Pair button 1",
+        "nl": "Koppel knop 1",
+		"de": "Taste 1 verbinden"
+      },
+      "desc": {
+        "en": "You will have 10 seconds to press the button 3 times.",
+        "nl": "Je hebt 10 seconden om 3 keer op de knop te drukken.",
+		"de": "Sie haben 10 Sekunden Zeit, um die Taste 3 Mal zu drücken."
+      }
+    },
+    "button.pair_button_2": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Pair button 2",
+        "nl": "Koppel knop 2",
+		"de": "Taste 2 verbinden"
+      },
+      "desc": {
+        "en": "You will have 10 seconds to press the button 3 times.",
+        "nl": "Je hebt 10 seconden om 3 keer op de knop te drukken.",
+		"de": "Sie haben 10 Sekunden Zeit, um die Taste 3 Mal zu drücken."
+      }
+    },
+    "button.pair_button_3": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Pair button 3",
+        "nl": "Koppel knop 3",
+		"de": "Taste 3 verbinden"
+      },
+      "desc": {
+        "en": "You will have 10 seconds to press the button 3 times.",
+        "nl": "Je hebt 10 seconden om 3 keer op de knop te drukken.",
+		"de": "Sie haben 10 Sekunden Zeit, um die Taste 3 Mal zu drücken."
+      }
+    },
+    "button.unpair_button_1": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Unpair button 1",
+        "nl": "Ontkoppel knop 1",
+		"de": "Taste 1 entfernen"
+      },
+      "desc": {
+        "en": "The chime will blink 3 times when button was succesfully unpaired.",
+        "nl": "De gong zal 3 keer knipperen wanner de knop succesvol is ontkoppelt.",
+		"de": "Der Gong blinkt 3 Mal, wenn die Taste erfolgreich entfernt wurde."
+      }
+    },
+    "button.unpair_button_2": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Unpair button 2",
+        "nl": "Ontkoppel knop 2",
+		"de": "Taste 2 entfernen"
+      },
+      "desc": {
+        "en": "The chime will blink 3 times when button was succesfully unpaired.",
+        "nl": "De gong zal 3 keer knipperen wanner de knop succesvol is ontkoppelt.",
+		"de": "Der Gong blinkt 3 Mal, wenn die Taste erfolgreich entfernt wurde."
+      }
+    },
+    "button.unpair_button_3": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Unpair button 3",
+        "nl": "Ontkoppel knop 3",
+		"de": "Taste 3 entfernen"
+      },
+      "desc": {
+        "en": "The chime will blink 3 times when button was succesfully unpaired.",
+        "nl": "De gong zal 3 keer knipperen wanner de knop succesvol is ontkoppelt.",
+		"de": "Der Gong blinkt 3 Mal, wenn die Taste erfolgreich entfernt wurde."
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "small": "{{driverAssetsPath}}/images/small.jpg"
+  },
+  "energy": {
+    "batteries": [
+      "CR2450",
+      "INTERNAL"
+    ]
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      3,
+      259,
+      515
+    ],
+    "productId": [
+      164
+    ],
+    "zwaveAllianceProductId": 3292,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/3292/Doorbell%206%20product%20manual.pdf",
+    "includeSecure": true,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button on the rear of {{driverNameEn}}",
+        "nl": "Druk op de actie knop op de achterkant van {{driverNameNl}}",
+		"de": "Drücken Sie Taste auf der Rückseite der {{driverNameEn}}"
+      }
+    },
+    "unlearnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button on the rear of {{driverNameEn}} once, if nothing happens quickly press 6 times.",
+        "nl": "Druk een keer op de actie knop op de achterkant van {{driverNameNl}}, gebeurt er niks, druk dan 6 keer snel achter elkaar op de actie knop.",
+		"de": "Drücken Se die Taste auf der Rückseite der {{driverName}} 6x schnell hintereinander."
+      }
+    },
+    "associationGroups": [
+      1, 2, 3, 7, 8, 9
+    ],
+    "associationGroupsMultiChannel": [
+      4, 5, 6
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Group 1 is assigned to the Lifeline association group.",
+          "nl": "Groep 1 is toegewezen aan de levenslijn associatie groep.",
+		  "de": "Gruppe 1 Lifeline"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "=== Test Alarm ===",
+          "nl": "=== Test Alarm ===",
+		  "de": "=== Teste Alarm ==="
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "=== Tamper Alarm ===",
+          "nl": "=== Sabotage Alarm ===",
+		  "de": "=== Sabotagealarm ==="
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "=== Doorbell 1 ===",
+          "nl": "=== Deurbel 1 ===",
+		  "de": "=== Klingel 1 ==="
+        }
+      },
+      "5": {
+        "hint": {
+          "en": "=== Doorbell 2 ===",
+          "nl": "=== Deurbel 2 ===",
+		  "de": "=== Klingel 2 ==="
+        }
+      },
+      "6": {
+        "hint": {
+          "en": "=== Doorbell 3 ===",
+          "nl": "=== Deurbel 3 ===",
+		  "de": "=== Klingel 3 ==="
+        }
+      },
+      "7": {
+        "hint": {
+          "en": "=== Environment Alarm ===",
+          "nl": "=== Omgeving Alarm ===",
+		  "de": "=== Umgebungsalarm ==="
+        }
+      },
+      "8": {
+        "hint": {
+          "en": "=== Security Alarm ===",
+          "nl": "=== Beveiligings Alarm ===",
+		  "de": "=== Sicherheitsalarm ==="
+        }
+      },
+      "9": {
+        "hint": {
+          "en": "=== Emergency Alarm ===",
+          "nl": "=== Noodalarm ===",
+		  "de": "=== Notfallalarm ==="
+        }
+      }
+    }
+  }
+}

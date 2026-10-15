@@ -1,0 +1,111 @@
+{
+  "title": {
+    "en": "A switch action occurred",
+    "de": "Ein Schaltvorgang ist aufgetreten"
+  },
+  "titleFormatted": {
+    "en": "[[switch]] has been [[action]]",
+    "de": "[[switch]] wird [[action]]"
+  },
+  "hint": {
+    "en": "The available actions depend on the configured switch type in the device settings.",
+    "de": "Die verfügbaren Aktionen hängen von dem in den Geräteeinstellungen konfigurierten Schaltertyp ab."
+  },
+  "highlight": true,
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ZGA002|ZGA003|ZGA004&capabilities=supports_switch_action"
+    },
+    {
+      "name": "switch",
+      "type": "dropdown",
+      "title": {
+        "en": "Switch",
+        "de": "Schalter"
+      },
+      "values": [
+        {
+          "id": "sw1",
+          "title": {
+            "en": "Switch 1",
+            "de": "Schalter 1"
+          }
+        },
+        {
+          "id": "sw2",
+          "title": {
+            "en": "Switch 2",
+            "de": "Schalter 2"
+          }
+        },
+        {
+          "id": "any",
+          "title": {
+            "en": "Any switch",
+            "de": "Jeder Schalter"
+          }
+        }
+      ]
+    },
+    {
+      "name": "action",
+      "type": "dropdown",
+      "title": {
+        "en": "Switch action",
+        "de": "Aktion"
+      },
+      "values": [
+        {
+          "id": "pressed",
+          "title": {
+            "en": "pressed",
+            "de": "gedrückt"
+          }
+        },
+        {
+          "id": "held",
+          "title": {
+            "en": "held",
+            "de": "gehalten"
+          }
+        },
+        {
+          "id": "released",
+          "title": {
+            "en": "released",
+            "de": "losgelassen"
+          }
+        },
+        {
+          "id": "any",
+          "title": {
+            "en": "pressed, held or released",
+            "de": "gedrückt, gehalten oder losgelassen"
+          }
+        }
+      ]
+    }
+  ],
+  "tokens": [
+    {
+      "name": "switch",
+      "type": "string",
+      "example": "sw1/sw2",
+      "title": {
+        "en": "Switch number",
+        "de": "Schalternummer"
+      }
+    },
+    {
+      "name": "switch_action",
+      "type": "string",
+      "example": "on/off/toggle/up/down/stop",
+      "title": {
+        "en": "Switch sub action",
+        "de": "Schalteraktion"
+      }
+    }
+  ]
+}

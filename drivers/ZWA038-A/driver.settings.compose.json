@@ -1,0 +1,485 @@
+[
+  {
+    "id": "20",
+    "type": "dropdown",
+    "label": {
+      "en": "Configure the output load status after re-power"
+    },
+    "hint": {
+      "en": "Parameter 20 : This parameter determines the behaviour of the device after power loss."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Always Off"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Always on"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Last known state when repowered"
+        }
+      }
+    ]
+  },
+   {
+		"id": "40",
+		"type": "number",
+		"label": {
+			"en": "Automatic Off Timer"
+		},
+		"hint": {
+			"en": "Parameter 40: Acts as auto off after as soon as the switch turns ON, setting is set in seconds."
+		},
+		"zwave": {
+			"index": 40,
+			"size": 4,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 65535
+		},
+		"value": 0
+	},
+	{
+		"id": "41",
+		"type": "number",
+		"label": {
+			"en": "Automatic On Timer"
+		},
+		"hint": {
+			"en": "Parameter 41: Acts as auto on after as soon as the switch turns OFF, setting is set in seconds."
+		},
+		"zwave": {
+			"index": 41,
+			"size": 4,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 65535
+		},
+		"value": 0
+	},
+  {
+    "id": "82",
+    "type": "dropdown",
+    "label": {
+      "en": "Association Control Settings"
+    },
+    "hint": {
+      "en": "Parameter 82: Setting command for association group."
+    },
+    "zwave": {
+      "index": 82,
+      "size": 1
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Basic Set"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Binary Switch SET"
+        }
+      }
+    ]
+  },
+   {
+    "id": "83",
+    "type": "dropdown",
+    "label": {
+      "en": "Led Indicator Settings"
+    },
+    "hint": {
+      "en": "Parameter 83: Select the indicator function for output."
+    },
+    "zwave": {
+      "index": 83,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disable completely"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Momentary blink"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "LED follows status of output"
+        }
+      }
+    ]
+  },
+   {
+    "id": "84",
+    "type": "dropdown",
+    "label": {
+      "en": "Led Indicator Settings"
+    },
+    "hint": {
+      "en": "Parameter 84: Select the indicator function for output."
+    },
+    "zwave": {
+      "index": 84,
+      "size": 1
+    },
+    "value": "9",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "Blue"
+        }
+      },
+	  {
+        "id": "3",
+        "label": {
+          "en": "Green"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Pink"
+        }
+      },
+	  {
+        "id": "5",
+        "label": {
+          "en": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White"
+        }
+      }
+    ]
+  },
+  {
+    "id": "85",
+    "type": "dropdown",
+    "label": {
+      "en": "Led Indicator Color For scene/flow"
+    },
+    "hint": {
+      "en": "Parameter 85: Select the indicator color for scene/flow.."
+    },
+    "zwave": {
+      "index": 85,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "Blue"
+        }
+      },
+	  {
+        "id": "3",
+        "label": {
+          "en": "Green"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Pink"
+        }
+      },
+	  {
+        "id": "5",
+        "label": {
+          "en": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White"
+        }
+      }
+    ]
+  },
+  {
+		"id": "86",
+		"type": "number",
+		"label": {
+			"en": "Led Brightness"
+		},
+		"hint": {
+			"en": "Parameter 86: Setting the brightness of indicator in %."
+		},
+		"zwave": {
+			"index": 86,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 100
+		},
+		"value": 60
+	},
+    {
+    "id": "119",
+    "type": "dropdown",
+    "label": {
+      "en": "External Switch Scene"
+    },
+    "hint": {
+      "en": "Parameter 119: Enable or disable the scene/flow function of external(3-way) switch."
+    },
+    "zwave": {
+      "index": 119,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disable"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Enable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type"
+    },
+    "hint": {
+      "en": "Parameter 120: Select the external (3-way) switch's type."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Toggle on or off"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Momentary switch (Normally Open)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Momentary switch (Normally Closed)"
+        }
+	   }
+    ]
+  },
+  {
+    "id": "121",
+    "type": "dropdown",
+    "label": {
+      "en": "Output Control"
+    },
+    "hint": {
+      "en": "Parameter 121: Enable or disable output."
+    },
+    "zwave": {
+      "index": 121,
+      "size": 1
+    },
+    "value": "3",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disable completely"
+        }
+      },
+       {
+        "id": "1",
+        "label": {
+          "en": "Enable local control"
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Enable central scene"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Enable local and central scene"
+        }
+      }
+    ]
+  },
+ 
+   {
+    "id": "122",
+    "type": "dropdown",
+    "label": {
+      "en": "Button Function"
+    },
+    "hint": {
+      "en": "Parameter 122: Select the paddle button functions."
+    },
+    "zwave": {
+      "index": 122,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "up/ON, down/OFF"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "down/ON, up/OFF"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "toggle (down/up buttons are the same)"
+        }
+      }
+    ]
+  },
+   {
+    "id": "123",
+    "type": "dropdown",
+    "label": {
+      "en": "Report Behavior"
+    },
+    "hint": {
+      "en": "Parameter 123: Select behavior for report and indicator when output is disable."
+    },
+    "zwave": {
+      "index": 123,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Report on/off status"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Don't report on/off status"
+        }
+      }
+	  ]
+  }
+]

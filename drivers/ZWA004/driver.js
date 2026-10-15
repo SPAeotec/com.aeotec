@@ -1,0 +1,21 @@
+'use strict';
+
+const Homey = require('homey');
+
+class ZWA004Driver extends Homey.Driver {
+    onInit() {
+        super.onInit();
+
+        this.batteryTrigger = this.homey.flow.getDeviceTriggerCard('ZWA004_battery_full');
+        this.sceneTrigger = this.homey.flow.getDeviceTriggerCard('ZWA004_scene');
+		this.sceneTrigger.registerRunListener((args, state) => {
+           return args.device.sceneRunListener(args, state);
+		
+    });
+		
+          
+            }
+}
+
+module.exports = ZWA004Driver;
+

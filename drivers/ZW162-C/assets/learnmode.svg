@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960px" height="960px" viewBox="0 0 960 960" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>com.aeotec/zw164/learnmode</title>
+    <desc>Created with Sketch.</desc>
+    <style type="text/css">
+    .pair {
+    	animation: pair 2s infinite;
+    }
+
+    @keyframes pair {
+    	0%, 100% {
+    		fill: rgba(255,255,255,0);
+    	}
+    	50% {
+    		fill: #0078CC;
+    	}
+    }
+    </style>
+    <g id="com.aeotec/zw164/learnmode" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#000000" stroke-width="15" stroke-linecap="square" stroke-linejoin="round" x="18.5" y="18.5" width="924" height="924" rx="364.99"/>
+        <path d="M908.75,566.616236 C908.75,658.587935 872.287343,744.795338 808.541341,808.541341 C744.795338,872.287343 658.587935,908.75 566.616236,908.75 L394.383764,908.75 C302.412065,908.75 216.204662,872.287343 152.458659,808.541341 C88.7126565,744.795338 52.25,658.587935 52.25,566.616236 L52.25,394.383764 C52.25,302.412065 88.7126565,216.204662 152.458659,152.458659 C216.204662,88.7126565 302.412065,52.25 394.383764,52.25 L566.616236,52.25 C658.587935,52.25 744.795338,88.7126565 808.541341,152.458659 C872.287343,216.204662 908.75,302.412065 908.75,394.383764 L908.75,566.616236 Z" id="Rectangle" stroke="#000000" stroke-width="7.5" stroke-linecap="square" stroke-linejoin="round"/>
+        <circle id="Oval" stroke="#000000" stroke-width="7.5" stroke-linejoin="round" cx="749" cy="201" r="62"/>
+        <circle class="pair" cx="749" cy="201" r="52"/>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "id": "tone_interval",
+  "type": "number",
+  "label": {
+    "en": "Tone interval",
+    "nl": "Geluid interval",
+	"de": "Tonintervall"
+  },
+  "hint": {
+    "en": "Determine the amount of time between every repeated sound.",
+    "nl": "Bepaal de hoeveelheid tijd tussen elk herhaalde geluid.",
+	"de": "Bestimmen Sie die Zeitspanne zwischen jedem wiederholten Ton."
+  },
+  "attr": {
+    "min": 0,
+    "max": 14
+  },
+  "value": 0,
+  "units": {
+    "en": "Seconds",
+    "nl": "Seconden",
+	"de": "Sekunden"
+  }
+}

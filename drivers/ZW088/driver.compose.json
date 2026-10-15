@@ -1,5 +1,6 @@
 {
   "id": "ZW088",
+  "platforms": [ "local","cloud" ],
   "name": {
     "en": "Key Fob"
   },
@@ -11,6 +12,10 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [ "CR2450" ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
@@ -46,13 +51,6 @@
           "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the Key Fob is in Scene Mode, pressing the control button, which will send the corresponding Scene id to the associated nodes. "
         }
       }
-    },
-    "defaultConfiguration": [
-      {
-        "id": 250,
-        "size": 1,
-        "value": 1
-      }
-    ]
+    }
   }
 }

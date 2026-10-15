@@ -1,0 +1,266 @@
+[
+  {
+    "id": "2",
+    "type": "dropdown",
+    "label": {
+      "en": "Energy detection mode"
+    },
+    "hint": {
+      "en": "Parameter 2: Select what type of Meter Reports will be sent when setting the parameter 101-103 to send the automatic reports."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Report power, report the absolute value of energy."
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Report positive/negative power, report the algebraic sum of energy."
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "Report positive power."
+        }
+      },
+	  {
+        "id": "3",
+        "label": {
+          "en": "Report negative power."
+        }
+	  }
+    ]
+  },
+  {
+    "id": "3",
+    "value": false,
+    "label": {
+      "en": "Enable/disable selective reporting only when power change reaches a certain threshold or percentage"
+    },
+    "hint": {
+      "en": "Parameter 3: Determines whether or not to limit reporting power changes to only report when the change is above the threshold."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "4",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold for automatic reporting"
+    },
+    "hint": {
+      "en": "Parameter 4: Determines the threshold change in wattage before an automatic report is send to Homey."
+    },
+    "zwave": {
+      "index": 4,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "5",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold for automatic reporting, Clamp 1"
+    },
+    "hint": {
+      "en": "Parameter 5: Determines the threshold change in wattage on Clamp 1 before an automatic report is send to Homey."
+    },
+    "zwave": {
+      "index": 5,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "6",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold for automatic reporting, Clamp 2"
+    },
+    "hint": {
+      "en": "Parameter 6: Determines the threshold change in wattage on Clamp 2 before an automatic report is send to Homey."
+    },
+    "zwave": {
+      "index": 6,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "8",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold for automatic reporting"
+    },
+    "hint": {
+      "en": "Parameter 8: Determines the percentage threshold for wattage changes to trigger an automatic report."
+    },
+    "zwave": {
+      "index": 8,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "value": 80
+  },
+  {
+    "id": "9",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold for automatic reporting, Clamp 1"
+    },
+    "hint": {
+      "en": "Parameter 9: Determines the percentage threshold for wattage on Clamp 1 changes to trigger an automatic report."
+    },
+    "zwave": {
+      "index": 9,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "value": 80
+  },
+  {
+    "id": "10",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold for automatic reporting, Clamp 2"
+    },
+    "hint": {
+      "en": "Parameter 10: Determines the percentage threshold for wattage on Clamp 2 changes to trigger an automatic report."
+    },
+    "zwave": {
+      "index": 10,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "value": 80
+  },
+  {
+    "id": "101",
+    "type": "number",
+    "label": {
+      "en": "Report group 1 report type"
+	  
+    },
+    "hint": {
+      "en": "Parameter 101: Determines the type of reports sent to devices in the 1st report group."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": 10
+  },
+  {
+    "id": "102",
+    "type": "number",
+    "label": {
+      "en": "Report group 2 report type"
+    },
+    "hint": {
+      "en": "Parameter 102: etermines the type of reports sent to devices in the 2nd association group."
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": 4
+  },
+  {
+    "id": "103",
+    "type": "number",
+    "label": {
+      "en": "Report group 3 report type"
+    },
+    "hint": {
+      "en": "Parameter 103: Determines the type of reports sent to devices in the 3rd association group."
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": 1
+  },
+  {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 1"
+    },
+    "hint": {
+      "en": "Parameter 111: Determines the interval for sending report to devices in report group 1."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4
+    },
+    "value": 34
+  },
+  {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 2"
+    },
+    "hint": {
+      "en": "Parameter 112: Determines the interval for sending report to devices in report group 2."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4
+    },
+    "value": 300
+  },
+  {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 3"
+    },
+    "hint": {
+      "en": "Parameter 113: etermines the interval for sending report to devices in report group 3."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4
+    },
+    "value": 3600
+  }
+]

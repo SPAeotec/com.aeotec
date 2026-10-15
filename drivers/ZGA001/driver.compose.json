@@ -1,0 +1,45 @@
+{
+  "id": "ZGA001",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Range Extender Zigbee",
+	"de": "Range Extender Zigbee"
+  },
+  "class": "other",
+  "capabilities": [],
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+   "images": {
+    "large": "drivers/ZGA001/assets/images/large.png",
+    "small": "drivers/ZGA001/assets/images/small.png"
+  },
+  "connectivity": ["zigbee"],
+  "zigbee": {
+     "productId": "WG001-Z01",
+    "manufacturerName": "AL001",
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3
+      ],
+        "bindings": [
+          3,
+		  25
+        ]
+      }
+    },
+
+    "learnmode": {
+      "image": "drivers/ZGA001/assets/learnmode.svg",
+      "instruction": {
+        "en": "Tap the Button once.",
+        "de": "Drücken Sie die Taste einmal."
+      }
+    }
+  }
+  
+}

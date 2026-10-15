@@ -1,0 +1,166 @@
+{
+  "triggers": [
+    {
+      "id": "ZWA055_mold_alarm_on",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "The mold alarm is on",
+		"nl": "Het schimmelalarm is aan",
+		"de": "Der Schimmel Alarm ist angegangen"
+      }
+    },
+    {
+      "id": "ZWA055_mold_alarm_off",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "The mold alarm is off",
+		"nl": "Het schimmelalarm is uit",
+		"de": "Der Schimmel Alarm ist ausgegangen"
+      }
+    },
+	{
+      "id": "ZWA055_tilt_info_on",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Is tilted",
+	    "nl": "Is gekanteld",
+	    "de": "Ist gekippt worden"
+      }
+    },
+    {
+      "id": "ZWA055_tilt_info_off",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Is no longer tilted",
+	    "nl": "Is niet meer gekanteld",
+		"de": "Ist nicht mehr gekippt"
+      }
+    },
+	
+	{
+      "id": "ZWA055_power_changed_trigger",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Power source changed",
+	    "nl": "Stroombron gewijzigd",
+	    "de": "Stromquelle wurde geändert"
+      }
+    },
+		{
+    "id": "ZWA055_dewpoint_value",
+	"platforms": [ "local", "cloud" ],
+    "title": {
+      "en": "The dew point has changed",
+      "nl": "Het dauwpunt is veranderd",
+	  "de": "Der Taupunkt hat sich geändert"
+    },
+	        "tokens": [
+          {
+            "name": "dewpoint",
+            "type": "number",
+            "title": {
+              "en": "Dew Point",
+              "nl": "Dauwpunt",
+			  "de": "Taupunkt"
+            }
+          }
+		]},
+   	{
+    "id": "ZWA055_zaxis_value",
+	"platforms": [ "local", "cloud" ],
+    "title": {
+      "en": "Z-Axis has changed",
+      "nl": "Z-As is veranderd",
+	  "de": "Z-Achse hat sich geändert"
+    },
+	        "tokens": [
+          {
+            "name": "zaxis",
+            "type": "number",
+            "title": {
+              "en": "Z-Axis",
+              "nl": "Z-As",
+			  "de": "Z-Achse"
+            }
+          }
+		]},
+	{
+    "id": "ZWA055_yaxis_value",
+	"platforms": [ "local", "cloud" ],
+    "title": {
+      "en": "Y-Axis has changed",
+      "nl": "Y-As is veranderd",
+	  "de": "Y-Achse hat sich geändert"
+    },
+	        "tokens": [
+          {
+            "name": "yaxis",
+            "type": "number",
+            "title": {
+              "en": "Y-Axis",
+              "nl": "Y-As",
+			  "de": "Y-Achse"
+            }
+          }
+		]},
+   	{
+    "id": "ZWA055_xaxis_value",
+	"platforms": [ "local", "cloud" ],
+    "title": {
+      "en": "X-Axis has changed",
+      "nl": "X-As is veranderd",
+	  "de": "X-Achse hat sich geändert"
+    },
+	        "tokens": [
+          {
+            "name": "xaxis",
+            "type": "number",
+            "title": {
+              "en": "X-Axis",
+              "nl": "X-As",
+			  "de": "X-Achse"
+            }
+          }
+		]}
+		
+  ],
+    "conditions": [
+      {
+        "id": "ZWA055_is_tilted",
+		"platforms": [ "local", "cloud" ],
+        "title": {
+          "en": "Is !{{|not}} tilted",
+		  "nl": "Heeft {{|niet}} gekanteld",
+          "de": "Ist !{{|nicht}} gekippt"
+        },
+        "args": []
+      },
+	  {
+        "id": "ZWA055_mold_onoff",
+		 "platforms": ["local", "cloud"],
+        "title": {
+          "en": "Mold Alarm is !{{activated|off}}",
+		  "nl": "Schimmelalarm is !{{aan|uit}}",
+          "de": "Schimmelalarm ist !{{aktiv|aus}}"
+        },
+        "args": []
+      }
+],
+  "actions": [			
+  {
+      "id": "ZWA055_disabletampercontact",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Switch off Tamper alert",
+	    "nl": "Het sabotagealarm uitschakelen",
+        "de": "Sabotage-Alarm ausschalten"
+      },
+      "hint": {
+        "en": "Tamper alert set to off",
+	    "nl": "Sabotage-alarm is ingesteld op Nee",
+        "de": "Sabotage-Alarm-Alarm wird auf Nein gesetzt"
+      },
+      "args": []
+    }
+	]
+}

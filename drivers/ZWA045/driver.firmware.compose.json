@@ -1,0 +1,73 @@
+
+{
+  "wakeInstruction": {
+    "en": "Hold the button for three seconds.",
+	"de": "Halte den Knopf für 3 Sekunden gedückt"
+  },
+  "updates": [
+    {
+      "version": "2.8.4",
+      "changelog": {
+        "en": "- New settings, light sensor adjustment, bug fixes",
+		"de": "- Neue Einstellmöglichkeiten, Anpassung Lichtsensor, Fehlerbehebung"
+      },
+      "device": {
+        "manufacturerId": 881,
+        "productTypeId": 2,
+        "productId": 45
+      },
+      "files": [
+        {
+          "targetId": 0,
+          "size": 150080,
+          "name": "ZWA045_EU_2084.gbl",
+          "integrity": "sha256:3E754C9BE172EBC522A5B36C428872CA57A604CF7D551477217527E69E93BF41",
+		  "region": "EU"
+        }
+      ],
+	  "applicableTo": ">2.7.0"
+    },
+	{
+      "version": "2.8.4",
+      "changelog": {
+        "en": "- New settings, light sensor adjustment, bug fixes"
+      },
+      "device": {
+        "manufacturerId": 881,
+        "productTypeId": 258,
+        "productId": 45
+      },
+      "files": [
+        {
+          "targetId": 0,
+          "size": 150068,
+          "name": "ZWA045_US_2084.gbl",
+          "integrity": "sha256:7F1B8939384FFA243468AE8350116BFB0C098257DD518ECDB7699E953DD79A85",
+		  "region": "US"
+        }
+      ],
+	  "applicableTo": ">2.7.0"
+    },
+		{
+      "version": "2.8.4",
+      "changelog": {
+        "en": "- New settings, light sensor adjustment, bug fixes"
+      },
+      "device": {
+        "manufacturerId": 881,
+        "productTypeId": 514,
+        "productId": 45
+      },
+      "files": [
+        {
+          "targetId": 0,
+          "size": 150072,
+          "name": "ZWA045_AU_2084.gbl",
+          "integrity": "sha256:D0B737EAC86B163EBCCA0F83D19B5F1BCB18771D421E87BC63A6DD5B100F693B",
+		  "region": "AU"
+        }
+      ],
+	  "applicableTo": ">2.7.0"
+    }
+  ]
+}

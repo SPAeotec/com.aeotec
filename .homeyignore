@@ -1,0 +1,8 @@
+.git*
+.idea
+.editorconfig
+.eslint*
+LICENSE
+package-lock.json
+interview.json
+interview.*.json

@@ -2,17 +2,21 @@
   "triggers": [
     {
       "id": "dsa38_press_1",
+	  "platforms": [ "local","cloud" ],
       "title": {
         "en": "The button has been short pressed",
-        "nl": "De knop is kort ingedrukt"
+        "nl": "De knop is kort ingedrukt",
+		"de": "Die Taste wurde kurz gedrückt"
       },
       "args": []
     },
     {
       "id": "dsa38_hold_1",
+	  "platforms": [ "local","cloud" ],
       "title": {
         "en": "The button has been long pressed",
-        "nl": "De knop is lang ingedrukt"
+        "nl": "De knop is lang ingedrukt",
+		"de": "Die Taste wurde lang gedrückt"
       },
       "args": []
     }

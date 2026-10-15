@@ -4,11 +4,13 @@
     "type": "checkbox",
     "label": {
       "en": "Wake up for 10 minutes when batteries are inserted",
-      "nl": "Maak wakker voor 10 minuten nadat batterijen zijn ingevoegd"
+      "nl": "Maak wakker voor 10 minuten nadat batterijen zijn ingevoegd",
+	  "de": "Aufwachen für 10 Minuten nach Einlegen der Batterien"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the device wakes up for 10 minutes when batteries are inserted.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat 10 minuten wakker blijft wanneer er batterijen worden geplaatst."
+      "en": "Parameter 2: Determines whether or not the device wakes up for 10 minutes when batteries are inserted.",
+      "nl": "Parameter 2: Bepaalt of het apparaat 10 minuten wakker blijft wanneer er batterijen worden geplaatst.",
+	  "de": "Parameter 2: Legt fest, ob das Gerät beim Einlegen der Batterien für 10 Minuten aufwacht oder nicht."
     },
     "zwave": {
       "index": 2,
@@ -21,11 +23,13 @@
     "type": "number",
     "label": {
       "en": "No motion detection timeout",
-      "nl": "Geen beweging gedetecteerd na"
+      "nl": "Geen beweging gedetecteerd na",
+	  "de": "Keine Zeitüberschreitung bei der Bewegungserkennung"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines for how long the motion detection alarm will stay on after detection.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaatl voor hoe lang het bewegingsalarm actief blijft nadat er beweging is gedetecteerd."
+      "en": "Parameter 3: Determines for how long the motion detection alarm will stay on after detection.",
+      "nl": "Parameter 3: Bepaalt voor hoe lang het bewegingsalarm actief blijft nadat er beweging is gedetecteerd.",
+	  "de": "Parameter 3: Legt fest, wie lange der Bewegungserkennungsalarm nach der Erkennung eingeschaltet bleibt."
     },
     "zwave": {
       "index": 3,
@@ -43,11 +47,13 @@
     "type": "checkbox",
     "label": {
       "en": "Enable motion sensor",
-      "nl": "Schakel bewegingsdetectie in"
+      "nl": "Schakel bewegingsdetectie in",
+	  "de": "Aktivieren des Bewegungssensors"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the device detects motion.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat beweging detecteert."
+      "en": "Parameter 4: Determines whether or not the device detects motion.",
+      "nl": "Parameter 4: Bepaalt of het apparaat beweging detecteert.",
+	  "de": "Parameter 4: Bestimmt, ob das Gerät eine Bewegung erkennt."
     },
     "zwave": {
       "index": 4,
@@ -55,16 +61,103 @@
     },
     "value": true
   },
-  {
+   {
+    "id": "101",
+    "type": "dropdown",
+    "label": {
+      "en": "Information reports send to report group 1",
+      "nl": "Informatie updates naar verslag groep 1",
+	  "de": "Übermittlung von Informationsberichten an die Berichtsgruppe 1"
+    },
+    "hint": {
+      "en": "Parameter 101: Determines what information is sent to the devices in reportgroup 1.",
+      "nl": "Parameter 101: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 1e verslag groep.",
+	  "de": "Parameter 101: Legt fest, welche Informationen an die Geräte der Berichtsgruppe 1 gesendet werden."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": "225",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Geen",
+		  "de": "Nichts"
+        }
+      },
+      {
+        "id": "33",
+        "label": {
+          "en": "Battery and temperature",
+          "nl": "Batterij en temperatuur",
+		  "de": "Batterie- und Temperaturbericht"
+        }
+      },
+      {
+        "id": "65",
+        "label": {
+          "en": "Battery and luminosity",
+          "nl": "Batterij en lichtsterkte",
+		  "de": "Batterie- und Helligkeitsbreicht"
+        }
+      },
+      {
+        "id": "129",
+        "label": {
+          "en": "Battery and humidity",
+          "nl": "Batterij en vochtigheidsgraad",
+		  "de": "Batterie- und Luftfeuchtigkeitsbericht"
+        }
+      },
+      {
+        "id": "97",
+        "label": {
+          "en": "Battery, temperature and luminosity",
+          "nl": "Batterij, temperatuur, en lichtsterkte",
+		  "de": "Batterie- und Temperatur- und Helligkeitsbericht"
+        }
+      },
+      {
+        "id": "161",
+        "label": {
+          "en": "Battery, temperature and humidity",
+          "nl": "Batterij, temperatuur en vochtigheidsgraad",
+		  "de": "Batterien-, Temperatur- und Luftfeuchtigkeitsbericht"
+        }
+      },
+      {
+        "id": "193",
+        "label": {
+          "en": "Battery, luminosity and humidity",
+          "nl": "Batterij, lichtsterkte en vochtigheidsgraad",
+		  "de": "Batterie-, Helligkeit- und Luftfeuchtigkeitsbericht"
+        }
+      },
+      {
+        "id": "225",
+        "label": {
+          "en": "Battery, temperature, luminosity and humidity",
+          "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad",
+		  "de": "Batterie-, Temperatur-, Helligkeit- und Luftfeuchtigkeitsbericht"
+        }
+      }
+    ]
+  },
+     {
     "id": "102",
     "type": "dropdown",
     "label": {
-      "en": "Information reports send to association group 2",
-      "nl": "Informatie updates naar associatie groep 2"
+      "en": "Information reports send to report group 2",
+      "nl": "Informatie updates naar verslag groep 2",
+	  "de": "Übermittlung von Informationsberichten an die Berichtsgruppe 2"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what information is sent to the devices in association group 2.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e associatie groep."
+      "en": "Parameter 102: Determines what information is sent to the devices in report group 2.",
+      "nl": "Parameter 102: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e verslag groep.",
+	  "de": "Parameter 102: Legt fest, welche Informationen an die Geräte der Berichtsgruppe 2 gesendet werden."
     },
     "zwave": {
       "index": 102,
@@ -76,70 +169,80 @@
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Geen"
+          "nl": "Geen",
+		  "de": "Nichts"
         }
       },
       {
         "id": "33",
         "label": {
           "en": "Battery and temperature",
-          "nl": "Batterij en temperatuur"
+          "nl": "Batterij en temperatuur",
+		  "de": "Batterie- und Temperaturbericht"
         }
       },
       {
         "id": "65",
         "label": {
           "en": "Battery and luminosity",
-          "nl": "Batterij en lichtsterkte"
+          "nl": "Batterij en lichtsterkte",
+		  "de": "Batterie- und Helligkeitsbreicht"
         }
       },
       {
         "id": "129",
         "label": {
           "en": "Battery and humidity",
-          "nl": "Batterij en vochtigheidsgraad"
+          "nl": "Batterij en vochtigheidsgraad",
+		  "de": "Batterie- und Luftfeuchtigkeitsbericht"
         }
       },
       {
         "id": "97",
         "label": {
           "en": "Battery, temperature and luminosity",
-          "nl": "Batterij, temperatuur, en lichtsterkte"
+          "nl": "Batterij, temperatuur, en lichtsterkte",
+		  "de": "Batterie- und Temperatur- und Helligkeitsbericht"
         }
       },
       {
         "id": "161",
         "label": {
           "en": "Battery, temperature and humidity",
-          "nl": "Batterij, temperatuur en vochtigheidsgraad"
+          "nl": "Batterij, temperatuur en vochtigheidsgraad",
+		  "de": "Batterien-, Temperatur- und Luftfeuchtigkeitsbericht"
         }
       },
       {
         "id": "193",
         "label": {
           "en": "Battery, luminosity and humidity",
-          "nl": "Batterij, lichtsterkte en vochtigheidsgraad"
+          "nl": "Batterij, lichtsterkte en vochtigheidsgraad",
+		  "de": "Batterie-, Helligkeit- und Luftfeuchtigkeitsbericht"
         }
       },
       {
         "id": "225",
         "label": {
           "en": "Battery, temperature, luminosity and humidity",
-          "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad"
+          "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad",
+		  "de": "Batterie-, Temperatur-, Helligkeit- und Luftfeuchtigkeitsbericht"
         }
       }
     ]
   },
-  {
+      {
     "id": "103",
     "type": "dropdown",
     "label": {
-      "en": "Information reports send to association group 3",
-      "nl": "Informatie updates naar associatie groep 3"
+      "en": "Information reports send to report group 3",
+      "nl": "Informatie updates naar verslag groep 3",
+	  "de": "Übermittlung von Informationsberichten an die Berichtsgruppe 3"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what information is sent to the devices in association group 3.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e associatie groep."
+      "en": "Parameter 103: Determines what information is sent to the devices in report group 3.",
+      "nl": "Parameter 103: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e verslag groep.",
+	  "de": "Parameter 103: Legt fest, welche Informationen an die Geräte der Berichtssgruppe 3 gesendet werden."
     },
     "zwave": {
       "index": 103,
@@ -151,56 +254,64 @@
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Geen"
+          "nl": "Geen",
+		  "de": "Nichts"
         }
       },
       {
         "id": "33",
         "label": {
           "en": "Battery and temperature",
-          "nl": "Batterij en temperatuur"
+          "nl": "Batterij en temperatuur",
+		  "de": "Batterie- und Temperaturbericht"
         }
       },
       {
         "id": "65",
         "label": {
           "en": "Battery and luminosity",
-          "nl": "Batterij en lichtsterkte"
+          "nl": "Batterij en lichtsterkte",
+		  "de": "Batterie- und Helligkeitsbreicht"
         }
       },
       {
         "id": "129",
         "label": {
           "en": "Battery and humidity",
-          "nl": "Batterij en vochtigheidsgraad"
+          "nl": "Batterij en vochtigheidsgraad",
+		  "de": "Batterie- und Luftfeuchtigkeitsbericht"
         }
       },
       {
         "id": "97",
         "label": {
           "en": "Battery, temperature and luminosity",
-          "nl": "Batterij, temperatuur, en lichtsterkte"
+          "nl": "Batterij, temperatuur, en lichtsterkte",
+		  "de": "Batterie- und Temperatur- und Helligkeitsbericht"
         }
       },
       {
         "id": "161",
         "label": {
           "en": "Battery, temperature and humidity",
-          "nl": "Batterij, temperatuur en vochtigheidsgraad"
+          "nl": "Batterij, temperatuur en vochtigheidsgraad",
+		  "de": "Batterien-, Temperatur- und Luftfeuchtigkeitsbericht"
         }
       },
       {
         "id": "193",
         "label": {
           "en": "Battery, luminosity and humidity",
-          "nl": "Batterij, lichtsterkte en vochtigheidsgraad"
+          "nl": "Batterij, lichtsterkte en vochtigheidsgraad",
+		  "de": "Batterie-, Helligkeit- und Luftfeuchtigkeitsbericht"
         }
       },
       {
         "id": "225",
         "label": {
           "en": "Battery, temperature, luminosity and humidity",
-          "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad"
+          "nl": "Batterij, temperatuur, lichtsterkte en vochtigheidsgraad",
+		  "de": "Batterie-, Temperatur-, Helligkeit- und Luftfeuchtigkeitsbericht"
         }
       }
     ]
@@ -209,12 +320,14 @@
     "id": "111",
     "type": "number",
     "label": {
-      "en": "Reporting interval association group 1",
-      "nl": "Informatie update interval associatie groep 1"
+      "en": "Reporting interval report group 1",
+      "nl": "Informatie update interval verslag groep 1",
+	  "de": "Meldeintervall Berichtsgruppe 1"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to Homey.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar Homey."
+      "en": "Parameter 111: Determines the interval between reports to Homey.",
+      "nl": "Parameter 111: Bepaalt de tijd tussen rapportages naar Homey.",
+	  "de": "Parameter 111: Bestimmt das Intervall zwischen den Meldungen an Homey."
     },
     "zwave": {
       "index": 111,
@@ -229,13 +342,15 @@
   {
     "id": "112",
     "type": "number",
-    "label": {
-      "en": "Reporting interval association group 2",
-      "nl": "Informatie update interval associatie groep 2"
+       "label": {
+      "en": "Reporting interval report group 2",
+      "nl": "Informatie update interval verslag groep 2",
+	  "de": "Meldeintervall Berichtsgruppe 2"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to devices in association group 2.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar apparaten in de 2e associatie groep."
+      "en": "Parameter 112: Determines the interval between reports to Homey.",
+      "nl": "Parameter 112: Bepaalt de tijd tussen rapportages naar Homey.",
+	  "de": "Parameter 112: Bestimmt das Intervall zwischen den Meldungen an Homey."
     },
     "zwave": {
       "index": 112,
@@ -250,13 +365,15 @@
   {
     "id": "113",
     "type": "number",
-    "label": {
-      "en": "Reporting interval association group 3",
-      "nl": "Informatie update interval associatie groep 3"
+       "label": {
+      "en": "Reporting interval report group 3",
+      "nl": "Informatie update interval verslag groep 3",
+	  "de": "Meldeintervall Berichtsgruppe 31"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to devices in association group 3.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar apparaten in de 3e associatie groep."
+      "en": "Parameter 113: Determines the interval between reports to Homey.",
+      "nl": "Parameter 113: Bepaalt de tijd tussen rapportages naar Homey.",
+	  "de": "Parameter 113: Bestimmt das Intervall zwischen den Meldungen an Homey."
     },
     "zwave": {
       "index": 113,

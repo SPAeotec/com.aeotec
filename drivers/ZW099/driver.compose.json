@@ -1,5 +1,6 @@
 {
   "id": "ZW099",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Smart Dimmer 6"
   },
@@ -10,18 +11,24 @@
     "meter_power",
     "onoff"
   ],
+
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
-      3
+      3,
+      515,
+	  258
     ],
     "productId": [
+      20,
       99
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 1519,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1519/Manual Aeon Labs Smart Dimmer 6.pdf",
     "learnmode": {

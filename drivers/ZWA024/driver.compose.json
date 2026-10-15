@@ -1,0 +1,196 @@
+{
+  "id": "ZWA024",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Multisensor 7"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_motion",
+    "alarm_tamper", 
+    "measure_temperature",
+    "measure_luminance",
+    "measure_humidity",
+    "measure_ultraviolet"
+  ],
+  "capabilitiesOptions": {
+    "alarm_tamper": {
+      "title": { 
+	  "en": "Vibration Sensor",
+	  "de": "Vibrationsalarm"
+	  }
+    }
+	},
+  
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "CR123A",
+      "CR123A"
+    ]
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      2,
+      514,
+	  258,
+	  7170
+    ],
+    "productId": 24,
+    "wakeUpInterval": 86400,
+	"learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button on your {{driverNameEn}}.",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste im Batteriefach einmal."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+	  "title": {
+			"en": "Lifeline",
+			"de": "Lifeline"
+			},
+        "hint": {
+          "en": "This is the lifeline, it is not recommended to remove Homey's id from this association group.",
+		  "de": "Dies ist die Lifeline, es wird nicht empfohlen, die ID von Homey aus dieser Assoziationsgruppe zu entfernen."
+        }
+      },
+	  "2": {
+	  "title": {
+			"en": "Motion",
+			"de": "Bewegung"
+			},
+        "hint": {
+          "en": "Basic Set -  will be sent to the associated device when motion trigger or untrigger. The basic set value is determined by Param11, Param12. See Param 13 for more information.",
+		  "de": "Basic Set -  wird an das zugehörige Gerät gesendet, wenn Bewegung ausgelöst oder nicht ausgelöst wird. Der Basissollwert wird bestimmt durch Param 11, Param 12, Param 13."
+        }
+      },
+	  "3": {
+	  "tiltle": {
+			"en": "Over Heat Temperature",
+			"de": "Oberer Temperaturberich"
+			},
+        "hint": {
+          "en": "Basic Set - When the temperature change value is over or under the threshold set by Param 16. Scale is determined by Param 64.",
+		  "de": "Basic Set - Wenn der Temperaturänderungswert über oder unter dem Schwellenwert, der mit Param16 eingestellt wird. Die Skala wird durch Param 64 bestimmt."
+        }
+      },
+	  "4": {
+	  "title": {
+			"en": "Under Heat Temperature",
+			"de": "Unterer Temperaturbereich"
+			},
+        "hint": {
+          "en": "Basic Set - When the temperature change value is under or over the threshold set by Param 17. Scale is determined by Param64.",
+		  "de": "Basic Set - Wenn der Temperaturänderungswert unter oder über dem Schwellwert, der mit Param 17 eingestellt wird. Die Skala wird durch Param 64 bestimmt."
+        }
+      },
+	  "5": {
+	  "title": {
+			"en": "Over Humidity",
+			"de": "Oberer Luftfeuchtigkeitsbereich"
+			},
+        "hint": {
+          "en": "Basic Set - When the current humidity is over or under the threshold set by Param 14.",
+		  "de": "Basic Set - Wenn die aktuelle Luftfeuchtigkeit über oder unter dem Schwellenwert, welcher durch Param 14 festgelegt wird, liegt."
+        }
+      },
+	  "6": {
+	  "title": {
+			"en": "Under Humidity",
+			"de": "Unterer Luftfeuchtigkeitsbereich"
+			},
+        "hint": {
+          "en": "Basic Set - When the current humidity is under or over the threshold set by Param 15.",
+		  "de": "Basic Set - Wenn die aktuelle Luftfeuchtigkeit unter oder über dem Schwellenwert, welcher durch Param 15 festgelegt wird, liegt."
+        }
+      },
+	  "7": {
+	  "title": {
+			"en": "Over Light",
+			"de": "Oberer Helligkeitsbereich"
+			},
+        "hint": {
+          "en": "Basic Set - When the current light/lux is over or under the threshold set by Param 18.",
+		  "de": "Basic Set - Wenn der aktuelle Licht/Lux-Wert über oder unter dem Schwellenwert, welcher durch Param 18 festgelegt wird, liegt."
+        }
+      },
+	 "8": {
+		"title": {
+			"en": "Under Light",
+			"de": "Unterer Helligkeitsbereich"
+			},
+        "hint": {
+          "en": "Basic Set - When the current light/lux is under or over the threshold set by Param 19.",
+		  "de": "Basic Set - Wenn der aktuelle Licht/Lux-Wert unter oder über dem Schwellenwert, welcher durch Param 19 festgelegt wird, liegt."
+        }
+      }
+	  
+    },
+    "defaultConfiguration": [
+      {
+        "id": 7,
+        "value": 1,
+        "size": 1
+      },
+      {
+        "id": 2,
+        "value": 30,
+        "size": 2
+      },
+      {
+        "id": 3,
+        "value": 60,
+        "size": 2
+      },
+	  {
+        "id": 6,
+        "value": 1,
+        "size": 1
+      },
+	  {
+        "id": 5,
+        "value": 2,
+        "size": 1
+      },
+	  {
+        "id": 40,
+        "value": 1,
+        "size": 1
+      },
+	  {
+        "id": 41,
+        "value": 1,
+        "size": 1
+      },
+	  {
+        "id": 42,
+        "value": 1,
+        "size": 1
+      },
+	  {
+        "id": 43,
+        "value": 10,
+        "size": 2
+      },
+	  {
+        "id": 45,
+        "value": 61,
+        "size": 2
+      }
+	  
+	  
+    ]
+  }
+}

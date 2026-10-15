@@ -1,0 +1,603 @@
+[
+	{
+      "id": "visual_led_indications",
+      "zwave": {
+        "index": 3,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "7",
+      "label": {
+        "en": "Visual LED Indications",
+        "nl": "Visuele LED-indicaties",
+    	"de": "Optische LED-Anzeige"
+      },
+      "hint": {
+        "en": "Parameter 3: This parameter defines when the red LED will indicate events. Disabling all indications may extend battery life.",
+        "nl": "Parameter 3: Deze parameter bepaalt wanneer de rode LED gebeurtenissen aangeeft. Het uitschakelen van alle indicaties kan de levensduur van de batterij verlengen.",
+	    "de": "Parameter 3: Dieser Parameter legt fest, wann die rote LED Ereignisse anzeigt. Das Deaktivieren aller Anzeigen kann die Lebensdauer der Batterie verlängern."
+      },
+	   "values": [{
+          "id": "7",
+          "label": {
+            "en": "On at all events (default)",
+            "nl": "Altijd aan (standaard)",
+	      	"de": "An bei allen Events (Standard)"
+          }
+        },
+		 {
+          "id": "0",
+          "label": {
+            "en": "Off",
+            "nl": "Uit",
+			      "de": "Aus"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			    "en": "Water Leakage Status Change only",
+				"nl": "Alleen bij status verandering van waterlekkage",
+		      	"de": "Nur bei Statusänderung des Wasseralarm"
+          }
+        },
+		        {
+          "id": "2",
+          "label": {
+			      "en": "Wake Up only",
+				  "nl": "Alleen bij Wake Up",
+			      "de": "Nur bei Wake Up"
+          }
+        },
+		        {
+          "id": "4",
+          "label": {
+			      "en": "Device Tampering only",
+                  "nl": "Alleen bij apparaat sabotage",
+			      "de": "Nur bei Auslösen des Tamper-Tasters"
+          }
+        },
+		        {
+          "id": "3",
+          "label": {
+			     "en": "Water Sensor Status Change + Wake Up",
+                 "nl": "Status verandering van water sensor + Wake Up",
+		      	 "de": "Statusänderung Wasser Sensor + Wake Up"
+          }
+        },
+		        {
+          "id": "5",
+          "label": {
+			     "en": "Open/Close Status Change + Device Tampering",
+				 "nl": "Statuswijziging open / dicht + apparaat sabotage",
+		      	 "de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
+          }
+        },
+		        {
+          "id": "6",
+          "label": {
+			     "en": "Wake Up + Device Tampering",
+                 "nl": "Wake Up + apparaat sabotage",
+			     "de": "Wake Up + Tamper-Taster"
+          }
+        }
+      ]
+    },
+    {
+      "id": "range_test",
+      "zwave": {
+        "index": 4,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Range Test after double click",
+        "nl": "Bereiktest na dubbelklikken",
+		    "de": "Reichweitentest nach Doppelklick"
+      },
+      "hint": {
+        "en": "Parameter 4: Allows to enable the activation of a Z-Wave range test with double clicking the tamper switch.",
+        "nl": "Parameter 4: Maakt het mogelijk om een Z-Wave-bereiktest te activeren met een dubbelklik op de sabotageschakelaar. ",
+		"de": "Parameter 4: Ermöglicht die Aktivierung eines Z-Wave-Reichweitentests durch Doppelklicken des Manipulationsschalters."
+      },
+	   "values": [{
+          "id": "1",
+          "label": {
+            "en": "Enabled",
+            "nl": "Ingeschakeld",
+	      	"de": "Aktiviert"
+          }
+        },
+        {
+          "id": "0",
+          "label": {
+		    "en": "Disabled",
+            "nl": "Uitgeschakeld",
+		    "de": "Deaktiviert"
+          }
+        }
+      ]
+    },
+	{
+      "id": "group_trigger",
+      "zwave": {
+        "index": 5,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "2nd Association Group Trigger",
+        "nl": "2de Association Group Trigger",
+		"de": "Auslöser für Assoziationsgruppe 2"
+      },
+      "hint": {
+        "en": "Parameter 5: This parameter defines the status of the water leakage that determines when a BASIC command is sent to all devices of Association Group 2.",
+        "nl": "Parameter 5: Deze parameter definieert de status van de waterlekkage die het verzenden van een BASIC-opdracht naar alle apparaten van groep 2 veroorzaakt.",
+	    "de": "Parameter 5: Dieser Parameter definiert den Status des Wasseraustritts, der das Senden eines BASIC-Befehls an alle Geräte der Verbandsgruppe 2 bewirkt."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Switch after Water Leakage Start and Stop",
+            "nl": "Schakelaar na waterlekkage Start en Stop",
+			"de": "Schalter nach Start und Stopp bei Wasserleckage."
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+		    "en": "Switch after Leakage Start",
+			"nl": "Schakelaar na waterlekkage Start",
+			"de": "Umschalten nach Start bei Wasseralarm"
+          }
+        },
+		{
+          "id": "2",
+          "label": {
+			"en": "Switch after Water Leakage Stop",
+            "nl": "Schakelaar na waterlekkage Stop",
+			"de": "Umschalten nach Stop bei Wasseralarm"
+          }
+        }
+      ]
+    },
+	{
+      "id": "group_command",
+      "zwave": {
+        "index": 6,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "2",
+      "label": {
+        "en": "Command Sent to Devices of Association Group 2",
+        "nl": "Commando Verzonden naar apparaten van de Associatiegroep 2",
+	    "de": "Befehl, der an Geräte der Assoziationsgruppe 2 gesendet wird"
+      },
+      "hint": {
+        "en": "Parameter 6: This parameter defines which commands is sent to 2nd Association Group ",
+        "nl": "Parameter 6: Deze parameter definieert welke commando's naar de 2e Associatiegroep worden gestuurd.",
+	    "de": "Parameter 6: Dieser Parameter definiert, welche Befehle an die Assoziationsgruppe 2 gesendet werden."
+      },
+	   "values": [{
+          "id": "2",
+          "label": {
+            "en": "On and Off (default)",
+            "nl": "Aan en uit (standaard)",
+			"de": "An und Aus (Standard)"
+          }
+        },
+        {
+          "id": "0",
+          "label": {
+			"en": "On",
+            "nl": "Aan",
+			"de": "Ein"
+          }
+        },
+		{
+          "id": "1",
+          "label": {
+			"en": "Off",
+            "nl": "Uit",
+		    "de": "Aus"
+          }
+        }
+      ]
+    },
+	{
+      "id": "basic_group_on",
+      "zwave": {
+        "index": 7,
+        "size": 1,
+        "signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 255,
+      "label": {
+        "en": "BASIC command value sent to 2nd Association Group on On event",
+        "nl": "BASIC command verzonden naar 2de Associatiegroep On evenement",
+		"de": "BASIC Command wird an die Assoziationsgruppe 2 gesendet, wenn das Ereignis On eintritt "
+      },
+      "hint": {
+        "en": "Parameter 7: This is the BASIC command value sent in case of On event. (1-99, 255) (Default: 255)",
+        "nl": "Parameter 7: BASIC-commandowaarde verzonden in het geval van On event. (1-99, 255) (Standaard: 255)",
+		"de": "Parameter 7: Dies ist das BASIC Command, das im Falle des Ereignisses On gesendet wird. (1-99, Standard: 255)"
+      }
+    },
+    {
+      "id": "basic_group_off",
+      "zwave": {
+        "index": 8,
+        "size": 1,
+        "signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "BASIC command value sent to 2nd Association Group off event",
+        "nl": "BASIC command verzonden naar 2de Associatiegroep off evenement",
+		"de": "BASIC Command wird bei AUS gesendet "
+      },
+      "hint": {
+        "en": "Parameter 8: This is the BASIC command value sent in case of Off event. (1-99, 255) (Default: 255)",
+        "nl": "Parameter 8: BASIC-commandowaarde verzonden in het geval van Off event. (1-99, 255) (Standaard: 255)",
+	    "de": "Parameter 8: Dies ist das BASIC Command, das im Falle des Ereignisses Off gesendet wird. (1-99, 255) (Standard: 255)"
+      }
+    },
+    {
+      "id": "time_delay_on",
+      "zwave": {
+        "index": 9,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Time Delay of On command frame",
+        "nl": "Tijdvertraging van het On-commandokader",
+	    "de": "Zeitverzögerung des BASIC Commands AN"
+      },
+      "hint": {
+        "en": "Parameter 9: On command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+        "nl": "Parameter 9: On command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+		"de": "Parameter 9: Das On Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+      }
+    },
+    {
+      "id": "time_delay_off",
+      "zwave": {
+        "index": 10,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Time Delay of Off command frame",
+        "nl": "Tijdvertraging van het Off-commandokader",
+		"de": "Zeitverzögerung des BASIC Commands AUS"
+      },
+      "hint": {
+        "en": "Parameter 10: Off command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+        "nl": "Parameter 10: Off-opdracht wordt verzonden na een in deze parameter gedefinieerde vertraging. (0-32400) (Standaard: 0)",
+		"de": "Parameter 10: Das Off Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+      }
+    },
+   {
+      "id": "time_delay_tamper",
+      "zwave": {
+        "index": 11,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Delay of Tamper Alarm Cancellation",
+        "nl": "Tijdsvertraging tot het sabotagealarm wordt gereset",
+	    	"de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird "
+      },
+      "hint": {
+        "en": "Parameter 11: Time a tamper alarm is delayed. (0-32400) (Default: 0)",
+        "nl": "Parameter 11: Tijd dat een sabotagealarm wordt uitgesteld.  (0-32400) (Standaard: 0)",
+    	"de": "Parameter 11: Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird. (0-32400) (Standard: 0)"
+      }
+    },
+	{
+      "id": "alarm_cancellation",
+      "zwave": {
+        "index": 12,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Reporting Tamper Alarm Cancellation",
+        "nl": "Melding dat het sabotagealarm is gereset",
+	    "de": "Notification, dass der Tamper Alarm zurückgesetzt wurde "
+      },
+      "hint": {
+        "en": "Parameter 12: This parameter defines if the alarm cancellation event is reported.",
+        "nl": "Parameter 12: Deze parameter bepaalt of de alarmannulering wordt gemeld.",
+	    "de": "Parameter 12: Dieser Parameter legt fest, ob das Ereignis Tamper Alarm zurückgesetzt gemeldet wird."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Do not send Report",
+            "nl": "Rapport niet verzenden",
+		    "de": "Bericht nicht senden"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+		    "en": "Send Report (default)",
+            "nl": "Rapport verzenden (standaard)",
+		    "de": "Bericht senden (Standard)"
+          }
+        }
+      ]
+    },
+	{
+      "id": "16",
+      "zwave": {
+        "index": 16,
+        "size": 1,
+        "signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 100
+    },
+      "type": "number",
+      "value": 5,
+	  "label": {
+        "en": "Temperature change to report",
+	    "de": "Zu meldende Temperaturänderung"
+      },
+      "hint": {
+        "en": "Parameter 16: This value defines the minimum change of temperature to cause a temperature report.",
+        "nl": "Parameter 16: Deze waarde definieert de minimale verandering van de temperatuur om een temperatuurrapport te veroorzaken.",
+    	"de": "Parameter 16: Dieser Wert definiert die minimale Temperaturänderung, die einen Temperaturbericht verursacht."
+      }
+      
+    },
+    {
+      "id": "17",
+      "zwave": {
+        "index": 17,
+        "size": 1,
+        "signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 20
+    },
+      "type": "number",
+      "value": 2,
+	  "label": {
+        "en": "Humidity change to report",
+	    "de": "Zu meldende Änderung der Luftfeuchtigkeit"
+      },
+      "hint": {
+        "en": "Parameter 17: This value defines the minimum change of humidity to cause a humidity report.",
+        "nl": "Parameter 17: Deze waarde definieert de minimale verandering van de luchtvochtigheid om een vochtigheidsrapport te veroorzaken.",
+    	"de": "Parameter 17: Dieser Wert definiert die minimale Änderung der Feuchtigkeit, die einen Feuchtigkeitsbericht verursacht."
+      }
+	},
+	{
+      "id": "18",
+      "zwave": {
+        "index": 18,
+        "size": 2,
+        "signed": false
+      },
+	  "attr": {
+      "min": 900,
+      "max": 65535
+    },
+      "type": "number",
+      "value": 900,
+	  "label": {
+        "en": "Periodic Reports",
+	    "de": "Periodische Berichte"
+      },
+      "hint": {
+        "en": "Parameter 18: This parameter defines the time interval to send a report for both humidity and temperature.",
+        "nl": "Parameter 18: Deze parameter definieert het tijdsinterval voor het verzenden van een rapport voor zowel de luchtvochtigheid als de temperatuur.",
+	    "de": "Parameter 18: Dieser Parameter definiert das Zeitintervall, in dem ein Bericht sowohl für Feuchtigkeit als auch für Temperatur gesendet werden soll."
+      }
+	  },
+	  {
+	   "id": "temperature_unit",
+      "zwave": {
+        "index": 64,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Unit o temperature",
+		"de": "Temperatureinheit"
+      },
+      "hint": {
+        "en": "Parameter 64: This value allows to switch between Celcius and Fahrenheit unit of temperature report.",
+	    "de": "Parameter 64: Mit diesem Wert kann zwischen den Temperatureinheiten Celcius und Fahrenheit umgeschaltet werden."
+      },
+	   "values": [{
+          "id": "1",
+          "label": {
+            "en": "Celcius (EU)" ,
+	      	"de": "Celsius (EU)"
+          }
+        },
+        {
+          "id": "2",
+          "label": {
+		      	"en": "Fahrenheit (US)",
+		      	"de": "Fahrenheit (US)"
+          }
+        }
+      ]
+    },
+		 {
+    "type": "group",
+    "label": {
+      "en": "Settings only for Door Window Sensor 7 PRO with fimware V2.x",
+	  "de": "Einstellungen nur Tür- Fenstersensor 7 PRO mit Firmware V2.x"
+		},
+	"children": [
+	
+	{
+      "id": "temperature_offset",
+      "zwave": {
+        "index": 13,
+        "size": 1,
+		"signed": true
+      },
+	  "attr": {
+      "min": -20,
+      "max": 20
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Offset value for temperature",
+		"de": "Temperatur Offset-Wert"
+      },
+      "hint": {
+        "en": "Parameter 13: Can add or minus this setting value to calibrate temperature when checked.",
+		"de": "Parameter 13: Diese Einstellung kann zur Kalibrierung der Temperatur addiert oder subtrahiert werden."
+      }
+    },
+	{
+      "id": "humidity_offset",
+      "zwave": {
+        "index": 14,
+        "size": 1,
+		"signed": true
+      },
+	  "attr": {
+      "min": -50,
+      "max": 50
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Offset value for humidity",
+		"de": "Luftfeuchtigkeit Offset-Wert"
+      },
+      "hint": {
+        "en": "Parameter 14: Can add or minus this setting value to calibrate humidity when checked.",
+		"de": "Parameter 14: Diese Einstellung kann zur Kalibrierung der Luftfeuchtigkeit addiert oder subtrahiert werden."
+      }
+    },
+	{
+      "id": "interval_watermark",
+      "zwave": {
+        "index": 15,
+        "size": 2,
+		"signed": false
+      },
+	  "attr": {
+      "min": 1,
+      "max": 65535
+    },
+      "type": "number",
+      "value": 240,
+      "label": {
+        "en": "Threshold Report checks.",
+		"de": "Prüfintervall für Grenzwerte."
+      },
+      "hint": {
+        "en": "Parameter 15: Defines the time interval to check threshold reports via Parameter 16 and 17. If the value is set to 0, there will be no threshold checks. However, reports on Parameter 18 may still be active. (0, 30-65535 seconds)",
+		"de": "Parameter 15: Legt das Zeitintervall für die Überprüfung der Grenzwertmeldungen über Parameter 16 und 17 fest. Wenn der Wert auf 0 gesetzt wird, finden keine Schwellenwertprüfungen statt. Die Meldungen über Parameter 18 können jedoch weiterhin aktiv sein. (0, 30-65535 Sekunden)"
+      }
+    },
+	{
+    "id": "22",
+    "type": "checkbox",
+    "label": {
+      "en": "Binary Sensor report",
+	  "de": "Binary Sensor Bericht"
+    },
+    "hint": {
+      "en": "Parameter 22: Binary Sensor for door/window state.",
+	  "de": "Parameter 22: Binärer Bericht bei Statusänderung."
+    },
+    "zwave": {
+      "index": 22,
+      "size": 1
+    },
+    "value": false
+  },
+	
+	{
+      "id": "23",
+      "zwave": {
+        "index": 23,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 10,
+      "max": 50
+    },
+      "type": "number",
+      "value": 20,
+      "label": {
+        "en": "Battery low report",
+		"de": "Bericht bei niedrigem Batteriestand"
+      },
+      "hint": {
+        "en": "Parameter 23: Report low battery when level in % goes under threshold setting",
+		"de": "Parameter 23: Bericht über schwache Batterie, wenn der Füllstand unter den eingestellten Schwellenwert in % fällt."
+      }
+    },
+	{
+      "id": "24",
+      "zwave": {
+        "index": 24,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 1,
+      "max": 255
+    },
+      "type": "number",
+      "value": 24,
+      "label": {
+        "en": "Battery report",
+		"de": "Batteriebericht"
+      },
+      "hint": {
+        "en": "Parameter 24: Report battery report at an interval set in hour.",
+		"de": "Parameter 24: Meldet den Batteriebericht in einem in Stunden festgelegten Intervall."
+      }
+    }
+	]
+	 }
+]

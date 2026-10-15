@@ -1,0 +1,1101 @@
+[
+
+
+  
+  {
+    "id": "3",
+    "value": true,
+    "label": {
+      "en": "Selective reporting",
+	  "de": "Selektiven Berichterstattung"
+    },
+    "hint": {
+      "en": "Parameter 3: Determines whether or not to limit reporting power changes to only report when the change is above the threshold.",
+      "nl": "Parameter 3: Bepaalt of het apparaat alleen rapporteerd als de verandering groter is dan de ingestelde drempel.",
+	  "de": "Parameter 3: Bestimmt, ob Änderungen der Meldeleistung nur dann gemeldet werden sollen, wenn die Änderung über dem Schwellenwert liegt."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+   {
+   "type": "group",
+    "label": {
+      "en": "Consumption settings selective reporting",
+	  "de": "Selektive Berichterstattung für Verbrauch"
+		},
+	"children": [ 
+  {
+    "id": "4",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold Whole HEM",
+      "nl": "Wattage drempel Hele HEM",
+	  "de": "Watt-Schwellwert Gesamtes HEM"
+    },
+    "hint": {
+      "en": "Parameter 4: Determines the threshold change in wattage before an automatic report is send to Homey.",
+      "nl": "Parameter 4: Bepaalt de drempel voor wattage veranderingen voordat er automatisch een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 4: Legt den Schwellenwert für Wattänderungen fest, bevor ein Bericht automatisch an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 4,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "5",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold Clamp 1",
+      "nl": "Wattage drempel Clamp 1",
+	  "de": "Watt-Schwellwert Klemme 1"
+    },
+    "hint": {
+      "en": "Parameter 5: Determines the threshold change in wattage on Clamp 1 before an automatic report is send to Homey.",
+      "nl": "Parameter 5: Bepaalt de drempel voor wattage veranderingen op Clamp 1 voordat er automatisch een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 5: Bestimmt die Schwellenwertänderung der Wattzahl an Klemme 1, bevor ein automatischer Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 5,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "6",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold Clamp 2",
+      "nl": "Wattage drempel Clamp 2",
+	  "de": "Watt-Schwellwert Klemme 2"
+    },
+    "hint": {
+      "en": "Parameter 6: Determines the threshold change in wattage on Clamp 2 before an automatic report is send to Homey.",
+      "nl": "Parameter 6: Bepaalt de drempel voor wattage veranderingen op Clamp 2 voordat er automatisch een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 6: Bestimmt die Schwellenwertänderung der Wattzahl an Klemme 2, bevor ein automatischer Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 6,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "7",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold Clamp 3",
+      "nl": "Wattage drempel Clamp 3",
+	  "de": "Watt-Schwellwert Klemme 3"
+    },
+    "hint": {
+      "en": "Parameter 7: Determines the threshold change in wattage on Clamp 3 before an automatic report is send to Homey.",
+      "nl": "Parameter 7: Bepaalt de drempel voor wattage veranderingen op Clamp 3 voordat er automatisch een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 7: Bestimmt die Schwellenwertänderung der Wattzahl an Klemme 3, bevor ein automatischer Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 7,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "12",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold Whole HEM",
+      "nl": "Wattage drempel in procenten Hele HEM",
+	  "de": "Prozentualerer Watt-Schwellwert Gesamtes HEM"
+    },
+    "hint": {
+      "en": "Parameter 12: Determines the percentage threshold for wattage changes to trigger an automatic report.",
+      "nl": "Parameter 12: Bepaalt de minimale verandering in procenten van het wattage voorat er een automatisch rapport wordt verzonden.",
+	  "de": "Parameter 12: Bestimmt den prozentualen Schwellenwert für Wattänderungen, der einen automatischen Bericht auslöst."
+    },
+    "zwave": {
+      "index": 12,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20
+  },
+  {
+    "id": "13",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold Clamp 1",
+      "nl": "Wattage drempel in procenten Clamp 1",
+	  "de": "Prozentualerer Watt-Schwellwert Klemme 1"
+    },
+    "hint": {
+      "en": "Parameter 13: Determines the percentage threshold for wattage on Clamp 1 changes to trigger an automatic report.",
+      "nl": "Parameter 13: Bepaalt de minimale verandering in procenten van het wattage op Clamp 1 voordat er een automatisch rapport wordt verzonden.",
+	  "de": "Parameter 13: Bestimmt den prozentualen Schwellenwert für die Wattzahl bei Änderungen an Klemme 1, um einen automatischen Bericht auszulösen."
+    },
+    "zwave": {
+      "index": 13,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20
+  },
+  {
+    "id": "14",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold Clamp 2",
+      "nl": "Wattage drempel in procenten Clamp 2",
+	  "de": "Prozentualerer Watt-Schwellwert Klemme 2"
+    },
+    "hint": {
+      "en": "Parameter 14: Determines the percentage threshold for wattage on Clamp 2 changes to trigger an automatic report.",
+      "nl": "Parameter 14: Bepaalt de minimale verandering in procenten van het wattage op Clamp 2 voordat er een automatisch rapport wordt verzonden.",
+	  "de": "Parameter 14: Bestimmt den prozentualen Schwellenwert für die Wattzahl bei Änderungen an Klemme 2, um einen automatischen Bericht auszulösen."
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20
+  },
+  {
+    "id": "15",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold Clamp 3",
+      "nl": "Wattage drempel in procenten Clamp 3",
+	  "de": "Prozentualerer Watt-Schwellwert Klemme 3"
+    },
+    "hint": {
+      "en": "Parameter 15: Determines the percentage threshold for wattage on Clamp 3 changes to trigger an automatic report.",
+      "nl": "Parameter 15: Bepaalt de minimale verandering in procenten van het wattage op Clamp 3 voordat er een automatisch rapport wordt verzonden.",
+	  "de": "Parameter 15: Bestimmt den prozentualen Schwellenwert für die Wattzahl bei Änderungen an Klemme 3, um einen automatischen Bericht auszulösen."
+    },
+    "zwave": {
+      "index": 15,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20
+  }
+
+	]
+   },
+   
+ {
+   "type": "group",
+    "label": {
+      "en": "Production settings selective reporting",
+	  "de": "Selektive Berichterstattung Produktion"
+		},
+	"children": [ 
+   {
+    "id": "8",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold Whole HEM",
+      "nl": "Wattage drempel Hele HEM",
+	  "de": "Watt-Schwellwert Gesamtes HEM"
+    },
+    "hint": {
+      "en": "Parameter 8: Determines the threshold change in wattage before an automatic report is send to Homey.",
+      "nl": "Parameter 8: Bepaalt de drempel voor wattage veranderingen voordat er automatisch een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 8: Legt den Schwellenwert für Wattänderungen fest, bevor ein Bericht automatisch an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 8,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "9",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold Clamp 1",
+      "nl": "Wattage drempel Clamp 1",
+	  "de": "Watt-Schwellwert Klemme 1"
+    },
+    "hint": {
+      "en": "Parameter 9: Determines the threshold change in wattage on Clamp 1 before an automatic report is send to Homey.",
+      "nl": "Parameter 9: Bepaalt de drempel voor wattage veranderingen op Clamp 1 voordat er automatisch een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 9: Bestimmt die Schwellenwertänderung der Wattzahl an Klemme 1, bevor ein automatischer Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 9,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "10",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold Clamp 2",
+      "nl": "Wattage drempel Clamp 2",
+	  "de": "Watt-Schwellwert Klemme 2"
+    },
+    "hint": {
+      "en": "Parameter 10: Determines the threshold change in wattage on Clamp 2 before an automatic report is send to Homey.",
+      "nl": "Parameter 10: Bepaalt de drempel voor wattage veranderingen op Clamp 2 voordat er automatisch een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 10: Bestimmt die Schwellenwertänderung der Wattzahl an Klemme 2, bevor ein automatischer Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 10,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "11",
+    "type": "number",
+    "label": {
+      "en": "Wattage threshold Clamp 3",
+      "nl": "Wattage drempel Clamp 3",
+	  "de": "Watt-Schwellwert Klemme 3"
+    },
+    "hint": {
+      "en": "Parameter 11: Determines the threshold change in wattage on Clamp 3 before an automatic report is send to Homey.",
+      "nl": "Parameter 11: Bepaalt de drempel voor wattage veranderingen op Clamp 3 voordat er automatisch een rapport wordt verzonden naar Homey.",
+	  "de": "Parameter 11: Bestimmt die Schwellenwertänderung der Wattzahl an Klemme 3, bevor ein automatischer Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 11,
+      "size": 2,
+      "signed": false
+    },
+    "attr": {
+      "min": 5,
+      "max": 60000
+    },
+    "value": 50
+  },
+  {
+    "id": "16",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold Whole HEM",
+      "nl": "Wattage drempel in procenten Hele HEM",
+	  "de": "Prozentualerer Watt-Schwellwert Gesamtes HEM"
+    },
+    "hint": {
+      "en": "Parameter 16: Determines the percentage threshold for wattage changes to trigger an automatic report.",
+      "nl": "Parameter 16: Bepaalt de minimale verandering in procenten van het wattage voorat er een automatisch rapport wordt verzonden.",
+	  "de": "Parameter 16: Bestimmt den prozentualen Schwellenwert für Wattänderungen, der einen automatischen Bericht auslöst."
+    },
+    "zwave": {
+      "index": 16,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20
+  },
+  {
+    "id": "17",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold Clamp 1",
+      "nl": "Wattage drempel in procenten Clamp 1",
+	  "de": "Prozentualerer Watt-Schwellwert Klemme 1"
+    },
+    "hint": {
+      "en": "Parameter 17: Determines the percentage threshold for wattage on Clamp 1 changes to trigger an automatic report.",
+      "nl": "Parameter 17: Bepaalt de minimale verandering in procenten van het wattage op Clamp 1 voordat er een automatisch rapport wordt verzonden.",
+	  "de": "Parameter 17: Bestimmt den prozentualen Schwellenwert für die Wattzahl bei Änderungen an Klemme 1, um einen automatischen Bericht auszulösen."
+    },
+    "zwave": {
+      "index": 17,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20
+  },
+  {
+    "id": "18",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold Clamp 2",
+      "nl": "Wattage drempel in procenten Clamp 2",
+	  "de": "Prozentualerer Watt-Schwellwert Klemme 2"
+    },
+    "hint": {
+      "en": "Parameter 18: Determines the percentage threshold for wattage on Clamp 2 changes to trigger an automatic report.",
+      "nl": "Parameter 18: Bepaalt de minimale verandering in procenten van het wattage op Clamp 2 voordat er een automatisch rapport wordt verzonden.",
+	  "de": "Parameter 18: Bestimmt den prozentualen Schwellenwert für die Wattzahl bei Änderungen an Klemme 2, um einen automatischen Bericht auszulösen."
+    },
+    "zwave": {
+      "index": 18,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20
+  },
+  {
+    "id": "19",
+    "type": "number",
+    "label": {
+      "en": "Percentage wattage threshold Clamp 3",
+      "nl": "Wattage drempel in procenten Clamp 3",
+	  "de": "Prozentualerer Watt-Schwellwert Klemme 3"
+    },
+    "hint": {
+      "en": "Parameter 19: Determines the percentage threshold for wattage on Clamp 3 changes to trigger an automatic report.",
+      "nl": "Parameter 19: Bepaalt de minimale verandering in procenten van het wattage op Clamp 3 voordat er een automatisch rapport wordt verzonden.",
+	  "de": "Parameter 19: Bestimmt den prozentualen Schwellenwert für die Wattzahl bei Änderungen an Klemme 3, um einen automatischen Bericht auszulösen."
+    },
+    "zwave": {
+      "index": 19,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 100
+    },
+    "value": 20
+ }]},
+   
+  {
+   "type": "group",
+    "label": {
+      "en": "Consumption settings time interval reporting",
+	  "de": "Zeitintervallberichterstattung für Verbrauch"
+		},
+	"children": [  
+  
+  {
+    "id": "101",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type rapport groep 1",
+	  "de": "Berichttyp an Berichtsgruppe 1"
+	  
+    },
+    "hint": {
+      "en": "Parameter 101: Determines the type of reports sent to devices in the report group. Overwrites the expert setting!",
+      "nl": "Parameter 101: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de rapport groep. Overschrijft de expertinstellingen!",
+	  "de": "Parameter 101: Bestimmt die Art der Berichte, die an die Geräte in der ersten Berichtsgruppe gesendet werden. Überschreibt die Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4,
+	  "signed": false
+    },
+    "value": "50529027",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "50529027",
+				"label": {
+					"en": "W & kWh (standard)",
+					"de": "W & kWh (Standard)"
+				}
+			},
+			{
+				"id": "33686018",
+				"label": {
+					"en": "Consumption W",
+					"de": "Momentanverbrauch W"
+				}
+			},
+			{
+				"id": "134744064",
+				"label": {
+					"en": "Current power A",
+					"de": "Stromverbrauch A "
+				}
+			},
+			{
+				"id": "168430082",
+				"label": {
+					"en": "W & A",
+					"de": "W & A"
+				}
+			},
+			{
+				"id": "4294967043",
+				"label": {
+					"en": "All values",
+					"de": "Alle Werte"
+				}
+			}
+			
+		]
+  },
+  {
+    "id": "102",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type raport groep 2",
+	  "de": "Berichttyp an Berichtsgruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 102: Determines the type of reports sent to devices in the report group. Overwrites expert setting!",
+      "nl": "Parameter 102: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de rapport groep. Overschrijft de expertinstellingen!",
+	  "de": "Parameter 102: Bestimmt die Art der Berichte, die an die Geräte in der zweiten Berichtsgruppe gesendet werden. Überschreibt die Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4,
+	  "signed": false
+    },
+    "value": "202116096",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "202116096",
+				"label": {
+					"en": "A+V (standard)",
+					"de": "A+V (Standard)"
+				}
+			},
+			{
+				"id": "67372032",
+				"label": {
+					"en": "Voltage V",
+					"de": "Spannung V"
+				}
+			},
+			{
+				"id": "16843009",
+				"label": {
+					"en": "Total consumption kWh",
+					"de": "Gesamtverbrauch kWh"
+				}
+			},
+			{
+				"id": "84215041",
+				"label": {
+					"en": "V + kWh",
+					"de": "V + kWh"
+				}
+			},
+			{
+				"id": "4294967043",
+				"label": {
+					"en": "All values",
+					"de": "Alle Werte"
+				}
+			}
+		]
+  },
+  {
+    "id": "103",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 3 report type",
+      "nl": "Rapport type rapport groep 3",
+	  "de": "Berichttyp an Berichtsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 103: Determines the type of reports sent to devices in the report group. Overwrites the basic and expert setting!",
+      "nl": "Parameter 103: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de rapport groep. Overschrijft de basis- en expertinstellingen!",
+	  "de": "Parameter 103: Bestimmt die Art der Berichte, die an die Geräte in der dritten Berichtsgruppe gesendet werden. Überschreibt die Grundeinstellung und Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4,
+	  "signed": false
+    },
+    "value": "4042321920",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "4042321920",
+				"label": {
+					"en": "cosPhi, kVar, kVAh, kVARh (standard)",
+					"de": "cosPhi, kVar, kVAh, kVARh (Standard)"
+				}
+			},
+			{
+				"id": "16843009",
+				"label": {
+					"en": "Total consumption kWh (total)",
+					"de": "Gesamtverbrauch kWh (Gesamt)"
+				}
+			},
+			{
+				"id": "2155905024",
+				"label": {
+					"en": "cosPhi Power Factor",
+					"de": "cosPhi Leistungsfaktor"
+				}
+			},
+			{
+				"id": "538976256",
+				"label": {
+					"en": "kVar Reactive Power",
+					"de": "kVar Blindleistung"
+				}
+			},
+			{
+				"id": "2694881280",
+				"label": {
+					"en": "CosPhi + kVar",
+					"de": "CosPhi + kVar"
+				}
+			},
+			{
+				"id": "4294967043",
+				"label": {
+					"en": "All values ",
+					"de": "Alle Werte "
+				}
+			}
+			]
+
+  },
+
+  {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 1",
+      "nl": "Rapportage interval rapport groep 1",
+	  "de": "Berichtsintervall an Berichtgruppe 1"
+    },
+    "hint": {
+      "en": "Parameter 111: Determines the interval for sending report to devices in report group 1.",
+      "nl": "Parameter 111: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste rapport groep.",
+	  "de": "Parameter 111: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 1."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 3600
+  },
+  {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 2",
+      "nl": "Rapportage interval rapport groep 2",
+	  "de": "Berichtsintervall an Berichtgruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 112: Determines the interval for sending report to devices in report group 2.",
+      "nl": "Parameter 112: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e rapport groep.",
+	  "de": "Parameter 112: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 2."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4,
+	  "signed": false
+    },
+    "value":7200
+  },
+  {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 3",
+      "nl": "Rapportage interval rapport groep 3",
+	  "de": "Berichtsintervall an Berichtgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 113: Determines the interval for sending report to devices in report group 3.",
+      "nl": "Parameter 113: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e rapport groep.",
+	  "de": "Parameter 113: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 3."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 7200
+  }]},
+  
+    {
+   "type": "group",
+    "label": {
+      "en": "Production settings time interval reporting",
+	  "de": "Zeitintervallberichterstattung für Produktion"
+		},
+	"children": [  
+  
+  {
+    "id": "104",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 4 report type",
+      "nl": "Rapport type rapport groep 4",
+	  "de": "Berichttyp an Berichtsgruppe 4"
+	  
+    },
+    "hint": {
+      "en": "Parameter 104: Determines the type of reports sent to devices in the report group. Overwrites the expert setting!",
+      "nl": "Parameter 104: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de rapport groep. Overschrijft de expertinstellingen!",
+	  "de": "Parameter 104: Bestimmt die Art der Berichte, die an die Geräte in der ersten Berichtsgruppe gesendet werden. Überschreibt die Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 104,
+      "size": 4,
+	  "signed": false
+    },
+    "value": "50529027",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "50529027",
+				"label": {
+					"en": "W & kWh (standard)",
+					"de": "W & kWh (Standard)"
+				}
+			},
+			{
+				"id": "33686018",
+				"label": {
+					"en": "Consumption W",
+					"de": "Momentanverbrauch W"
+				}
+			},
+			{
+				"id": "134744064",
+				"label": {
+					"en": "Current power A",
+					"de": "Stromverbrauch A "
+				}
+			},
+			{
+				"id": "168430082",
+				"label": {
+					"en": "W & A",
+					"de": "W & A"
+				}
+			},
+			{
+				"id": "4294967043",
+				"label": {
+					"en": "All values",
+					"de": "Alle Werte"
+				}
+			}
+			
+		]
+  },
+  {
+    "id": "105",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 5 report type",
+      "nl": "Rapport type raport groep 5",
+	  "de": "Berichttyp an Berichtsgruppe 5"
+    },
+    "hint": {
+      "en": "Parameter 105: Determines the type of reports sent to devices in the report group. Overwrites expert setting!",
+      "nl": "Parameter 105: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de rapport groep. Overschrijft de expertinstellingen!",
+	  "de": "Parameter 105: Bestimmt die Art der Berichte, die an die Geräte in der zweiten Berichtsgruppe gesendet werden. Überschreibt die Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 105,
+      "size": 4,
+	  "signed": false
+    },
+    "value": "202116096",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "202116096",
+				"label": {
+					"en": "A+V (standard)",
+					"de": "A+V (Standard)"
+				}
+			},
+			{
+				"id": "67372032",
+				"label": {
+					"en": "Voltage V",
+					"de": "Spannung V"
+				}
+			},
+			{
+				"id": "16843009",
+				"label": {
+					"en": "Total consumption kWh",
+					"de": "Gesamtverbrauch kWh"
+				}
+			},
+			{
+				"id": "84215041",
+				"label": {
+					"en": "V + kWh",
+					"de": "V + kWh"
+				}
+			},
+			{
+				"id": "4294967043",
+				"label": {
+					"en": "All values",
+					"de": "Alle Werte"
+				}
+			}
+		]
+  },
+  {
+    "id": "106",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 6 report type",
+      "nl": "Rapport type rapport groep 6",
+	  "de": "Berichttyp an Berichtsgruppe 6"
+    },
+    "hint": {
+      "en": "Parameter 106: Determines the type of reports sent to devices in the  report group. Overwrites the basic and expert setting!",
+      "nl": "Parameter 106: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de rapport groep. Overschrijft de basis- en expertinstellingen!",
+	  "de": "Parameter 106: Bestimmt die Art der Berichte, die an die Geräte in der dritten Berichtsgruppe gesendet werden. Überschreibt die Grundeinstellung und Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 106,
+      "size": 4,
+	  "signed": false
+    },
+    "value": "4042321920",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "4042321920",
+				"label": {
+					"en": "cosPhi, kVar, kVAh, kVARh (standard)",
+					"de": "cosPhi, kVar, kVAh, kVARh (Standard)"
+				}
+			},
+			{
+				"id": "16843009",
+				"label": {
+					"en": "Total consumption kWh (total)",
+					"de": "Gesamtverbrauch kWh (Gesamt)"
+				}
+			},
+			{
+				"id": "2155905024",
+				"label": {
+					"en": "cosPhi Power Factor",
+					"de": "cosPhi Leistungsfaktor"
+				}
+			},
+			{
+				"id": "538976256",
+				"label": {
+					"en": "kVar Reactive Power",
+					"de": "kVar Blindleistung"
+				}
+			},
+			{
+				"id": "2694881280",
+				"label": {
+					"en": "CosPhi + kVar",
+					"de": "CosPhi + kVar"
+				}
+			},
+			{
+				"id": "4294967043",
+				"label": {
+					"en": "All values ",
+					"de": "Alle Werte "
+				}
+			}
+]
+  },
+
+  {
+    "id": "114",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 4",
+      "nl": "Rapportage interval rapport groep 4",
+	  "de": "Berichtsintervall an Berichtgruppe 4"
+    },
+    "hint": {
+      "en": "Parameter 114: Determines the interval for sending report to devices in report group 4.",
+      "nl": "Parameter 114: Bepaalt de interval voor het versturen van rapporten naar apparaten in de rapport groep.",
+	  "de": "Parameter 114: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 4."
+    },
+    "zwave": {
+      "index": 114,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 3600
+  },
+  {
+    "id": "115",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 5",
+      "nl": "Rapportage interval rapport groep 5",
+	  "de": "Berichtsintervall an Berichtgruppe 5"
+    },
+    "hint": {
+      "en": "Parameter 115 Determines the interval for sending report to devices in report group 5.",
+      "nl": "Parameter 115: Bepaalt de interval voor het versturen van rapporten naar apparaten in de rapport groep.",
+	  "de": "Parameter 115: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 5."
+    },
+    "zwave": {
+      "index": 115,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 7200
+  },
+  {
+    "id": "116",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 6",
+      "nl": "Rapportage interval rapport groep 6",
+	  "de": "Berichtsintervall an Berichtgruppe 6"
+    },
+    "hint": {
+      "en": "Parameter 115: Determines the interval for sending report to devices in report group 6.",
+      "nl": "Parameter 115: Bepaalt de interval voor het versturen van rapporten naar apparaten in de rapport groep.",
+	  "de": "Parameter 115: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 6."
+    },
+    "zwave": {
+      "index": 115,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 7200
+  }]},
+  
+    
+  
+  {
+   "type": "group",
+    "label": {
+      "en": "Expert setting for consumption time intervall reporting . Overwrites user setting!",
+	  "de": "Experteneinstellung für Berichtseinstellung für Verbrauch. Überschreibt Benutzereinstellung! "
+		},
+	"children": [
+	{
+    "id": "101e",
+    "type": "number",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type rapport groep 1",
+	  "de": "Berichttyp an Berichtsgruppe 1"
+	  
+    },
+    "hint": {
+      "en": "Parameter 101: Expert setting\n Use the manual for the device at http://support.aeotec.com. ",
+	  "de": "Parameter 101: Experteneinstellung\n Nutzen Sie das Handbuch des Gerätes unter http://support.aeotec.com. "
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 50529027
+  },
+  {
+    "id": "102e",
+    "type": "number",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type raport groep 2",
+	  "de": "Berichttyp an Berichtsgruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 102: Expert setting \n Use the manual for the device at http://support.aeotec.com.",
+	  "de": "Parameter 102: Experteneinstellung\nNutzen Sie das Handbuch des Gerätes unter http://support.aeotec.com."
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 202116096
+  },
+  {
+    "id": "103e",
+    "type": "number",
+    "label": {
+      "en": "Report group 3 report type",
+      "nl": "Rapport type rapport groep 3",
+	  "de": "Berichttyp an Berichtsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 103: Expert setting\nUse the manual for the device at http://support.aeotec.com.",
+	  "de": "Parameter 103: Experteneinstellung \nNutzen Sie das Handbuch des Gerätes unter http://support.aeotec.com."
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 4042321920
+  }
+	
+		
+	]
+  },
+{
+   "type": "group",
+    "label": {
+      "en": "Expert setting for production time intervall reporting . Overwrites user setting!",
+	  "de": "Experteneinstellung für Berichtseinstellung für Produktion. Überschreibt Benutzereinstellung!  "
+		},
+	"children": [
+	{
+    "id": "104e",
+    "type": "number",
+    "label": {
+      "en": "Report group 4 report type",
+      "nl": "Rapport type rapport groep 4",
+	  "de": "Berichttyp an Berichtsgruppe 4"
+	  
+    },
+    "hint": {
+      "en": "Parameter 101: Expert setting\n Use the manual for the device at http://support.aeotec.com. ",
+	  "de": "Parameter 101: Experteneinstellung\n Nutzen Sie das Handbuch des Gerätes unter http://support.aeotec.com. "
+    },
+    "zwave": {
+      "index": 104,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 50529027
+  },
+  {
+    "id": "105e",
+    "type": "number",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type raport groep 2",
+	  "de": "Berichttyp an Berichtsgruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 102: Expert setting \n Use the manual for the device at http://support.aeotec.com.",
+	  "de": "Parameter 102: Experteneinstellung\nNutzen Sie das Handbuch des Gerätes unter http://support.aeotec.com."
+    },
+    "zwave": {
+      "index": 105,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 202116096
+  },
+  {
+    "id": "106e",
+    "type": "number",
+    "label": {
+      "en": "Report group 3 report type",
+      "nl": "Rapport type rapport groep 3",
+	  "de": "Berichttyp an Berichtsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 103: Expert setting\nUse the manual for the device at http://support.aeotec.com.",
+	  "de": "Parameter 103: Experteneinstellung \nNutzen Sie das Handbuch des Gerätes unter http://support.aeotec.com."
+    },
+    "zwave": {
+      "index": 106,
+      "size": 4,
+	  "signed": false
+    },
+    "value": 4042321920
+  }
+	
+		
+	]
+  }   
+]

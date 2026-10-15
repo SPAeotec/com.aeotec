@@ -4,60 +4,84 @@
   "actions": [
     {
       "id": "zw098_rainbow",
+	  "platforms": [ "local", "cloud" ],
       "title": {
         "en": "Rainbow color mode",
-        "nl": "Regenboog kleuren modus"
+        "nl": "Regenboog kleuren modus",
+		"de": "Regenbogenmodus"
       },
       "hint": {
         "en": "Number of cycles (0 - 254, where 0 is unlimited). Color transition speed (0 - 100, where 100 is fastest).",
-        "nl": "Aantal cycli (0 - 254, waarbij 0 oneindig is). Kleur overgangssnelheid (0 - 100, waarbij 100 het snelst is)."
+        "nl": "Aantal cycli (0 - 254, waarbij 0 oneindig is). Kleur overgangssnelheid (0 - 100, waarbij 100 het snelst is).",
+		"de": "Number of cycles (0 - 254, where 0 is unlimited). Color transition speed (0 - 100, where 100 is fastest)."
       },
+	   "titleFormatted": {
+		"en": "Rainbow color mode with [[cycles]] cycles, color transition speed [[speed]] and [[fadeType]]",
+		"de": "Regenbogenmodus mit [[cycles]] Zyklen, Farbübergangsgeschwindigkeit [[speed]] und [[fadeType]]"
+		},
       "args": [
         {
           "name": "cycles",
+		   "title": {
+			  "en": "Cycles",
+			  "de": "Durchgänge"
+		  },
           "type": "number",
           "min": 0,
           "max": 254,
           "step": 1,
           "placeholder": {
             "en": "Number of cycles",
-            "nl": "Aantal cycli"
+            "nl": "Aantal cycli",
+			"de": "Zyklenanzahl"
           }
         },
         {
           "name": "speed",
+		   "title": {
+			  "en": "Speed",
+			  "de": "Geschwindigkeit"
+		  },
           "type": "number",
           "min": 0,
           "max": 100,
           "step": 1,
           "placeholder": {
             "en": "Color transition speed",
-            "nl": "Kleur overgangssnelheid"
+            "nl": "Kleur overgangssnelheid",
+			"de": "Farbübergangsgeschwindigkeit"
           }
         },
         {
           "name": "fadeType",
+		   "title": {
+			  "en": "Fade Type",
+			  "de": "Farbübergang"
+		  },
           "type": "dropdown",
           "values": [
             {
               "id": "0",
               "label": {
                 "en": "Smooth color transition",
-                "nl": "Soepele kleur overgang"
+                "nl": "Soepele kleur overgang",
+				"de": "Sanfter Farbübergang"
               }
             },
             {
               "id": "1",
               "label": {
                 "en": "Direct color transition",
-                "nl": "Directe kleur overgang"
+                "nl": "Directe kleur overgang",
+				"de": "Direkter Farbübergang"
               }
             },
             {
               "id": "2",
               "label": {
                 "en": "Fade out fade in color transition",
-                "nl": "Langzaam gedimde kleur overgang"
+                "nl": "Langzaam gedimde kleur overgang",
+				"de": "Farbübergang ausblenden und einblenden"
               }
             }
           ],

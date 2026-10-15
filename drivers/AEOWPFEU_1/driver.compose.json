@@ -1,0 +1,59 @@
+{
+  "id": "AEOWPFEU_1",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Smart Outlet (IM6001) Aeotec SmartThings",
+	"de": "Smart Outlet (IM6001) Aeotec SmartThings"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff",
+	"measure_power",
+	"measure_voltage",
+	"measure_current"
+ 
+  ],
+   "images": {
+    "large": "drivers/AEOWPFEU_1/assets/images/large.png",
+    "small": "drivers/AEOWPFEU_1/assets/images/small.png"
+  },
+  "connectivity": ["zigbee"],
+  "zigbee": {
+     "productId": "outletv4",
+    "manufacturerName": "SmartThings",
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          9,
+          15,
+		  25,
+          2820
+        ],
+        "bindings": [
+          6,
+		  25,
+          2820,
+		  768,
+		  1285,
+		  1288,
+		  1291
+		  
+        ]
+      }
+    },
+
+    "learnmode": {
+      "image": "drivers/AEOWPFEU_1/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press and hold the button on the side for 5 seconds and release.",
+        "de": "Halten Sie die Taste an der Seite für 5 Sekunden gedrückt."
+      }
+    }
+  }
+  
+}

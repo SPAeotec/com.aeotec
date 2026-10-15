@@ -1,0 +1,15 @@
+{
+  "class": "other",
+  "connectivity": [
+    "zigbee"
+  ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "images": {
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  }
+}

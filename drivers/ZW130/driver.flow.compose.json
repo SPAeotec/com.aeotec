@@ -2,82 +2,108 @@
   "triggers": [
     {
       "id": "zw130_scene",
+	  "platforms": [ "local", "cloud" ],
       "title": {
-        "en": "Scene is activated",
-        "nl": "Scene is geactiveerd"
+		"en": "A key was pressed",
+	    "de": "Eine Taste wurde gedrückt",
+        "nl": "Een toets werd ingedrukt"
+		
       },
+	  "titleFormatted": {
+		"en": "Button [[button]] is [[scene]]",
+		"de": "Taste [[button]] wird [[scene]]"
+		},
       "args": [
         {
           "name": "button",
+		   "title": {
+			  "en": "Select a button",
+			  "de": "Tastenauswahl"
+		  },
           "type": "dropdown",
           "values": [
             {
               "id": "1",
               "label": {
                 "en": "Top left",
-                "nl": "Links boven"
+                "nl": "Links boven",
+				"de": "Oben links"
               }
             },
             {
               "id": "2",
               "label": {
                 "en": "Top right",
-                "nl": "Rechts boven"
-              }
+                "nl": "Rechts boven",
+				"de": "Oben rechts"
+  			  }
             },
             {
               "id": "3",
               "label": {
                 "en": "Bottom left",
-                "nl": "Links onder"
+                "nl": "Links onder",
+				"de": "Unten links"
               }
             },
             {
               "id": "4",
               "label": {
                 "en": "Bottom right",
-                "nl": "Rechts onder"
+                "nl": "Rechts onder",
+				"de": "Unten rechts"
               }
             }
           ]
         },
         {
           "name": "scene",
+		  "platforms": [ "local", "cloud" ],
+		  "title": {
+			  "en": "action",
+			  "de": "Aktion",
+			  "nl": "actie"
+		  },
           "type": "dropdown",
           "values": [
             {
               "id": "Key Pressed 1 time",
               "label": {
                 "en": "Pressed 1x",
-                "nl": "1x gedrukt"
+                "nl": "1x gedrukt",
+				"de": "1x gedrückt"
               }
             },
             {
               "id": "Key Held Down",
               "label": {
                 "en": "Hold press (5x a second)",
-                "nl": "Lang drukken (5x per seconde)"
+                "nl": "Lang drukken (5x per seconde)",
+				"de": "Gehalten (5 Sekunden gedrückt)"
               }
             },
             {
               "id": "Key Released",
               "label": {
                 "en": "Press released",
-                "nl": "Drukken losgelaten"
+                "nl": "Drukken losgelaten",
+				"de": "Losgelassen"
               }
             },
             {
               "id": "Key Slide Up",
               "label": {
                 "en": "Slide Up",
-                "nl": "Omhoog Schuiven"
+                "nl": "Omhoog Schuiven",
+				"de": "Hochgleiten"
               }
             },
             {
               "id": "Key Slide Down",
               "label": {
                 "en": "Slide Down",
-                "nl": "Omlaag schuiven"
+                "nl": "Omlaag schuiven",
+				"de": "Runtergleiten"
               }
             }
           ]
@@ -86,13 +112,20 @@
     },
     {
       "id": "zw130_dim",
+	  "platforms": [ "local", "cloud" ],
       "title": {
         "en": "Dim level has been sent",
-        "nl": "Het helderheidsniveau is verzonden"
+        "nl": "Het helderheidsniveau is verzonden",
+		"de": "Dimmlevel wurde gesendet"
       },
+	  "titleFormatted": {
+		"en": "Dim level has been sent by button [[button]]",
+		"de": "Dimmlevel durch Taste [[button]] gesendet wurde"
+		},
       "hint": {
         "en": "The dim level is send when you slide your finger over the wallmote. The brightness level will be the height you stopped at (full height of the {{driverNameEn}}).",
-        "nl": "Het helderheidsniveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de {{driverNameNl}})."
+        "nl": "Het helderheidsniveau wordt verzonden bij het schuiven van de vinger over de wallmote. Het helderheidsniveau is de hoogte waar je stopt (volle hoogte van de {{driverNameNl}}).",
+		"de": "Die Helligkeitsstufe wird beim Gleiten des Fingers über die Wallmote gesendet. Die Helligkeitsstufe ist die Höhe, in der Sie anhalten (volle Höhe des {{driverNameEn}})"
       },
       "tokens": [
         {
@@ -108,34 +141,42 @@
       "args": [
         {
           "name": "button",
+		  "title": {
+			  "en": "Select a button",
+			  "de": "Tastenauswahl"
+		  },
           "type": "dropdown",
           "values": [
             {
               "id": "1",
               "label": {
                 "en": "Top left",
-                "nl": "Links boven"
+                "nl": "Links boven",
+				"de": "Oben links"
               }
             },
             {
               "id": "2",
               "label": {
                 "en": "Top right",
-                "nl": "Rechts boven"
+                "nl": "Rechts boven",
+				"de": "Oben rechts"
               }
             },
             {
               "id": "3",
               "label": {
                 "en": "Bottom left",
-                "nl": "Links onder"
+                "nl": "Links onder",
+				"de": "Unten links"
               }
             },
             {
               "id": "4",
               "label": {
                 "en": "Bottom right",
-                "nl": "Rechts onder"
+                "nl": "Rechts onder",
+				"de": "Unten rechts"
               }
             }
           ]
@@ -144,13 +185,16 @@
     },
     {
       "id": "zw130_battery_full",
+	  "platforms": [ "local", "cloud" ],
       "title": {
         "en": "Battery fully charged",
-        "nl": "Batterij volledig opgeladen"
+        "nl": "Batterij volledig opgeladen",
+		"de": "Batterie ist vollständlig geladen"
       },
       "hint": {
         "en": "This card will only trigger if the {{driverNameEn}} has been included as secure.",
-        "nl": "Deze kaart zal alleen activeren als de {{driverNameNl}} beveiligd is toevoegd."
+        "nl": "Deze kaart zal alleen activeren als de {{driverNameNl}} beveiligd is toevoegd.",
+		"de": "Diese Karte wird nur ausgelöst, wenn der {{driverNameEn}} als sicher eingebunden wurde."
       }
     }
   ],

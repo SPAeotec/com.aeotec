@@ -1,5 +1,6 @@
 {
   "id": "ZW100",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Multisensor 6"
   },
@@ -17,20 +18,43 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [
+      "CR123A",
+      "CR123A"
+    ]
+  },
+  "connectivity": ["zwave"],
   "zwave": {
-    "manufacturerId": 134,
+    "manufacturerId": [
+     134,
+     362
+    ],
     "productTypeId": [
       2,
-      514
+      514,
+      258,
+      6658,
+      7426
     ],
+	"requireSecure": false,
     "productId": 100,
     "zwaveAllianceProductId": 2714,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2714/Aeon Labs MultiSensor 6 manual.pdf",
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Press the action button on your {{driverNameEn}}. For secure pairing press this button twice.",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}. Voor beveiligd koppelen druk tweemaal op deze knop."
+        "en": "Press the action button  on your {{driverNameEn}}.",
+        "nl": "Druk op de actie knop van de {{driverNameEn}}, om de leermodus te activeren.",
+		"de": "Drückes Sie die Taste am {{driverNameEn}} einmal."		
+      }
+    },
+	"unlearnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button  on your {{driverNameEn}}.",
+        "nl": "Druk 1 keer op de actie knop van de {{driverNameEn}}, om de leermodus te activeren.",
+		"de": "Drückes Sie die Taste am {{driverNameEn}} einmal."		
       }
     },
     "associationGroups": [
@@ -40,7 +64,8 @@
       "1": {
         "hint": {
           "en": "This is the lifeline, it is not recommended to remove Homey's id from this association group.",
-          "nl": "Dit is de levenslijn, het is niet aangeraden om Homey's zijn id te verwijderen uit deze associatie groep."
+          "nl": "Dit is de levenslijn, het is niet aangeraden om Homey's zijn id te verwijderen uit deze associatie groep.",
+		  "de": "Dies ist die Lifeline, es wird nicht empfohlen, die ID von Homey aus dieser Assoziationsgruppe zu entfernen."
         }
       }
     },
@@ -50,6 +75,11 @@
         "value": 2,
         "size": 1
       },
+	  {
+        "id": 3,
+        "value": 30,
+        "size": 2
+      },
       {
         "id": 40,
         "value": 1,
@@ -57,8 +87,13 @@
       },
       {
         "id": 111,
-        "value": 600,
+        "value": 3600,
         "size": 4
+      },
+	  {
+        "id": 252,
+        "value": 0,
+        "size": 1
       }
     ]
   }

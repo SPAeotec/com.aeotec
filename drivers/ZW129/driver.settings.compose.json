@@ -4,11 +4,13 @@
     "type": "checkbox",
     "label": {
       "en": "Touch sounds",
-      "nl": "Aanraak geluid"
+      "nl": "Aanraak geluid",
+	  "de": "Töne bei Berührung"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the {{driverNameEn}} makes a sound when touched.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de {{driverNameNl}} geluid maakt bij het aanraken."
+      "en": "Parameter 1: Determines whether or not the {{driverNameEn}} makes a sound when touched.",
+      "nl": "Parameter 1: Bepaalt of de {{driverNameNl}} geluid maakt bij het aanraken.",
+	  "de": "Parameter 1: Bestimmt, ob der {{driverNameEn}} bei Berührung einen Ton erzeugt oder nicht."
     },
     "zwave": {
       "index": 1,
@@ -21,11 +23,13 @@
     "type": "checkbox",
     "label": {
       "en": "Touch vibration",
-      "nl": "Aanraak vibratie"
+      "nl": "Aanraak vibratie",
+	  "de": "Vibaraion bei Berührung"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the {{driverNameEn}} vibrates when touched.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de {{driverNameNl}} trilt bij het aanraken."
+      "en": "Parameter 2: Determines whether or not the {{driverNameEn}} vibrates when touched.",
+      "nl": "Parameter 2: Bepaalt of de {{driverNameNl}} trilt bij het aanraken.",
+	  "de": "Parameter 2: Bestimmt, ob der {{driverNameEn}} bei Berührung vibriert oder nicht."
     },
     "zwave": {
       "index": 2,
@@ -38,11 +42,13 @@
     "type": "checkbox",
     "label": {
       "en": "Slide dimming function",
-      "nl": "Swipe dim functie"
+      "nl": "Swipe dim functie",
+	  "de": "Dimmen beim Gleiten"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not dimming on slide is enabled.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of dimmen met swipen geactiveerd is."
+      "en": "Parameter 3: Determines whether or not dimming on slide is enabled.",
+      "nl": "Parameter 3: Bepaalt of dimmen met swipen geactiveerd is.",
+	  "de": "Parameter 3: Legt fest, ob das Dimmen auf Folie aktiviert ist oder nicht."
     },
     "zwave": {
       "index": 3,
@@ -55,11 +61,13 @@
     "type": "number",
     "label": {
       "en": "Low battery level",
-      "nl": "Laag batterij niveau"
+      "nl": "Laag batterij niveau",
+	  "de": "Niedriger Batteristand"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the percentage of battery value to at which the low battery alarm will go off.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt hoe laag het batterijpercentage moet zijn om het alarm af te laten gaan."
+      "en": "Parameter 5: Determines the percentage of battery value to at which the low battery alarm will go off.",
+      "nl": "Parameter 5: Bepaalt hoe laag het batterijpercentage moet zijn om het alarm af te laten gaan.",
+	  "de": "Parameter 5: Bestimmt den Prozentsatz des Batteriewerts, bei dem der Alarm für schwache Batterie ausgelöst wird."
     },
     "zwave": {
       "index": 39,
@@ -75,7 +83,8 @@
     "type": "group",
     "label": {
       "en": "LED color when sending data",
-      "nl": "LED kleur bij verzenden data"
+      "nl": "LED kleur bij verzenden data",
+	  "de": "LED Farbe beim senden"
     },
     "children": [
       {
@@ -83,11 +92,13 @@
         "type": "dropdown",
         "label": {
           "en": "Color Name",
-          "nl": "Kleur Naam"
+          "nl": "Kleur Naam",
+		  "de": "Farbe"
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the colour of the LED when sending data. * = Unfortunately the LED can't be turned off completely, this is the most faint color.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de kleur van de LED wanneer er data verstuurd wordt. * = Helaas kan de LED niet volledig uitgezet worden, dit is de minst felle kleur."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de kleur van de LED wanneer er data verstuurd wordt. * = Helaas kan de LED niet volledig uitgezet worden, dit is de minst felle kleur.",
+		  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt die Farbe der LED beim Senden von Daten. * = Leider kann die LED nicht komplett ausgeschaltet werden, dies ist die schwächste Farbe."
         },
         "value": "0,0,255",
         "values": [
@@ -95,84 +106,96 @@
             "id": "1,1,1",
             "label": {
               "en": "Off *",
-              "nl": "Uit *"
+              "nl": "Uit *",
+			  "de": "Aus *"
             }
           },
           {
             "id": "255,0,0",
             "label": {
               "en": "Red",
-              "nl": "Rood"
+              "nl": "Rood",
+			  "de": "Rot"
             }
           },
           {
             "id": "255,127,0",
             "label": {
               "en": "Orange",
-              "nl": "Oranje"
+              "nl": "Oranje",
+			  "de": "Orange"
             }
           },
           {
             "id": "255,255,0",
             "label": {
               "en": "Yellow",
-              "nl": "Geel"
+              "nl": "Geel",
+			  "de": "Gelb"
             }
           },
           {
             "id": "0,255,0",
             "label": {
               "en": "Green",
-              "nl": "Groen"
+              "nl": "Groen",
+			  "de": "Grün"
             }
           },
           {
             "id": "0,255,255",
             "label": {
               "en": "Turquise",
-              "nl": "Turkoois"
+              "nl": "Turkoois",
+			  "de": "Türkis"
             }
           },
           {
             "id": "0,127,255",
             "label": {
               "en": "Cyan",
-              "nl": "Cyaan"
+              "nl": "Cyaan",
+			  "de": "Cyan"
             }
           },
           {
             "id": "0,0,255",
             "label": {
               "en": "Blue",
-              "nl": "Blauw"
+              "nl": "Blauw",
+			  "de": "Blau"
             }
           },
           {
             "id": "255,0,255",
             "label": {
               "en": "Pink",
-              "nl": "Roze"
+              "nl": "Roze",
+			  "de": "Rosa"
             }
           },
           {
             "id": "64,0,255",
             "label": {
               "en": "Purple",
-              "nl": "Paars"
+              "nl": "Paars",
+			  "de": "Lila"
             }
           },
           {
             "id": "255,255,255",
             "label": {
               "en": "White",
-              "nl": "Wit"
+              "nl": "Wit",
+			  "de": "Weiß"
             }
           },
           {
             "id": "custom",
             "label": {
               "en": "Custom",
-              "nl": "Aangepast"
+              "nl": "Aangepast",
+			  "de": "Angepasst"
             }
           }
         ]
@@ -182,11 +205,13 @@
         "type": "number",
         "label": {
           "en": "Brightness namecolor",
-          "nl": "Helderheid naamkleur"
+          "nl": "Helderheid naamkleur",
+		  "de": "Helligkeit der Farbe"
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the brightness level of the color.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheidsniveau van de kleur."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheidsniveau van de kleur.",
+		  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt den Helligkeitsgrad der Farbe."
         },
         "value": 100,
         "attr": {
@@ -199,11 +224,13 @@
         "type": "number",
         "label": {
           "en": "Red",
-          "nl": "Rood"
+          "nl": "Rood",
+		  "de": "Rot"
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the red channel brightness.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het rode kleur kanaal."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het rode kleur kanaal.",
+		  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt die Helligkeit des roten Kanals."
         },
         "value": 0,
         "attr": {
@@ -216,11 +243,13 @@
         "type": "number",
         "label": {
           "en": "Green",
-          "nl": "Groen"
+          "nl": "Groen",
+		  "de": "Grün"
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the green channel brightness.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het groene kleur kanaal."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het groene kleur kanaal.",
+		  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt die Helligkeit des grünen Kanals."
         },
         "value": 0,
         "attr": {
@@ -233,11 +262,13 @@
         "type": "number",
         "label": {
           "en": "Blue",
-          "nl": "Blauw"
+          "nl": "Blauw",
+		  "de": "Blau"
         },
         "hint": {
           "en": "This parameter ({{zwaveParameterIndex}}) determines the blue channel brightness.",
-          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het blauwe kleur kanaal."
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de helderheid van het blauwe kleur kanaal.",
+		  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt die Helligkeit des blauen Kanals."
         },
         "value": 255,
         "attr": {

@@ -4,11 +4,13 @@
     "type": "radio",
     "label": {
       "en": "Operation mode",
-      "nl": "Werking"
+      "nl": "Werking",
+	  "de": "Betriebsmodus"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether the alarm goes off when water is detected or when no water is detected.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm afgaat als er water gedetecteert wordt of wanneer er geen water gedetecteert wordt."
+      "en": "Parameter 1: Determines whether the alarm goes off when water is detected or when no water is detected.",
+      "nl": "Parameter 1: Bepaalt of het alarm afgaat als er water gedetecteert wordt of wanneer er geen water gedetecteert wordt.",
+	  "de": "Parameter 1: Legt fest, ob der Alarm ausgelöst wird, wenn Wasser erkannt wird oder wenn kein Wasser erkannt wird."
     },
     "zwave": {
       "index": 1,
@@ -20,14 +22,16 @@
         "id": "0",
         "label": {
           "en": "Warn when water detected",
-          "nl": "Waarschuw als er water gedetecteert wordt"
+          "nl": "Waarschuw als er water gedetecteert wordt",
+		  "de": "Warnen, wenn Wasser entdeckt wird"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Warn when no water detected",
-          "nl": "Waarschuw als er geen water gedetecteert wordt"
+          "nl": "Waarschuw als er geen water gedetecteert wordt",
+		  "de": "Warnung, wenn kein Wasser erkannt wird"
         }
       }
     ]
@@ -37,37 +41,42 @@
     "type": "dropdown",
     "label": {
       "en": "Information to send",
-      "nl": "Te versturen informatie"
+      "nl": "Te versturen informatie",
+	  "de": "Zu übermittelnde Informationen"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what kind of report will be sent to the associated nodes when the {{driverNameEn}} detects water.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt wat voor soort rapport er wordt verzonder naar de geassocieerde apparaten wanneer de {{driverNameEn}} water detecteert."
+      "en": "Parameter 121: Determines what kind of report will be sent to the associated nodes when the Sensor detects water.",
+      "nl": "Parameter 121: Bepaalt wat voor soort rapport er wordt verzonden naar de geassocieerde apparaten wanneer de sensor water detecteert.",
+	  "de": "Parameter 121: Legt fest, welche Art von Bericht an die zugehörigen Knoten gesendet wird, wenn der Sensor Wasser feststellt"
     },
     "zwave": {
       "index": 121,
       "size": 4
     },
-    "value": "299",
+    "value": "273",
     "values": [
       {
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Niets"
+          "nl": "Niets",
+		  "de": "Nichts"
         }
       },
       {
-        "id": "298",
+        "id": "272",
         "label": {
           "en": "Water detect",
-          "nl": "Water detectie"
+          "nl": "Water detectie",
+		  "de": "Wasser erkannt"
         }
       },
       {
-        "id": "299",
+        "id": "273",
         "label": {
           "en": "Water detect and battery",
-          "nl": "Water detectie and batterij"
+          "nl": "Water detectie and batterij",
+		  "de": "Wasser erkannt und Battereistatus"
         }
       }
     ]

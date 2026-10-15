@@ -4,11 +4,13 @@
     "type": "checkbox",
     "label": {
       "en": "Current overload protection",
-      "nl": "Bescherming tegen overbelasting"
+      "nl": "Bescherming tegen overbelasting",
+	  "de": "Überstromschutz"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the {{driverNameEn}} protects plugged-in devices from overcurrent.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of de {{driverNameNl}} de ingeplugde appraten beschermd tegen overbelasting."
+      "en": "Parameter 3: Determines whether or not the Smart Switch 6 protects plugged-in devices from overcurrent.",
+      "nl": "Parameter 3: Bepaalt of de Smart Switch 6 de ingeplugde appraten beschermd tegen overbelasting.",
+	  "de": "Parameter 3: Legt fest, ob der Smart Switch 6 eingesteckte Geräte vor Überstrom schützt oder nicht, basierend auf dem eingestellten Wert."
     },
     "zwave": {
       "index": 3,
@@ -21,11 +23,13 @@
     "type": "dropdown",
     "label": {
       "en": "Configure the output load status after re-power",
-      "nl": "Zet na een stroomonderbreking deze Smart Switch"
+      "nl": "Zet na een stroomonderbreking deze Smart Switch",
+			"de": "Maßnahmen bei einem Stromausfall."
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the device behaviour after power loss.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van het appraat na stroomuitval."
+      "en": "Parameter 20: Determines the device behaviour after power loss.",
+      "nl": "Parameter 20: Bepaalt het gedrag van het appraat na stroomuitval.",
+	  "de": "Parameter 20: Bestimmt den Zustand des Schalters nach der Rückkehr der Stromversorgung."
     },
     "zwave": {
       "index": 20,
@@ -37,52 +41,40 @@
         "id": "0",
         "label": {
           "en": "Status before re-power",
-          "nl": "Status voor stroomonderbreking"
+          "nl": "Status voor stroomonderbreking",
+		  "de": "letzter Status"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Always on",
-          "nl": "Altijd aan"
+          "nl": "Altijd aan",
+		  "de": "Einschalten"
         }
       },
       {
         "id": "2",
         "label": {
           "en": "Always off",
-          "nl": "Altijd uit"
+          "nl": "Altijd uit",
+		  "de": "Ausschalten"
         }
       }
     ]
   },
-  {
-    "id": "80",
-    "type": "checkbox",
-    "label": {
-      "en": "Notify associated devices when Smart Switch is toggled",
-      "nl": "Stuur notificaties naar geassocieerde apparaten wanneer de Smart Switch aan of uit wordt gezet"
-    },
-    "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not associated devices are notifiied of on/off events.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of geassocieerde apparaten notificaties ontvangen van aan/uit events."
-    },
-    "zwave": {
-      "index": 80,
-      "size": 1
-    },
-    "value": true
-  },
-  {
+    {
     "id": "81",
     "type": "dropdown",
     "label": {
       "en": "Configure the behaviour of the LED",
-      "nl": "Stel het gedrag van de LED in"
+      "nl": "Stel het gedrag van de LED in",
+	  "de": "Verhalten der LED"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour of the device LED.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag van de apparaat LED."
+      "en": "Parameter 81: Determines the behaviour of the device LED.",
+      "nl": "Parameter 81: Bepaalt het gedrag van de apparaat LED.",
+	  "de": "Parameter 81: Stellt das Verhalten der LED ein."
     },
     "zwave": {
       "index": 81,
@@ -94,61 +86,131 @@
         "id": "0",
         "label": {
           "en": "LED color follows load",
-          "nl": "LED kleur representeert stroom verbruik"
+          "nl": "LED kleur representeert stroom verbruik",
+		  "de": "LED farbe folgt der Last"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "LED color follows load for 5 seconds",
-          "nl": "LED kleur representeert stroom verbruik voor 5 seconden"
+          "nl": "LED kleur representeert stroom verbruik voor 5 seconden",
+		  "de": "LED farbe folgt für 5 Sekunden"
         }
       },
       {
         "id": "2",
         "label": {
           "en": "Night light mode",
-          "nl": "Nacht lamp modus"
+          "nl": "Nacht lamp modus",
+		  "de": "Nachtlichtmodus"
         }
       }
     ]
   },
   {
-    "id": "91",
+    "id": "83",
     "type": "number",
     "label": {
-      "en": "Minimum wattage change needed before an update report is send",
-      "nl": "Minimale verandering in wattage nodig voor het verzenden van een update"
+      "en": "Night light mode stting",
+	  "de": "Nachtlichtmodus konfiguration"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the minimum change of wattage before value reports are sent to Homey.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de minimale verandering in wattage voordat er rapporten worden verstuurd naar Homey."
+      "en": "Parameter 83: Changes the color tone in night light mode",
+	  "de": "Parameter 83: Ändert den Farbton im Nachtlichtmodus"
+    },
+    "zwave": {
+      "index": 83,
+      "size": 4,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 4294967295
+    },
+	
+    "value": 454302464
+  },
+    {
+    "id": "84",
+    "type": "number",
+    "label": {
+      "en": "Brightness level in Energy Mode/Momentary",
+	  "de": "Helligkeitsstufe im Energiemodus/Momentanmodus"
+    },
+    "hint": {
+      "en": "Parameter 83: Configure the brightness level of RGB LED (0%-100%) when it is in Energy Mode/Momentary",
+	  "de": "Parameter 83: Konfiguriert die Helligkeitsstufe der RGB-LED (0 %-100 %), wenn Smart Witch 6 im Energiemodus/Momentanmodus befindet."
+    },
+    "zwave": {
+      "index": 84,
+      "size": 4
+    },
+    "attr": {
+      "min": 0,
+      "max": 1684300900
+    },
+    "value": 842150450
+  },
+  {
+    "id": "90",
+    "value": true,
+    "label": {
+      "en": "Enable automatic reports",
+      "nl": "Schakel automatische rapportage in",
+	  "de": "Aktivieren des automatischen Berichtes."
+    },
+    "hint": {
+      "en": "Parameter 90: Determines whether or not automatic reports are enabled.",
+      "nl": "Parameter 90: Bepaalt of automatische rapportage is ingeschakeld.",
+	  "de": "Parameter 90: Bestimmt, ob automatische Berichte aktiviert sind oder nicht."
+    },
+    "zwave": {
+      "index": 90,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "91",
+    "value": 25,
+    "label": {
+      "en": "Wattage report change threshold",
+      "nl": "Wattage rapportage drempel",
+	  "de": "Watt Bericht Schwellwert"
+    },
+    "hint": {
+      "en": "Parameter 91: Determines the minimum value change in wattage before an automatic report is send to Homey.",
+      "nl": "Parameter 91: Bepaalt de minimum verandering in wattage voordat er een automatisch rapport naar Homey wordt verzonden.",
+	  "de": "Parameter 91: Bestimmt die minimale Wertänderung der Wattzahl, bevor ein automatischer Bericht an Homey gesendet wird." 
     },
     "zwave": {
       "index": 91,
       "size": 2,
-      "signed": false
+	  "signed": false
     },
     "attr": {
       "min": 0,
       "max": 60000
     },
-    "value": 25
+    "type": "number"
   },
   {
     "id": "92",
     "type": "number",
     "label": {
       "en": "Minimum wattage change (%) needed before an update report is send",
-      "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update"
+      "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update",
+	  "de": "Mindestwattageänderung (%), die erforderlich ist, bevor ein Update-Report gesendet wird"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the minimum percentage change in wattage before value reports are sent to Homey.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de minimale verandering in procenten van het wattage voordat er rapporten worden verstuurd naar Homey."
+      "en": "Parameter 92: Determines the minimum percentage change before a report is being send to Homey.",
+      "nl": "Parameter 92: Bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey",
+	  "de": "Parameter 92: Bestimmt die minimale prozentuale Änderung, bevor ein Bericht an Homey gesendet wird."
     },
     "zwave": {
       "index": 92,
-      "size": 1
+      "size": 2
     },
     "attr": {
       "min": 0,
@@ -160,66 +222,83 @@
     "id": "101",
     "type": "dropdown",
     "label": {
-      "en": "Information reports send to association group 1",
-      "nl": "Informatie updates naar associatie groep 1"
+      "en": "Information reports send to report group 1",
+      "nl": "Informatie updates naar rapport groep 1",
+	  "de": "Informationen welche an Berichtsgruppe 1 gesendet werden"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what information is sent to the devices in association group 1.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 1e associatie groep."
+      "en": "Parameter 101: Determines what information is sent to the devices in report group 1.",
+      "nl": "Parameter 101: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 1e rapport groep.",
+	  "de": "Parameter 101: Wählen Sie welche Informationen an die Geräte der Berichtsgruppe 1 gesendet werden."
     },
     "zwave": {
       "index": 101,
       "size": 4
     },
-    "value": "8",
+    "value": "2",
     "values": [
       {
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Geen"
+          "nl": "Geen",
+		  "de": "Nichts"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Voltage (V)",
-          "nl": "Voltage (V)"
+          "nl": "Voltage (V)",
+		  "de": "Spannung (V)"
         }
       },
       {
         "id": "2",
         "label": {
           "en": "Current (A)",
-          "nl": "Current (A)"
+          "nl": "Current (A)",
+		  "de": "Strom (A)"
         }
       },
       {
         "id": "4",
         "label": {
           "en": "Power (Watt)",
-          "nl": "Vermogen (Watt)"
+          "nl": "Vermogen (Watt)",
+		  "de": "Leistung (Watt)"
+        }
+      },
+	   {
+        "id": "6",
+        "label": {
+          "en": "Power (Watt) & Current (A) ",
+          "nl": "Vermogen (Watt) & Current (A)",
+		  "de": "Leistung (Watt) & Strom (A)"
         }
       },
       {
         "id": "8",
         "label": {
           "en": "Energy (kWh)",
-          "nl": "Energie (kWh)"
+          "nl": "Energie (kWh)",
+		  "de": "Verbrauch (kWh)"
         }
       },
       {
         "id": "12",
         "label": {
           "en": "Power (Watt) & Energy (kWh)",
-          "nl": "Vermogen (Watt) & Energie (kWh)"
+          "nl": "Vermogen (Watt) & Energie (kWh)",
+		  "de": "Leistung (Watt) & Verbrauch (kWh)"
         }
       },
       {
         "id": "15",
         "label": {
           "en": "Everything",
-          "nl": "Alles"
+          "nl": "Alles",
+		  "de": "Alle Werte"
         }
       }
     ]
@@ -228,66 +307,83 @@
     "id": "102",
     "type": "dropdown",
     "label": {
-      "en": "Information reports send to association group 2",
-      "nl": "Informatie updates naar associatie groep 2"
+      "en": "Information reports send to report group 2",
+      "nl": "Informatie updates naar rapport groep 2",
+	  "de": "Informationen welche an Berichtsgruppe 2 gesendet werden"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what information is sent to the devices in association group 2.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e associatie groep."
+      "en": "Parameter 102: Determines what information is sent to the devices in report group 2.",
+      "nl": "Parameter 102: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e rapport groep.",
+	  "de": "Parameter 102: Wählen Sie welche Informationen an die Geräte der Berichtsgruppe 2 gesendet werden."
     },
     "zwave": {
       "index": 102,
       "size": 4
     },
-    "value": "8",
+    "value": "1",
     "values": [
       {
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Geen"
+          "nl": "Geen",
+		  "de": "Nichts"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Voltage (V)",
-          "nl": "Voltage (V)"
+          "nl": "Voltage (V)",
+		  "de": "Spannung (V)"
         }
       },
       {
         "id": "2",
         "label": {
           "en": "Current (A)",
-          "nl": "Current (A)"
+          "nl": "Current (A)",
+		  "de": "Strom (A)"
         }
       },
       {
         "id": "4",
         "label": {
           "en": "Power (Watt)",
-          "nl": "Vermogen (Watt)"
+          "nl": "Vermogen (Watt)",
+		  "de": "Leistung (Watt)"
+        }
+      },
+	   {
+        "id": "6",
+        "label": {
+          "en": "Power (Watt) & Current (A) ",
+          "nl": "Vermogen (Watt) & Current (A)",
+		  "de": "Leistung (Watt) & Strom (A)"
         }
       },
       {
         "id": "8",
         "label": {
           "en": "Energy (kWh)",
-          "nl": "Energie (kWh)"
+          "nl": "Energie (kWh)",
+		  "de": "Verbrauch (kWh)"
         }
       },
       {
         "id": "12",
         "label": {
           "en": "Power (Watt) & Energy (kWh)",
-          "nl": "Vermogen (Watt) & Energie (kWh)"
+          "nl": "Vermogen (Watt) & Energie (kWh)",
+		  "de": "Leistung (Watt) & Verbrauch (kWh)"
         }
       },
       {
         "id": "15",
         "label": {
           "en": "Everything",
-          "nl": "Alles"
+          "nl": "Alles",
+		  "de": "Alle Werte"
         }
       }
     ]
@@ -296,12 +392,14 @@
     "id": "103",
     "type": "dropdown",
     "label": {
-      "en": "Information reports send to association group 3",
-      "nl": "Informatie updates naar associatie groep 3"
+      "en": "Information reports send to report group 3",
+      "nl": "Informatie updates naar rapport groep 3",
+	  "de": "Informationen welche an Berichtsgruppe 3 gesendet werden"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what information is sent to the devices in association group 3.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e associatie groep."
+      "en": "Parameter 103: Determines what information is sent to the devices in report group 3.",
+      "nl": "Parameter 103: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e rapport groep.",
+	  "de": "Parameter 103: Wählen Sie welche Informationen an die Geräte der Berichtsgruppe 3 gesendet werden."
     },
     "zwave": {
       "index": 103,
@@ -313,49 +411,64 @@
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Geen"
+          "nl": "Geen",
+		  "de": "Nichts"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Voltage (V)",
-          "nl": "Voltage (V)"
+          "nl": "Voltage (V)",
+		  "de": "Spannung (V)"
         }
       },
       {
         "id": "2",
         "label": {
           "en": "Current (A)",
-          "nl": "Current (A)"
+          "nl": "Current (A)",
+		  "de": "Strom (A)"
         }
       },
       {
         "id": "4",
         "label": {
           "en": "Power (Watt)",
-          "nl": "Vermogen (Watt)"
+          "nl": "Vermogen (Watt)",
+		  "de": "Leistung (Watt)"
+        }
+      },
+	   {
+        "id": "6",
+        "label": {
+          "en": "Power (Watt) & Current (A) ",
+          "nl": "Vermogen (Watt) & Current (A)",
+		  "de": "Leistung (Watt) & Strom (A)"
         }
       },
       {
         "id": "8",
         "label": {
           "en": "Energy (kWh)",
-          "nl": "Energie (kWh)"
+          "nl": "Energie (kWh)",
+		  "de": "Verbrauch (kWh)"
         }
       },
       {
         "id": "12",
         "label": {
           "en": "Power (Watt) & Energy (kWh)",
-          "nl": "Vermogen (Watt) & Energie (kWh)"
+          "nl": "Vermogen (Watt) & Energie (kWh)",
+		  "de": "Leistung (Watt) & Verbrauch (kWh)"
         }
       },
       {
         "id": "15",
         "label": {
           "en": "Everything",
-          "nl": "Alles"
+          "nl": "Alles",
+		  "de": "Alle Werte"
         }
       }
     ]
@@ -364,41 +477,37 @@
     "id": "111",
     "type": "number",
     "label": {
-      "en": "Reporting interval association group 1",
-      "nl": "Informatie update interval associatie groep 1"
+      "en": "Report interval report group 1",
+      "nl": "Rapportage interval rapport groep 1",
+	  "de": "Berichtsintervall an Berichtgruppe 1"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to Homey.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar Homey."
+      "en": "Parameter 111: Determines the interval for sending report to devices in report group 1.",
+      "nl": "Parameter 111: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste rapport groep.",
+	  "de": "Parameter 111: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 1."
     },
     "zwave": {
       "index": 111,
       "size": 4
     },
-    "attr": {
-      "min": 0,
-      "max": 2147483647
-    },
-    "value": 15
+    "value": 60
   },
   {
     "id": "112",
     "type": "number",
     "label": {
-      "en": "Reporting interval association group 2",
-      "nl": "Informatie update interval associatie groep 2"
+      "en": "Report interval report group 2",
+      "nl": "Rapportage interval rapport groep 2",
+	  "de": "Berichtsintervall an Berichtgruppe 2"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to devices in association group 2.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar apparaten in de 2e associatie groep."
+      "en": "Parameter 112: determines the interval for sending report to devices in report group 2.",
+      "nl": "Parameter 112: bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e rapport groep.",
+	  "de": "Parameter 112: bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 2."
     },
     "zwave": {
       "index": 112,
       "size": 4
-    },
-    "attr": {
-      "min": 0,
-      "max": 2147483647
     },
     "value": 600
   },
@@ -406,21 +515,19 @@
     "id": "113",
     "type": "number",
     "label": {
-      "en": "Reporting interval association group 3",
-      "nl": "Informatie update interval associatie groep 3"
+      "en": "Report interval report group 3",
+      "nl": "Rapportage interval rapport groep 3",
+	  "de": "Berichtsintervall an Berichtgruppe 3"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval between reports to devices in association group 3.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen rapportages naar apparaten in de 3e associatie groep."
+      "en": "Parameter 113: Determines the interval for sending report to devices in report group 3.",
+      "nl": "Parameter 113: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e rapport groep.",
+	  "de": "Parameter 113: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 3."
     },
     "zwave": {
       "index": 113,
       "size": 4
     },
-    "attr": {
-      "min": 0,
-      "max": 2147483647
-    },
-    "value": 600
+    "value": 3600
   }
 ]

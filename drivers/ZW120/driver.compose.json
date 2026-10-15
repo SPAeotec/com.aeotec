@@ -1,5 +1,6 @@
 {
   "id": "ZW120",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Door/Window Sensor Gen5"
   },
@@ -13,20 +14,32 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
-      2
+      2,
+      514,
+	  258
     ],
     "productId": [
+      42,
       120
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 1579,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1579/Door Window Sensor Gen5 manual.pdf",
     "learnmode": {
       "instruction": {
         "en": "Press the action button on the {{driverNameEn}}.",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}."
+        "nl": "Druk op de actie knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste am {{driverNameEn}}"
       }
     },
     "associationGroups": [

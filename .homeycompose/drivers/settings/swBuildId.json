@@ -1,0 +1,10 @@
+{
+  "id": "swBuildId",
+  "type": "label",
+  "label": {
+    "en": "Firmware version",
+    "nl": "Firmwareversie",
+	"de": "Firmwareversion"
+  },
+  "value": "Unknown"
+}

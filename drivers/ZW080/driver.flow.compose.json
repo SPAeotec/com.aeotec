@@ -4,91 +4,118 @@
   "actions": [
     {
       "id": "ZW080-turn_alarm_on",
+	  "platforms": [ "local", "cloud" ],
       "title": {
         "en": "Turn siren on",
-        "nl": "Zet sirene aan"
+        "nl": "Zet sirene aan",
+		"de": "Sirene einschalten"
       },
       "args": []
     },
     {
       "id": "ZW080-turn_alarm_off",
+	  "platforms": [ "local", "cloud" ],
       "title": {
         "en": "Turn siren off",
-        "nl": "Zet sirene uit"
+        "nl": "Zet sirene uit",
+		"de": "Sirene Ausschalten"
       },
       "args": []
     },
     {
       "id": "ZW080-set_alarm",
+	  "platforms": [ "local", "cloud" ],
       "title": {
         "en": "Set alarm sound",
-        "nl": "Zet alarm geluid"
+        "nl": "Zet alarm geluid",
+		"de": "Alarmton einstellen"
       },
+	  "titleFormatted": {
+		"en": "Set alarm sound to [[sound]] and [[volume]]",
+        "nl": "Zet alarm geluid naar [[sound]] en [[volume]] ",
+		"de": "Alarmton einstellen auf [[sound]] und [[volume]]"
+		},
       "args": [
         {
           "name": "sound",
+		  "title": {
+			  "en": "Sound",
+			  "de": "Ton"
+		  },
           "type": "dropdown",
           "values": [
             {
               "id": "256",
               "label": {
                 "en": "Sound 1",
-                "nl": "Geluid 1"
+                "nl": "Geluid 1",
+				"de": "Ton 1"
               }
             },
             {
               "id": "512",
               "label": {
                 "en": "Sound 2",
-                "nl": "Geluid 2"
+                "nl": "Geluid 2",
+				"de": "Ton 2"
               }
             },
             {
               "id": "768",
               "label": {
                 "en": "Sound 3",
-                "nl": "Geluid 3"
+                "nl": "Geluid 3",
+				"de": "Ton 3"
               }
             },
             {
               "id": "1024",
               "label": {
                 "en": "Sound 4",
-                "nl": "Geluid 4"
+                "nl": "Geluid 4",
+				"de": "Ton 4"
               }
             },
             {
               "id": "1280",
               "label": {
                 "en": "Sound 5",
-                "nl": "Geluid 5"
+                "nl": "Geluid 5",
+				"de": "Ton 5"
               }
             }
           ]
         },
         {
           "name": "volume",
+		   "title": {
+			  "en": "Volume",
+			  "de": "Lautstärke"
+		  },
           "type": "dropdown",
           "values": [
             {
               "id": "1",
               "label": {
                 "en": "Low volume",
-                "nl": "Laag volume"
+                "nl": "Laag volume",
+				"de": "Niedrige Lautstärke"
               }
             },
             {
               "id": "2",
               "label": {
                 "en": "Middle volume",
-                "nl": "Middel volume"
+                "nl": "Middel volume",
+				"de": "Mittlere Lautstärke"
               }
             },
             {
               "id": "3",
               "label": {
                 "en": "High volume",
-                "nl": "Hoog volume"
+                "nl": "Hoog volume",
+				"de": "Hohe Lautstärke"
               }
             }
           ]

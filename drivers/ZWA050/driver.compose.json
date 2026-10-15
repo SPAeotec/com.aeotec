@@ -1,0 +1,103 @@
+{
+  "id": "ZWA050",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "SmokeShield",
+	"de": "SmokeShield"
+  },
+   "class": "homealarm",
+  "capabilities": [
+  "alarm_smoke",
+  "alarm_tamper",
+  "measure_battery",
+  "alarm_smoke.1",
+  "alarm_generic.system",
+  "button.reset_error"
+  ],
+  "capabilitiesOptions": {
+	
+	"alarm_smoke.1": {
+      "title": {
+        "en": "Test Alarm",
+        "de": "Funktionstest"
+      }
+    },
+	"button.reset_error":{
+		"maintenanceAction": true,
+		"title": {
+			"en": "Reset hardware failure",
+			"de": "Hardwarefehler zurücksetzen"
+			}
+		},
+	"alarm_generic.system": {
+      "title": {
+        "en": "Hardware failure",
+        "de": "Hardwarefehler"
+      }
+    }	
+  },	
+  "energy": {
+    "batteries": [ "LS14250" ]
+  },
+  "images": {
+    "large": "/drivers/ZWA050/assets/images/large.jpg",
+    "small": "/drivers/ZWA050/assets/images/small.jpg"
+  },
+  "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": [
+	881
+	],
+    "productTypeId": [
+	2
+	],
+    "productId": [
+	50
+	],
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button twice on the radio module",
+		"de": "Drücken Sie die Taste auf dem Funkmodul zweimal "
+      }
+    },
+	"unlearnmode": {
+		"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button twice on the radio module",
+		"de": "Drücken Sie die Taste auf dem Funkmodul zweimal "
+      }
+    },
+	"defaultConfiguration": [
+		{
+			"id": 80,
+			"size": 1,
+			"value": 0
+		}
+	],
+    "associationGroups": [
+	1
+	],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline",
+          "de": "Lifeline"
+        }
+      },
+	   "2": {
+        "hint": {
+          "en": "Fire Alarm Basic Report",
+		  "de": "Basic Report bei ausgelöstem Alarm"
+        }
+      },
+       "3": {
+        "hint": {
+          "en": "Fire Alarm Report ",
+		  "de": "Alarm Benachrichtigungen bei ausgelöstem Alarm"
+        }
+      }
+          }
+  }
+   
+}

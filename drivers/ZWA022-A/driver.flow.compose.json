@@ -1,0 +1,103 @@
+{
+  "triggers": [
+    {
+      "id": "ZWA022_scene",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Scene is activated"
+      },
+	  "titleFormatted": {
+		"en": "Button[[button]] is [[scene]]"
+		},
+      "args": [
+        {
+          "name": "button",
+		  "title": {
+			  "en": "Select a button"
+		  },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Top"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Bottom"
+              }
+            }
+          ]
+        },
+        {
+          "name": "scene",
+		  "platforms": [ "local", "cloud" ],
+		  "title": {
+			  "en": "Select a action"
+		  },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "Pressed 1x"
+              }
+            },
+			{
+              "id": "Key Pressed 2 times",
+              "label": {
+                "en": "Pressed 2x"
+              }
+            },
+			{
+              "id": "Key Pressed 3 times",
+              "label": {
+                "en": "Pressed 3x"
+              }
+            },
+			{
+              "id": "Key Pressed 4 times",
+              "label": {
+                "en": "Pressed 4x"
+              }
+            },
+			{
+              "id": "Key Pressed 5 times",
+              "label": {
+                "en": "Pressed 5x"
+              }
+            },
+            {
+              "id": "Key Held Down",
+              "label": {
+                "en": "Hold press (2 seconds)"
+              }
+            },
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Press released"
+              }
+            }
+            
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "ZWA022_battery_full",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Battery fully charged"
+      },
+      "hint": {
+        "en": "This card will only trigger if the {{driverNameEn}} has been included as secure."
+      }
+    }
+  ],
+  "condition": [],
+  "actions": []
+}

@@ -1,0 +1,510 @@
+[
+	{
+		"id": "4",
+		"type": "number",
+		"label": {
+			"en": "Current overload protection",
+			"de": "Übertstromschutz"
+		},
+		"hint": {
+			"en": "Parameter 4: Determines whether or not the {{driverNameEn}} protects plugged-in devices from overcurrent based on the value set.",
+			"de": "Parameter 4: Legt fest, ob der {{driverNameEn}} eingesteckte Geräte vor Überstrom schützt oder nicht, basierend auf dem eingestellten Wert."
+		},
+		"zwave": {
+			"index": 4,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 1,
+			"max": 2415
+		},
+		"value": 2415
+	},
+	{
+		"id": "8",
+		"type": "dropdown",
+		"label": {
+			"en": "Alarm Response",
+			"de": "Alarmreaktion"
+		},
+		"hint": {
+			"en": "Parameter 8: Determines how the Switch should respond when an alarm is received.",
+			"de": "Parameter 8: Legt fest, wie der Schalter reagieren soll, wenn ein Alarm empfangen wird."
+		},
+		"zwave": {
+			"index": 8,
+			"size": 1
+		},
+		"value": "0",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disable, no reaction.",
+					"de": "Keine Reaktion"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Switch turns ON",
+					"de": "Einschalten"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch turns OFF",
+					"de": "Ausschalten"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "Switch turns on for 5 seconds, then turns off for 5 seconds. This is repeated until user disables alarm manually by triple tapping SS7s' button.",
+					"de": "Der Schalter schaltet sich für 5 Sekunden ein und schaltet sich dann für 5 Sekunden aus. Dies wiederholt sich, bis der Benutzer den Alarm manuell durch dreimaliges Antippen der Taste deaktiviert."
+				}
+			}
+		]
+	},
+	{
+		"id": "9",
+		"type": "number",
+		"label": {
+			"en": "Alarm Settings",
+			"de": " Alarmeinstellung"
+		},
+		"hint": {
+			"en": "Parameter 9: Determines what the Switch responds to what alarms in your Z-Wave System (Z-Wave smoke detectors, motion sensors, etc). \n1 - access control trigger state\n256 - Smoke Alarm\n512 - CO Alarm\n2048 - CO2 Alarm\n4096 - Water Alarm\n8192 - Access Control\n16384 - Home Security",
+			"de": "Parameter 9: Dieser Parameter ({{zwaveParameterIndex}}) bestimmt, wie der Schalter auf welche Alarme im Homey reagiert.\n1 - Zutrittskontrolle Auslösestatus\n256 - Rauchalarm\n512 - CO-Alarm\n2048 - CO2-Alarm\n4096 - Wasseralarm\n8192 - Zutrittskontrolle\n16384 - Home Security"
+		},
+		"zwave": {
+			"index": 9,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 32513
+		},
+		"value": 0
+	},
+	{
+		"id": "10",
+		"type": "number",
+		"label": {
+			"en": "Setting to disable Alarm",
+			"de": "Einstellung zum Deaktivieren des Alarms"
+		},
+		"hint": {
+			"en": "Parameter 10: Determines how you are able to disable your alarm. Value 0 will allow you to disable using 3x button press, Value 1 will allow you to disable whenn a idle response is received, values 10 - 255 will set the duration of the alarm state in seconds.",
+			"de": "Parameter 10: Bestimmt, wie Sie Ihren Alarm deaktivieren können. Mit dem Wert 0 können Sie den Alarm durch dreimaliges Drücken der Taste deaktivieren, mit dem Wert 1 können Sie ihn deaktivieren, wenn eine Leerlaufantwort empfangen wird, mit den Werten 10 - 255 können Sie die Dauer des Alarmzustands in Sekunden festlegen."
+		},
+		"zwave": {
+			"index": 10,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 255
+		},
+		"value": 0
+	},
+	{
+		"id": "18",
+		"type": "number",
+		"label": {
+			"en": "LED blinking frequency",
+			"de": "LED Blinkfrequenz"
+		},
+		"hint": {
+			"en": "Parameter 18: Set amount of blinks per seconds.",
+			"de": "Parameter 18: Stellen Sie die Anzahl der Blinksignale pro Sekunde ein."
+		},
+		"zwave": {
+			"index": 18,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 9
+		},
+		"value": 2
+	},
+	{
+		"id": "19",
+		"type": "number",
+		"label": {
+			"en": "Start or stop LED blinking",
+			"de": "Start or Stopp LED blinken"
+		},
+		"hint": {
+			"en": "Parameter 19: Set the duration and start the blinking process. ",
+			"de": "Parameter 19: Einstellen der Dauer und Starten des Blinkvorgangs."
+		},
+		"zwave": {
+			"index": 19,
+			"size": 2
+		},
+		"attr": {
+			"min": 0,
+			"max": 255
+		},
+		"value": 0
+	},
+	{
+		"id": "20",
+		"type": "dropdown",
+		"label": {
+			"en": "Action in the case of a power outage.",
+			"de": "Maßnahmen bei einem Stromausfall."
+		},
+		"hint": {
+			"en": "Parameter 20: Determines the state of the Switch after power comes back.",
+			"de": "Parameter 20: Bestimmt den Zustand des Schalters nach der Rückkehr der Stromversorgung."
+		},
+		"zwave": {
+			"index": 20,
+			"size": 1
+		},
+		"value": "0",
+		"values": [{
+				"id": "0",
+				"label": {
+					"en": "Last State",
+					"de": "letzter Status"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Switch turns ON.",
+					"de": "Einschalten"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch turns OFF.",
+					"de": "Ausschalten"
+				}
+			}
+		]
+	},
+	{
+		"id": "80",
+		"type": "dropdown",
+		"label": {
+			"en": "Instant Status Update",
+			"de": "Status-Update"
+		},
+		"hint": {
+			"en": "Parameter 80: Allows the Switch to report a status update when controlled by other devices or by its own physical button.",
+			"de": "Parameter 80: Ermöglicht es dem Schalter, eine Statusaktualisierung zu melden, wenn er von anderen Geräten oder von seiner eigenen physischen Taste gesteuert wird."
+		},
+		"zwave": {
+			"index": 80,
+			"size": 1
+		},
+		"value": "2",
+		"values": [{
+				"id": "0",
+				"label": {
+					"en": "Nothing",
+					"de": "Nichts"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Basic Report"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Binary Switch"
+				}
+			}
+		]
+	},
+	{
+		"id": "81",
+		"type": "dropdown",
+		"label": {
+			"en": "LED Indicator Mode",
+			"de": "LED-Anzeige Modus"
+		},
+		"hint": {
+			"en": "Parameter 81: Determines how the LED on Switch should react.",
+			"de": "Parameter 81: Bestimmt, wie die LED am Schalter reagieren soll."
+		},
+		"zwave": {
+			"index": 81,
+			"size": 1
+		},
+		"value": "2",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "LED Disabled",
+					"de": "LED deaktiviert"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Night Light Mode.",
+					"de": "Nachtlichmodus"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "On/Off LED follow.",
+					"de": "Folgt dem Schaltzustand"
+				}
+			}
+		]
+	},
+	{
+		"id": "82",
+		"type": "number",
+		"label": {
+			"en": "If Night Light mode is set on Parameter 81, you can configure the time setting of when the LED turns on and off. Default settings will turn the light on at 6pm, and turn off light at 8am.",
+			"de": "Wenn der Nachtlichtmodus auf Parameter 81 eingestellt ist, können Sie die Zeiteinstellung konfigurieren, wann die LED ein- und ausgeschaltet wird. Die Standardeinstellungen schalten das Licht um 18 Uhr ein und um 8 Uhr aus."
+		},
+		"hint": {
+			"en": "Parameter 82: SET only command, setting this parameter will cause the LED to blink in for X amount of seconds before it stops on its own.",
+			"de": "Parameter 82: Ist ein reiner SET-Befehl, das Setzen dieses Parameters bewirkt, dass die LED für X Sekunden blinkt, bevor sie von selbst aufhört."
+		},
+		"zwave": {
+			"index": 82,
+			"size": 4
+		},
+		"attr": {
+			"min": 0,
+			"max": 389748539
+		},
+		"value": 301991936
+	},
+	{
+		"id": "91",
+		"type": "number",
+		"label": {
+			"en": "Threshold Power (W)",
+			"de": "Leistungsschwellwert (W)"
+		},
+		"hint": {
+			"en": "Parameter 91: Determines the threshold value that is required of Watt to change before it can report.",
+			"de": "Parameter 91: Legt den Schwellenwert fest, der von Watt geändert werden muss, bevor es sich melden kann."
+		},
+		"zwave": {
+			"index": 91,
+			"size": 2
+		},
+		"attr": {
+			"min": 0,
+			"max": 2300
+		},
+		"value": 5
+	},
+	{
+		"id": "92",
+		"type": "number",
+		"label": {
+			"en": "Threshold Consumption (kWh)",
+			"de": "Gesamtverbrauchsschwellwert (kWh)"
+		},
+		"hint": {
+			"en": "Parameter 92: Determines the threshold value that is required of kWh to change before it can report.",
+			"de": "Parameter 92: Legt den Schwellenwert fest, den die kWh ändern muss, bevor sie gemeldet werden kann."
+		},
+		"zwave": {
+			"index": 92,
+			"size": 2
+		},
+		"attr": {
+			"min": 0,
+			"max": 10000
+		},
+		"value": 1
+	},
+	{
+		"id": "93",
+		"type": "number",
+		"label": {
+			"en": "Threshold Current (A)",
+			"de": "Stromschwellwert (A)"
+		},
+		"hint": {
+			"en": "Parameter 93: Determines the threshold value that is required of A to change before it can report. The setting is set in value*0.1 scale.",
+			"de": "Parameter 93: Legt den Schwellenwert fest, der sich von A ändern muss, bevor er melden kann. Die Einstellung erfolgt in Wert*0,1-Skala."
+		},
+		"zwave": {
+			"index": 93,
+			"size": 1
+		},
+		"attr": {
+			"min": 0,
+			"max": 100
+		},
+		"value": 5
+	},
+	{
+		"id": "101",
+		"type": "dropdown",
+		"label": {
+			"en": "Sensors reported at a timed interval",
+			"de": "Berichtstype"
+		},
+		"hint": {
+			"en": "Parameter 101: Allows you to set the sensors that are reported at a timed interval.",
+			"de": "Parameter 101: Einstellen der Werte, welche in einem zeitlichen Intervall gemeldet werden. "
+		},
+		"zwave": {
+			"index": 101,
+			"size": 4
+		},
+		"value": "4",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Total consumption kWh",
+					"de": "Gesamtverbrauch kWh"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Consumption W",
+					"de": "Momentanverbrauch W"
+				}
+			},
+			{
+				"id": "3",
+				"label": {
+					"en": "kWh & W",
+					"de": "kWh & W"
+				}
+			},
+			{
+				"id": "4",
+				"label": {
+					"en": "Voltage V",
+					"de": "Spannung V"
+				}
+			},
+			{
+				"id": "5",
+				"label": {
+					"en": "kWh & V",
+					"de": "kWh & V"
+				}
+			},
+			{
+				"id": "6",
+				"label": {
+					"en": "W & V ",
+					"de": "W & V"
+				}
+			},
+			{
+				"id": "7",
+				"label": {
+					"en": "kWh, W & V ",
+					"de": "kWh, W & V"
+				}
+			},
+			{
+				"id": "8",
+				"label": {
+					"en": "Current power A",
+					"de": "Stromverbrauch A"
+				}
+			},
+			{
+				"id": "9",
+				"label": {
+					"en": "kWh & A",
+					"de": "kWh & A"
+				}
+			},
+			{
+				"id": "10",
+				"label": {
+					"en": "W & A",
+					"de": "W & A"
+				}
+			},
+			{
+				"id": "11",
+				"label": {
+					"en": "kWh, W & A",
+					"de": "kWh, W & A"
+				}
+			},
+			{
+				"id": "12",
+				"label": {
+					"en": "V & A",
+					"de": "V & A"
+				}
+			},
+			{
+				"id": "13",
+				"label": {
+					"en": "kWh, V & A",
+					"de": "kWh, V & A"
+				}
+			},
+			{
+				"id": "14",
+				"label": {
+					"en": "W, V & A",
+					"de": "W, V & A"
+				}
+			},
+			{
+				"id": "15",
+				"label": {
+					"en": "All values kWh, W, V & A",
+					"de": "Alle Werte kWh, W, V & A"
+				}
+			}
+		]
+	},
+	{
+		"id": "111",
+		"type": "number",
+		"label": {
+			"en": "Sensor interval report setting",
+			"de": "Berichtsintervall"
+		},
+		"hint": {
+			"en": "Parameter 111: Allows you to set the interval at which the sensors set on Parameter 101 to be reported every X amount of seconds.",
+			"de": "Parameter 111: Sie können das Intervall einstellen, welcher bestimmt, in welchem Intervall die in Parameter 101 eingestellten Sensorenwerte gemeldet werden."
+		},
+		"zwave": {
+			"index": 111,
+			"size": 4
+		},
+		"attr": {
+			"min": 0,
+			"max": 2592000
+		},
+		"value": 600
+	}
+]

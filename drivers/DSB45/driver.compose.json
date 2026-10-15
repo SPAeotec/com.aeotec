@@ -1,7 +1,9 @@
 {
   "id": "DSB45",
+  "platforms": [ "local", "cloud" ],
   "name": {
-    "en": "Water Sensor"
+    "en": "Water Sensor",
+	"de": "Wassersensor"
   },
   "class": "sensor",
   "capabilities": [
@@ -12,10 +14,19 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
-      2
+      2,
+	  258,
+	  514
     ],
     "productId": [
       45
@@ -24,7 +35,8 @@
       "image": "/drivers/DSB45/assets/learnmode.svg",
       "instruction": {
         "en": "Press the action button on the {{driverNameEn}}",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}"
+        "nl": "Druk op de actie knop op de {{driverNameNl}}",
+		"de": "Drücken Sie die Taste des Wassersensors"
       }
     },
     "associationGroups": [
@@ -34,7 +46,7 @@
       {
         "id": 121,
         "size": 4,
-        "value": 299
+        "value": 273
       }
     ]
   }

@@ -1,0 +1,76 @@
+{
+  "id": "DSC06106",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Smart Energy Switch",
+	"de": "Smart Energy Switch"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3,
+      259,
+      515
+    ],
+    "productId": [
+      6
+    ],
+    "learnmode": {
+      "instruction": {
+        "en": "Press the action button on the back of the {{driverNameEn}}.",
+		"de": "Drücken Sie die Taste am {{driverNameEn}} einmal."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      },
+      {
+        "id": 90,
+        "size": 1,
+        "value": 0
+      },
+	  {
+        "id": 101,
+        "size": 4,
+        "value": 4
+	  },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 30
+	  },
+	  {
+        "id": 102,
+        "size": 4,
+        "value": 8
+	  },
+	  {
+        "id": 112,
+        "size": 4,
+        "value": 3600
+	  }
+	  
+	  
+    ]
+    
+      
+    
+  }
+}

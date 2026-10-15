@@ -1,0 +1,45 @@
+{
+  "id": "ZW187",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Recessed Door Sensor 7",
+	"nl": "Verzonken Deur Sensor 7"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_contact"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [ "CR2" ]
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      2,
+      514,
+	  258
+    ],
+    "productId": [
+      187
+    ],
+    "zwaveAllianceProductId": 3736,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3736/Recessed%20Door%20Sensor%207%20-%20Product%20Manual.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Use a small tool to press the button on the {{driverNameEn}} once.",
+        "nl": "Druk met een klein hulpmiddel eenmaal op de knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie mit einem kleinen Werkzeugt die Taste am {{driverNameEn}} einmal."
+      }
+    },
+    "associationGroups": [
+      1
+    ]
+  }
+}

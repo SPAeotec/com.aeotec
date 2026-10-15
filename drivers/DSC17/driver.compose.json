@@ -1,0 +1,85 @@
+{
+  "id": "DSC17",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Micro Double Smart Switch (DSC17)"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3,
+      259,
+      515
+    ],
+    "productId": [
+      17
+    ],
+    "zwaveAllianceProductId": 1622,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2275/Oomi%20Dual%20In-Wall%20Switch%20manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Press the action button on the back of the {{driverNameEn}}.",
+        "nl": "Druk op de actie knop op de achterkant van de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste am {{driverNameEn}} einmal."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      },
+      {
+        "id": 90,
+        "size": 1,
+        "value": 0
+      },
+	  {
+        "id": 101,
+        "size": 4,
+        "value": 12
+	  },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 180
+	  }
+    ],
+    "multiChannelNodes": {
+      "1": {
+        "name": {
+          "en": "Micro Dual Smart Switch 1"
+        },
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "class": "socket",
+        "capabilities": [
+          "onoff"
+        ]
+      },
+      "2": {
+        "name": {
+          "en": "Micro Dual Smart Switch 2"
+        },
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "class": "socket",
+        "capabilities": [
+          "onoff"
+        ]
+      }
+    }
+  }
+}

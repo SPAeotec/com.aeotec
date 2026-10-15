@@ -1,0 +1,20 @@
+{
+  "title": {
+    "en": "Doorbell 3 has been activated",
+    "nl": "Deurbel 3 is geactiveerd",
+	"de": "Türklingel 3 wurde aktiviert"
+  },
+  "platforms": [ "local", "cloud" ],
+  "hint": {
+    "en": "This will always trigger when \"Doorbell 3\" is being actived, not just by the button.",
+    "nl": "Dit zal altijd activeren als \"Deurbel 3\" wordt geactiveerd, niet alleen door de knop.",
+	"de": "Dies wird immer ausgelöst, wenn \"Türklingel 3\" aktiviert wird, nicht nur durch die Taste."
+  },
+  "args": [
+    {
+      "name": "doorbell_3",
+      "type": "device",
+      "filter": "driver_id=ZW162-C|ZW164-C&capabilities=alarm_battery.button_3"
+    }
+  ]
+}

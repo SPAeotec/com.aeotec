@@ -1,0 +1,116 @@
+[
+  {
+    "id": "101",
+    "type": "number",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type groep 1",
+	  "de": "Bericht and Berichtsgrupe 1"
+    },
+    "hint": {
+      "en": "Parameter: 101: Determines the type of reports sent to devices in the 1st report group.",
+      "nl": "Parameter: 101: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1e groep.",
+	  "de": "Parameter: 101: Bestimmt die Art der Berichte, die an die Geräte in der ersten Berichtsgruppe gesendet werden."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": 12
+  },
+  {
+    "id": "102",
+    "type": "number",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type groep 2",
+	  "de": "Bericht and Berichtsgrupe 2"
+    },
+    "hint": {
+      "en": "Parameter: 102: Determines the type of reports sent to devices in the 2nd report group.",
+      "nl": "Parameter: 102: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e groep.",
+	  "de": "Parameter: 102: Bestimmt die Art der Berichte, die an die Geräte in der zweiten Berichtsgruppe gesendet werden."
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": 0
+  },
+  {
+    "id": "103",
+    "type": "number",
+     "label": {
+      "en": "Report group 3 report type",
+      "nl": "Rapport type groep 3",
+	  "de": "Bericht and Berichtsgrupe 3"
+    },
+    "hint": {
+      "en": "Parameter: 103: Determines the type of reports sent to devices in the 3rd report group.",
+      "nl": "Parameter: 103: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e groep.",
+	  "de": "Parameter: 103: Bestimmt die Art der Berichte, die an die Geräte in der dritten Berichtsgruppe gesendet werden."
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": 0
+  },
+  {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 1",
+      "nl": "Rapportage interval  groep 1",
+	  "de": "Berichtsintervall Gruppe 1"
+    },
+    "hint": {
+      "en": "Parameter 111: Determines the interval for sending report to devices in report group 1.",
+      "nl": "Parameter 111: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep.",
+	  "de": "Parameter 111: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 1."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4
+    },
+    "value": 300
+  },
+  {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 2",
+      "nl": "Rapportage interval groep 2",
+	  "de": "Berichtsintervall Gruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 112: Determines the interval for sending report to devices in report group 2.",
+      "nl": "Parameter 112: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 2. groep.",
+	  "de": "Parameter 112: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 2."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4
+    },
+    "value": 3600
+  },
+  {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 3",
+      "nl": "Rapportage interval groep 3",
+	  "de": "Berichtsintervall Gruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 113: Determines the interval for sending report to devices in report group 2.",
+      "nl": "Parameter 113: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 2. groep.",
+	  "de": "Parameter 113: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 2."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4
+    },
+    "value": 3600
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "triggers": [
+    {
+      "id": "zw141_scene",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+		"en": "A key was pressed",
+	    "de": "Eine Taste wurde gedrückt",
+        "nl": "Een toets werd ingedrukt"
+		
+      },
+	  "titleFormatted": {
+		"en": "Button [[button]] is [[scene]]",
+		"de": "Taste [[button]] wird [[scene]]"
+		},
+      "args": [
+        {
+          "name": "button",
+		   "title": {
+			  "en": "Select a button",
+			  "de": "Tastenauswahl"
+		  },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Button 1",
+				"de": "Taste 1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Button 2",
+				"de": "Taste 2 "
+  			  }
+            }
+          ]
+        },
+        {
+          "name": "scene",
+		  "platforms": [ "local", "cloud" ],
+		  "title": {
+			  "en": "action",
+			  "de": "Aktion",
+			  "nl": "actie"
+		  },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "Pressed 1x",
+                "nl": "1x gedrukt",
+				"de": "1x gedrückt"
+              }
+            },
+			{
+              "id": "Key Pressed 2 times",
+              "label": {
+                "en": "Pressed 2x",
+                "nl": "2x gedrukt",
+				"de": "2x gedrückt"
+              }
+            },
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Press released",
+                "nl": "Drukken losgelaten",
+				"de": "Losgelassen"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    
+  ],
+  "condition": [],
+  "actions": []
+}

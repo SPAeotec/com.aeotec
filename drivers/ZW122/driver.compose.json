@@ -1,46 +1,102 @@
 {
   "id": "ZW122",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Water Sensor 6"
   },
   "class": "sensor",
   "capabilities": [
     "measure_battery",
-    "alarm_water",
-    "measure_temperature",
-    "alarm_tamper"
+    "alarm_tamper",
+	"measure_temperature"
+	
   ],
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [ "CR123A" ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
-    "manufacturerId": 134,
+        "manufacturerId": [
+     134,
+     362
+    ],
     "productTypeId": [
       2,
-      514
+      258,
+	  514
     ],
     "productId": [
-      120,
       122
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 1579,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1579/Door Window Sensor Gen5 manual.pdf",
     "learnmode": {
       "instruction": {
-        "en": "Press the action button on the {{driverNameEn}}. For secure pairing press the action button twice.",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}. Voor beveiligd koppelen druk tweemaal op de actie knop."
+        "en": "Press the action button on the {{driverNameEn}}. ",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste am {{driverNameNl}} einmal."
+		
       }
     },
-    "associationGroups": [
-      1
-    ],
+	"learnmode": {
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}. ",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste am {{driverNameNl}} einmal."
+		
+      }
+    },
+	
+   
+    
     "defaultConfiguration": [
       {
         "id": 64,
         "size": 1,
         "value": 0
+      },
+	  {
+        "id": 94,
+        "size": 1,
+        "value": 1
       }
-    ]
+	 
+    ],
+	  "associationGroupsMultiChannel": [ 1 ],
+    "multiChannelNodes": {
+      "1": {
+        "name": {
+          "en": "Probe 1",
+		  "de": "Sensor 1"
+        },
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "class": "sensor",
+		"settings": [],
+        "capabilities": [
+          "alarm_water"
+        ]
+      },
+      "2": {
+        "name": {
+          "en": "Probe 2",
+		  "de": "Sensor 2"
+        },
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "class": "sensor",
+		"settings": [],
+        "capabilities": [
+          "alarm_water"
+        ]
+      }
+    }
+  
+  
   }
+  
+  
 }

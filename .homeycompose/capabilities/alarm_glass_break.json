@@ -1,0 +1,14 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Glass Break",
+    "de": "Glasbruch"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "insightsTitleTrue": { "en": "Glass breeak alarm", "de": "Glasbruchalarm" },
+  "insightsTitleFalse": { "en": "Alarm reset", "de": "Alarm zurückgesetzt" },
+  "icon": "/assets/alarm_incident.svg"
+}

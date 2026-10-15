@@ -3,19 +3,21 @@
 const Homey = require('homey');
 
 class AeotecKeyFobDeviceDriver extends Homey.Driver {
-    onInit() {
-        super.onInit();
 
-        this.press1Trigger = new Homey.FlowCardTriggerDevice('zw088_press_1').register();
-        this.press2Trigger = new Homey.FlowCardTriggerDevice('zw088_press_2').register();
-        this.press3Trigger = new Homey.FlowCardTriggerDevice('zw088_press_3').register();
-        this.press4Trigger = new Homey.FlowCardTriggerDevice('zw088_press_4').register();
+  onInit() {
+    super.onInit();
 
-        this.hold1Trigger = new Homey.FlowCardTriggerDevice('zw088_hold_1').register();
-        this.hold2Trigger = new Homey.FlowCardTriggerDevice('zw088_hold_2').register();
-        this.hold3Trigger = new Homey.FlowCardTriggerDevice('zw088_hold_3').register();
-        this.hold4Trigger = new Homey.FlowCardTriggerDevice('zw088_hold_4').register();
-    }
+    this.press1Trigger = this.homey.flow.getDeviceTriggerCard('zw088_press_1');
+    this.press2Trigger = this.homey.flow.getDeviceTriggerCard('zw088_press_2');
+    this.press3Trigger = this.homey.flow.getDeviceTriggerCard('zw088_press_3');
+    this.press4Trigger = this.homey.flow.getDeviceTriggerCard('zw088_press_4');
+
+    this.hold1Trigger = this.homey.flow.getDeviceTriggerCard('zw088_hold_1');
+    this.hold2Trigger = this.homey.flow.getDeviceTriggerCard('zw088_hold_2');
+    this.hold3Trigger = this.homey.flow.getDeviceTriggerCard('zw088_hold_3');
+    this.hold4Trigger = this.homey.flow.getDeviceTriggerCard('zw088_hold_4');
+  }
+
 }
 
 module.exports = AeotecKeyFobDeviceDriver;

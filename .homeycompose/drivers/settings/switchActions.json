@@ -1,0 +1,35 @@
+{
+  "value": "toggle",
+  "type": "dropdown",
+  "label": {
+    "en": "Switch action",
+	"de": "Schaltverhalten"
+  },
+  "hint": {
+    "en": "Configures how a switch input should be handled. You can invert the on/off handling, or use toggle to switch on each switch state change.",
+	"de": "Legt fest, wie sich der Schalter verhalten soll."
+  },
+  "values": [
+    {
+      "id": "onoff",
+      "label": {
+        "en": "On - Off",
+		"de": "Ein - Aus"
+      }
+    },
+    {
+      "id": "offon",
+      "label": {
+        "en": "Off - On",
+		"de": "Aus - Ein"
+      }
+    },
+    {
+      "id": "toggle",
+      "label": {
+        "en": "Toggle",
+		"de": "Wechselnd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "ZW189",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Range Extender 7"
+  },
+  "class": "other",
+  "capabilities": [],
+  "energy": {
+    "approximation": {
+      "usageConstant": 1
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      4,
+      516,
+      2564,
+	  260,
+	  6660
+    ],
+    "productId": [
+      189
+    ],
+    "zwaveAllianceProductId": 3699,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/3699/Range%20Extender%207%20EU%20-%20Product%20Manual.pdf",
+    "learnmode": {
+      "image": "/drivers/ZW189/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}.",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste am {{driverNameEn}}."
+      }
+    },
+    "associationGroups": [
+      1
+    ]
+  }
+}

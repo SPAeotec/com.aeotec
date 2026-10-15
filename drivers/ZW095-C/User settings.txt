@@ -1,0 +1,288 @@
+  {
+    "id": "101",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type rapport groep 1",
+	  "de": "Berichttyp an Berichtsgruppe 1"
+	  
+    },
+    "hint": {
+      "en": "Parameter 101: Determines the type of reports sent to devices in the 1st report group. Overwrites the basic and expert setting!",
+      "nl": "Parameter 101: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1ste rapport groep. Overschrijft de basis- en expertinstellingen!",
+	  "de": "Parameter 101: Bestimmt die Art der Berichte, die an die Geräte in der ersten Berichtsgruppe gesendet werden. Überschreibt die Grundeinstellung und Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": "10",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "50",
+				"label": {
+					"en": "Basic or Expert setting",
+					"de": "Grund- oder Experteneinstellung"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Consumption W (total)",
+					"de": "Momentanverbrauch W (Gesamt)"
+				}
+			},
+			{
+				"id": "8",
+				"label": {
+					"en": "Current power A (total)",
+					"de": "Stromverbrauch A (Gesamt)"
+				}
+			},
+			{
+				"id": "10",
+				"label": {
+					"en": "W & A (total)",
+					"de": "W & A (Gesamt)"
+				}
+			},
+			{
+				"id": "258",
+				"label": {
+					"en": "Consumption W (Clamp 1 & total)",
+					"de": "Momentanverbrauch W (Klemme 1 & gesamt)"
+				}
+			},
+			{
+				"id": "524296",
+				"label": {
+					"en": "Current power A (Clamp 1 & total))",
+					"de": "Stromverbrauch A (Klemme 1 & gesamt)"
+				}
+			},
+			{
+				"id": "524554",
+				"label": {
+					"en": "W & A (Clamp 1 & total)",
+					"de": "W & A (Klemme 1 & gesamt)"
+				}
+			},
+			{
+				"id": "770",
+				"label": {
+					"en": "Consumption W (Clamp 1,2 & total)",
+					"de": "Momentanverbrauch W (Klemmen 1,2 & gesamt)"
+				}
+			},
+			{
+				"id": "1572872",
+				"label": {
+					"en": "Current power A (Clamp 1,2 & total))",
+					"de": "Stromverbrauch A (Klemmen 1,2 & gesamt)"
+				}
+			},
+			{
+				"id": "1573642",
+				"label": {
+					"en": "W & A (Clamp 1,2 & total)",
+					"de": "W & A (Klemmen 1,2 & gesamt)"
+				}
+			},
+			{
+				"id": "1794",
+				"label": {
+					"en": "Consumption W ((Clamps 1,2,3 & total)",
+					"de": "Momentanverbrauch W (Klemmen 1,2,3 & gesamt)"
+				}
+			},
+			{
+				"id": "3670024",
+				"label": {
+					"en": "Current power A (Clamps 1,2,3 & total)",
+					"de": "Stromverbrauch A (Klemmen 1,2,3 & gesamt)"
+				}
+			},
+			{
+				"id": "3671818",
+				"label": {
+					"en": "W & A (Clamps 1,2,3 & total)",
+					"de": "W & A (Klemmen 1,2,3 & gesamt)"
+				}
+			},
+			{
+				"id": "4144911",
+				"label": {
+					"en": "All values EU/AU",
+					"de": "Alle Werte EU/AU"
+				}
+			},
+			{
+				"id": "1776399",
+				"label": {
+					"en": "All values US",
+					"de": "Alle Werte US"
+				}
+			}
+		]
+  },
+  {
+    "id": "102",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type raport groep 2",
+	  "de": "Berichttyp an Berichtsgruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 102: Determines the type of reports sent to devices in the 2nd report group. Overwrites the basic and expert setting!",
+      "nl": "Parameter 102: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e rapport groep. Overschrijft de basis- en expertinstellingen!",
+	  "de": "Parameter 102: Bestimmt die Art der Berichte, die an die Geräte in der zweiten Berichtsgruppe gesendet werden. Überschreibt die Grundeinstellung und Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": "4",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "50",
+				"label": {
+					"en": "Basic or Expert setting",
+					"de": "Grund- oder Experteneinstellung"
+				}
+			},
+			{
+				"id": "4",
+				"label": {
+					"en": "Voltage V (total)",
+					"de": "Spannung V (Gesamt)"
+				}
+			},
+			{
+				"id": "65540",
+				"label": {
+					"en": "Voltage V (Clamp 1 & total)",
+					"de": "Spannung V (Klemme 1 & gesamt)"
+				}
+			},
+			{
+				"id": "196612",
+				"label": {
+					"en": "Voltage V (Clamp 1,2 & total)",
+					"de": "Spannung V (Klemmen 1,2 & gesamt)"
+				}
+			},
+			{
+				"id": "458756",
+				"label": {
+					"en": "Voltage V (Clamp 1,2,3 & total)",
+					"de": "Spannung V (Klemmen 1,2,3 & gesamt)"
+				}
+			},
+			{
+				"id": "4144911",
+				"label": {
+					"en": "All values EU/AU",
+					"de": "Alle Werte EU/AU"
+				}
+			},
+			{
+				"id": "1776399",
+				"label": {
+					"en": "All values US",
+					"de": "Alle Werte US"
+				}
+			}
+		]
+  },
+  {
+    "id": "103",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 3 report type",
+      "nl": "Rapport type rapport groep 3",
+	  "de": "Berichttyp an Berichtsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 103: Determines the type of reports sent to devices in the 3rd report group. Overwrites the basic and expert setting!",
+      "nl": "Parameter 103: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e rapport groep. Overschrijft de basis- en expertinstellingen!",
+	  "de": "Parameter 103: Bestimmt die Art der Berichte, die an die Geräte in der dritten Berichtsgruppe gesendet werden. Überschreibt die Grundeinstellung und Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": "1",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "50",
+				"label": {
+					"en": "Basic or Expert setting",
+					"de": "Grund- oder Experteneinstellung"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Total consumption kWh (total)",
+					"de": "Gesamtverbrauch kWh (Gesamt)"
+				}
+			},
+			{
+				"id": "2049",
+				"label": {
+					"en": "Total consumption kWh (Clamp 1 & total)",
+					"de": "Gesamtverbrauch kWh (Klemme 1 & gesamt)"
+				}
+			},
+			{
+				"id": "6145",
+				"label": {
+					"en": "Total consumption kWh (Clamp 1,2 & total)",
+					"de": "Gesamtverbrauch kWh (Klemmen 1,2 & gesamt)"
+				}
+			},
+			{
+				"id": "14337",
+				"label": {
+					"en": "Total consumption kWh (Clamp 1,2,3 & total)",
+					"de": "Gesamtverbrauch kWh (Klemmen 1,2,3 & gesamt)"
+				}
+			},
+			{
+				"id": "4144911",
+				"label": {
+					"en": "All values EU/AU",
+					"de": "Alle Werte EU/AU"
+				}
+			},
+			{
+				"id": "1776399",
+				"label": {
+					"en": "All values US",
+					"de": "Alle Werte US"
+				}
+			}
+		]
+  },

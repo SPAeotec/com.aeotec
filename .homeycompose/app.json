@@ -1,0 +1,80 @@
+{
+  "id": "com.aeotec",
+  "name": {
+    "en": "Aeotec",
+	"de": "Aeotec"
+  },
+  "version": "3.20.0",
+  "compatibility": ">=12.7.2",
+  "sdk": 3,
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "brandColor": "#00A2DA",
+  "category": [
+    "appliances",
+    "lights",
+    "security",
+    "climate",
+	"energy"
+	
+ ],
+ "tags": { 
+	"en": [
+		"Aeotec",
+		"OOMI",
+		"SmartThings",
+		"Samsung",
+		"IM6001",
+		"SamJin",
+		"HomeAutomation",
+		"Security",
+		"Waterleak",
+		"RangeExtender",
+		"Temperature",
+		"Humidity",
+		"Energy",
+		"Switch",
+		"Dimmer"
+		],
+	"de": [
+        "Aeotec",
+		"OOMI",
+		"SmartThings",
+		"Samsung",
+		"IM6001",
+		"SamJin",
+		"HomeAutomation",
+		"Security",
+		"Wasser",
+		"RangeExtender"	,
+		"Energie",
+		"Temperatur",
+		"Feuchtigkeit",
+		"Schalter",
+		"Dimmer"
+		]
+},
+  "description": {
+    "en": "Intelligent automation.",
+	"de": "Intelligente Automatisierung"
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Aeotec Group",
+    "email": "support@aeotec.freshdesk.com"
+  },
+  "contributors": {
+    "developers": [
+	{
+        "name": "Caseda",
+        "email": "caseda08@hotmail.com"
+      }	  
+    ]
+  },
+  "support": "https://aeotec.com/support/"
+}

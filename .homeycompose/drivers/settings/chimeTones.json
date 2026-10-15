@@ -1,0 +1,258 @@
+{
+  "id": "tone",
+  "type": "dropdown",
+  "label": {
+    "en": "Tone",
+    "nl": "Geluid",
+	"de": "Ton"
+  },
+  "hint": {
+    "en": "Determine the tone that is used for this alarm.",
+    "nl": "Bepaal het geluid dat word gebruikt voor dit alarm.",
+	"de": "Legen Sie den Ton fest, der für diesen Alarm verwendet wird."
+  },
+  "value": "1",
+  "values": [
+            
+            {
+              "id": "1",
+              "label": {
+                "en": "1. Ding dong",
+                "nl": "1. Ding dong",
+				"de": "1. Ding dong"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "2. Ding dong tubular bell",
+                "nl": "2. Ding dong buisklok",
+				"de": "2. Ding-Dong-Röhrenglocke"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "3. Traditional apartment buzzer",
+                "nl": "3. Traditionele apartment buzzer",
+				"de": "3. Traditionelle Klingel"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "4. Electric apartment buzzer",
+                "nl": "4. Electrische apartment buzzer",
+				"de": "4. Elektrische Klingel"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "5. Westminster chimes",
+                "nl": "5. Westminsterslag",
+				"de": "5. Westminster-Glockenspiel"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "6. Chimes",
+                "nl": "6. Klokkenspel",
+				"de": "6. Glockenspiel"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "7. Cuckoo clock",
+                "nl": "7. Koekoeksklok",
+				"de": "7. Kuck Kuck"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "8. Traditional bell",
+                "nl": "8. Traditionele bel",
+				"de": "8. Traditionelle Klingel"
+              }
+            },
+            {
+              "id": "9",
+              "label": {
+                "en": "9. Smoke alarm (low)",
+                "nl": "9. Brand alarm (laag)",
+				"de": "9. Feueralarm (niedrig)"
+              }
+            },
+            {
+              "id": "10",
+              "label": {
+                "en": "10. Smoke alarm (high)",
+                "nl": "10. Brand alarm (hoog)",
+				"de": "10. Feueralarm (hoch)"
+              }
+            },
+            {
+              "id": "11",
+              "label": {
+                "en": "11. Fire evacuation bell",
+                "nl": "11. Brand evacuatie bel",
+				"de": "11. Evakuierungsalarm bei Feuer"
+              }
+            },
+            {
+              "id": "12",
+              "label": {
+                "en": "12. CO alarm",
+                "nl": "12. CO alarm",
+				"de": "12. CO alarm"
+              }
+            },
+            {
+              "id": "13",
+              "label": {
+                "en": "13. Klaxon",
+                "nl": "13. Claxon",
+				"de": "13. Hupe"
+              }
+            },
+            {
+              "id": "14",
+              "label": {
+                "en": "14. Klaxon (deep)",
+                "nl": "14. Claxon (diep)",
+				"de": "14. Hupe(tief)"
+              }
+            },
+            {
+              "id": "15",
+              "label": {
+                "en": "15. Warning tone",
+                "nl": "15. Waarschuwings toon",
+				"de": "15. Warnton"
+              }
+            },
+            {
+              "id": "16",
+              "label": {
+                "en": "16. Tornado siren",
+                "nl": "16. Lucht alarm",
+				"de": "16. Tornadosirene"
+              }
+            },
+            {
+              "id": "17",
+              "label": {
+                "en": "17. Car Alarm",
+                "nl": "17. Auto Alarm",
+				"de": "17. Autoalarm"
+              }
+            },
+            {
+              "id": "18",
+              "label": {
+                "en": "18. Deep alarm tone",
+                "nl": "18. Diepe alarm toon",
+				"de": "18. Tiefer Alarmton"
+              }
+            },
+            {
+              "id": "19",
+              "label": {
+                "en": "19. Alarm (archangel tone)",
+                "nl": "19. Alarm (aartsengel toon)",
+				"de": "19. Alarm (Erzengelton)"
+              }
+            },
+            {
+              "id": "20",
+              "label": {
+                "en": "20. Alarm (shrill)",
+                "nl": "20. Alarm (schel)",
+				"de": "20. Alarm (Schrill)"
+              }
+            },
+            {
+              "id": "21",
+              "label": {
+                "en": "21. Digital siren",
+                "nl": "21. Digitale sirene",
+				"de": "21. Digitale Sirene"
+              }
+            },
+            {
+              "id": "22",
+              "label": {
+                "en": "22. Alerts (series)",
+                "nl": "22. Alarmen (serie)",
+				"de": "22. Alarmseie"
+              }
+            },
+            {
+              "id": "23",
+              "label": {
+                "en": "23. Security",
+                "nl": "23. Beveiliging",
+				"de": "23. Sicherheit"
+              }
+            },
+            {
+              "id": "24",
+              "label": {
+                "en": "24. Alarm Clock buzzer",
+                "nl": "24. Wekker buzzer",
+				"de": "24. Wecker"
+              }
+            },
+            {
+              "id": "25",
+              "label": {
+                "en": "25. Christmas tree trumpet",
+                "nl": "25. O denneboom trompet",
+				"de": "25. Oh Tannenbaum"
+              }
+            },
+            {
+              "id": "26",
+              "label": {
+                "en": "26. Gong",
+                "nl": "26. Gong",
+				"de": "26. Gong"
+              }
+            },
+            {
+              "id": "27",
+              "label": {
+                "en": "27. Single bell ting",
+                "nl": "27. Enkele bel ting",
+				"de": "27. Einfacher Glockenschlag"
+              }
+            },
+            {
+              "id": "28",
+              "label": {
+                "en": "28. Tonal pulse",
+                "nl": "28. Tonale puls",
+				"de": "28. Impulston"
+              }
+            },
+            {
+              "id": "29",
+              "label": {
+                "en": "29. Upwards tone",
+                "nl": "29. Opwaardse toon",
+				"de": "29. Aufsteigender Ton"
+              }
+            },
+            {
+              "id": "30",
+              "label": {
+                "en": "30. Door stil open",
+                "nl": "30. Deur nog open",
+				"de": "30. Tür offen signal"
+              }
+            }
+  ]
+}

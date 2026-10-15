@@ -1,0 +1,798 @@
+[
+  {
+    "id": "3",
+    "type": "number",
+    "label": {
+      "en": "Motion Clear Time",
+	  "de": "Bewegung Rücksetzzeit"
+    },
+    "hint": {
+      "en": "Parameter 3: This parameter configures the time to clear a motion event after a motion event detected.",
+      "de": "Parameter 3: Dieser Parameter konfiguriert die Zeit zum Löschen eines Bewegungsereignisses nach einem erkannten Bewegungsereignis."      
+    },
+    "zwave": {
+      "index": 3,
+      "size": 2
+    },
+    "attr": {
+      "min": 30,
+      "max": 3600
+    },
+    "value": 60
+  },
+  {
+    "id": "4",
+    "type": "dropdown",
+    "label": {
+      "en": "Motion Sensor Sensitivity",
+	  "de": "Empfindlichkeit des Bewegunssensors"
+    },
+    "hint": {
+      "en": "Parameter 4: Determines sensitivity of the motion sensor.",
+	  "de": "Parameter 4: Bestimmt die Empfindlichkeit des Bewegungssensors."
+    },
+    "zwave": {
+      "index": 4,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "disable",
+		  "de": "deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Level 1 (minimum)",
+          "de": "Level 1 (minimum)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Level 2",
+          "de": "Level 2"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Level 3 (maximum)",
+          "de": "Level 3 (maximum)"
+        }
+      }
+      
+    ]
+  },
+  {
+    "id": "7",
+    "type": "dropdown",
+    "label": {
+      "en": "Group 2 Motion Control",
+	  "de": "Gruppe 2 Bewegungserkennung"
+    },
+    "hint": {
+      "en": "Parameter 7: Set control of other devices on group2 based on motion trigger.",
+	  "de": "Parameter 7: Stellt die Steuerung anderer Geräte der Gruppe 2 bei Bewegungserkennung ein."
+    },
+    "zwave": {
+      "index": 7,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Sends ON if triggert, sends OFF if untriggert",
+		  "de": "Sendet EIN wenn getriggert, sendet AUS bei ruhezustand"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Sends OFF if triggert, sends ON if untriggert",
+		  "de": "Sendet AUS wenn getriggert, sendet EIN bei ruhezustand"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Sends ON if triggert, sends nothing if untriggert",
+		  "de": "Sendet EIN wenn getriggert, sendet nichts bei ruhezustand"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Sends OFF if triggert, sends nothing if untriggert",
+		  "de": "Sendet AUS wenn getriggert, sendet nichts bei ruhezustand"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Sends OFF if untriggert, sends nothing if triggert",
+		  "de": "Sendet AUS bei ruhezustand, sendet nichts wenn getriggert"
+        }
+      },
+	  {
+        "id": "5",
+        "label": {
+          "en": "Sends ON if triggert, sends nothing if untriggert",
+		  "de": "Sendet EIN wenn getriggert, sendet nichts bei ruhezustand"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Sends basic value configured in parameter 8",
+		  "de": "Sendet in Parameter 8 konfigurierten Basic-Wert"
+        }
+      }
+  ]
+  },
+    {
+    "id": "8",
+    "type": "number",
+    "label": {
+      "en": "Group 2 Value Setting ",
+	  "de": "Gruppe 2 Basic-Wert-Einstellung"
+    },
+    "hint": {
+      "en": "Parameter 8: Set Basic Set value for Group2. Byte 1 defines the ON event, byte 2 defines the OFF event.",
+      "de": "Parameter 8: Grundeinstellung des Wertes für Gruppe 2. Byte 1 definiert das ON Ereigniss, Byte 2 definiert das OFF Ereigniss."      
+    },
+    "zwave": {
+      "index": 8,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 65535
+    },
+    "value": 65280
+  },
+      {
+    "id": "9",
+    "type": "number",
+    "label": {
+      "en": "Group 2 Requirments",
+	  "de": "Gruppe 2 Anforderungen"
+    },
+    "hint": {
+      "en": "Parameter 9: Set threshold of Light/Lux when devices associated in group2 should be triggered by motion. Associated device only receives BASIC_SET command when light <= (this value). ",
+      "de": "Parameter 9: Legen Sie den Schwellenwert für Licht/Lux fest, bei dem die in Gruppe 2 zugeordneten Geräte durch Bewegung ausgelöst werden sollen. Zugeordnetes Gerät erhält den BASIC_SET-Befehl nur, wenn das Licht <= (dieser Wert) ist."      
+    },
+    "zwave": {
+      "index": 9,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+    },
+    "value": 30000
+  },
+  {
+    "id": "24",
+    "type": "dropdown",
+    "label": {
+      "en": "Temperature Scale Setting",
+      "de": "Temperaturskala"
+    },
+    "hint": {
+      "en": "Parameter 24: Configure temperature sensor scale type, Temperature to report in Celsius or Fahrenheit.",
+      "de": "Parameter 24: Konfigurieren Sie den Skalentyp des Temperatursensors, Temperatur für die Meldung in Celsius oder Fahrenheit."
+    },
+    "zwave": {
+      "index": 24,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Celsius",
+          "de": "Celsius"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Fahrenheit",
+          "de": "Fahrenheit"
+        }
+      }
+	]
+  },
+  
+       {
+    "id": "10",
+    "type": "number",
+    "label": {
+      "en": "Over Heat Threshold Group 3",
+	  "de": "Oberer Temperaturgrenzwert Gruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 10: Set threshold of temperature. Designed to control Air Conditioners or temperature controllers ON or OFF. If measured temperature >= (this value) send ON to associated devices. If measured temperature < (this value) send OFF to associated devices.\nValues:\n270 - 850 (27,0 - 85,0 Celsius)\n806 - 1850 (80,6 - 185,0 Fahrenheit) ",
+      "de": "Parameter 10: Einstellung der Temperaturschwelle. Für die Steuerung von Klimaanlagen oder Temperaturreglern EIN oder AUS. Wenn gemessene Temperatur >= (dieser Wert), wird EIN an die zugehörigen Geräte. Wenn die gemessene Temperatur < (dieser Wert) ist, senden Sie AUS an die zugehörigen Geräte. Wertebereich: 270 - 850 (27,0 - 85,0 Celsius)"      
+    },
+    "zwave": {
+      "index": 10,
+      "size": 2
+    },
+    "attr": {
+      "min": 270,
+      "max": 1850
+    },
+    "value": 270
+  }, 
+  
+       {
+    "id": "11",
+    "type": "number",
+    "label": {
+      "en": "Under Heat Threshold Group 4",
+	  "de": "Unterer Temperaturgrenzwert Gruppe 4"
+    },
+    "hint": {
+      "en": "Parameter 11: Set threshold of temperature. Designed to control Air Conditioners or temperature controllers ON or OFF. If measured temperature <= (this value) send ON to associated devices. If measured temperature > (this value) send OFF to associated devices.\nValues:\n-100 - 155 (-10,0 - 15,5 Celsius)\n140 - 600 (14,0 - 60,0 Fahrenheit)",
+      "de": "Parameter 11: Einstellung der Temperaturschwelle. Für die Steuerung von Klimaanlagen oder Temperaturreglern EIN oder AUS. Wenn gemessene Temperatur <= (dieser Wert), wird BASIC_SET (0xFF) an die zugehörigen Geräte. Wenn die gemessene Temperatur > (dieser Wert) ist, senden Sie AUS an die zugehörigen Geräte. Wertebereich: -100 - 155 (-10,0 - 15,5 Celsius)"      
+    },
+    "zwave": {
+      "index": 11,
+      "size": 2
+    },
+    "attr": {
+      "min": -100,
+      "max": 600
+    },
+    "value": 155
+  },  
+       {
+    "id": "12",
+    "type": "number",
+    "label": {
+      "en": "Over Light Threshold Group 5",
+	  "de": "Oberer Helligkeitsgrenzwert Gruppe 5"
+    },
+    "hint": {
+      "en": "Parameter 12: Set threshold of Light/Lux. If measured light/lux >= (this value) send ON to associated devices. If measured light < (this value) send OFF to associated devices.",
+      "de": "Parameter 12: Schwellenwert für Licht/Lux einstellen. Wenn gemessenes Licht/Lux >= (dieser Wert) sendet EIN an zugehörige Geräte. Wenn gemessenes Licht < (dieser Wert) senden Sie AUS an die zugehörigen Geräte."      
+    },
+    "zwave": {
+      "index": 12,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+    },
+    "value": 2000
+  },  
+         {
+    "id": "13",
+    "type": "number",
+    "label": {
+      "en": "Under Light Threshold Group 6",
+	  "de": "Unterer Helligkeitsgrenzwert Gruppe 6"
+    },
+    "hint": {
+      "en": "Parameter 13: Set threshold of Light/Lux. If measured light/lux <= (this value) send ON to associated devices. If measured light > (this value) send OFF to associated devices.",
+      "de": "Parameter 13: Schwellenwert für Licht/Lux einstellen. Wenn gemessenes Licht/Lux <= (dieser Wert) sendet EIN an zugehörige Geräte. Wenn gemessenes Licht > (dieser Wert) senden Sie AUS an die zugehörigen Geräte."      
+    },
+    "zwave": {
+      "index": 13,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+    },
+    "value": 100
+  },
+           {
+    "id": "14",
+    "type": "number",
+    "label": {
+      "en": "Low Battery Threshold",
+	  "de": "Batteriemessung unterer Grenzwert"
+    },
+    "hint": {
+      "en": "Parameter 14: Configure low battery report threshold, sends low battery report via notification and battery report when battery level drops under setting. Unit %. ",
+      "de": "Parameter 14: Konfigurieren Sie den Schwellenwert für den Bericht über einen niedrigen Batteriestand, der über eine Benachrichtigung und einen Batteriebericht gesendet wird, wenn der Batteriestand unter den eingestellten Wert fällt. Einheit %."      
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "attr": {
+      "min": 10,
+      "max": 50
+    },
+    "value": 20
+  },
+    {
+    "id": "15",
+    "type": "checkbox",
+    "label": {
+      "en": "Threshold Check Enable/Disable",
+	  "de": "Grenzwertprüfung Sensorberichte"
+    },
+    "hint": {
+      "en": "Parameter 15: Enable/disable Threshold check.",
+	  "de": "Parameter 15: Aktivieren/Deaktivieren der Schwellenwertprüfung."
+    },
+    "zwave": {
+      "index": 15,
+      "size": 1
+    },
+    "value": true 
+ }, 
+    {
+    "id": "16",
+    "type": "number",
+    "label": {
+      "en": "Temperature Sensor Report Threshold",
+	  "de": "Temperaurberichtsgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 16: Change threshold value for change in temperature to induce an automatic report for temperature sensor. Scale is identical setting in Parameter No.20.",
+	  "de": "Parameter 16: Ändern Sie den Schwellenwert für die Temperaturänderung, um eine automatische Meldung für den Temperatursensor zu veranlassen. Die Skala ist identisch mit der Einstellung in Parameter Nr.20."
+    },
+    "zwave": {
+      "index": 16,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "value": 10
+  },
+   {
+    "id": "17",
+    "type": "number",
+    "label": {
+      "en": "Light Sensor Report Threshold",
+	  "de": "Lichtsensorberichtsgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 17: Change threshold value for change in light sensor to induce an automatic report for temperature sensor.",
+	  "de": "Parameter 17: Ändern Sie den Schwellenwert für die Änderung des Lichtsensors, um eine automatische Meldung für den Temperatursensor zu veranlassen."
+    },
+    "zwave": {
+      "index": 17,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 10000
+    },
+    "value": 100
+  },
+    {
+    "id": "18",
+    "type": "number",
+    "label": {
+      "en": "Threshold Check Time",
+	  "de": "Grenzwert Prüfintervall"
+    },
+    "hint": {
+      "en": "Parameter 18: Set threshold check time in seconds.",
+	  "de": "Parameter 18: Legen Sie die Dauer der Schwellenwertprüfung in Sekunden fest."
+    },
+    "zwave": {
+      "index": 18,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 60,
+      "max": 65535
+    },
+    "value": 120
+  },
+     {
+    "id": "19",
+    "type": "dropdown",
+    "label": {
+      "en": "Limit control",
+      "de": "Auswahl Grenzwertprüfung"
+    },
+    "hint": {
+      "en": "Parameter 19: Used to enable/disable measurement reports for various sensors that is more than the upper limit value or less than the lower limit value.",
+      "de": "Parameter 19: Dient zum Aktivieren/Deaktivieren von Messberichten für verschiedene Sensoren, die über dem oberen Grenzwert oder unter dem unteren Grenzwert liegen."
+    },
+    "zwave": {
+      "index": 19,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Temperature upper level ",
+          "de": "Temperatur oberer Grenzwert"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Lux upper level ",
+          "de": "Helligkeit oberer Grenzwert"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Both upper level",
+          "de": "Beide obere Grenzwerte"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Temperature lower level",
+          "de": "Temperatur unterer Grenzwert"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Temperature upper & lower level",
+          "de": "Temperature oberer & unterer Grenzwert"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Temperature lower & Lux upper level",
+          "de": "Temperature oberer & unterer Grenzwert"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Both upper & Temperature lower level",
+          "de": "Beide oberen & Temperatur unterer Grenzwert"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Lux lower level ",
+          "de": "Helligkeit unterer Grenzwert"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "Lux lower & Temperature upper level ",
+          "de": "Helligkeit unterer & Temperatur oberer Grenzwert"
+        }
+      },
+	  {
+        "id": "10",
+        "label": {
+          "en": "Lux lower & upper level",
+          "de": "Helligkeit unterer & oberer Grenzwert"
+        }
+      },
+	  {
+        "id": "11",
+        "label": {
+          "en": "Lux lower & both upper level",
+          "de": "Helligkeit unterer & beide oberen Grenzwerte"
+        }
+      },
+	  {
+        "id": "12",
+        "label": {
+          "en": "Both lower level ",
+          "de": "Beide untere Grenzwerte"
+        }
+      },
+	  {
+        "id": "13",
+        "label": {
+          "en": "Temperature upper & both lower level",
+          "de": "Temperature oberer & beide unteren Grenzwerte"
+        }
+      },
+	  {
+        "id": "14",
+        "label": {
+          "en": "Lux upper & both lower level",
+          "de": "Helligkeit oberer & beide unteren Grenzwerte"
+        }
+      },
+	  	  {
+        "id": "15",
+        "label": {
+          "en": "All enabled",
+          "de": "Alle aktiviert"
+        }
+      } 
+    ]
+  },
+  {
+    "id": "20",
+    "type": "number",
+    "label": {
+      "en": "Temperature Upper Limit",
+	  "de": "Oberer Temperaturgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 20: Set upper limit level for temperature set in scale of 0.1. If (Current measurement) > (Upper Limit), then report sensor. \nValues:\n280 - 1000 (28,0 - 100,0 Celsius)\n824 - 2120 (82,4 - 212,0 Fahrenheit) ",
+      "de": "Parameter 20: Oberer Grenzwert für die Temperatur in der Skala von 0,1 einstellen. Wenn (aktueller Messwert) > (oberer Grenzwert), dann meldet der Sensor.  Wertebereich: 270 - 850 (27,0 - 85,0 Celsius)"      
+    },
+    "zwave": {
+      "index": 20,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 2120
+    },
+    "value": 280
+  }, 
+    {
+    "id": "21",
+    "type": "number",
+    "label": {
+      "en": "Temperature Lower Limit",
+	  "de": "Unterer Temperaturgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 21: Set lower limit level for temperature set in scale of 0.1. If (Current measurement) < (Lower Limit), then report sensor. \nValues:\n-400 - 0 (-40,0 - 0 Celsius)\n-400 - 320 (-40,0 - 32,0 Fahrenheit) ",
+      "de": "Parameter 21: Unterer Grenzwert für die Temperatur in der Skala von 0,1 einstellen. Wenn (aktueller Messwert) < (unterer Grenzwert), dann meldet der Sensor.  Wertebereich: -400 - 0 (-40,0 - 0 Celsius)"      
+    },
+    "zwave": {
+      "index": 21,
+      "size": 2
+    },
+    "attr": {
+      "min": -400,
+      "max": 320
+    },
+    "value": 0
+  }, 
+    {
+    "id": "22",
+    "type": "number",
+    "label": {
+      "en": "Lux Upper Limit",
+	  "de": "Oberer Helligkeitsgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 22: Set lux upper limit level. If (Current measurement) > (Upper Limit), then report sensor. ",
+      "de": "Parameter 22: Oberen Grenzwert für die Helligkeitseinstellung. Wenn (Aktueller Messwert) > (Obere Grenze), dann meldet der Sensor."      
+    },
+    "zwave": {
+      "index": 22,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+    },
+    "value": 1000
+  },
+    {
+    "id": "23",
+    "type": "number",
+    "label": {
+      "en": "Lux Lower Limit",
+	  "de": "Unterer Helligkeitsgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 23: Set lux lower limit level. If (Current measurement) < (Upper Limit), then report sensor. ",
+      "de": "Parameter 23: Oberen Grenzwert für die Helligkeitseinstellung. Wenn (Aktueller Messwert) > (Obere Grenze), dann meldet der Sensor."      
+    },
+    "zwave": {
+      "index": 23,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+    },
+    "value": 100
+  },  
+     {
+    "id": "25",
+    "type": "number",
+    "label": {
+      "en": "Automatic Interval Time",
+	  "de": "Automatische Berichtszeit"
+    },
+    "hint": {
+      "en": "Parameter 25: Interval time set in seconds to check the sensor report. Multilevel Sensor Report will be sent when timeout.  ",
+      "de": "Parameter 25: Intervallzeit in Sekunden zur Überprüfung des Sensorberichts. Der Multisensorbericht wird bei Zeitüberschreitung gesendet."      
+    },
+    "zwave": {
+      "index": 25,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 30,
+      "max": 65535
+    },
+    "value": 3600
+  },
+  {
+  "type": "group",
+    "label": {
+      "en": "Sensor firmware V2.08 or higher",
+	  "de": "Sensor ab Firmware-Version 2.08"
+		},
+	"children": [  
+  {
+    "id": "26",
+    "type": "checkbox",
+    "label": {
+      "en": "LED Activity",
+	  "de": "LED Anzeige"
+    },
+    "hint": {
+      "en": "Parameter 26:Deactivates/activates the LED",
+	  "de": "Parameter 26:Deaktiviert/Aktiviert die LED"
+    },
+	"zwave": {
+      "index": 26,
+      "size": 1
+    },
+    "value": true
+  },
+     {
+    "id": "27",
+    "type": "dropdown",
+    "label": {
+      "en": "Motion Sensor Report Indicator",
+      "de": "Anzeige des Bewegungssensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 27: If LED is enabled, allow user to change the report color of motion sensor.",
+      "de": "Parameter 27: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Bewegungssensors ändern."
+    },
+    "zwave": {
+      "index": 27,
+      "size": 1
+    },
+    "value": "3",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+    },
+    {
+    "id": "28",
+    "type": "number",
+    "label": {
+      "en": "Temperature Offset Value",
+	  "de": "Kalibrierung Temperatursensor"
+    },
+    "hint": {
+      "en": "Parameter 28: Can add or minus this setting value to calibrate temperature when checked.",
+      "de": "Parameter 28: Dieser Einstellwert kann zur Kalibrierung der Temperatur addiert oder subtrahiert werden."      
+    },
+    "zwave": {
+      "index": 28,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": -200,
+      "max": 200
+    },
+    "value": 0
+  },
+      {
+    "id": "29",
+    "type": "number",
+    "label": {
+      "en": "Lux Offset Value",
+	  "de": "Kalibrierung Helligkeitssensor (Lux)"
+    },
+    "hint": {
+      "en": "Parameter 29: Can add or minus this setting value to calibrate Lux when checked..",
+      "de": "Parameter 29: Dieser Wert kann zur Kalibrierung der Helligkeit (LUX) addiert oder subtrahiert werden."      
+    },
+    "zwave": {
+      "index": 29,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": -10000,
+      "max": 10000
+    },
+    "value": 0
+  }
+  ]}
+]

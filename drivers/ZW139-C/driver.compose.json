@@ -1,9 +1,10 @@
 {
   "id": "ZW139-C",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Nano Switch (ZW139)"
   },
-  "class": "light",
+  "class": "socket",
   "capabilities": [
     "onoff"
   ],
@@ -11,39 +12,53 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+   "connectivity": ["zwave"],
   "zwave": {
-    "manufacturerId": 134,
+        "manufacturerId": [
+     134,
+     362
+    ],
     "productTypeId": [
       3,
-      515
+      515,
+	  259
     ],
     "productId": [
       139
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 2320,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2320/Nano Switch manual.pdf",
     "learnmode": {
       "instruction": {
         "en": "Press the action button on the back of the {{driverNameEn}}.",
-        "nl": "Druk op de actie knop op de achterkant van de {{driverNameNl}}."
+        "nl": "Druk op de actie knop op de achterkant van de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste auf der Rücksite des {{driverNemeEn}} einmal."
+      }
+    },
+	"unlearnmode": {
+      "instruction": {
+        "en": "Press the action button on the back of the {{driverNameEn}}.",
+        "nl": "Druk op de actie knop op de achterkant van de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste auf der Rückseite des {{driverNameEn}} einmal."
       }
     },
     "associationGroups": [
-      1,
-      3,
-      4
+      1, 3, 4
     ],
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Z-Wave Plus Lifeline.\r\nWhen the load state of Nano Switch (turn on/off the load) is changed, the Hail CC and Basic Report (configured by parameter 80) can be sent to the associated nodes in this group."
+          "en": "Z-Wave Plus Lifeline",
+		  "de": "Z-Wave Plus Lifeline",
+		  "nl": "Z-Wave Plus Lifeline"
         }
       }
     },
     "defaultConfiguration": [
       {
         "id": 80,
-        "value": 3,
+        "value": 2,
         "size": 1
       },
       {

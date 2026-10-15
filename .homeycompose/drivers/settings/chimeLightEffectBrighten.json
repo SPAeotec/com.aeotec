@@ -1,0 +1,24 @@
+{
+  "id": "lightEfftectBright",
+  "type": "number",
+  "label": {
+    "en": "Brighten duration",
+    "nl": "Verlicht duratie",
+	"de": "Aufhellungsdauer"
+  },
+  "hint": {
+    "en": "Determine the time it takes to dim up.",
+    "nl": "Bepaal de tijd het duurt om naar boven te dimmen.",
+	"de": "Bestimmen Sie die Zeit, die zum Aufdimmen benötigt wird."
+  },
+  "attr": {
+    "min": 0,
+    "max": 127
+  },
+  "value": 50,
+  "units": {
+    "en": "x 20 mS",
+    "nl": "x 20 mS",
+	"de": "x 20 mS"
+  }
+}

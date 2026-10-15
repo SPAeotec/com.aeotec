@@ -3,12 +3,14 @@
     "id": "1",
     "value": true,
     "label": {
-      "en": "Reported Sensor Binary values when opened/closed.",
-      "nl": "Gerapporteerde Sensor Binary waarde bij het openen/sluiten."
+      "en": "Reported Sensor Binary values when opened/closed",
+      "nl": "Gerapporteerde Sensor Binary waarde bij het openen/sluiten",
+	  "de": "Binärwert beim Öffnen/Schließen"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines what value will be sent in the Sensor Binary report when the door is opened/closed.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Sensor Binary report wanneer de deur opent/sluit."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Sensor Binary rapport wanneer de deur opent/sluit.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt, welcher Wert im Sensor-Binärbericht gesendet wird, wenn die Tür geöffnet/geschlossen wird."
     },
     "zwave": {
       "index": 1,
@@ -20,12 +22,14 @@
     "id": "111",
     "value": 0,
     "label": {
-      "en": "Report interval for battery reports.",
-      "nl": "Rapportage interval voor batterijniveau."
+      "en": "Report interval for battery reports",
+      "nl": "Rapportage interval voor batterijniveau",
+	  "de": "Berichtsintervall für Batterieberichte"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines the time interval between battery reports.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen batterij rapportages."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de tijd tussen batterij rapportages.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt die Zeit zwischen den Batteriemeldungen."
     },
     "zwave": {
       "index": 111,
@@ -42,11 +46,13 @@
     "value": "256",
     "label": {
       "en": "On/off report command",
-      "nl": "Report bij aan/uit"
+      "nl": "Report bij aan/uit",
+	  "de": "Typ des Berichtes bei Ein/Aus"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines what report will be sent when the sensor is triggered on/off.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type report er wordt verzonden wanneer de sensor aan/uit geschakelt is."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type rapport er wordt verzonden wanneer de sensor aan/uit geschakelt is.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) legt fest, welche Art von Bericht gesendet wird, wenn der Sensor ausgelöst und zurückgesetzt wird."
     },
     "zwave": {
       "index": 121,
@@ -56,19 +62,22 @@
       {
         "id": "16",
         "label": {
-          "en": "Basic Set CC is selected."
+          "en": "Basic Set CC is selected.",
+		  "de": "Basic Set CC ist ausgewählt."
         }
       },
       {
         "id": "256",
         "label": {
-          "en": "Sensor Binary report CC is selected."
+          "en": "Sensor Binary report CC is selected.",
+		  "de": "Sensor Binärbericht CC ist ausgewählt."
         }
       },
       {
         "id": "272",
         "label": {
-          "en": "Basic Set CC and Sensor Binary report CC are selected."
+          "en": "Basic Set CC and Sensor Binary report CC are selected.",
+		  "de": "Basic Set CC und Sensor Binary report CC sind ausgewählt."
         }
       }
     ],
@@ -78,12 +87,14 @@
     "id": "2",
     "value": true,
     "label": {
-      "en": "Enable 10 minute wake-up on re-power.",
-      "nl": "Schakel 10 minuten wakker zijn bij stroomherstel in."
+      "en": "Enable 10 minute wake-up on re-power",
+      "nl": "Schakel 10 minuten wakker zijn bij stroomherstel in",
+	  "de": "10-minütiges Aufwachen beim Wiedereinschalten aktivieren"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the device will stay awake for 10 minutes after re-power.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat na stroomherstel 10 minuten in wakker modus blijft."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat na stroomherstel 10 minuten in wakker modus blijft.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) legt fest, ob das Gerät nach dem Wiedereinschalten 10 Minuten lang wach bleibt oder nicht."
     },
     "zwave": {
       "index": 2,
@@ -95,12 +106,14 @@
     "id": "255",
     "value": false,
     "label": {
-      "en": "Reset the sensor.",
-      "nl": "Reset de sensor."
+      "en": "Reset the sensor",
+      "nl": "Reset de sensor",
+	  "de": "Werkseinstellung"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) triggers a reset of the sensor.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) veroorzaakt een reset van de sensor."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) veroorzaakt een reset van de sensor.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) löst einen Reset des Sensors aus."
     },
     "zwave": {
       "index": 255,
@@ -112,12 +125,14 @@
     "id": "3",
     "value": true,
     "label": {
-      "en": "Reported Basic Set values when opened/closed.",
-      "nl": "Gerapporteerde Basic Set waarde bij het openen/sluiten."
+      "en": "Reported Basic Set values when opened/closed",
+      "nl": "Rapporteerd Basic Set waardes bij het openen/sluiten",
+	  "de": "Gemeldete Basic-Set-Werte beim Öffnen/Schließen"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines what value will be sent in the Basic Set report when the door is opened/closed.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waarde er wordt verzonden in het Basic Set report wanneer de deur opent/sluit."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke waardes er wordt verzonden in het Basic Set rapport wanneer de deur opent/sluit.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) legt fest, welcher Wert im Grundeinstellungsbericht gesendet wird, wenn die Tür geöffnet/geschlossen wird."
     },
     "zwave": {
       "index": 3,
@@ -130,11 +145,13 @@
     "value": 10,
     "label": {
       "en": "Low battery value",
-      "nl": "Laag batterij niveau"
+      "nl": "Laag batterij niveau",
+	  "de": "Niedriger Batteriewert"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines the low battery value.",
-      "nl": "Deze parameter ({{zwaveParamtererIn dex}}) bepaalt het lage batterij niveau."
+      "nl": "Deze parameter ({{zwaveParamtererIn dex}}) bepaalt het lage batterij niveau.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt den Wert für die schwache Batterie."
     },
     "zwave": {
       "index": 39,

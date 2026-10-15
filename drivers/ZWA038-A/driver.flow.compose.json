@@ -1,0 +1,76 @@
+{
+  "triggers": [
+    {
+      "id": "ZWA038_scene",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Scene is activated"
+      },
+	  "titleFormatted": {
+		"en": "Button[[button]] is [[scene]]"
+		},
+      "args": [
+        {
+          "name": "button",
+		  "title": {
+			  "en": "Select a button"
+		  },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Top"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Bottom"
+              }
+            }
+          ]
+        },
+        {
+          "name": "scene",
+		  "platforms": [ "local", "cloud" ],
+		  "title": {
+			  "en": "Select a aktion",
+			  "de": "Aktionsauswahl"
+		  },
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "Pressed 1x"
+              }
+            },
+			{
+              "id": "Key Pressed 2 times",
+              "label": {
+                "en": "Pressed 2x"
+              }
+            },
+			{
+              "id": "Key Held Down",
+              "label": {
+                "en": "Hold press (5 seconds)"
+              }
+            },
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Press released"
+              }
+            }
+            
+          ]
+        }
+      ]
+    }
+        
+  ],
+  "condition": [],
+  "actions": []
+}

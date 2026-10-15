@@ -1,0 +1,260 @@
+{
+  "3.0.0": {
+    "en": "Updated to the latest version of the Homey Apps SDK.",
+    "nl": "Bijgewerkt naar de laatste versie van de Homey Apps SDK."
+  },
+  "3.0.1": {
+    "en": "Updated to the latest version of the Homey Apps SDK.",
+    "nl": "Bijgewerkt naar de laatste versie van de Homey Apps SDK."
+  },
+  "3.0.2": {
+    "en": "Added support for various devices and improved existing drivers.",
+    "de": "Unterstützung für verschiedene Geräte hinzugefügt und bestehende Treiber verbessert."
+  },
+  "3.0.3": {
+    "en": "Added support for various devices and improved existing drivers. Updated to the latest SDK",
+    "de": "Unterstützung für verschiedene Geräte hinzugefügt und bestehende Treiber verbessert. SDK aktualisiert."
+  },
+  "3.0.4": {
+    "en": "Errors in individual device drivers fixed.",
+    "de": "Fehler in einzelnen Gerätetreibern beseitigt"
+  },
+  "3.0.5": {
+    "en": "Fix Temper Problem on Notification CC.",
+    "de": "Temper-Problem bei Notification CC behoben"
+  },
+  "3.0.6": {
+    "en": "Fix Zwave driver notification problem."
+  },
+  "3.0.7": {
+    "en": "Add DSC17 device driver, any fixes"
+  },
+  "3.0.8": {
+    "en": "Fix problems with ZWA003 and ZWA021, text corrections. "
+  },
+  "3.0.9": {
+    "en": "Fix freezing of Home Energy Meter, fix Inclusion error Bulb 5, update Z-Wave driver"
+  },
+  "3.0.11": {
+    "en": "Add new capabilitys, flows and german language for ZW078, ZW116, ZW111, ZW132, ZW175, ZWA006, ZW095, ZW096, ZWA006. Fix battery bug for ZW112, rework driver for ZW162 and ZW164.",
+	"de": "Es wurden neuen Fähigkeiten, Flows und deutsche Sprache für ZW078, ZW116, ZW111, ZW132, ZW175, ZWA006, ZW095, ZW096, ZWA006 hinzugefügt. Fehler mit der Battereinazeige wurde ZW112 behoben, der Treiber für ZW162 und ZW164 wurde überarbeitet."
+  },
+  "3.0.12": {
+    "en": "Fix ZW062 driver error, fix translation errors ",
+	"de": "Behebt ZW062 Treiberprobleme sowie Übersetzungsfehler \n Detaillierte Änderungen der einzelnen Versionen finden Sie hier.https://tinyurl.com/AeotecHomey \n "
+  },
+  "3.1.0": {
+    "en": "Add new devices, update Z-Wave driver and fix minor bugs.",
+	"de": "Es wurden neue Geräte hinzugefügt, der Z-Wave Treiber geupdatet sowie kleinere Fehler beseitigt. "
+  },
+  "3.1.2": {
+    "en": "This patch fixes the problems with the NanoMote Quad, Doorbell 6 and Siren 6.",
+	"de": "Dieses Patch behebt die Probleme mit dem NanoMote Quad, Doorbell 6 and Siren 6. "
+  },
+  "3.1.3": {
+    "en": "This patch fixes the problems Dual Nano Switch.",
+	"de": "Dieses Patch behebt die Probleme der Ekennung des Dual Nano Switch."
+  },
+  "3.2.0": {
+    "en": "The ZWA011 device has been added. The ID for devices with Russian frequency was added to several devices.",
+	"de": "Es wurde das Gerät ZWA011 hinzugefügt. Bei verschiedenen Geräten wurde die ID für Geräte mit russischer frequenz aufgenomen."
+  },
+  "3.2.2": {
+    "en": "Update Z-Wave Driver. Bugfix Doorbell6 and Siren 6.",
+	"de": "Z-Wave Treibe wurde aktualisiert. Es erfolgte eine Fehlerbeseitigung bei Doorbell 6 und Siren 6."
+  },
+  "3.3.0": {
+    "en": "Add Zigbee devices. Now you can use Aeotec Zigbee Sensors with Homey.",
+	"de": "Hinzufügen des Zigbee Treibers. Es können jetzt Aeotec Zigbee Sensoren mit Homey verwendet werden. "
+  },
+    "3.4.0": {
+    "en": "Aeotec (Smartthings) Outlet was added. Adjustments were made and bugs were fixed. Now you can use Aeotec Zigbee Sensors with Homey. ",
+	"de": "Aeotec (Smartthings) Outlet wurde hinzugefügt. Es wurden Anpassungen vorgenommen und Fehler beseitigt. "
+  },
+  "3.5.1": {
+    "en": "Add New devices, Adjustments were made and bugs were fixed. Now you can use Aeotec Zigbee Sensors with Homey.",
+	"de": "Neue Geräte wurden hinzugefügt. Es wurden Anpassungen vorgenommen und Fehler beseitigt. "
+  },
+  "3.6.0": {
+    "en": "Add New US devices for Homey Bridge, Adjustments were made and bugs were fixed. Rework Home Energy Meter Gen 5 (EU) driver. ",
+	"de": "Neue US-Geräte für Homey Bridge hinzufügen, Anpassungen wurden vorgenommen und Fehler behoben. "
+  },
+   "3.6.1": {
+    "en": "Add New US devices for Homey Bridge, Adjustments were made and bugs were fixed. Rework Home Energy Meter Gen 5 (EU) driver.",
+	"de": "Neue US-Geräte für Homey Bridge hinzufügen, Anpassungen wurden vorgenommen und Fehler behoben. Überarbeitung Home Energy Meter Gen 5 (EU) Treiber."
+  },
+  "3.6.2": {
+    "en": "Adjustments were made and bugs were fixed.",
+	"de": "Anpassungen wurden vorgenommen und Fehler behoben."
+  },
+  "3.6.3": {
+    "en": "Adjustments were made and bugs were fixed. Detailed change of the individual versions can be found here. https://tinyurl.com/AeotecHomey",
+	"de": "Anpassungen wurden vorgenommen und Fehler behoben. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://tinyurl.com/AeotecHomey"
+  },
+  "3.6.4": {
+    "en": "Adjustments were made and bugs were fixed. Detailed change of the individual versions can be found here. https://tinyurl.com/AeotecHomey",
+	"de": "Anpassungen wurden vorgenommen und Fehler behoben. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://tinyurl.com/AeotecHomey"
+  },
+  "3.7.0": {
+    "en": "Add Range Extender Zigbee. Adjustments were made and bugs were fixed. Detailed change of the individual versions can be found here. https://tinyurl.com/AeotecHomey",
+	"de": "Range Extender Zigbee hinzugefügt. Anpassungen wurden vorgenommen und Fehler behoben. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://tinyurl.com/AeotecHomey"
+  },
+   "3.8.0": {
+    "en": "Add Nano Mote One. Rework Home Energy Meter EU and Smart Switch 7 EU, adjustments were made and bugs were fixed. Detailed change of the individual versions can be found here. https://aeotec.com/Homey",
+	"de": "Nano Mote One hinzufügen. Überarbeitung von Home Energy Meter EU und Smart Switch 7 EU, detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://Aeotec.com/Homey"
+  },
+   "3.8.1": {
+    "en": "Adjustments were made and bugs were fixed. Detailed change of the individual versions can be found here. https://aeotec.com/Homey",
+	"de": "Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/Homey"
+  },
+  "3.8.2": {
+    "en": "Adjustments were made and bugs were fixed. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Fehlerbehebung, Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.8.3": {
+    "en": "Rework Aeotc Outlet (Zigbee), Fixed bugs. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Überarbeitung Aeotec Outlet(Zigbee), Fehlerbehebung. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.8.4": {
+    "en": "Fixed AerQ Parameter 14, Fixed Radiator Thermostat external Temperature flow. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Fehler Parameter 14 bei AerQ behoben, Fehler bei Radiator Thermostat Flow externe Temperatur behoben. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.8.5": {
+    "en": "Fix and add condition flows of some devices. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Hinzufügen und Fehlerbehebung von condition Flows bei einigen Geräten. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.8.6": {
+    "en": "Rework DSB28 driver, release US-Devices for Homey Pro. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Überarbeitung des DSB28-Treibers, Freigabe von US-Geräten für Homey Pro. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.9.0": {
+    "en": "Add Smart Outdoor Switch (US) and Z-Stick Gen 5(+). Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Smart Outdoor Switch (US) und Z-Stick Gen5(+) wurden hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+   "3.9.1": {
+    "en": "Adjustments for Homey Pro (Early2023). Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Anpassungen für Homey Pro (Early2023). Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+   "3.9.2": {
+    "en": "Fixed issue with remote devices Enabling these devices for Homey Bridge. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Problem mit Remote-Geräten behoben Freigabe dieser Geräte für Homey Bridge. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.9.3": {
+    "en": "Fixed issue with LED Bulb 6. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Problem mit LED Bulb 6 behoben. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+	"3.9.4": {
+    "en": "Fixed issue with MultiSensor 6. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Problem mit MultiSensor 6 behoben. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+	"3.9.5": {
+    "en": "Optimization energy reports of various devices. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Optimierung Energieberichte verschiedener Geräte. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.9.6": {
+    "en": "Optimization  Nano Shutter V3 devices. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Optimierung Nano Shutter V3. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.9.7": {
+    "en": "Add ID'S for OOMI devices. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+	"de": "Geräte ID'S für OOMI Geräte hinzugefügt. Optimierung Nano Shutter V3. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.9.8": {
+    "en": "Add ID'S for SmartSwitch6 US. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Geräte ID'S für Smart Switch 6 US Geräte hinzugefügt. Optimierung Nano Shutter V3. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.10.1": {
+    "en": "Add new device. Fix issues. Optimise Home Energy Meter Gen 5. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Nues Gerät hinzugefügt. Fehlerbehebung. Optimierung Home Energy Meter Gen 5. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.11.0": {
+    "en": "Add new Pico devices. Fix issues. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Pico Geräte hinzugefügt. Fehlerbehebung. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+
+    "3.12.0": {
+    "en": "Add DSB004 Fix issues. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "DSB004 hinzugefügt. Fehlerbehebung. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+   "3.12.1": {
+    "en": "Add DSB004, DSB009. Fix issues. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "DSB004, DSB009 hinzugefügt. Fehlerbehebung. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+   "3.13.0": {
+    "en": "Add ZGA004. Fix issues. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "ZGA004 hinzugefügt. Fehlerbehebung. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.13.4": {
+    "en": "Bug fixes. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Fehlerbehebung. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.14.0": {
+    "en": "Add Home Energy Meter 8 (US) ,Bug fixes. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Home Energy Meter 8 (US) hinzugefügt. Fehlerbehebung. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.14.1": {
+    "en": "Add Home Energy Meter 8 (US) ,Bug fixes. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Home Energy Meter 8 (US) hinzugefügt. Fehlerbehebung. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+   "3.14.2": {
+    "en": "Bug fix ZWA005. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Fehlerbehebung ZWA005. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+     "3.14.3": {
+    "en": "Add Parmeter for new Firmware ZWA045. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Ergänzung von Parametern des ZWA045 für neue Firmware. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.15.0": {
+    "en": "Add Home Energy Meter 8 3 Clamp Edition. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Home Energy Meter 8 Version mit 3 Klemmen hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.16.1": {
+    "en": "Add SmokeShield. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "SmokeShield hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.17.2": {
+    "en": "Add Aeotec SmartThings Button (Zigbee). Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Aeotec SmartThings Button hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.17.3": {
+    "en": "Add Aeotec SmartThings Button (Zigbee). Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Aeotec SmartThings Button hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.17.4": {
+    "en": "Revision/adjustment of MultiSensor 7. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Überarbeitung/Anpassung MultiSensor 7. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.17.5": {
+    "en": "General Update. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Allgemeines Update. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+   "3.17.6": {
+    "en": "General Update compatibility fix for bridge. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Allgemeines Update Kompatibilitätsanpassung für bridge. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+   "3.17.7": {
+    "en": "Fix for Multipurpose Sensor. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Fehlerbehebung Multipurpose Sensor. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.17.8": {
+    "en": "Fix for Multipurpose Sensor. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Fehlerbehebung Multipurpose Sensor. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+    "3.18.0": {
+    "en": "Add Door Window Sensor 8. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Door Window Sensor 8 hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.19.0": {
+    "en": "Add Water Sensor 8 and AerQ Sensor 8. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Wassersensor 8 und AerQ Sensor 8 hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+   "3.19.1": {
+    "en": "Add Firmware Update for ZWA050. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Firmwareupdate für ZWA050 hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  },
+  "3.20.0": {
+    "en": "Add new Devices, add Firmware Update for ZWA045. Detailed change of the individual versions can be found here. https://aeotec.com/homey",
+    "de": "Neuge Geräte hinzugefügt. Firmwareupdate für ZWA045 hinzugefügt. Detaillierte Änderungen der einzelnen Versionen finden Sie unter: https://aeotec.com/homey"
+  }
+ }
+

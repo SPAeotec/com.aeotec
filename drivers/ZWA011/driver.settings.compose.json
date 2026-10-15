@@ -1,0 +1,473 @@
+[
+	{
+      "id": "sensor_state_polarity",
+      "zwave": {
+        "index": 3,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Sensor State Polarity",
+        "nl": "Sensorstaat Polariteit van de sensor",
+		"de": "Polarität des Sensorzustands"
+      },
+      "hint": {
+        "en": "Parameter 3: This parameter defines if the internal magnet sensor or the external terminal input is detected and used to issue alarm notification. There is always one input active only. The other sensor input the deactivated.",
+        "nl": "Parameter 3: Deze parameter bepaalt of de interne magneetsensor of de externe klemmeningang wordt gedetecteerd en gebruikt voor het afgeven van alarmmeldingen. Er is altijd maar één ingang actief. De andere sensoringang is gedeactiveerd.",
+		"de": "Parameter 3: Dieser Parameter legt fest, ob der interne Magnetsensor oder der Eingang des externen Terminals erkannt und zur Alarmmeldung verwendet wird. Es ist immer nur ein Eingang aktiv. Der andere Sensoreingang ist der deaktivierte. "
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Closed when Magnet in proximity (default)",
+            "nl": "Gesloten wanneer de magneet in de buurt is. (standaard)",
+			"de": "Geschlossen, wenn der Magnet in der Nähe ist. (Standard)"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Opened when Magnet in proximity",
+            "nl": "Geopend wanneer de magneet in de buurt is.",
+			"de": "Geöffnet, wenn der Magnet in der Nähe ist."
+          }
+        }
+      ]
+    },
+	{
+      "id": "visual_led_indications",
+      "zwave": {
+        "index": 4,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "7",
+      "label": {
+        "en": "Visual LED Indications",
+        "nl": "Visuele LED-indicaties",
+		"de": "Optische LED-Anzeige"
+      },
+      "hint": {
+        "en": "Parameter 4: This parameter defines when the red LED will indicate events. Disabling all indications may extend battery life. ",
+        "nl": "Parameter 4: Deze parameter bepaalt wanneer de rode LED gebeurtenissen aangeeft. Het uitschakelen van alle indicaties kan de levensduur van de batterij verlengen.",
+		"de": "Parameter 4: Dieser Parameter legt fest, wann die rote LED Ereignisse anzeigt. Das Deaktivieren aller Anzeigen kann die Lebensdauer der Batterie verlängern."
+      },
+	   "values": [{
+          "id": "7",
+          "label": {
+            "en": "On at all events (default)",
+            "nl": "Aan in ieder geval (standaard)",
+			"de": "An bei allen Events (Standard)"
+          }
+        },
+		 {
+          "id": "0",
+          "label": {
+			"en": "Off",
+            "nl": "Uit",
+			"de": "Aus"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Open/Close Status Change only",
+            "nl": "Alleen openen/sluiten van de statuswijziging",
+			"de": "Nur bei Statusänderung Öffnen/Schließen"
+          }
+        },
+		        {
+          "id": "2",
+          "label": {
+			"en": "Wake Up only",
+            "nl": "Alleen Wake Up",
+			"de": "Nur bei Wake Up"
+          }
+        },
+		        {
+          "id": "4",
+          "label": {
+			"en": "Device Tampering only",
+            "nl": "Alleen Apparaat manipulatie",
+			"de": "Nur bei Auslösen des Tamper-Tasters"
+          }
+        },
+		        {
+          "id": "3",
+          "label": {
+			"en": "Open/Close Status Change + Wake Up",
+            "nl": "openen/sluiten van de statuswijziging + Wake Up",
+			"de": "Statusänderung Öffnen/Schließen + Wake Up"
+          }
+        },
+		        {
+          "id": "5",
+          "label": {
+			"en": "Open/Close Status Change + Device Tampering",
+            "nl": "openen/sluiten van de statuswijziging + Apparaat manipulatie",
+			"de": "Statusänderung Öffnen/Schließen + Tamper-Taster"
+          }
+        },
+		        {
+          "id": "6",
+          "label": {
+			"en": "Wake Up + Device Tampering",
+            "nl": "Wake Up + Apparaat manipulatie",
+			"de": "Wake Up + Tamper-Taster"
+          }
+        }
+      ]
+    },
+    {
+      "id": "range_test",
+      "zwave": {
+        "index": 5,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Range Test after double click",
+        "nl": "Bereiktest na dubbelklikken",
+		"de": "Reichweitentest nach Doppelklick"
+      },
+      "hint": {
+        "en": "Parameter 5: Allows to enable the activation of a Z-Wave range test with double clicking the tamper switch.",
+        "nl": "Parameter 5: Maakt het mogelijk om een Z-Wave-bereiktest te activeren met een dubbelklik op de sabotageschakelaar. ",
+		"de": "Parameter 5: Ermöglicht die Aktivierung eines Z-Wave-Reichweitentests durch Doppelklicken des Manipulationsschalters."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Enabled (default)",
+            "nl": "Ingeschakeld",
+			"de": "Deaktiviert (Standard)"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Disabled",
+            "nl": "Uitgeschakeld",
+			"de": "Aktiviert"
+          }
+        }
+      ]
+    },
+	{
+      "id": "group_trigger",
+      "zwave": {
+        "index": 6,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "2nd Association Group Trigger",
+        "nl": "2de Association Group Trigger",
+		"de": "Auslöser für Assoziationsgruppe 2"
+      },
+      "hint": {
+        "en": "Parameter 6: This parameter defines the status of the magnet switch that causes sending a BASIC command to all devices of Association Group 2. ",
+        "nl": "Parameter 6: Deze parameter definieert de status van de magneetschakelaar die ervoor zorgt dat een BASIC-commando naar alle apparaten van Associatiegroep 2 wordt verzonden.",
+		"de": "Parameter 6: Dieser Parameter definiert den Status des Magnetschalters, der das Senden eines BASIC-Befehls an alle Geräte der Verbindungsgruppe 2 bewirkt."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Switch after Open and Close (default)",
+            "nl": "Schakelaar na openen en sluiten (standaard)",
+			"de": "Umschalten nach Open und Close (Standard)"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Switch after Open",
+            "nl": "Schakelaar na openen",
+			"de": "Umschalten nach Open"
+          }
+        },
+		{
+          "id": "2",
+          "label": {
+			"en": "Switch after Close",
+            "nl": "Schakelaar na sluiten",
+			"de": "Umschalten nach Close"
+          }
+        }
+      ]
+    },
+	{
+      "id": "group_command",
+      "zwave": {
+        "index": 7,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Command Sent to Devices of Association Group 2",
+        "nl": "Commando Verzonden naar apparaten van de Associatiegroep 2",
+		"de": "Befehl, der an Geräte der Assoziationsgruppe 2 gesendet wird"
+      },
+      "hint": {
+        "en": "Parameter 7: This parameter defines which commands is sent to 2nd Association Group ",
+        "nl": "Parameter 7: Deze parameter definieert welke commando's naar de 2e Associatiegroep worden gestuurd.",
+		"de": "Parameter 7: Dieser Parameter definiert, welche Befehle an die Assoziationsgruppe 2 gesendet werden."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "On and Off (default)",
+            "nl": "Aan en uit (standaard)",
+			"de": "An und Aus (Standard)"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "On",
+            "nl": "Aan",
+			"de": "On"
+          }
+        },
+		{
+          "id": "2",
+          "label": {
+			"en": "Off",
+            "nl": "Uit",
+			"de": "Off"
+          }
+        }
+      ]
+    },
+	{
+      "id": "basic_group_on",
+      "zwave": {
+        "index": 8,
+        "size": 1,
+        "signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 255,
+      "label": {
+        "en": "BASIC command value sent to 2nd Association Group on On event",
+        "nl": "BASIC command verzonden naar 2de Associatiegroep On evenement",
+		"de": "BASIC Command wird an die Assoziationsgruppe 2 gesendet, wenn das Ereignis On eintritt "
+      },
+      "hint": {
+        "en": "Parameter 8: This is the BASIC command value sent in case of On event. (1-99, 255) (Default: 255)",
+        "nl": "Parameter 8: BASIC-commandowaarde verzonden in het geval van On event. (1-99, 255) (Standaard: 255)",
+		"de": "Parameter 8: Dies ist das BASIC Command, das im Falle des Ereignisses On gesendet wird. (1-99, Standard: 255)"
+      }
+    },
+    {
+      "id": "basic_group_off",
+      "zwave": {
+        "index": 9,
+        "size": 1,
+        "signed": false
+      },
+	  "attr": {
+      "min": 0,
+      "max": 255
+    },
+      "type": "number",
+      "value": 255,
+      "label": {
+        "en": "BASIC command value sent to 2nd Association Group off event",
+        "nl": "BASIC command verzonden naar 2de Associatiegroep off evenement",
+		"de": "BASIC Command wird bei AUS gesendet "
+      },
+      "hint": {
+        "en": "Parameter 9: This is the BASIC command value sent in case of Off event. (1-99, 255) (Default: 255)",
+        "nl": "Parameter 9: BASIC-commandowaarde verzonden in het geval van Off event. (1-99, 255) (Standaard: 255=-1)",
+		"de": "Parameter 9: Dies ist das BASIC Command, das im Falle des Ereignisses Off gesendet wird. (1-99, 255) (Standard: 255=-1)"
+      }
+    },
+    {
+      "id": "time_delay_on",
+      "zwave": {
+        "index": 10,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Time Delay of On command frame",
+        "nl": "Tijdvertraging van het On-commandokader",
+		"de": "Zeitverzögerung des BASIC Commands AN"
+      },
+      "hint": {
+        "en": "Parameter 10: On command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+        "nl": "Parameter 10: On command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+		"de": "Parameter 10: Das On Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+      }
+    },
+    {
+      "id": "time_delay_off",
+      "zwave": {
+        "index": 11,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Time Delay of Off command frame",
+        "nl": "Tijdvertraging van het Off-commandokader",
+		"de": "Zeitverzögerung des BASIC Commands AUS"
+      },
+      "hint": {
+        "en": "Parameter 11: Off command is sent after a delay defined in this parameter. (0-32400) (Default: 0)",
+        "nl": "Parameter 11: Off command is sent after a delay defined in this parameter. (0-32400) (Standaard: 0)",
+		"de": "Parameter 11: Das Off Kommando wird nach einer in diesem Parameter definierten Verzögerung gesendet.  (0-32400) (Standard: 0)"
+      }
+    },
+   {
+      "id": "time_delay_tamper",
+      "zwave": {
+        "index": 12,
+        "size": 2
+      },
+	  "attr": {
+      "min": 0,
+      "max": 32400
+    },
+      "type": "number",
+      "value": 0,
+      "label": {
+        "en": "Delay of Tamper Alarm Cancellation",
+        "nl": "Vertraging van de Annulering van het sabotagealarm door een manipulatiealarm",
+		"de": "Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird "
+      },
+      "hint": {
+        "en": "Parameter 12: Time a tamper alarm is delayed. (0-32400) (Default: 0)",
+        "nl": "Parameter 12: Tijd dat een sabotagealarm wordt uitgesteld.  (0-32400) (Standaard: 0)",
+		"de": "Parameter 12: Zeitverzögerung bis der Tamper Alarm zurückgesetzt wird. (0-32400) (Standard: 0)"
+      }
+    },
+	{
+      "id": "alarm_cancellation",
+      "zwave": {
+        "index": 13,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Reporting Tamper Alarm Cancellation",
+        "nl": "Melden van het sabotagealarm annuleren",
+		"de": "Notification, dass der Tamper Alarm zurückgesetzt wurde "
+      },
+      "hint": {
+        "en": "Parameter 13: This parameter defines if the alarm cancellation event is reported.",
+        "nl": "Parameter 13: Deze parameter bepaalt of de alarmannulering wordt gemeld.",
+		"de": "Parameter 13: Dieser Parameter legt fest, ob das Ereignis Tamper Alarm zurückgesetzt gemeldet wird."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Do not send Report",
+            "nl": "Niet verzenden Rapport",
+			"de": "Bericht nicht senden"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Send Report (default)",
+            "nl": "Rapport verzenden (standaard)",
+			"de": "Bericht senden (Standard)"
+          }
+        }
+      ]
+    },
+	
+	 {
+    "type": "group",
+    "label": {
+      "en": "Settings only for Door Window Sensor 7 with fimware V2.x",
+	  "de": "Einstellungen nur Tür- Fenstersensor 7 mit Firmware V2.x"
+		},
+	"children": [
+	
+	 {
+    "id": "22",
+    "type": "checkbox",
+    "label": {
+      "en": "Binary Sensor report",
+	  "de": "Binary Sensor Bericht"
+    },
+    "hint": {
+      "en": "Parameter 22: Binary Sensor for door/window state.",
+	  "de": "Parameter 22: Binärer Bericht bei Statusänderung."
+    },
+    "zwave": {
+      "index": 22,
+      "size": 1
+    },
+    "value": false
+  },
+	
+	{
+      "id": "23",
+      "zwave": {
+        "index": 23,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 10,
+      "max": 50
+    },
+      "type": "number",
+      "value": 20,
+      "label": {
+        "en": "Battery low report",
+		"de": "Bericht bei niedrigem Batteriestand"
+      },
+      "hint": {
+        "en": "Parameter 23: Report low battery when level in % goes under threshold setting",
+		"de": "Parameter 23: Bericht über schwache Batterie, wenn der Füllstand unter den eingestellten Schwellenwert in % fällt."
+      }
+    },
+	{
+      "id": "24",
+      "zwave": {
+        "index": 24,
+        "size": 1,
+		"signed": false
+      },
+	  "attr": {
+      "min": 1,
+      "max": 255
+    },
+      "type": "number",
+      "value": 24,
+      "label": {
+        "en": "Battery report",
+		"de": "Batteriebericht"
+      },
+      "hint": {
+        "en": "Parameter 24: Report battery report at an interval set in hour.",
+		"de": "Parameter 24: Meldet den Batteriebericht in einem in Stunden festgelegten Intervall."
+      }
+    }
+	]
+	 }
+
+]

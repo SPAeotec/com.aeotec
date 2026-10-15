@@ -1,0 +1,22 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Reactive Power",
+    "nl": "Reactief Vermogen",
+	"de": "Blindleistung"
+  },
+  "decimals": 2,
+  "chartType": "spline",
+  "units": {
+    "en": "kVar"
+  },
+  "desc": {
+    "en": "Reactive Power (kVar)",
+    "nl": "Reactief Vermogen (kVar)",
+	"de": "Blindleistung (kVar)"
+  },
+  "insights": true,
+  "icon": "/assets/meter_power.svg",
+  "getable": true,
+  "setable": false
+}

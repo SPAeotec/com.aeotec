@@ -1,5 +1,6 @@
 {
   "id": "ZW089",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Recessed Door Sensor",
     "nl": "Verzonken Deur Sensor"
@@ -13,16 +14,23 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [ "CR2" ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
       2,
-      514
+      514,
+	  258,
+	  6658
     ],
     "productId": [
       54,
       89
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 1184,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1184/Recessed Door Sensor Gen5 - Manual MCert.pdf",
     "learnmode": {
@@ -33,7 +41,7 @@
       }
     },
     "associationGroups": [
-      1
+      1,2
     ],
     "associationGroupsOptions": {
       "1": {

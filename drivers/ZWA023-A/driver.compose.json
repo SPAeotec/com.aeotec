@@ -1,0 +1,88 @@
+{
+  "id": "ZWA023",
+    "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Smart Switch 7 US"
+  },
+  "class": "socket",
+  "capabilities": [
+      "meter_power",
+      "measure_power",
+      "onoff",
+	  "measure_voltage",
+	  "measure_current",
+	  "button.reset_meter"
+  ],
+   "capabilitiesOptions": {
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    }
+  },
+ 
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      259
+    ],
+    "productId": [
+      23
+    ],
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button one time and the led will be a solid yellow status. "
+      }
+    },
+	 "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button two times and the led will be a solid purple status. It indicates the device has enter learn mode."
+		}
+	},
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline. Mirror of root device, but without node count."
+        }
+      },
+	  "2": {
+		"hint": {
+		  "en": "When these commands are received, they will be re-transmitted to the associated nodes. Basic Set, Switch Binary Set, Scene Activation Set"
+		}
+	  },
+	  "2": {
+		"hint": {
+		  "en": "Alert Meter Triggered when watt above parameter6’s setting."
+		}
+	  }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 23,
+        "size": 2,
+        "value": 35
+      },
+      {
+        "id": 26,
+        "size": 2,
+        "value": 60
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": {
+    "en": "Doorbell 1 has been activated",
+    "nl": "Deurbel 1 is geactiveerd",
+	"de": "Türklingel 1 wurde aktiviert"
+  },
+  "platforms": [ "local", "cloud" ],
+  "hint": {
+    "en": "This will always trigger when \"Doorbell 1\" is being actived, not just by the button.",
+    "nl": "Dit zal altijd activeren als \"Deurbel 1\" wordt geactiveerd, niet alleen door de knop.",
+	"de": "Dies wird immer ausgelöst, wenn \"Türklingel 1\" aktiviert wird, nicht nur durch die Taste."
+  },
+  "args": [
+    {
+      "name": "doorbell_1",
+      "type": "device",
+      "filter": "driver_id=ZW162-C|ZW164-C&capabilities=alarm_battery.button_1"
+    }
+  ]
+}

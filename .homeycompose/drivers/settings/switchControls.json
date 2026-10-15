@@ -1,0 +1,12 @@
+{
+  "value": true,
+  "type": "checkbox",
+  "label": {
+    "en": "Switches the output",
+	"de": "Schaltet den Ausgang"
+  },
+  "hint": {
+    "en": "When disabled, the switch input will not be used to control the output",
+	"de": "Wenn diese Funktion deaktiviert ist, wird der Schalteingang nicht zur Steuerung des Ausgangs verwendet."
+  }
+}

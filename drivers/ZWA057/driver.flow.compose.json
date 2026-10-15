@@ -1,0 +1,65 @@
+{
+  "triggers": [    
+    {
+      "id": "ZWA057_mold_alarm_on",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "The mold alarm is on",
+		"nl": "Het schimmelalarm is aan",
+		"de": "Der Schimmel Alarm is angegangen"
+      }
+    },
+    {
+      "id": "ZWA057_mold_alarm_off",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "The mold alarm is off",
+		"nl": "Het schimmelalarm is uit",
+		"de": "Der Schimmel Alarm is ausgegangen"
+      }
+    },
+	{
+      "id": "ZWA057_power_changed_trigger",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Power source changed",
+	    "nl": "Stroombron gewijzigd",
+	    "de": "Stromquelle wurde geändert"
+      }
+    },
+	{
+    "id": "ZWA057_dewpoint_value",
+	"platforms": [ "local", "cloud" ],
+    "title": {
+      "en": "The dew point has changed",
+      "nl": "Het dauwpunt is veranderd",
+	  "de": "Der Taupunkt hat sich geändert"
+    },
+	        "tokens": [
+          {
+            "name": "dewpoint",
+            "type": "number",
+            "title": {
+              "en": "Dew Point",
+              "nl": "Dauwpunt",
+			  "de": "Taupunkt"
+            }
+          }
+],
+    "args": []
+  }	
+	],
+  "conditions": [
+      {
+        "id": "ZWA057_mold_onoff",
+		 "platforms": ["local", "cloud"],
+        "title": {
+          "en": "Mold Alarm is !{{activated|off}}",
+		  "nl": "Schimmelalarm is !{{aan|uit}}",
+          "de": "Schimmelalarm ist !{{aktiv|aus}}"
+        },
+        "args": []
+      }
+],
+  "actions": []
+}

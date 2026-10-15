@@ -1,0 +1,63 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Switch 1",
+	  "de": "Schalteingang 1"
+    },
+    "children": [
+      {
+        "id": "sw1_type",
+        "$extends": "switchType"
+      },
+      {
+        "id": "sw1_actions",
+        "$extends": "switchActions"
+      },
+      {
+        "id": "sw1_controls",
+        "$extends": "switchControls"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Switch 2",
+	  "de": "Schalteingang 2"
+    },
+    "children": [
+      {
+        "id": "sw2_type",
+        "$extends": "switchType"
+      },
+      {
+        "id": "sw2_actions",
+        "$extends": "switchActions"
+      },
+      {
+        "id": "sw2_controls",
+        "$extends": "switchControls"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Device information",
+      "nl": "Toestelgegevens",
+	  "de": "Geräteinformation"
+    },
+    "children": [
+      {
+        "$extends": "swBuildId"
+      },
+      {
+        "$extends": "serialNumber"
+      },
+      {
+        "$extends": "dateCode"
+      }
+    ]
+  }
+]

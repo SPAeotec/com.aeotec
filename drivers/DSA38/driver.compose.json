@@ -1,9 +1,11 @@
 {
   "id": "SDA38",
+  "platforms": [ "local","cloud"],
   "name": {
-    "en": "Panic Button"
+    "en": "Panic Button",
+	"de": "Panic Button"
   },
-  "class": "sensor",
+  "class": "button",
   "capabilities": [
     "measure_battery"
   ],
@@ -11,10 +13,16 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [ "CR2450"]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
-      1
+      1,
+	  257,
+	  513
     ],
     "productId": [
       38
@@ -23,7 +31,8 @@
     "learnmode": {
       "instruction": {
         "en": "Press the \"Learn\" button on the {{driverNameEn}}.",
-        "nl": "Druk de \"Learn\" knop op de {{driverNameNl}} in."
+        "nl": "Druk de \"Learn\" knop op de {{driverNameNl}} in.",
+		"de": "Drücken Sie die Learn Taste am Panic Button,"
       }
     },
     "associationGroups": [ 1 ],

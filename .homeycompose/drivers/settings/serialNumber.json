@@ -1,0 +1,10 @@
+{
+  "id": "serialNumber",
+  "type": "label",
+  "label": {
+    "en": "Serial number",
+    "nl": "Serienummer",
+	"de": "Seriennummer"
+  },
+  "value": "Unknown"
+}

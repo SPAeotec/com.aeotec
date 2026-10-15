@@ -1,0 +1,230 @@
+[
+  {
+    "id": "20",
+    "type": "dropdown",
+    "label": {
+      "en": "Default behaviour after re-power",
+      "nl": "Standaard gedrag na stroomonderbreking",
+	  "de": "Standardverhalten nach Wiedereinschalten"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour after power was disconnected.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag nadat de stroomtoevoer is verbroken.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt das Verhalten, nachdem die Stromversorgung unterbrochen wurde."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Status before re-power",
+          "nl": "Status voor stroomonderbreking",
+		  "de": "Status vor dem Wiedereinschalten"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Always on",
+          "nl": "Altijd aan",
+		  "de": "Immer an"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Always off",
+          "nl": "Altijd uit",
+		  "de": "Immer aus"
+        }
+      }
+    ]
+  },
+  {
+    "id": "81",
+    "type": "dropdown",
+    "label": {
+      "en": "Reports to association group 3",
+      "nl": "Updates naar associatie groep 3",
+	  "de": "Bericht ann Assoziationsgruppe 3"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what reports are sent to association group 3.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke updates er worden verzonden naar associatie groep 3.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt, welche Berichte an die Zuordnungsgruppe 3 gesendet werden."
+    },
+    "zwave": {
+      "index": 81,
+      "size": 1
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Niets",
+		  "de": "Nichts"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Basic Set",
+          "nl": "Basic Set",
+		  "de": "Basic Set"
+        }
+      }
+    ]
+  },
+  {
+    "id": "82",
+    "type": "dropdown",
+    "label": {
+      "en": "Reports to association group 4",
+      "nl": "Updates naar associatie groep 4",
+	  "de": "Bericht an Assozationsgruppe 4"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what reports are sent to association group 4.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke updates er worden verzonden naar associatie groep 4.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) bestimmt, welche Berichte an die Zuordnungsgruppe 4 gesendet werden."
+    },
+    "zwave": {
+      "index": 82,
+      "size": 1
+    },
+    "value": "1",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Niets",
+		  "de": "Nichts"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Basic Set",
+          "nl": "Basic Set",
+		  "de": "Basic Set"
+        }
+      }
+    ]
+  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input S1",
+      "nl": "Schakelaar type input S1",
+	  "de": "Schaltertyp an Eingang S1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what type of input is connected to input S1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type input apparaat er is verbonden aan input S1.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) legt fest, welcher Typ von Eingang an Eingang S1 angeschlossen ist."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch",
+		  "de": "Automatische Erkennung"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          
+		  "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselschalter"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+	  }
+      
+    ]
+  },
+  {
+    "id": "121",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input S2",
+      "nl": "Schakelaar type input S2",
+	  "de": "Schaltertype an Eingang S2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what type of input is connected to input S2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type input apparaat er is verbonden aan input S2.",
+	  "de": "Dieser Parameter ({{zwaveParameterIndex}}) legt fest, welcher Typ von Eingang an Eingang S2 angeschlossen ist."
+    },
+    "zwave": {
+      "index": 121,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch",
+		  "de": "Automatische Erkennung"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          
+		  "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselschalter"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+      }
+    ]
+  }
+]

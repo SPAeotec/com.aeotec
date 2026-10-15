@@ -1,0 +1,24 @@
+{
+      "type": "number",
+      "title": {
+        "en": "Z-Axis",
+        "nl": "Z-As",
+		"de": "Z-Achse"
+      },
+      "units": {
+        "en": "m/s²",
+		"nl": "m/s²",
+		"de": "m/s²"
+      },
+      "desc": {
+        "en": "m/s²",
+        "nl": "m/s²",
+		"de": "m/s²"
+      },
+      "chartType": "stepLine",
+	  "insights": false,
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+	  "icon": "/assets/acceleration.svg"
+    }

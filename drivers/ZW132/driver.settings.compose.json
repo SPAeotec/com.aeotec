@@ -1,108 +1,52 @@
 [
-  {
-    "id": "120",
-    "type": "dropdown",
+ {
+    "id": "3",
+    "value": true,
     "label": {
-      "en": "Switch type input 1",
-      "nl": "Schakelaar type input 1"
+      "en": "Current Overload Protection",
+      "nl": "Overbelastingsbeveiliging",
+	  "de": "Überlastschutz"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what type of input is connected to input 1.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type input apparaat er is verbonden op input 1."
+      "en": "Parameter 3: Determines whether or not current overload protection is enabled.",
+      "nl": "Parameter 3: Bepaalt of de overbelastingsbeveiliging ingeschakelt is.",
+	  "de": "Parameter 3: Legt fest, ob der Stromüberlastungsschutz aktiviert ist oder nicht."
     },
     "zwave": {
-      "index": 120,
+      "index": 3,
       "size": 1
     },
-    "value": "0",
-    "values": [
-      {
-        "id": "0",
-        "label": {
-          "en": "Automatic",
-          "nl": "Automatisch"
-        }
-      },
-      {
-        "id": "1",
-        "label": {
-          "en": "Momentary switch",
-          "nl": "Pulsdruk schakelaar"
-        }
-      },
-      {
-        "id": "2",
-        "label": {
-          "en": "3-way switch mode",
-          "nl": "3-way schakel modus"
-        }
-      },
-      {
-        "id": "3",
-        "label": {
-          "en": "2-state switch mode",
-          "nl": "2-state schakel modus"
-        }
-      }
-    ]
+    "type": "checkbox"
   },
   {
-    "id": "121",
-    "type": "dropdown",
+    "id": "4",
+    "value": false,
     "label": {
-      "en": "Switch type input 2",
-      "nl": "Schakelaar type input 2"
+      "en": "Over heat Protection",
+	  "de": "Überhitzungsschutz"
     },
     "hint": {
-      "en": "This parameter ({{zwaveParameterIndex}}) determines what type of input is connected to input 2.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type input apparaat er is verbonden op input 2."
+      "en": "Parameter 4: Determines whether or not over heat protection is enabled.",
+	  "de": "Parameter 4: Legt fest, ob der Überhittzungsschutz aktiviert ist oder nicht."
     },
     "zwave": {
-      "index": 121,
+      "index": 4,
       "size": 1
     },
-    "value": "0",
-    "values": [
-      {
-        "id": "0",
-        "label": {
-          "en": "Automatic",
-          "nl": "Automatisch"
-        }
-      },
-      {
-        "id": "1",
-        "label": {
-          "en": "Momentary switch",
-          "nl": "Pulsdruk schakelaar"
-        }
-      },
-      {
-        "id": "2",
-        "label": {
-          "en": "3-way switch mode",
-          "nl": "3-way schakel modus"
-        }
-      },
-      {
-        "id": "3",
-        "label": {
-          "en": "2-state switch mode",
-          "nl": "2-state schakel modus"
-        }
-      }
-    ]
+    "type": "checkbox"
   },
   {
     "id": "20",
     "type": "dropdown",
     "label": {
       "en": "Configure the output load status after re-power",
-      "nl": "Zet na een stroomonderbreking deze status"
+      "nl": "Zet na een stroomonderbreking deze status",
+	  "de": "Laststatus nach Ausfall"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines the behaviour after power was disconnected.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag nadat de stroomtoevoer is verbroken."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het gedrag nadat de stroomtoevoer is verbroken.",
+	  "de": "Dieser Parameter ({{{zwaveParameterIndex}}) bestimmt das Verhalten nach dem Abschalten der Stromversorgung."
     },
     "zwave": {
       "index": 20,
@@ -114,35 +58,43 @@
         "id": "0",
         "label": {
           "en": "Status before re-power",
-          "nl": "Status voor stroomonderbreking"
+          "nl": "Status voor stroomonderbreking",
+		  "de": "Status vor Ausfall"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Always on",
-          "nl": "Altijd aan"
+          "nl": "Altijd aan",
+		  "de": "Immer An"
         }
       },
       {
         "id": "2",
         "label": {
           "en": "Always off",
-          "nl": "Altijd uit"
+          "nl": "Altijd uit",
+		  "de": "Immer Aus"
         }
       }
     ]
   },
+  
+  
+  
   {
     "id": "81",
     "type": "dropdown",
     "label": {
       "en": "Reports to association group 3",
-      "nl": "Metingen naar associatie groep 3"
+      "nl": "Metingen naar associatie groep 3",
+	  "de": "Berichtart der Assoziationsgruppe 3"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines what reports are sent to association group 3.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke raporten er worden verzonden naar associatie groep 3."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke raporten er worden verzonden naar associatie groep 3.",
+	  "de": "Dieser Parameter ({{{zwaveParameterIndex}}) bestimmt, welche Berichte an die Assoziationsgruppe 3 gesendet werden."
     },
     "zwave": {
       "index": 81,
@@ -154,14 +106,16 @@
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Niets"
+          "nl": "Niets",
+		  "de": "Nichts"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Basic Set",
-          "nl": "Basic Set"
+          "nl": "Basic Set",
+		  "de": "Basic Set"
         }
       }
     ]
@@ -171,11 +125,13 @@
     "type": "dropdown",
     "label": {
       "en": "Reports to association group 4",
-      "nl": "Metingen naar associatie groep 4"
+      "nl": "Metingen naar associatie groep 4",
+	  "de": "Berichtart der Assoziationsgruppe 4"
     },
     "hint": {
       "en": "This parameter ({{zwaveParameterIndex}}) determines what reports are sent to association group 4.",
-      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke raporten er worden verzonden naar associatie groep 4."
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welke raporten er worden verzonden naar associatie groep 4.",
+	  "de": "Dieser Parameter ({{{zwaveParameterIndex}}) bestimmt, welche Berichte an die Assoziationsgruppe 4 gesendet werden."
     },
     "zwave": {
       "index": 82,
@@ -187,16 +143,589 @@
         "id": "0",
         "label": {
           "en": "Nothing",
-          "nl": "Niets"
+          "nl": "Niets",
+		  "de": "Nichts"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Basic Set",
-          "nl": "Basic Set"
+          "nl": "Basic Set",
+		  "de": "Basic Set"
         }
       }
     ]
+  },
+   {
+    "id": "90",
+    "value": false,
+    "label": {
+      "en": "Enable automatic reports",
+      "nl": "Schakel automatische rapportage in",
+	  "de": "Aktivieren des automatischen Berichtes."
+    },
+    "hint": {
+      "en": "Parameter 90: Determines whether or not automatic reports are enabled.",
+      "nl": "Parameter 90: Bepaalt of automatische rapportage is ingeschakeld.",
+	  "de": "Parameter 90: Bestimmt, ob automatische Berichte aktiviert sind oder nicht."
+    },
+    "zwave": {
+      "index": 90,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "91",
+    "value": 0,
+    "label": {
+      "en": "Wattage report change threshold",
+      "nl": "Wattage rapportage drempel",
+	  "de": "Watt Bericht Schwellwert"
+    },
+    "hint": {
+      "en": "Parameter 91: Determines the minimum value change in wattage before an automatic report is send to Homey.",
+      "nl": "Parameter 91: Bepaalt de minimum verandering in wattage voordat er een automatisch rapport naar Homey wordt verzonden.",
+	  "de": "Parameter 91: Bestimmt die minimale Wertänderung der Wattzahl, bevor ein automatischer Bericht an Homey gesendet wird." 
+    },
+    "zwave": {
+      "index": 91,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 60000
+    },
+    "type": "number"
+  },
+  {
+    "id": "92",
+    "type": "number",
+    "label": {
+      "en": "Minimum wattage change (%) needed before an update report is send",
+      "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update",
+	  "de": "Mindestwattageänderung (%), die erforderlich ist, bevor ein Update-Report gesendet wird"
+    },
+    "hint": {
+      "en": "Parameter 92: Determines the minimum percentage change before a report is being send to Homey.",
+      "nl": "Parameter 92: Bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey",
+	  "de": "Parameter 92: Bestimmt die minimale prozentuale Änderung, bevor ein Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 92,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "value": 0
+  },
+  {
+    "id": "101",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type rapport groep 1",
+	  "de": "Berichttyp an Berichtsgruppe 1"
+	  
+    },
+    "hint": {
+      "en": "Parameter 101: Determines the type of reports sent to devices in the 1st report group. Overwrites the expert setting!",
+      "nl": "Parameter 101: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 1ste rapport groep. Overschrijft de expert instelling!",
+	  "de": "Parameter 101: Bestimmt die Art der Berichte, die an die Geräte in der ersten Berichtsgruppe gesendet werden. Überschreibt die Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": "50",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "50",
+				"label": {
+					"en": "Expert setting",
+					"de": "Experteneinstellung"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Consumption W (total)",
+					"de": "Momentanverbrauch W (Gesamt)"
+				}
+			},
+			{
+				"id": "8",
+				"label": {
+					"en": "Current power A (total)",
+					"de": "Stromverbrauch A (Gesamt)"
+				}
+			},
+			{
+				"id": "10",
+				"label": {
+					"en": "W & A (total)",
+					"de": "W & A (Gesamt)"
+				}
+			},
+			{
+				"id": "770",
+				"label": {
+					"en": "Consumption W (All)",
+					"de": "Momentanverbrauch W (Alle)"
+				}
+			},
+			{
+				"id": "98312",
+				"label": {
+					"en": "Current power A (All))",
+					"de": "Stromverbrauch A (Alle)"
+				}
+			},
+			{
+				"id": "1573642",
+				"label": {
+					"en": "W & A (All)",
+					"de": "W & A (Alle)"
+				}
+			},
+			{
+				"id": "1776399",
+				"label": {
+					"en": "All values",
+					"de": "Alle Werte"
+				}
+			}
+		]
+  },
+  {
+    "id": "102",
+    "type": "dropdown",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type raport groep 2",
+	  "de": "Berichttyp an Berichtsgruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 102: Determines the type of reports sent to devices in the 2nd report group. Overwrites the expert setting!",
+      "nl": "Parameter 102: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 2e rapport groep. Overschrijft de expert instelling!",
+	  "de": "Parameter 102: Bestimmt die Art der Berichte, die an die Geräte in der zweiten Berichtsgruppe gesendet werden. Überschreibt die Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": "50",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "50",
+				"label": {
+					"en": "Expert setting",
+					"de": "Experteneinstellung"
+				}
+			},
+			{
+				"id": "4",
+				"label": {
+					"en": "Voltage V (total)",
+					"de": "Spannung V (Gesamt)"
+				}
+			},
+			{
+				"id": "196612",
+				"label": {
+					"en": "Voltage V (All)",
+					"de": "Spannung V (Alle)"
+				}
+			},
+			{
+				"id": "1776399",
+				"label": {
+					"en": "All values",
+					"de": "Alle Werte"
+				}
+			}
+		]
+  },
+  {
+    "id": "103",
+    "type": "dropdown",
+    "label": {
+      "en": "Association group 3 report type",
+      "nl": "Rapport type rapport groep 3",
+	  "de": "Berichttyp an Berichtsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 103: Determines the type of reports sent to devices in the 3rd report group. Overwrites the expert setting!",
+      "nl": "Parameter 103: Bepaalt welk type rapporten er worden verstuurd naar apparaten in de 3e rapport groep. Overschrijft de expert instelling!",
+	  "de": "Parameter 103: Bestimmt die Art der Berichte, die an die Geräte in der dritten Berichtsgruppe gesendet werden. Überschreibt die Experteneinstellung!"
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": "50",
+	"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disabled",
+					"de": "deaktiviert"
+				}
+			},
+			{
+				"id": "50",
+				"label": {
+					"en": "Expert setting",
+					"de": "Experteneinstellung"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Total consumption kWh (total)",
+					"de": "Gesamtverbrauch kWh (Gesamt)"
+				}
+			},
+			{
+				"id": "6145",
+				"label": {
+					"en": "Total consumption kWh (All)",
+					"de": "Gesamtverbrauch kWh (Alle)"
+				}
+			},
+			{
+				"id": "1776399",
+				"label": {
+					"en": "All values",
+					"de": "Alle Werte"
+				}
+			}
+		]
+  },
+  {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 1",
+      "nl": "Rapportage interval groep 1",
+	  "de": "Sendeintervall für Berichtsgruppe 1"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep.",
+	  "de": "Dieser Parameter ({{{zwaveParameterIndex}}}) bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 1."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4
+    },
+    "value": 60
+  },
+  {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 2",
+      "nl": "Rapportage interval groep 2",
+	  "de": "Sendeintervall für Berichtsgruppe 2"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e groep.",
+	  "de": "Dieser Parameter ({{{zwaveParameterIndex}}}) bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 2."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4
+    },
+    "value": 600
+  },
+  {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 3",
+      "nl": "Rapportage interval groep 3",
+	  "de": "Sendeintervall für Berichtsgruppe 3"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the interval for sending report to devices in report group 3.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e groep.",
+	  "de": "Dieser Parameter ({{{zwaveParameterIndex}}}) bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 3."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4
+    },
+    "value": 3600
+  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input 1",
+      "nl": "Schakelaar type input 1",
+	  "de": "Eingang 1 Schaltertyp"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what type of input is connected to input 1.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type input apparaat er is verbonden op input 1.",
+	  "de": "Dieser Parameter ({{{zwaveParameterIndex}}) bestimmt, welche Art von Eingabegerät an Eingang 1 angeschlossen wird."
+    },
+    "zwave": {
+      "index": 120,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch",
+		  "de": "Automatische Erkennung"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselscahltung"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+      }
+    ]
+  },
+  {
+    "id": "121",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type input 2",
+      "nl": "Schakelaar type input 2",
+	  "de": "Eingang 2 Schaltertyp"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines what type of input is connected to input 2.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt welk type input apparaat er is verbonden op input 2.",
+	  "de": "Dieser Parameter ({{{zwaveParameterIndex}}) bestimmt, welche Art von Eingabegerät an Eingang 2 angeschlossen wird."
+    },
+    "zwave": {
+      "index": 121,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Automatic",
+          "nl": "Automatisch",
+		  "de": "Automatische Erkennung"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselscahltung"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsschakelaar",
+		  "de": "Taster"
+        }
+      }
+    ]
+  },
+  {
+    "id": "122",
+    "type": "dropdown",
+    "label": {
+      "en": "Destination of the S1",
+	  "de": "Ziel des Schalters S1"
+    },
+    "hint": {
+      "en": "Parameter 122: Set the control destination of the external switch S1.",
+	  "de": "Parameter 122: Stellt das Steuerziel des externen Schalters S1 ein."
+    },
+    "zwave": {
+      "index": 122,
+      "size": 1
+    },
+    "value": "3",
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "control itself.",
+		  "de": "Steuert sich selbst."
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "control other nodes in the same network.",
+		  "de": "Steuert ander Geräte im Netzwerk"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "control itself and other nodes in the same network.",
+		  "de": "Steuert sich selbst und andere Geräte im Netzwerk."
+        }
+      }
+    ]
+  },
+  {
+    "id": "123",
+    "type": "dropdown",
+    "label": {
+      "en": "Destination of the S2",
+	  "de": "Ziel des Schalters S2"
+    },
+    "hint": {
+      "en": "Parameter 123: Set the control destination of the external switch S1.",
+	  "de": "Parameter 123: Stellt das Steuerziel des externen Schalters S1 ein."
+    },
+    "zwave": {
+      "index": 123,
+      "size": 1
+    },
+    "value": "3",
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "control itself.",
+		  "de": "Steuert sich selbst."
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "control other nodes in the same network.",
+		  "de": "Steuert ander Geräte im Netzwerk"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "control itself and other nodes in the same network.",
+		  "de": "Steuert sich selbst und andere Geräte im Netzwerk."
+        }
+      }
+    ]
+  },  
+  {
+	  "type": "group",
+    "label": {
+      "en": "Expert setting for report Groups 1 - 3. Overwrites the user setting!",
+	  "de": "Experteneinstellung für Berichtsgruppen 1 - 3. Überschreibt die Nutzereinstellung! "
+		},
+	"children": [
+	{
+    "id": "101e",
+    "type": "number",
+    "label": {
+      "en": "Report group 1 report type",
+      "nl": "Rapport type rapport groep 1",
+	  "de": "Berichttyp an Berichtsgruppe 1"
+	  
+    },
+    "hint": {
+      "en": "Parameter 101: Expert setting\n\nAdd the values: \n1 - kWh (total)\n2 - W (total)\n4 - V (total)\n8 - A (total)\n256 - W (Channel 1)\n512 - W (Channel 2)\n2048 - kWh (Channel 1)\n4096 - kWh (Channel 2)\n65536 - V (Channel 1)\n131072 - V (Channel 2)\n524288 - A (Channel 1)\n1048576 - A (Channel 2)",
+	  "de": "Parameter 101: Experteneinstellung\n\nAddieren Sie die Werte:\n1 - kWh (Gesamt)\n2 - W (Gesamt)\n4 - V (Gesamt)\n8 - A (Gesamt)\n256 - W (Ausgang 1)\n512 - W (Ausgang 2)\n2048 - kWh (Ausgang 1)\n4096 - kWh (Ausgang 2)\n65536 - V (Ausgang 1)\n131072 - V (Ausgang 2)\n524288 - A (Ausgang 1)\n1048576 - A (Ausgang 2)"
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": 1573642
+  },
+  {
+    "id": "102e",
+    "type": "number",
+    "label": {
+      "en": "Report group 2 report type",
+      "nl": "Rapport type raport groep 2",
+	  "de": "Berichttyp an Berichtsgruppe 2"
+    },
+    "hint": {
+       "en": "Parameter 102: Expert setting\n\nAdd the values: \n1 - kWh (total)\n2 - W (total)\n4 - V (total)\n8 - A (total)\n256 - W (Channel 1)\n512 - W (Channel 2)\n2048 - kWh (Channel 1)\n4096 - kWh (Channel 2)\n65536 - V (Channel 1)\n131072 - V (Channel 2)\n524288 - A (Channel 1)\n1048576 - A (Channel 2)",
+	  "de": "Parameter 102: Experteneinstellung\n\nAddieren Sie die Werte:\n1 - kWh (Gesamt)\n2 - W (Gesamt)\n4 - V (Gesamt)\n8 - A (Gesamt)\n256 - W (Ausgang 1)\n512 - W (Ausgang 2)\n2048 - kWh (Ausgang 1)\n4096 - kWh (Ausgang 2)\n65536 - V (Ausgang 1)\n131072 - V (Ausgang 2)\n524288 - A (Ausgang 1)\n1048576 - A (Ausgang 2)"
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": 196612
+  },
+  {
+    "id": "103e",
+    "type": "number",
+    "label": {
+      "en": "Association group 3 report type",
+      "nl": "Rapport type rapport groep 3",
+	  "de": "Berichttyp an Berichtsgruppe 3"
+    },
+    "hint": {
+       "en": "Parameter 102: Expert setting\n\nAdd the values: \n1 - kWh (total)\n2 - W (total)\n4 - V (total)\n8 - A (total)\n256 - W (Channel 1)\n512 - W (Channel 2)\n2048 - kWh (Channel 1)\n4096 - kWh (Channel 2)\n65536 - V (Channel 1)\n131072 - V (Channel 2)\n524288 - A (Channel 1)\n1048576 - A (Channel 2)",
+	  "de": "Parameter 102: Experteneinstellung\n\nAddieren Sie die Werte:\n1 - kWh (Gesamt)\n2 - W (Gesamt)\n4 - V (Gesamt)\n8 - A (Gesamt)\n256 - W (Ausgang 1)\n512 - W (Ausgang 2)\n2048 - kWh (Ausgang 1)\n4096 - kWh (Ausgang 2)\n65536 - V (Ausgang 1)\n131072 - V (Ausgang 2)\n524288 - A (Ausgang 1)\n1048576 - A (Ausgang 2)"
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": 6145
   }
-]
+  ]
+  }
+  
+ ]

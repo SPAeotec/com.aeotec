@@ -1,0 +1,275 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Shutter configuration",
+	  "de": "Konfiguration"
+    },
+    "children": [
+      {
+        "id": "operating_mode",
+        "label": {
+          "en": "Operating mode",
+		  "de": "Betriebsmodus"
+        },
+        "hint": {
+          "en": "Configures whether the connected shutter type",
+		  "de": "Auswahl des Jalousietypes"
+        },
+        "type": "dropdown",
+        "value": "0",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Roller blind",
+			  "de": "Rollo"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Venetian blind",
+			  "de": "Jalousie"
+            }
+          }
+        ]
+      },
+	  {
+		"id": "invert_tilt_direction",
+		"type": "checkbox",
+		"label": {
+			"en": "Invert tilt direction",
+			"de": "Lamellenrichtung umkehren"
+			},
+		"hint": {
+			"en": "Invert the tilt position.",
+			"de": "Kehrt die Lamellenposition um."
+			},
+		"value": false
+		},    
+
+	 {
+        "id": "move_time",
+        "label": {
+          "en": "Move time",
+		  "de": "Bewegungszeit"
+        },
+        "hint": {
+          "en": "The time it takes the motor to fully move from the open to closed position",
+		  "de": "Die Zeit, die der Motor benötigt, um von der offenen in die geschlossene Position zu gelangen" 
+        },
+        "units": { 
+			"en": "seconds",
+			"de": "Sekunden"
+		},
+        "type": "number",
+        "value": 60,
+        "min": 0,
+        "max": 655,
+        "step": 0.01
+      },
+      {
+        "id": "motor_response_time",
+        "label": {
+          "en": "Motor response time",
+		  "de": "Motor Reaktionszeit"
+        },
+        "hint": {
+          "en": "The time it takes for motor to start responding",
+		  "de": "Die Zeit, die der Motor benötigt, um zu reagieren"
+        },
+        "units": { 
+			"en": "seconds",
+			"de": "Sekunden"
+		},
+        "type": "number",
+        "value": 0.2,
+        "min": 0,
+        "max": 655,
+        "step": 0.01
+      },
+      {
+        "id": "slat_tilt_time",
+        "label": {
+          "en": "Slat tilt time",
+		  "de": "Lammellen Bewegungszeit"
+        },
+        "hint": {
+          "en": "The time it takes for the slats to complete a fill turn. Only applicable to Venetian blinds.",
+		  "de": "Die Zeit, die die Lamellen benötigen, um eine Umdrehung zu vollenden. Gilt nur für Jalousien."
+        },
+        "units": { 
+			"en": "seconds",
+			"de": "Sekunden"
+		},
+        "type": "number",
+        "value": 3,
+        "min": 0,
+        "max": 655,
+        "step": 0.01
+      },
+      {
+        "id": "slat_position_control",
+        "label": {
+          "en": "Slat tilt behaviour",
+		  "de": "Lamellenkippverhalten"
+        },
+        "hint": {
+          "en": "Configure how the slat tilt should be behave when the blind position has been changed. Only applicable to Venetian blinds.",
+		  "de": "Legen Sie fest, wie sich die Lamellenneigung verhalten soll, wenn die Position der Jalousie geändert wurde. Gilt nur für Jalousien."
+        },
+        "type": "dropdown",
+        "value": "2",
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Do not keep slat tilt",
+			  "de": "Lamellenneigung nicht beibehalten"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Only restore the slat position when changed using Homey",
+			  "de": "Stellt die Lamellenposition nur wieder her, wenn diese mit Homey eingestellt wurde"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Always restore the slat position when changed",
+			  "de": "Stellt die Lamellenposition immer wieder her, wenn die Jalousie verändert wurde."
+            }
+          }
+        ]
+      },
+      {
+        "id": "movement_mode",
+        "label": {
+          "en": "Movement mode",
+		  "de": "Bewegungsmodus"
+        },
+        "hint": {
+          "en": "How the shade should respond on button presses",
+		  "de": "Wie soll das Rollo auf Tastendruck reagieren. Soll es kontinuirlich Fahren oder nur solange die Taste gedrückt ist."
+        },
+        "type": "dropdown",
+        "value": "1",
+        "values": [
+          {
+            "id": "1",
+            "label": {
+              "en": "Continuous",
+			  "de": "Kontinuierlich"
+            }
+          },
+          {
+            "id": "0",
+            "label": {
+              "en": "Momentary",
+			  "de": "Wärend des Drückens"
+            }
+          }
+        ]
+      },
+      {
+        "id": "momentary_movement_time",
+        "label": {
+          "en": "Momentary move time",
+		  "de": "Momentane Bewegungszeit"
+        },
+        "hint": {
+          "en": "The time of motor action during momentary movement. Only applicable when momentary movement is configured.",
+		  "de": "Die Zeit der Motoraktion während der momentanen Bewegung. Nur anwendbar, wenn die momentane Bewegung konfiguriert ist."
+        },
+        "units": { 
+			"en": "milliseconds",
+			"de": "Millisekunden"
+		},
+        "type": "number",
+        "value": 200,
+        "min": 0,
+        "max": 65500,
+        "step": 1
+      },
+      {
+        "id": "self_calibration",
+        "label": {
+          "en": "Self calibration",
+		  "de": "Selbstkalibrierung"
+        },
+        "hint": {
+          "en": "When enabled, the device will add an additional 5 seconds to the configured runtime when fully opening or closing to allow the shutter end limits to be hit.",
+		  "de": "Wenn diese Funktion aktiviert ist, fügt das Gerät beim vollständigen Öffnen oder Schließen zusätzliche 5 Sekunden zur konfigurierten Laufzeit hinzu, um das Erreichen der Endgrenzen des Rollladens zu ermöglichen."
+        },
+        "type": "checkbox",
+        "value": true
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Switch 1",
+	  "de": "Schalteingang 1"
+    },
+    "children": [
+      {
+        "id": "sw1_type",
+        "$extends": "switchType",
+        "value": "momentary"
+      },
+      {
+        "id": "sw1_actions",
+        "$extends": "switchActions"
+      },
+      {
+        "id": "sw1_controls",
+        "$extends": "switchControls"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Switch 2",
+	  "de": "Schalteingang 2"
+    },
+    "children": [
+      {
+        "id": "sw2_type",
+        "$extends": "switchType",
+        "value": "momentary"
+      },
+      {
+        "id": "sw2_actions",
+        "$extends": "switchActions"
+      },
+      {
+        "id": "sw2_controls",
+        "$extends": "switchControls"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Device information",
+      "nl": "Toestelgegevens",
+	  "de": "Geräteinformation"
+    },
+    "children": [
+      {
+        "$extends": "swBuildId"
+      },
+      {
+        "$extends": "serialNumber"
+      },
+      {
+        "$extends": "dateCode"
+      }
+    ]
+  }
+]

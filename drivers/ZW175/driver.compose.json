@@ -1,0 +1,152 @@
+{
+  "id": "ZW175",
+    "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Smart Switch 7"
+  },
+  "class": "socket",
+  "capabilities": [
+      "meter_power",
+      "measure_power",
+      "onoff",
+	  "measure_voltage",
+	  "measure_current",
+	  "button.reset_meter"
+  ],
+   "capabilitiesOptions": {
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      3,
+	  259,
+      515,
+      771
+    ],
+	"energy": [],
+    "productId": [
+      175
+    ],
+    "zwaveAllianceProductId": 6544,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/3437/Smart%20Switch%207%20product%20manual.pdf - Smart Switch 7 product manual.pdf",
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the button 1x, the Smart Switch 7 flashes slowly in blue. Press the button again, the LED turns orange.",
+		"de": "Drücken Sie die Taste 1x, der Smart Switch 7 blinkt langsam in blau. Drücken Sie die Taste erneut, die LED wird orange."
+      }
+    },
+	 "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the (action) button 2x times in 1 second on the Smart Switch 7 to enter unlearn mode, LED turns purple.\n\nIf the device is already flashing blue, press the key twice at an interval of 1 second.",
+		"de": "Drücken Sie die Taste (Aktion) am Smart Switch 7 2x in 1 Sekunde, um in den Exklusionsmodus zu gelangen, die LED wird lila.\n\n Wenn das Gerät bereits blau blinkt, drücken Sie die Taste zweimal im Abstand von 1 Sekunde."
+		}
+	},
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline.\r\nThe Hail CC and Basic Report CC (configured by parameter 80) can be sent to the associatd nodes in this group. Typically the main Z-Wave controller Node ID 01 should be associated to this association.",
+		  "de": "Z-Wave Plus Lifeline.\r\nDas Hail CC und Basic Report CC (konfiguriert durch Parameter 80) können an die assoziierten Knoten in dieser Gruppe gesendet werden. Typischerweise sollte der Haupt-Z-Wave-Controller Node ID 01 mit dieser Assoziation verbunden sein."
+        }
+      },
+	  "2": {
+		"hint": {
+		  "en": "Retransmit received command to other Z-Wave devices by sending duplicated message to other associated Z-Wave devices.",
+		  "de": "Empfangenen Befehl an andere Z-Wave-Geräte weiterleiten, indem eine duplizierte Nachricht an andere verbundene Z-Wave-Geräte gesendet wird."
+		}
+	  }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 4,
+        "size": 2,
+        "value": 2415
+      },
+      {
+        "id": 8,
+        "size": 1,
+        "value": 0
+      },
+      {
+        "id": 9,
+        "size": 2,
+        "value": 0
+      },
+      {
+        "id": 10,
+        "size": 2,
+        "value": 0
+      },
+      {
+        "id": 18,
+        "size": 1,
+        "value": 2
+      },
+      {
+        "id": 20,
+        "size": 1,
+        "value": 0
+      },
+	  {
+        "id": 80,
+        "size": 1,
+        "value": 2
+      },
+      {
+        "id": 81,
+        "size": 1,
+        "value": 2
+      },
+	  {
+        "id": 82,
+        "size": 4,
+        "value": 301991936
+      },
+	  {
+        "id": 91,
+        "size": 2,
+        "value": 5
+      },
+	  {
+        "id": 92,
+        "size": 2,
+        "value": 1
+      },
+	  {
+        "id": 93,
+        "size": 1,
+        "value": 5
+      },
+	  {
+        "id": 101,
+        "size": 4,
+        "value": 4
+      },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 600
+      }
+    ]
+  }
+}

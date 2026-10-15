@@ -1,0 +1,65 @@
+{
+  "id": "ZWA037",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Illumino Dimmer Switch (US)"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+        259
+    ],
+    "productId": [
+      37
+    ],
+    "learnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",	
+      "instruction": {
+        "en": "Press a key once."
+		
+      }
+    },
+	 "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press a key three times."
+		
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+	 "defaultConfiguration": [
+      {
+        "id": 119,
+        "value": 0,
+        "size": 1
+      },
+	  {
+        "id": 120,
+        "value": 0,
+        "size": 1
+      },
+      {
+        "id": 121,
+        "value": 3,
+        "size": 1
+      }
+	  ]
+  }
+}

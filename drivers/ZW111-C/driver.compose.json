@@ -1,5 +1,6 @@
 {
   "id": "ZW111-C",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Nano Dimmer"
   },
@@ -8,9 +9,24 @@
     "dim",
     "measure_power",
     "meter_power",
-    "onoff"
+    "onoff",
+	"measure_voltage",
+	"measure_current",
+	"button.reset_meter"
   ],
-  "capabilitiesOptions": {
+   "capabilitiesOptions": {
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    },
+  
     "onoff": {
       "setOnDim": false
     }
@@ -19,21 +35,37 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+   "connectivity": ["zwave"],
   "zwave": {
-    "manufacturerId": 134,
+    "manufacturerId":[
+      134,
+	  362
+	  ],
     "productTypeId": [
       3,
-      515
+      515,
+	  259
     ],
     "productId": [
       111
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 2135,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2135/Aeon Labs Nano Dimmer manual.pdf",
     "learnmode": {
       "instruction": {
-        "en": "Short press the action button on the back of the Nano Dimmer. For secure pairing press the action button twice.",
-        "nl": "Druk kort op de actie knop op de achterkant van de Nano Dimmer. Voor beveiligd koppelen druk tweemaal op de actie knop."
+        "en": "Press the action button on the back of the Nano Dimmer.",
+        "nl": "Druk kort op de actie knop op de achterkant van de Nano Dimmer",
+		"de": "Drücken Sie die Taste auf der Rückseite des Nano Dimmers."
+		
+      }
+    },
+	 "unlearnmode": {
+      "instruction": {
+        "en": "Press the action button twice on the back of the Nano Dimmer.",
+        "nl": "Druk kort op de actie knop op de achterkant van de Nano Dimmer. Voor beveiligd koppelen druk tweemaal op de actie knop.",
+		"de": "Drücken Sie die Taste auf der Rückseite des Nano Dimmers einmal."
+		
       }
     },
     "associationGroups": [
@@ -44,7 +76,7 @@
     "defaultConfiguration": [
       {
         "id": 80,
-        "value": 3,
+        "value": 2,
         "size": 1
       },
       {
@@ -56,7 +88,38 @@
         "id": 92,
         "size": 1,
         "value": 30
+      },
+	  {
+        "id": 101,
+        "size": 4,
+        "value": 2
+      },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 300
+      },
+	  {
+        "id": 102,
+        "size": 4,
+        "value": 1
+      },
+	  {
+        "id": 112,
+        "size": 4,
+        "value": 600
+      },
+	  {
+        "id": 103,
+        "size": 4,
+        "value": 8
+      },
+	  {
+        "id": 113,
+        "size": 4,
+        "value": 3600
       }
+	  
     ]
   }
 }

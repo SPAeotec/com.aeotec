@@ -1,0 +1,117 @@
+[
+   {
+    "id": "2",
+    "type": "number",
+    "label": {
+      "en": "Blinkmode",
+      "de": "Blinkmodus"
+    },
+    "hint": {
+      "en": "Parameter 2: Configuration Value 1：1-255.Configuration Value 1 is to Specify the time that Micro Smart Dimmer 2nd Edition need blink, the unit is Seconds. Configuration Value 2：1-255. Configuration Value 2 is to Specify the Cycle of on/off the unit of it is 0.1 second.",
+      "de": "Parameter 2: Konfigurationswert 1：1-255. Konfigurationswert 1 soll die Zeit angeben, in der der Micro Smart Dimmer 2nd Edition blinken muss, die Einheit ist in Sekunden. Konfigurationswert 2：1-255. Konfigurationswert 2 soll den Ein-/Ausschaltzyklus angeben, die Einheit ist 0,1 Sekunden."
+    },
+    "zwave": {
+	  "signed": false,
+      "index": 2,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 65535
+    },
+    "value": 3850
+  },
+  {
+    "id": "120",
+    "type": "dropdown",
+    "label": {
+      "en": "Switch type",
+      "nl": "Schakelaar ",
+	  "de": "Schaltertyp"
+    },
+    "hint": {
+      "en": "Parameter 120: Determines the input device mode for input 1.",
+      "nl": "Parameter 120: Bepaalt de modus voor het invoer apparaat verbonden aan ingang 1.",
+	  "de": "Parameter 120: Betermines the input device mode for input 1."
+    },
+    "zwave": {
+	  "signed": false, 
+      "index": 120,
+      "size": 1
+    },
+    "value": "255",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Momentary switch",
+          "nl": "Pulsdruk schakelaar",
+		  "de": "Taster"
+        }
+      },
+       {
+        "id": "1",
+        "label": {
+          "en": "2-state switch mode",
+          "nl": "2-state schakel modus",
+		  "de": "Schalter"
+                  }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "3-way switch mode",
+          "nl": "3-way schakel modus",
+		  "de": "Wechselschaltung"
+        }
+      },
+      {
+        "id": "255",
+        "label": {
+          "en": "Unidentified mode",
+          "nl": "Niet-geïdentificeerde modus",
+		  "de": "Undefiniert"
+        }
+	   }
+    ]
+  },
+  {
+    "id": "255",
+    "type": "dropdown",
+    "label": {
+      "en": "Set Parameter to default",
+      "nl": "Stel de parameter in op standaardStel de parameter in op standaard",
+	  "de": "Setzt die Parametereinstellung zurück."
+    },
+    "hint": {
+      "en": "Parameter 255: Resets all parameters to factory settings.",
+      "nl": "Parameter 255: Zet alle parameters terug naar de fabrieksinstellingen.",
+	  "de": "Parameter 255: Setzt alle Parameter auf die Werkseinstellungen zurück."
+    },
+    "zwave": {
+      "index": 255,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Niets",
+		  "de": "Nichts"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Reset Parameters",
+          "nl": "Reset Parameters",
+		  "de": "Zurücksetzen"
+        }
+      }
+    ]
+  }
+ 
+  
+  ]

@@ -1,0 +1,168 @@
+{
+  "id": "DSB09",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Home Energy Meter (1st Edition)",
+	"de": "Home Energy Meter (1st Edition)",
+	"nl": "Home Energy Meter (1st Edition)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "measure_power.1",
+    "meter_power.1",
+    "measure_power.2",
+    "meter_power.2",
+    "measure_power.3",
+    "meter_power.3",
+	"button.reset_meter"
+  ],
+    "capabilitiesOptions": {
+	
+	"measure_power": {
+      "title": {
+        "en": "Power (Whole) ",
+        "de": "Leistung (Gesamt)",
+		"nl": "Vermogen (Totaal)"
+      }
+    },	
+    "measure_power.1": {
+      "title": {
+        "en": "Power (Clamp 1)",
+        "de": "Leistung (Klemme 1)",
+		"nl": "Vermogen (Clamp 1)"
+      }
+    },
+	"measure_power.2": {
+      "title": {
+        "en": "Power (Clamp 2) ",
+        "de": "Leistung (Klemme 2)",
+		"nl": "Vermogen (Clamp 2)"
+      }
+    },
+	"measure_power.3": {
+      "title": {
+        "en": "Power (Clamp 3) ",
+        "de": "Leistung (Klemme 3)",
+		"nl": "Vermogen (Clamp 3)"
+      }
+    },
+	"meter_power": {
+      "title": {
+        "en": "Energy (Whole) ",
+        "de": "Verbrauch (Gesamt)",
+		"nl": "Energie (Totaal)"
+      }
+    },
+    "meter_power.1": {
+      "title": {
+        "en": "Energy (Clamp 1)",
+        "de": "Verbrauch (Klemme 1)",
+		"nl": "Energie (Clamp 1)"
+      }
+    },
+	"meter_power.2": {
+      "title": {
+        "en": "Energy (Clamp 2)",
+        "de": "Verbrauch (Klemme 2)",
+		"nl": "Energie (Clamp 2)"
+      }
+    },
+	"meter_power.3": {
+      "title": {
+        "en": "Energy (Clamp 3)",
+        "de": "Verbrauch (Klemme 3)",
+		"nl": "Energie (Clamp 3)"
+      }
+    },
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    }    
+  },
+  "energy": {
+	  "cumulative": true
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      2,
+	  258,
+	  514
+    ],
+    "productId": [
+      9
+    ],
+    "zwaveAllianceProductId": 140,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1596/Home Energy Meter Gen5 manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}\n\nAfter successful addition, you must also set the reports of the terminals.",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}\n\nNa succesvolle toevoeging, moet u ook de rapporten van de klemmen instellen.",
+		"de": "Drücken Sie die Taste auf der Rückseite des Gerätes\n\nNach erfolgreichem Hinzufügen, müssen Sie zusätzlich die Berichte der Klemmen einstellen."
+      }
+    },
+	"unlearnmode": {
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}",
+		"de": "Drücken Sie die Taste auf der Rückseite des Gerätes"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+	"defaultConfiguration": [
+      {
+        "id": 3,
+        "value": 0,
+        "size": 1
+      },
+    
+	  {
+        "id": 101,
+        "size": 4,
+        "value": 16140 
+	  },
+	  {
+        "id": 102,
+        "size": 4,
+        "value": 0
+	  },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 240
+	  },
+	   {
+        "id": 112,
+        "size": 4,
+        "value": 300
+	  },
+	  {
+        "id": 103,
+        "size": 4,
+        "value": 0
+	  },
+	   {
+        "id": 113,
+        "size": 4,
+        "value": 3600
+		}
+		]
+    
+  }
+}

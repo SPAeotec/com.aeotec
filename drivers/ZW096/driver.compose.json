@@ -1,5 +1,6 @@
 {
   "id": "ZW096",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Smart Switch 6"
   },
@@ -7,28 +8,61 @@
   "capabilities": [
     "measure_power",
     "meter_power",
-    "onoff"
+    "onoff",
+	"measure_voltage",
+	"measure_current",
+	"button.reset_meter"
   ],
+   "capabilitiesOptions": {
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    }
+  },
+ 
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+   "connectivity": ["zwave"],
   "zwave": {
-    "manufacturerId": 134,
+    "manufacturerId": [
+	134,
+	362
+	],
     "productTypeId": [
       3,
       515,
-      771
+      771,
+	  258,
+	  259,
+	  6659
     ],
     "productId": [
       96
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 2515,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2515/Instructions - Aeon Labs Smart Switch 6 (2).pdf",
     "learnmode": {
       "instruction": {
-        "en": "Press the (action) button on the Smart Switch to enter learn mode",
-        "nl": "Druk op de (actie) knop op de Smart Switch om de leer modus te activeren"
+        "en": "Press the (action) button on the Smart Switch, to enter learn mode",
+        "nl": "Druk op de actie knop van de Smart Switch, om de leermodus te activeren.",
+		"de": "Drücken Sie die Taste am Smart Switch, um in den Lernmodus zu gelangen."
+      }
+    },
+	"unlearnmode": {
+      "instruction": {
+        "en": "Press the (action) button on the Smart Switch, to enter remove mode",
+        "nl": "Druk 1 keer op de actie knop van de Smart Switch, om de leermodus te activeren.",
+		"de": "Drücken Sie die Taste am Smart Switch, um das Gerät zu entfernen."
       }
     },
     "associationGroups": [
@@ -37,7 +71,8 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Z-Wave Plus Lifeline.\r\nThe Hial CC and Basic Report CC (configured by parameter 80) can be sent to the associatd nodes in this group."
+          "en": "Z-Wave Plus Lifeline.\r\nThe Hail CC and Basic Report CC (configured by parameter 80) can be sent to the associated nodes in this group.",
+		  "de": "Lifeline"
         }
       }
     },
@@ -60,7 +95,7 @@
       {
         "id": 91,
         "size": 2,
-        "value": 25
+        "value": 5
       },
       {
         "id": 92,
@@ -70,12 +105,32 @@
       {
         "id": 101,
         "size": 4,
-        "value": 12
+        "value": 2
       },
       {
         "id": 111,
         "size": 4,
-        "value": 15
+        "value": 60
+      },
+	   {
+        "id": 102,
+        "size": 4,
+        "value": 1
+      },
+      {
+        "id": 112,
+        "size": 4,
+        "value": 600
+      },
+	   {
+        "id": 103,
+        "size": 4,
+        "value": 8
+      },
+      {
+        "id": 113,
+        "size": 4,
+        "value": 3600
       }
     ]
   }

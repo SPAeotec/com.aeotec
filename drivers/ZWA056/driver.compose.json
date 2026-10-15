@@ -1,0 +1,171 @@
+{
+  "id": "ZWA056",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Water Sensor 8",
+    "nl": "Watersensor 8",
+	"de": "Wassersensor 8"
+  },
+   "connectivity": ["zwave"],
+   "capabilitiesOptions": {
+    "alarm_generic.mold": {
+      "title": {
+        "en": "Mold Alert",
+        "nl": "Schimmel Alarm",
+		"de": "Schimmel Alarm"
+      }
+	}
+   },
+  "class": "sensor",
+  "capabilities": [
+        "measure_battery",
+		"alarm_water",
+		"alarm_smoke",
+		"alarm_co",
+		"alarm_generic.mold",
+		"alarm_co2",
+		"alarm_contact",
+		"alarm_motion",
+		"alarm_emergency",
+        "info_tilt",
+		"alarm_tamper",
+		"alarm_glass_break",
+		"measure_humidity",
+		"measure_temperature",
+		"measure_dewpoint",
+		"info_power"
+		],
+
+  "energy": {
+    "batteries": [ "CR14250" ]
+  },
+  "images": {
+    "large": "/drivers/ZWA056/assets/images/large.png",
+    "small": "/drivers/ZWA056/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+	2,
+	514,
+	258
+	],
+    "productId": 56,
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+	"instruction": {
+        "en": "Press the button twice in quick succession.",
+        "nl": "Druk twee keer snel achter elkaar op de knop.",
+		"de": "Drücken Sie die Taste zweimal schnell hintereinander"
+      }
+    },
+	 "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+	"instruction": {
+        "en": "Press the button twice in quick succession.",
+        "nl": "Druk twee keer snel achter elkaar op de knop.",
+		"de": "Drücken Sie die Taste zweimal schnell hintereinander"
+      }
+    },
+	"defaultConfiguration": [
+			{
+				"id": 22,
+				"size": 1,
+				"value": 1
+			},
+			{
+				"id": 10,
+				"size": 1,
+				"value": 0
+			},
+			{
+				"id": 2,
+				"size": 1,
+				"value": 20
+			},
+			{
+				"id": 13,
+				"size": 1,
+				"value": 10
+			},
+			{
+				"id": 14,
+				"size": 2,
+				"value": 300
+			},
+			{
+				"id": 15,
+				"size": 2,
+				"value": 0
+			}
+			
+	],
+    "associationGroups": [1, 1],
+	 "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline (Max. Nodes: 5)",
+			  "nl": "Lifeline",
+			  "de": "Lifeline"
+            }
+		},
+		"2": {
+		  "hint": {
+			"en": "Control (Max. Nodes: 5). Sends BASIC SET when dry contact closed or open.",
+			"de": "Steuerung (Max. Knoten: 5). Sendet BASIC SET, wenn der potentialfreie Kontakt geschlossen oder geöffnet wird."
+		  }
+		},
+		"3": {
+		  "hint": {
+			"en": "Alarm (Max. Nodes: 5). Sends out alarm message when dry contact state is changed.",
+			"de": "Alarm (Max. Knoten: 5). Sendet eine Alarmmeldung, wenn sich der Zustand des potentialfreien Kontakts ändert."
+		  }
+		},
+		"4": {
+		  "hint": {
+			"en": "Tamper (Max. Nodes: 5). Sends Notification Report when tamper is triggered or released.",
+			"de": "Manipulation (Max. Knoten: 5). Sendet Notification Report bei ausgelöster oder aufgehobener Manipulation."
+		  }
+		},
+		"5": {
+		  "hint": {
+			"en": "Temperature High Trigger (Max. Nodes: 5). Sends BASIC SET when temperature exceeds parameter 14 (heat alarm).",
+			"de": "Temperatur – Hochschwelle (Max. Knoten: 5). Sendet BASIC SET, wenn die Temperatur Parameter 14 überschreitet (Hitzealarm)."
+		  }
+		},
+		"6": {
+		  "hint": {
+			"en": "Temperature Low Trigger (Max. Nodes: 5). Sends BASIC SET when temperature goes below parameter 15 (underheat).",
+			"de": "Temperatur – Niedrigschwelle (Max. Knoten: 5). Sendet BASIC SET, wenn die Temperatur unter Parameter 15 fällt (Unterkühlung)."
+		  }
+		},
+		"7": {
+		  "hint": {
+			"en": "Humidity High Trigger (Max. Nodes: 5). Sends BASIC SET when humidity exceeds parameter 16 (weather alarm).",
+			"de": "Luftfeuchte – Hochschwelle (Max. Knoten: 5). Sendet BASIC SET, wenn die Luftfeuchte Parameter 16 überschreitet (Wetteralarm)."
+		  }
+		},
+		"8": {
+		  "hint": {
+			"en": "Humidity Low Trigger (Max. Nodes: 5). Sends BASIC SET when humidity goes below parameter 17 (weather alarm).",
+			"de": "Luftfeuchte – Niedrigschwelle (Max. Knoten: 5). Sendet BASIC SET, wenn die Luftfeuchte unter Parameter 17 fällt (Wetteralarm)."
+		  }
+		},
+		"9": {
+		  "hint": {
+			"en": "Mold danger (Max. Nodes: 5). Sends Notification Report when mold danger condition is detected.",
+			"de": "Schimmelgefahr (Max. Knoten: 5). Sendet Notification Report bei erkannter Schimmelgefahr."
+		  }
+		},
+		"10": {
+		  "hint": {
+			"en": "Air Temperature (Max. Nodes: 5). Sends Multilevel Sensor Report (periodic/threshold/limit).",
+			"de": "Lufttemperatur (Max. Knoten: 5). Sendet Multilevel Sensor Report (periodisch/Schwelle/Grenzwert)."
+		  }
+		}
+	  }
+	}
+	
+  
+
+}

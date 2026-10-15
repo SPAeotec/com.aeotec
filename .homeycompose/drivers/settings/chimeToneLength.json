@@ -1,0 +1,24 @@
+{
+  "id": "tamper_tone_length",
+  "type": "number",
+  "label": {
+    "en": "Tone length",
+    "nl": "Geluid lengte",
+	"de": "Tönlänge"
+  },
+  "hint": {
+    "en": "Determine the length of the played tone (0 = entirely).",
+    "nl": "Bepaal de lengte van het afgespeelde geluid (0 = helemaal).",
+	"de": "Bestimmen Sie die Länge des gespielten Tons (0 = ganz)."
+  },
+  "attr": {
+    "min": 0,
+    "max": 254
+  },
+  "value": 0,
+  "units": {
+    "en": "Seconds",
+    "nl": "Seconden",
+	"de": "Sekunden"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "id": "DSB28-ZWEU",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Home Energy Meter (2nd Edition)",
+	"de": "Home Energy Meter (2nd Edition)",
+	"nl": "Home Energy Meter (2nd Edition)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_current",
+    "measure_power",
+    "meter_power",
+    "measure_voltage",
+	"measure_current.1",
+    "measure_power.1",
+    "meter_power.1",
+    "measure_voltage.1",
+	"measure_current.2",
+    "measure_power.2",
+    "meter_power.2",
+    "measure_voltage.2",
+	"measure_current.3",
+    "measure_power.3",
+    "meter_power.3",
+    "measure_voltage.3",
+	"button.reset_meter"
+  ],
+    "capabilitiesOptions": {
+	
+	"measure_voltage": {
+      "title": {
+        "en": "Voltage (Whole)",
+        "de": "Spannung (Gesamt)",
+		"nl": "Voltage (Totaal)"
+      }
+    },	
+     
+    "measure_voltage.1": {
+      "title": {
+        "en": "Voltage (Clamp 1)",
+        "de": "Spannung (Klemme 1)",
+		"nl": "Voltage (Clamp 1)"
+      }
+    },
+    "measure_voltage.2": {
+      "title": {
+        "en": "Voltage (Clamp 2)",
+        "de": "Spannung (Klemme 2)",
+		"nl": "Voltage (Clamp 2)"
+      }
+    },
+    "measure_voltage.3": {
+      "title": {
+        "en": "Voltage (Clamp 3)",
+        "de": "Spannung (Klemme 3)",
+		"nl": "Voltage (Clamp 3)"
+      }
+    },
+	"measure_power": {
+      "title": {
+        "en": "Power (Whole) ",
+        "de": "Leistung (Gesamt)",
+		"nl": "Vermogen (Totaal)"
+      }
+    },	
+    "measure_power.1": {
+      "title": {
+        "en": "Power (Clamp 1)",
+        "de": "Leistung (Klemme 1)",
+		"nl": "Vermogen (Clamp 1)"
+      }
+    },
+	"measure_power.2": {
+      "title": {
+        "en": "Power (Clamp 2) ",
+        "de": "Leistung (Klemme 2)",
+		"nl": "Vermogen (Clamp 2)"
+      }
+    },
+	"measure_power.3": {
+      "title": {
+        "en": "Power (Clamp 3) ",
+        "de": "Leistung (Klemme 3)",
+		"nl": "Vermogen (Clamp 3)"
+      }
+    },
+	"meter_power": {
+      "title": {
+        "en": "Energy (Whole) ",
+        "de": "Verbrauch (Gesamt)",
+		"nl": "Energie (Totaal)"
+      }
+    },
+    "meter_power.1": {
+      "title": {
+        "en": "Energy (Clamp 1)",
+        "de": "Verbrauch (Klemme 1)",
+		"nl": "Energie (Clamp 1)"
+      }
+    },
+	"meter_power.2": {
+      "title": {
+        "en": "Energy (Clamp 2)",
+        "de": "Verbrauch (Klemme 2)",
+		"nl": "Energie (Clamp 2)"
+      }
+    },
+	"meter_power.3": {
+      "title": {
+        "en": "Energy (Clamp 3)",
+        "de": "Verbrauch (Klemme 3)",
+		"nl": "Energie (Clamp 3)"
+      }
+    },		
+	"measure_current": {
+      "title": {
+        "en": "Current (Whole)",
+        "de": "Strom (Gesamt)",
+		"nl": "Stroom (Totaal)"
+      }
+    },
+	"measure_current.1": {
+      "title": {
+        "en": "Current (Clamp 1)",
+        "de": "Strom (Klemme 1)",
+		"nl": "Stroom (Clamp 3)"
+      }
+    },
+	"measure_current.2": {
+      "title": {
+        "en": "Current (Clamp 2)",
+        "de": "Strom (Klemme 2)",
+		"nl": "Stroom (Clamp 3)"
+      }
+    },
+	"measure_current.3": {
+      "title": {
+        "en": "Current (Clamp 3)",
+        "de": "Strom (Klemme 3)",
+		"nl": "Stroom (Clamp 3)"
+      }
+    },
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    }    
+  },
+  "energy": {
+	  "cumulative": true
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      2,
+	  258,
+	  514
+    ],
+    "productId": [
+      
+      28
+    ],
+    "zwaveAllianceProductId": 1596,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1596/Home Energy Meter Gen5 manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}\n\nAfter successful addition, you must also set the reports of the terminals.",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}\n\nNa succesvolle toevoeging, moet u ook de rapporten van de klemmen instellen.",
+		"de": "Drücken Sie die Taste auf der Rückseite des Gerätes\n\nNach erfolgreichem Hinzufügen, müssen Sie zusätzlich die Berichte der Klemmen einstellen."
+      }
+    },
+	"unlearnmode": {
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}}",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}",
+		"de": "Drücken Sie die Taste auf der Rückseite des Gerätes"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+	"defaultConfiguration": [
+      {
+        "id": 3,
+        "value": 0,
+        "size": 1
+      },
+    
+	  {
+        "id": 101,
+        "size": 4,
+        "value": 10 
+	  },
+	  {
+        "id": 102,
+        "size": 4,
+        "value": 4
+	  },
+	  {
+        "id": 111,
+        "size": 4,
+        "value": 34
+	  },
+	   {
+        "id": 112,
+        "size": 4,
+        "value": 300
+	  },
+	  {
+        "id": 103,
+        "size": 4,
+        "value": 1
+	  },
+	   {
+        "id": 113,
+        "size": 4,
+        "value": 3600
+		}
+		]
+    
+  }
+}

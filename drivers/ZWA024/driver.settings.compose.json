@@ -1,0 +1,1982 @@
+[
+{
+    "id": "1",
+    "type": "checkbox",
+    "label": {
+      "en": "Vibration Alarm",
+	  "de": "Vibrationsalarm"
+    },
+    "hint": {
+      "en": "Deactivates/activates the vibration alarm",
+	  "de": "Deaktiviert/Aktiviert den Vibrationsalarm"
+    },
+
+    "value": true
+  },
+  {
+    "id": "5",
+    "type": "dropdown",
+    "label": {
+      "en": "Binary Report",
+	  "de": "Binary Report"
+    },
+    "hint": {
+      "en": "Parameter 5: Switches between Notification Report and Binary Report for motion alarm",
+	  "de": "Parameter 5: Wechselt zwischen Notification Report und Binary Report bei Bewegungsalarm"
+    },
+	"zwave": {
+      "index": 5,
+      "size": 2
+	  
+    },
+	"value": "2",
+    "values": [{
+          "id": "0",
+          "label": {
+            "en": "Notification report",
+			"de": "Notification Report"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Binary report",
+			"de": "Binary Report"
+          }
+        },
+		{
+          "id": "2",
+          "label": {
+			"en": "Both",
+			"de": "Beide"
+          }
+        }
+      ]
+  },
+  
+  {
+    "id": "2",
+    "type": "number",
+	 "value": 30,
+    "label": {
+      "en": "Motion Retrigger Time",
+      "de": "Wiedererkennungszeit"
+    },
+    "hint": {
+      "en": "Parameter 2: Presence re-detection time set in second to allow motion sensor to reset timeout of motion sensor. In this time, the motion sensor can not be triggered again. If this value reach zero, the timeout configuration value set by Param3 will be reset. This setting value must always be less than timeout configuration. Parameter Number Size (Byte) Available Settings Default. Value 1-30 = 30 seconds",
+      "de": "Parameter 2: Zeit für die erneute Erkennung von Anwesenheit, die in Sekunden eingestellt wird, damit der Bewegungssensor den Timeout des Bewegungssensors zurücksetzen kann. In dieser Zeit kann der kann der Bewegungssensor nicht erneut ausgelöst werden. Wenn dieser Wert Null erreicht, wird der mit Param3 eingestellte Timeout-Konfigurationswert zurückgesetzt. Dieser Einstellwert muss immer kleiner sein als die Timeout-Konfiguration. Wert 1-30 = 30 Sekunden"
+			
+    },
+    "zwave": {
+      "index": 2,
+      "size": 2
+	  
+    },
+    "attr": {
+      "min": 0,
+      "max": 3600
+    }
+   
+  },
+{
+    "id": "3",
+    "type": "number",
+	"value": 60,
+    "label": {
+      "en": "Motion Untrigger Time",
+      "de": "Abschaltzeit"
+    },
+    "hint": {
+      "en": "Parameter 3: Timeout configuration set in second for motion sensor to send no trigger status.",
+      "de": "Parameter 3: Timeout-Konfiguration, die in Sekunden eingestellt wird, damit der Bewegungssensor keinen Triggerstatus sendet."
+			
+    },
+    "zwave": {
+      "index": 3,
+      "size": 2
+    },
+    "attr": {
+      "min": 30,
+      "max": 3600
+    }
+  },
+  {
+    "id": "4",
+    "type": "number",
+	"value": 11,
+    "label": {
+      "en": "Motion Sensitivity",
+      "de": "Bewegungssensor Empfindlichkeit"
+    },
+    "hint": {
+      "en": "Parameter 4: Set the sensitivity of motion sensor.",
+      "de": "Parameter 4: Stellen Sie die Empfindlichkeit des Bewegungssensors ein."			
+    },
+    "zwave": {
+      "index": 4,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 11
+    }
+    
+  },
+     
+    {
+    "id": "6",
+    "type": "number",
+    "label": {
+      "en": "Vibration Sensor",
+      "de": "Vibrationssensor"
+    },
+    "hint": {
+      "en": "Parameter 6: Sets the vibration alarm deactivation time in minutes.\n\n255 - Alarm is not deactivated",
+      "de": "Parameter 6: Legt die Abschaltzeit des Vibrationsalarm in Minuten fest.\n\n255 - Alarm wird nicht deaktiviert"			
+    },
+    "zwave": {
+      "index": 6,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "value": 1
+  },
+    
+   {
+    "id": "9",
+    "type": "number",
+    "label": {
+      "en": "Wakeup CC Timeout",
+      "de": "Wakeup CC Timeout"
+    },
+    "hint": {
+      "en": "Parameter 9: Timeout set in seconds after Wakeup CC is send out before go to sleep. If role type is RSS, the minimum value will be 10. If role type is LSS, the minimum value will be 2. If wakeup no more information received, return to sleep mode immediately.",
+      "de": "Parameter 9: Der Timeout legt fest, wie lange der Sensor wach bleibt, wenn ein WakeUP CC gesendet wurde. Wenn das Gerät mit Batterie Betrieben wird, ist der Mindestwert 10. Wenn er mit USB Betieben wird, ist der Mindestwert 2. Wenn keine Wakeup-Informationen mehr empfangen werden, tritt sofort der sleep Mode ein."			
+    },
+    "zwave": {
+      "index": 9,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 2,
+      "max": 255
+    },
+    "value": 15
+  },
+  {
+    "id": "11",
+    "type": "number",
+    "label": {
+      "en": "Motion Group Control (Group2)",
+      "de": "Kommando bei Bewegung (Gruppe2)"
+    },
+    "hint": {
+      "en": "Parameter 11: Set control of other devices on group2 based on motion trigger,\n 0 - Send BASIC_SET (0xFF) when motion is triggered to associated device\n Send BASIC_SET (0x00) when motion is untriggered to associated device\n 1 - Send BASIC_SET (0x00) when motion is triggered\n Send BASIC_SET (0xFF) when motion is untriggered\n 2 - Send BASIC_SET (0xFF) when motion is triggered, Nothing when motion untriggered.\n 3 - Send BASIC_SET (0x00) when motion is triggered, Nothing when motion untriggered.\n 4 - Send BASIC_SET (0x00) when motion is untriggered, Nothing when motion triggered.\n 5 - Send BASIC_SET (0xFF) when motion is untriggered, Nothing when motion triggered.\n 6 - Send BASIC_SET (value is configured by parameter 12) when motion is triggered to associated devices.\n Send BASIC_SET (value is configured by parameter 12) when motion is untriggered.", 
+	  "de": "Parameter 11: Stellen Sie die Steuerung anderer Geräte über Gruppe 2 ein. \n 0 - BASIC_SET (0xFF) bei ausgelöster Bewegung an das zugehörige Gerät senden\n BASIC_SET (0x00) an das zugehörige Gerät senden, wenn die Bewegung nicht ausgelöst wird\n 1 - BASIC_SET (0x00) senden, wenn Bewegung ausgelöst wird\n BASIC_SET (0xFF) senden, wenn Bewegung nicht ausgelöst ist\n 2 - BASIC_SET (0xFF) senden, wenn Bewegung ausgelöst wird, nichts, wenn Bewegung nicht ausgelöst wird.\n 3 - BASIC_SET (0x00) senden, wenn Bewegung ausgelöst wird, nichts, wenn Bewegung nicht ausgelöst wird.\n 4 - BASIC_SET (0x00) senden, wenn Bewegung nicht ausgelöst ist, nichts, wenn Bewegung ausgelöst ist.\n 5 - BASIC_SET (0xFF) senden, wenn Bewegung nicht ausgelöst wird, nichts, wenn Bewegung ausgelöst wird.\n 6 - BASIC_SET (Wert wird durch Parameter 12 konfiguriert) bei ausgelöster Bewegung an zugehörige Geräte senden.\n BASIC_SET (Wert wird über Parameter 12 konfiguriert) senden, wenn Bewegung nicht ausgelöst wird."			
+    },
+    "zwave": {
+      "index": 11,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 6
+    },
+    "value": 0
+  },
+  {
+    "id": "12",
+    "type": "number",
+    "label": {
+      "en": "Motion Group Value Setting (Group2)",
+      "de": "Wert bei Bewegung (Gruppe2)"
+    },
+    "hint": {
+      "en": "Parameter 12: Expert setting! For this setting, please read the instructions of MultiSensor 7.",
+      "de": "Parameter 12: Experteneinstellung! Für diese Einstellung lesen Sie bitte die Anleitung des MultiSensor 7"			
+    },
+    "zwave": {
+      "index": 12,
+      "size": 2,
+	 "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 65535
+    },
+    "value": 65280
+  },
+  {
+    "id": "13",
+    "type": "number",
+    "label": {
+      "en": "Motion Group Control Requirement (Group2)",
+      "de": "Helligkeitsgrenzwert für Bewegungssteuerung (Gruppe2)"
+    },
+    "hint": {
+      "en": "Parameter 13: Set threshold of Light/Lux when devices associated in group2 should be triggered by motion.",
+      "de": "Parameter 13: Stellen Sie den Schwellenwert für Licht/Lux ein, wenn die in Gruppe2 zugeordneten Geräte durch Bewegung ausgelöst werden sollen."			
+    },
+    "zwave": {
+      "index": 13,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+    },
+    "value": 30000
+  },
+  {
+    "id": "14",
+    "type": "number",
+    "label": {
+      "en": "Over Humidity Group Threshold (Group 5)",
+      "de": "Schwellwert für hohe Feuchtigkeit(Gruppe 5)"
+    },
+    "hint": {
+      "en": "Parameter 14: Set threshold of humidity. If measured humidity >= (this value), send ON to associated devices through group5. If measured humidity < (this value) send OFF to associated devices through group5.",
+      "de": "Parameter 14: Stellt den Schwellenwert der Luftfeuchtigkeit ein. Wenn gemessene Luftfeuchtigkeit >= (Wert), sendet es EIN an Geräte in Gruppe 5. Wenn die gemessene Luftfeuchtigkeit < (Wert) ist, sendet es AUS an die Geräte in Gruppe 5."			
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+	},
+    "value": 60
+  },
+  {
+    "id": "15",
+    "type": "number",
+    "label": {
+      "en": "Under Humidity Group Threshold (Group 6)",
+      "de": "Schwellwert für niedrige Feuchtigkeit(Gruppe 6)"
+    },
+    "hint": {
+      "en": "Parameter 15: Set threshold of humidity. If measured humidity <= (this value), send ON to associated devices through group 6. If measured humidity > (this value) send OFF to associated devices through group 6.",
+      "de": "Parameter 15: Stellt den Schwellenwert der Luftfeuchtigkeit ein. Wenn die gemessene Luftfeuchtigkeit <= (Wert), sendet es EIN an Geräte in Gruppe 6. Wenn die gemessene Luftfeuchtigkeit > (Wert) ist, sendet es AUS an die Geräte in Gruppe 6."			
+    },
+    "zwave": {
+      "index": 15,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+	},
+    "value": 40
+  },
+  {
+    "id": "16",
+    "type": "number",
+    "label": {
+      "en": "Over Heat Group Threshold (Group 3)",
+      "de": "Schwellwert für hohe Temperatur(Gruppe 3)"
+    },
+    "hint": {
+      "en": "Parameter 16: Set threshold of temperature. If measured temperature >= (this value), send ON to associated devices through group 3. If measured temperature < (this value) send OFF to associated devices through group 3. Value 239 means 23.9 °C.",
+      "de": "Parameter 16: Stellt den Schwellenwert der Temperatur ein. Wenn die gemessene Temperatur >= (Wert), sendet es EIN an Geräte in Gruppe 3. Wenn die gemessene Temperatur < (Wert) ist, sendet es AUS an die Geräte in Gruppe 3. Wert 239 entsprichr 23.9 °C."			
+    },
+    "zwave": {
+      "index": 16,
+      "size": 2,
+	  "signed": true
+    },
+    "attr": {
+      "min": -400,
+      "max": 850
+	},
+    "value": 239
+  },
+    {
+    "id": "17",
+    "type": "number",
+    "label": {
+      "en": "Under Heat Group Threshold (Group 4)",
+      "de": "Schwellwert für niedrige Temperatur(Gruppe 4)"
+    },
+    "hint": {
+      "en": "Parameter 17: Set threshold of temperature. If measured temperature <= (this value), send ON to associated devices through group 4. If measured temperature > (this value) send OFF to associated devices through group 4. Value 155 means 15.5°C.",
+      "de": "Parameter 17: Stellt den Schwellenwert der Temperatur ein. Wenn die gemessene Temperatur <= (Wert), sendet es EIN an Geräte in Gruppe 4. Wenn die gemessene Temperatur > (Wert) ist, sendet es AUS an die Geräte in Gruppe 4. Wert 155 entsprichr 15,5°C."			
+    },
+    "zwave": {
+      "index": 17,
+      "size": 2,
+	  "signed": true
+    },
+    "attr": {
+      "min": -400,
+      "max": 850
+	},
+    "value": 155
+  },
+  {
+    "id": "18",
+    "type": "number",
+    "label": {
+      "en": "Over Light Group Threshold (Group 7)",
+      "de": "Grenzwert für hohe Helligkeit(Gruppe 7)"
+    },
+    "hint": {
+      "en": "Parameter 18: Set threshold of Light. If measured brightness >= (this value), send ON to associated devices through group 7. If measured brightness < (this value) send OFF to associated devices through group 7.",
+      "de": "Parameter 18: Stellt den Schwellenwert der Helligkeit ein. Wenn die gemessene Helligkeit >= (Wert), sendet es EIN an Geräte in Gruppe 7. Wenn die gemessene Helligkeit < (Wert) ist, sendet es AUS an die Geräte in Gruppe 7."			
+    },
+    "zwave": {
+      "index": 18,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+	},
+    "value": 2000
+  },
+  {
+    "id": "19",
+    "type": "number",
+    "label": {
+      "en": "Under Light Group Threshold (Group 8)",
+      "de": "Grenzwert für niedrige Helligkeit(Gruppe 8)"
+    },
+    "hint": {
+      "en": "Parameter 19: Set threshold of Light. If measured brightness <= (this value), send ON to associated devices through group 8. If measured brightness > (this value) send OFF to associated devices through group 8.",
+      "de": "Parameter 19: Stellt den Schwellenwert der Helligkeit ein. Wenn die gemessene Helligkeit <= (Wert), sendet es EIN an Geräte in Gruppe 8. Wenn die gemessene Helligkeit > (Wert) ist, sendet es AUS an die Geräte in Gruppe 8."			
+    },
+    "zwave": {
+      "index": 19,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+	},
+    "value": 100
+  },
+   {
+    "id": "20",
+    "type": "number",
+    "label": {
+      "en": "Over UV Group Threshold (Group 9)",
+      "de": "Grenzwert für hohe UV-Belastung(Gruppe 10)"
+    },
+    "hint": {
+      "en": "Parameter 20: Set threshold of UV exposure. If measured exposure >= (this value), send ON to associated devices through group 9. If measured exposure < (this value) send OFF to associated devices through group 9.",
+      "de": "Parameter 20: Stellt den Schwellenwert der UV-Belastung ein. Wenn die gemessene UV Belastung >= (Wert), sendet es EIN an Geräte in Gruppe 9. Wenn die gemessene UV-Belastung < (Wert) ist, sendet es AUS an die Geräte in Gruppe 9."			
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 11
+	},
+    "value": 8
+  },
+  {
+    "id": "21",
+    "type": "number",
+    "label": {
+      "en": "Under UV Group Threshold (Group 10)",
+      "de": "Grenzwert für niedrige UV-Belastung(Gruppe 10)"
+    },
+    "hint": {
+      "en": "Parameter 21: Set threshold of UV exposure. If measured UV exposure <= (this value), send ON to associated devices through group 10. If measured UV exposure > (this value) send OFF to associated devices through group 10.",
+      "de": "Parameter 22: Stellt den Schwellenwert der UV-Belastung ein. Wenn die gemessene UV-Belastung <= (Wert), sendet es EIN an Geräte in Gruppe 10. Wenn die gemessene UV-Belastung > (Wert) ist, sendet es AUS an die Geräte in Gruppe 10."			
+    },
+    "zwave": {
+      "index": 21,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 11
+	},
+    "value": 1
+  },
+   {
+    "id": "39",
+    "type": "number",
+    "label": {
+      "en": "Low Battery Threshold",
+      "de": "Grenzwert für niedrigen Batteriestand"
+    },
+    "hint": {
+      "en": "Parameter 39: Configure low battery report threshold, sends low battery report via notification and battery report when battery level drops under setting.",
+      "de": "Parameter 39: Konfigurieren Sie den Schwellenwert für den Bericht bei niedrigem Batteriestand und senden Sie einen Bericht bei niedrigem Batteriestand über eine Benachrichtigung und einen Batteriebericht, wenn der Batteriestand unter die Einstellung fällt."			
+    },
+    "zwave": {
+      "index": 39,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 10,
+      "max": 90
+	},
+    "value": 50
+  },
+ {
+      "id": "40",
+      "zwave": {
+        "index": 40,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Threshold Check Enable/Disable",
+		"de": "Schwellenwertprüfung ein/aus"
+      },
+      "hint": {
+        "en": "Parameter 40: Enable/Disable threshold reporting, check time can be adjusted by Param45.",
+		"de": "Parameter 40: Aktivieren/Deaktivieren der Schwellenwertmeldung, die Prüfzeit kann mit Param45 eingestellt werden."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Disabled",
+			"de": "Deaktiviert"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Enabled",
+			"de": "Aktiviert"
+          }
+        }
+      ]
+    },
+  {
+    "id": "41",
+    "type": "number",
+    "label": {
+      "en": "Temperature Threshold",
+      "de": "Temperaturgrenzwert"
+    },
+    "hint": {
+      "en": "Parameter 41: Threshold = (Value * 0.1) ",
+      "de": "Parameter 41: Grenzwert = (Wert * 0.1)"			
+    },
+    "zwave": {
+      "index": 41,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+	},
+    "value": 1
+  },
+   {
+    "id": "42",
+    "type": "number",
+    "label": {
+      "en": "Humidity Threshold",
+      "de": "Luftfeuchtigkeitsgrenzwert"
+    },
+	"hint": {
+      "en": "Parameter 42: Threshold in %",
+      "de": "Parameter 42: Grenzwert in %"			
+    },
+      "zwave": {
+      "index": 42,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 50
+	},
+    "value": 1
+  },
+     {
+    "id": "43",
+    "type": "number",
+    "label": {
+      "en": "Lux Threshold",
+      "de": "Helligkeitsgrenzwert"
+    },
+	"hint": {
+      "en": "Parameter 43: Threshold in Lux",
+      "de": "Parameter 43: Grenzwert in Lux"			
+    },
+      "zwave": {
+      "index": 43,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 10000
+	},
+    "value": 10
+  },
+     {
+    "id": "44",
+    "type": "number",
+    "label": {
+      "en": "UV Threshold",
+      "de": "UV-Belastung Grenzwert"
+    },
+	"hint": {
+      "en": "Parameter 44: UV Threshold",
+      "de": "Parameter 44: UV-Belastung Grenzwert"			
+    },
+      "zwave": {
+      "index": 44,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 11
+	},
+    "value": 1
+  }, 
+  {
+    "id": "45",
+    "type": "number",
+    "label": {
+      "en": "Threshold Check Time",
+      "de": "Grenzwertprüfzeit"
+    },
+    "hint": {
+      "en": "Parameter 45: Set threshold check time in seconds if threshold is enabled via parameter 40. \n1~65535 - When USB powered\n60~65535 - When Battery powered ",
+      "de": "Parameter 45: Stellen Sie die Zeit für die Schwellenwertprüfung in Sekunden ein, wenn der Schwellenwert über Parameter 40 aktiviert ist. \n1~65535 - Bei USB-Betrieb\n60~65535 - Bei Batteriebetrieb "			
+    },
+    "zwave": {
+      "index": 45,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 1,
+      "max": 65535
+	},
+    "value": 60
+  },
+  {
+      "id": "46",
+      "zwave": {
+        "index": 46,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "Low Temperature Report",
+		"de": "Niedrigtemperaturbericht ein/aus"
+      },
+      "hint": {
+        "en": "Parameter 46: Enable /Disable alarm report for low temperature (<= -15 C) Temperature report will be sent to gateway.",
+		"de": "Parameter 46: Aktivieren/Deaktivieren des Alarmberichts für niedrige Temperatur (<= -15 C) Der Temperaturbericht wird an das Gateway gesendet."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Disabled",
+			"de": "Deaktiviert"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Enabled",
+			"de": "Aktiviert"
+          }
+        }
+      ]
+    },
+  {
+    "id": "48",
+    "type": "number",
+    "label": {
+      "en": "Sensor Limit Control",
+      "de": "Sensor Grenzwertsteuerung"
+    },
+    "hint": {
+      "en": "Parameter 48: Used to enable/disable measurement reports for various sensors that is more than the upper limit value or less than the lower limit value.\n0 - Disabled\n1 - Temperature upper level\n2 - Humidity upper level\n4 - Lux upper level\n8 - UV upper level\n16 - Temperature lower level\n32 - Humidity lower level\n64 - Lux lower level\n128 - UV lower level",
+      "de": "Parameter 48: Dient zum Aktivieren/Deaktivieren von Messberichten für verschiedene Sensoren, die über dem oberen Grenzwert oder kleiner als der untere Grenzwert ist.\n0 - Deaktiviert\n1 - hohe Temperatur\n2 - hohe Luftfeuchtigkeit\n4 - hohe Helligkeit\n8 - hohe UV-Belastung\n16 - niedrige Temperatur\n32 - niedrige Luftfeuchtigkeit\n64 - niedrige Helligkeit\n128 - niedrige UV-Belastung"			
+    },
+    "zwave": {
+      "index": 48,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+	},
+    "value": 0
+  },
+   {
+    "id": "49",
+    "type": "number",
+    "label": {
+      "en": "Temperature Upper Limit",
+      "de": "Temperatur Obergrenze"
+    },
+    "hint": {
+      "en": "Parameter 49: Set upper limit level for temperature set in scale of 0.1.",
+      "de": "Parameter 49: Stellen Sie den oberen Grenzwert für die Temperatur in der Skala von 0,1 ein."			
+    },
+    "zwave": {
+      "index": 49,
+      "size": 2,
+	  "signed": true
+    },
+    "attr": {
+      "min": -400,
+      "max": 1000
+	},
+    "value": 280
+  },
+     {
+    "id": "50",
+    "type": "number",
+    "label": {
+      "en": "Temperature Lower Limit",
+      "de": "Temperatur Untergrenze"
+    },
+    "hint": {
+      "en": "Parameter 50: Set lower limit level for temperature set in scale of 0.1.",
+      "de": "Parameter 50: Stellen Sie den unteren Grenzwert für die Temperatur in der Skala von 0,1 ein."			
+    },
+    "zwave": {
+      "index": 50,
+      "size": 2,
+	  "signed": true
+    },
+    "attr": {
+      "min": -400,
+      "max": 1000
+	},
+    "value": 320
+  },
+   {
+    "id": "51",
+    "type": "number",
+    "label": {
+      "en": "Temperature Recover Limit",
+      "de": "Temperatur Rücksetzwert"
+    },
+    "hint": {
+      "en": "Parameter 51: Temperature recover limit set in scale of 0.1.",
+      "de": "Parameter 51: Grenzwert für die Temperaturwiederherstellung in der Skala von 0,1 eingestellt."			
+    },
+    "zwave": {
+      "index": 51,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 1,
+      "max": 255
+	},
+    "value": 20
+  },
+   {
+    "id": "52",
+    "type": "number",
+    "label": {
+      "en": "Humidity Upper Limit",
+      "de": "Luftfeuchtigkeit Obergrenze"
+    },
+    "hint": {
+      "en": "Parameter 52: Set humidity upper limit level.",
+      "de": "Parameter 52: Stellen Sie den oberen Feuchtigkeitsgrenzwert ein."			
+    },
+    "zwave": {
+      "index": 52,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+	},
+    "value": 60
+  },
+    {
+    "id": "53",
+    "type": "number",
+    "label": {
+      "en": "Humidity Lower Limit",
+      "de": "Luftfeuchtigkeit Untergrenze"
+    },
+    "hint": {
+      "en": "Parameter 53: Set humidity lower limit level.",
+      "de": "Parameter 53: Stellen Sie den unteren Feuchtigkeitsgrenzwert ein."			
+    },
+    "zwave": {
+      "index": 53,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+	},
+    "value": 40
+  },
+     {
+    "id": "54",
+    "type": "number",
+    "label": {
+      "en": "Humidity Recover Limit",
+      "de": "Luftfeuchtigkeit Rücksetzwert"
+    },
+    "hint": {
+      "en": "Parameter 54: Set humidity recover limit level.",
+      "de": "Parameter 54: Stellen Sie den Grenzwert für die Wiederherstellung der Feuchtigkeit ein."			
+    },
+    "zwave": {
+      "index": 54,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 50
+	},
+    "value": 5
+  }, 
+    {
+    "id": "55",
+    "type": "number",
+    "label": {
+      "en": "Lux Upper Limit",
+      "de": "Helligkeit oberer Grenzwert"
+    },
+    "hint": {
+      "en": "Parameter 55: Set lux upper limit level.",
+      "de": "Parameter 55: Stellen Sie den oberen Grenzwert für die Helligkeit ein."			
+    },
+    "zwave": {
+      "index": 55,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+	  },
+    "value": 1000
+  }, 
+     {
+    "id": "56",
+    "type": "number",
+    "label": {
+      "en": "Lux Lower Limit",
+      "de": "Helligkeit unterer Grenzwert"
+    },
+    "hint": {
+      "en": "Parameter 56: Set lux lower limit level.",
+      "de": "Parameter 56: Stellen Sie den unteren Grenzwert für die Helligkeit ein."			
+    },
+    "zwave": {
+      "index": 56,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 30000
+	  },
+    "value": 100
+  },   
+  {
+    "id": "57",
+    "type": "number",
+    "label": {
+      "en": "Lux Recover Limit",
+      "de": "Helligkeit Rücksetzwert"
+    },
+    "hint": {
+      "en": "Parameter 57: Set lux recover limit level.",
+      "de": "Parameter 57: Stellen Sie den Rücksetzwert für die Helligkeit ein."			
+    },
+    "zwave": {
+      "index": 57,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 1,
+      "max": 255
+	  },
+    "value": 100
+  }, 
+  {
+    "id": "58",
+    "type": "number",
+    "label": {
+      "en": "UV Upper Limit",
+      "de": "UV-Belastung oberer Grenzwert"
+    },
+    "hint": {
+      "en": "Parameter 58: Set UV upper limit level.",
+      "de": "Parameter 58: Stellen Sie den oberen Grenzwert für die UV-Belastung ein."
+    },
+    "zwave": {
+      "index": 58,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 1,
+      "max": 11
+	  },
+    "value": 8
+  }, 
+  {
+    "id": "59",
+    "type": "number",
+    "label": {
+      "en": "UV Lower Limit",
+      "de": "UV-Belastung unterer Grenzwert"
+    },
+    "hint": {
+      "en": "Parameter 59: Set UV lower limit level.",
+      "de": "Parameter 59: Stellen Sie den unterer Grenzwert für die UV-Belastung ein."
+    },
+    "zwave": {
+      "index": 59,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 1,
+      "max": 11
+	  },
+    "value": 4
+  }, 
+   {
+    "id": "60",
+    "type": "number",
+    "label": {
+      "en": "UV Recover Limit",
+      "de": "UV-Belastung Rücksetzwert"
+    },
+    "hint": {
+      "en": "Parameter 60: Set UV recover limit level.",
+      "de": "Parameter 60: Stellen Sie den Rücksetzwert für die UV-Belastung ein."
+    },
+    "zwave": {
+      "index": 60,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 1,
+      "max": 5
+	  },
+    "value": 1
+  }, 
+  {
+      "id": "64",
+      "zwave": {
+        "index": 64,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "0",
+      "label": {
+        "en": "Temperature Scale",
+		"de": "Temperatureinheit"
+      },
+	   "hint": {
+        "en": "Parameter 64",
+		"de": "Parameter 64"
+      },
+        "values": [{
+          "id": "0",
+          "label": {
+            "en": "Celsius",
+			"de": "Celsius"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Fahrenheit",
+			"de": "Fahrenheit"
+          }
+        }
+      ]
+    },
+  {
+      "id": "81",
+      "zwave": {
+        "index": 81,
+        "size": 1
+      },
+      "type": "dropdown",
+      "value": "1",
+      "label": {
+        "en": "LED Activity",
+		"de": "LED Steuerung"
+      },
+      "hint": {
+        "en": "Parameter 81: Allow user to enable/disable LED activity of specific reports sent by sensor. Button press indicator is not affected by this.",
+		"de": "Parameter 81: Erlaubt dem Benutzer, die LED-Aktivität bestimmter vom Sensor gesendeter Berichte zu aktivieren/deaktivieren. Die Tastendruckanzeige ist hiervon nicht betroffen."
+      },
+	   "values": [{
+          "id": "0",
+          "label": {
+            "en": "Disabled",
+			"de": "Deaktiviert"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+			"en": "Enabled ",
+			"de": "Aktiviert"
+          }
+        }
+      ]
+    },
+  {
+    "id": "82",
+    "type": "dropdown",
+    "label": {
+      "en": "Motion Sensor Report Indicator",
+      "de": "Anzeige des Bewegungssensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 82: If LED is enabled, allow user to change the report color of motion sensor.",
+      "de": "Parameter 82: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Bewegungssensors ändern."
+    },
+    "zwave": {
+      "index": 82,
+      "size": 1
+    },
+    "value": "3",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+   {
+    "id": "83",
+    "type": "dropdown",
+    "label": {
+      "en": "Temperature Sensor Report Indicator",
+      "de": "Anzeige des Temperaturesensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 83: If LED is enabled, allow user to change the report color of temperature sensor.",
+      "de": "Parameter 83: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Temperatursensors ändern."
+    },
+    "zwave": {
+      "index": 83,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+   {
+    "id": "84",
+    "type": "dropdown",
+    "label": {
+      "en": "Humidity Sensor Report Indicator",
+      "de": "Anzeige des Luftfeuchtesensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 84: If LED is enabled, allow user to change the report color of humidity sensor.",
+      "de": "Parameter 84: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Luftfeuchtesensors ändern."
+    },
+    "zwave": {
+      "index": 84,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+   {
+    "id": "85",
+    "type": "dropdown",
+    "label": {
+      "en": "LUX Sensor Report Indicator",
+      "de": "Anzeige des Helligkeitssensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 85: If LED is enabled, allow user to change the report color of LUX sensor.",
+      "de": "Parameter 85: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Helligkeitssensors ändern."
+    },
+    "zwave": {
+      "index": 85,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+  {
+    "id": "86",
+    "type": "dropdown",
+    "label": {
+      "en": "UV Sensor Report Indicator",
+      "de": "Anzeige des UV-Sensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 86: If LED is enabled, allow user to change the report color of UV-Sensor.",
+      "de": "Parameter 86: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des UV-sensors ändern."
+    },
+    "zwave": {
+      "index": 86,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+   {
+    "id": "87",
+    "type": "dropdown",
+    "label": {
+      "en": "Vibration Sensor Report Indicator",
+      "de": "Anzeige des Vibrationssensorberichts"
+    },
+    "hint": {
+      "en": "Parameter 87: If LED is enabled, allow user to change the report color of vibration sensor.",
+      "de": "Parameter 87: Wenn die LED aktiviert ist, kann der Benutzer die Berichtsfarbe des Vibrationssensors ändern."
+    },
+    "zwave": {
+      "index": 87,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+   {
+    "id": "88",
+    "type": "dropdown",
+    "label": {
+      "en": "Battery Report Indicator",
+      "de": "Anzeige des Batterieberichts"
+    },
+    "hint": {
+      "en": "Parameter 88: If LED is enabled, allow user to change the report color of battery.",
+      "de": "Parameter 88: Wenn die LED aktiviert ist, kann der Benutzer die Farbe für den Batteriebericht ändern."
+    },
+    "zwave": {
+      "index": 88,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+   {
+    "id": "89",
+    "type": "dropdown",
+    "label": {
+      "en": "Wakeup Report Indicator",
+      "de": "Anzeige des Wakeup-Berichtes"
+    },
+    "hint": {
+      "en": "Parameter 89: If LED is enabled, allow user to change the report color of wakeup.",
+      "de": "Parameter 89: Wenn die LED aktiviert ist, kann der Benutzer die Farbe des Wakeup-Berichtes ändern."
+    },
+    "zwave": {
+      "index": 89,
+      "size": 1
+    },
+    "value": "8",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+   {
+    "id": "90",
+    "type": "dropdown",
+    "label": {
+      "en": "Communication Indicator",
+      "de": "Kommunikationsanzeige"
+    },
+    "hint": {
+      "en": "Parameter 90: If LED is enabled, allow user to change indicator color when receiving communication from gateway or other devices.",
+      "de": "Parameter 90: Wenn die LED aktiviert ist, kann der Benutzer die Farbe der Anzeige ändern, wenn er Kommunikation vom Gateway oder anderen Geräten empfängt."
+    },
+    "zwave": {
+      "index": 90,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red",
+          "de": "Rot"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Blue",
+          "de": "Blau"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Green",
+          "de": "Grün"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Pink",
+          "de": "Pink"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Cyan",
+          "de": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple",
+          "de": "Lila"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange",
+          "de": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow",
+          "de": "Gelb"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White",
+          "de": "Weiß"
+        }
+      }
+    ]
+  },
+    {
+    "id": "101",
+    "type": "number",
+    "label": {
+      "en": "Automatic Report Checklist 1",
+      "de": "Automatischer Bericht Checkliste 1"
+    },
+    "hint": {
+      "en": "Parameter 101: Checklist 1 for automatic timed report.\n0 - Disabled\n1 - Battery report level\n16 - UV report\n32 - Temperature report\n64 - Humidity report\n128 - LUX report\n241 - all reports enable",
+      "de": "Parameter 101: Checkliste 1 für automatischen zeitgesteuerten Bericht.\n0 - Deaktiviert\n1 - Batteriestatusbericht\n16 - UV-Bericht\n32 - Temperaturbericht\n64 - Luftfeuchtigkeitsbericht\n128 - Helligkeitsbericht\n241 - alle Berichte aktivieren"			
+    },
+    "zwave": {
+      "index": 101,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 241
+	},
+    "value": 241
+  },
+     {
+    "id": "102",
+    "type": "number",
+    "label": {
+      "en": "Automatic Report Checklist 2",
+      "de": "Automatischer Bericht Checkliste 2"
+    },
+    "hint": {
+      "en": "Parameter 102: Checklist 2 for automatic timed report.\n0 - Disabled\n1 - Battery report level\n16 - UV report\n32 - Temperature report\n64 - Humidity report\n128 - LUX report\n241 - all reports enable",
+      "de": "Parameter 102: Checkliste 2 für automatischen zeitgesteuerten Bericht.\n0 - Deaktiviert\n1 - Batteriestatusbericht\n16 - UV-Bericht\n32 - Temperaturbericht\n64 - Luftfeuchtigkeitsbericht\n128 - Helligkeitsbericht\n241 - alle Berichte aktivieren"			
+    },
+    "zwave": {
+      "index": 102,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 241
+	},
+    "value": 0
+  },
+     {
+    "id": "103",
+    "type": "number",
+    "label": {
+      "en": "Automatic Report Checklist 3",
+      "de": "Automatischer Bericht Checkliste 3"
+    },
+    "hint": {
+      "en": "Parameter 103: Checklist 3 for automatic timed report.\n0 - Disabled\n1 - Battery report level\n16 - UV report\n32 - Temperature report\n64 - Humidity report\n128 - LUX report\n241 - all reports enable",
+      "de": "Parameter 103: Checkliste 3 für automatischen zeitgesteuerten Bericht.\n0 - Deaktiviert\n1 - Batteriestatusbericht\n16 - UV-Bericht\n32 - Temperaturbericht\n64 - Luftfeuchtigkeitsbericht\n128 - Helligkeitsbericht\n241 - alle Berichte aktivieren"			
+    },
+    "zwave": {
+      "index": 103,
+      "size": 1,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 241
+	},
+    "value": 0
+  },
+   {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Automatic Checklist 1 Interval Time",
+      "de": "Automatische Checkliste 1 Intervallzeit"
+    },
+    "hint": {
+      "en": "Parameter 111: Interval time set in seconds to check the checklist 1 items. ",
+      "de": "Parameter 111: Eingestellte Intervallzeit in Sekunden zur Überprüfung der Elemente der Checkliste 1."			
+    },
+    "zwave": {
+      "index": 111,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 30,
+      "max": 65535
+	},
+    "value": 3600
+  },
+    {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Automatic Checklist 2 Interval Time",
+      "de": "Automatische Checkliste 2 Intervallzeit"
+    },
+    "hint": {
+      "en": "Parameter 112: Interval time set in seconds to check the checklist 2 items. ",
+      "de": "Parameter 112: Eingestellte Intervallzeit in Sekunden zur Überprüfung der Elemente der Checkliste 2."			
+    },
+    "zwave": {
+      "index": 112,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 30,
+      "max": 65535
+	},
+    "value": 3600
+  },
+   {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Automatic Checklist 3 Interval Time",
+      "de": "Automatische Checkliste 3 Intervallzeit"
+    },
+    "hint": {
+      "en": "Parameter 113: Interval time set in seconds to check the checklist 3 items. ",
+      "de": "Parameter 113: Eingestellte Intervallzeit in Sekunden zur Überprüfung der Elemente der Checkliste 3."			
+    },
+    "zwave": {
+      "index": 113,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 30,
+      "max": 65535
+	},
+    "value": 3600
+  },
+{
+    "id": "201",
+    "type": "number",
+    "label": {
+      "en": "Temperature Offset Value",
+      "de": "Temperatur Offset Wert"
+    },
+    "hint": {
+      "en": "Parameter 201: Can add or minus this setting value to calibrate temperature when checked. Step 0.1",
+      "de": "Parameter 201: Der Wert wird zum Wert des Temperatursensor addiert oder abgezogen. Schritte 0,1"			
+    },
+    "zwave": {
+      "index": 201,
+      "size": 2,
+	  "signed": true
+    },
+    "attr": {
+      "min": -200,
+      "max": 200
+	},
+    "value": 0
+  },
+  {
+    "id": "202",
+    "type": "number",
+    "label": {
+      "en": "Humidity Offset Value",
+      "de": "Luftfeuchtigkeit Offset Wert"
+    },
+    "hint": {
+      "en": "Parameter 202: Can add or minus this setting value to calibrate humidity when checked.",
+      "de": "Parameter 202: Der Wert wird zum Wert des Luftfeuchtigkeitssensor addiert oder abgezogen."			
+    },
+    "zwave": {
+      "index": 202,
+      "size": 1,
+	  "signed": true
+    },
+    "attr": {
+      "min": -100,
+      "max": 100
+	},
+    "value": 0
+  },
+  {
+    "id": "203",
+    "type": "number",
+    "label": {
+      "en": "LUX Value",
+      "de": "Helligkeit Offset Wert"
+    },
+    "hint": {
+      "en": "Parameter 203: Can add or minus this setting value to calibrate LUX when checked.",
+      "de": "Parameter 203: Der Wert wird zum Wert des Helligkeitssensors addiert oder abgezogen."			
+    },
+    "zwave": {
+      "index": 203,
+      "size": 2,
+	  "signed": true
+    },
+    "attr": {
+      "min": -10000,
+      "max": 10000
+	},
+    "value": 0
+  },
+  {
+    "id": "204",
+    "type": "number",
+    "label": {
+      "en": "UV Offset Value",
+      "de": "UV Offset Wert"
+    },
+    "hint": {
+      "en": "Parameter 204: Can add or minus this setting value to calibrate UV when checked. Step 0.1",
+      "de": "Parameter 204: Der Wert wird zum Wert des UV-Sensorssensor addieren oder abgezogen. Schritte 0,1"			
+    },
+    "zwave": {
+      "index": 204,
+      "size": 1,
+	  "signed": true
+    },
+    "attr": {
+      "min": -10,
+      "max": 10
+	},
+    "value": 0
+  }
+  
+  ]
+  
+ 

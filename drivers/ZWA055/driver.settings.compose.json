@@ -1,0 +1,1580 @@
+[
+    {
+        "id": "1",
+        "type": "number",
+        "label": {
+            "en": "Threshold Check Time",
+            "de": "Schwellenprüfintervall"
+        },
+        "hint": {
+            "en": "Parameter 1: Interval used by several threshold parameters (battery: min 30 s; USB: real-time). 0 disables.",
+            "de": "Parameter 1: Intervall, das von mehreren Schwellenparametern genutzt wird (Batterie: min. 30 s; USB: Echtzeit). 0 deaktiviert."
+        },
+        "value": 900,
+		  "units": {
+            "en": "seconds",
+            "de": "Sekunden"
+        },
+        "zwave": {
+            "index": 1,
+            "size": 4,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 2678400
+        }
+    },
+    {
+        "id": "2",
+        "type": "number",
+        "label": {
+            "en": "Minimum Temperature Change to Report",
+            "de": "Min. Temperaturänderung für Report"
+        },
+        "hint": {
+            "en": "Parameter 2: Triggers temperature report to lifeline.",
+            "de": "Parameter 2: Löst Temperatur-Report zur Lifeline aus."
+        },
+        "value": 20,
+		  "units": {
+            "en": "×0.1°",
+            "de": "×0,1°"
+        },
+        "zwave": {
+            "index": 2,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "3",
+        "type": "number",
+        "label": {
+            "en": "Minimum Humidity Change to Report",
+            "de": "Min. Feuchteänderung für Report"
+        },
+        "hint": {
+            "en": "Parameter 3: Triggers humidity report to lifeline.",
+            "de": "Parameter 3: Löst Feuchte-Report zur Lifeline aus."
+        },
+        "value": 50,
+		"units": {
+            "en": "×0.1%",
+            "de": "×0,1%"
+        },
+        "zwave": {
+            "index": 3,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "4",
+        "type": "dropdown",
+        "label": {
+            "en": "LED Indication Mask",
+            "de": "LED‑Indikationsmaske"
+        },
+        "hint": {
+            "en": "Parameter 4: This parameter defines when the green or red LED will indicate events.",
+            "de": "Parameter 4: Dieser Parameter legt fest, wann die grüne oder rote LED Ereignisse anzeigt."
+        },
+        "value": "63",
+		  "values": [
+				{
+				  "id": "0",
+				  "label": {
+					"en": "All disabled",
+					"de": "Alles deaktiviert"
+				  }
+				},
+				{
+				  "id": "1",
+				  "label": {
+					"en": "Periodic report",
+					"de": "Periodischer Bericht"
+				  }
+				},
+				{
+				  "id": "2",
+				  "label": {
+					"en": "Wake Up",
+					"de": "Aufwachen"
+				  }
+				},
+				{
+				  "id": "3",
+				  "label": {
+					"en": "Periodic report, Wake Up",
+					"de": "Periodischer Bericht, Aufwachen"
+				  }
+				},
+				{
+				  "id": "4",
+				  "label": {
+					"en": "Mold",
+					"de": "Schimmel"
+				  }
+				},
+				{
+				  "id": "5",
+				  "label": {
+					"en": "Periodic report, Mold",
+					"de": "Periodischer Bericht, Schimmel"
+				  }
+				},
+				{
+				  "id": "6",
+				  "label": {
+					"en": "Wake Up, Mold",
+					"de": "Aufwachen, Schimmel"
+				  }
+				},
+				{
+				  "id": "7",
+				  "label": {
+					"en": "Periodic report, Wake Up, Mold",
+					"de": "Periodischer Bericht, Aufwachen, Schimmel"
+				  }
+				},
+				{
+				  "id": "8",
+				  "label": {
+					"en": "Contact",
+					"de": "Kontakt"
+				  }
+				},
+				{
+				  "id": "9",
+				  "label": {
+					"en": "Periodic report, Contact",
+					"de": "Periodischer Bericht, Kontakt"
+				  }
+				},
+				{
+				  "id": "10",
+				  "label": {
+					"en": "Wake Up, Contact",
+					"de": "Aufwachen, Kontakt"
+				  }
+				},
+				{
+				  "id": "11",
+				  "label": {
+					"en": "Periodic report, Wake Up, Contact",
+					"de": "Periodischer Bericht, Aufwachen, Kontakt"
+				  }
+				},
+				{
+				  "id": "12",
+				  "label": {
+					"en": "Mold, Contact",
+					"de": "Schimmel, Kontakt"
+				  }
+				},
+				{
+				  "id": "13",
+				  "label": {
+					"en": "Periodic report, Mold, Contact",
+					"de": "Periodischer Bericht, Schimmel, Kontakt"
+				  }
+				},
+				{
+				  "id": "14",
+				  "label": {
+					"en": "Wake Up, Mold, Contact",
+					"de": "Aufwachen, Schimmel, Kontakt"
+				  }
+				},
+				{
+				  "id": "15",
+				  "label": {
+					"en": "Periodic report, Wake Up, Mold, Contact",
+					"de": "Periodischer Bericht, Aufwachen, Schimmel, Kontakt"
+				  }
+				},
+				{
+				  "id": "16",
+				  "label": {
+					"en": "Tamper",
+					"de": "Sabotage"
+				  }
+				},
+				{
+				  "id": "17",
+				  "label": {
+					"en": "Periodic report, Tamper",
+					"de": "Periodischer Bericht, Sabotage"
+				  }
+				},
+				{
+				  "id": "18",
+				  "label": {
+					"en": "Wake Up, Tamper",
+					"de": "Aufwachen, Sabotage"
+				  }
+				},
+				{
+				  "id": "19",
+				  "label": {
+					"en": "Periodic report, Wake Up, Tamper",
+					"de": "Periodischer Bericht, Aufwachen, Sabotage"
+				  }
+				},
+				{
+				  "id": "20",
+				  "label": {
+					"en": "Mold, Tamper",
+					"de": "Schimmel, Sabotage"
+				  }
+				},
+				{
+				  "id": "21",
+				  "label": {
+					"en": "Periodic report, Mold, Tamper",
+					"de": "Periodischer Bericht, Schimmel, Sabotage"
+				  }
+				},
+				{
+				  "id": "22",
+				  "label": {
+					"en": "Wake Up, Mold, Tamper",
+					"de": "Aufwachen, Schimmel, Sabotage"
+				  }
+				},
+				{
+				  "id": "23",
+				  "label": {
+					"en": "Periodic report, Wake Up, Mold, Tamper",
+					"de": "Periodischer Bericht, Aufwachen, Schimmel, Sabotage"
+				  }
+				},
+				{
+				  "id": "24",
+				  "label": {
+					"en": "Contact, Tamper",
+					"de": "Kontakt, Sabotage"
+				  }
+				},
+				{
+				  "id": "25",
+				  "label": {
+					"en": "Periodic report, Contact, Tamper",
+					"de": "Periodischer Bericht, Kontakt, Sabotage"
+				  }
+				},
+				{
+				  "id": "26",
+				  "label": {
+					"en": "Wake Up, Contact, Tamper",
+					"de": "Aufwachen, Kontakt, Sabotage"
+				  }
+				},
+				{
+				  "id": "27",
+				  "label": {
+					"en": "Periodic report, Wake Up, Contact, Tamper",
+					"de": "Periodischer Bericht, Aufwachen, Kontakt, Sabotage"
+				  }
+				},
+				{
+				  "id": "28",
+				  "label": {
+					"en": "Mold, Contact, Tamper",
+					"de": "Schimmel, Kontakt, Sabotage"
+				  }
+				},
+				{
+				  "id": "29",
+				  "label": {
+					"en": "Periodic report, Mold, Contact, Tamper",
+					"de": "Periodischer Bericht, Schimmel, Kontakt, Sabotage"
+				  }
+				},
+				{
+				  "id": "30",
+				  "label": {
+					"en": "Wake Up, Mold, Contact, Tamper",
+					"de": "Aufwachen, Schimmel, Kontakt, Sabotage"
+				  }
+				},
+				{
+				  "id": "31",
+				  "label": {
+					"en": "Periodic report, Wake Up, Mold, Contact, Tamper",
+					"de": "Periodischer Bericht, Aufwachen, Schimmel, Kontakt, Sabotage"
+				  }
+				},
+				{
+				  "id": "32",
+				  "label": {
+					"en": "Acceleration",
+					"de": "Beschleunigung"
+				  }
+				},
+				{
+				  "id": "33",
+				  "label": {
+					"en": "Periodic report, Acceleration",
+					"de": "Periodischer Bericht, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "34",
+				  "label": {
+					"en": "Wake Up, Acceleration",
+					"de": "Aufwachen, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "35",
+				  "label": {
+					"en": "Periodic report, Wake Up, Acceleration",
+					"de": "Periodischer Bericht, Aufwachen, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "36",
+				  "label": {
+					"en": "Mold, Acceleration",
+					"de": "Schimmel, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "37",
+				  "label": {
+					"en": "Periodic report, Mold, Acceleration",
+					"de": "Periodischer Bericht, Schimmel, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "38",
+				  "label": {
+					"en": "Wake Up, Mold, Acceleration",
+					"de": "Aufwachen, Schimmel, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "39",
+				  "label": {
+					"en": "Periodic report, Wake Up, Mold, Acceleration",
+					"de": "Periodischer Bericht, Aufwachen, Schimmel, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "40",
+				  "label": {
+					"en": "Contact, Acceleration",
+					"de": "Kontakt, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "41",
+				  "label": {
+					"en": "Periodic report, Contact, Acceleration",
+					"de": "Periodischer Bericht, Kontakt, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "42",
+				  "label": {
+					"en": "Wake Up, Contact, Acceleration",
+					"de": "Aufwachen, Kontakt, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "43",
+				  "label": {
+					"en": "Periodic report, Wake Up, Contact, Acceleration",
+					"de": "Periodischer Bericht, Aufwachen, Kontakt, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "44",
+				  "label": {
+					"en": "Mold, Contact, Acceleration",
+					"de": "Schimmel, Kontakt, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "45",
+				  "label": {
+					"en": "Periodic report, Mold, Contact, Acceleration",
+					"de": "Periodischer Bericht, Schimmel, Kontakt, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "46",
+				  "label": {
+					"en": "Wake Up, Mold, Contact, Acceleration",
+					"de": "Aufwachen, Schimmel, Kontakt, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "47",
+				  "label": {
+					"en": "Periodic report, Wake Up, Mold, Contact, Acceleration",
+					"de": "Periodischer Bericht, Aufwachen, Schimmel, Kontakt, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "48",
+				  "label": {
+					"en": "Tamper, Acceleration",
+					"de": "Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "49",
+				  "label": {
+					"en": "Periodic report, Tamper, Acceleration",
+					"de": "Periodischer Bericht, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "50",
+				  "label": {
+					"en": "Wake Up, Tamper, Acceleration",
+					"de": "Aufwachen, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "51",
+				  "label": {
+					"en": "Periodic report, Wake Up, Tamper, Acceleration",
+					"de": "Periodischer Bericht, Aufwachen, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "52",
+				  "label": {
+					"en": "Mold, Tamper, Acceleration",
+					"de": "Schimmel, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "53",
+				  "label": {
+					"en": "Periodic report, Mold, Tamper, Acceleration",
+					"de": "Periodischer Bericht, Schimmel, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "54",
+				  "label": {
+					"en": "Wake Up, Mold, Tamper, Acceleration",
+					"de": "Aufwachen, Schimmel, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "55",
+				  "label": {
+					"en": "Periodic report, Wake Up, Mold, Tamper, Acceleration",
+					"de": "Periodischer Bericht, Aufwachen, Schimmel, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "56",
+				  "label": {
+					"en": "Contact, Tamper, Acceleration",
+					"de": "Kontakt, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "57",
+				  "label": {
+					"en": "Periodic report, Contact, Tamper, Acceleration",
+					"de": "Periodischer Bericht, Kontakt, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "58",
+				  "label": {
+					"en": "Wake Up, Contact, Tamper, Acceleration",
+					"de": "Aufwachen, Kontakt, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "59",
+				  "label": {
+					"en": "Periodic report, Wake Up, Contact, Tamper, Acceleration",
+					"de": "Periodischer Bericht, Aufwachen, Kontakt, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "60",
+				  "label": {
+					"en": "Mold, Contact, Tamper, Acceleration",
+					"de": "Schimmel, Kontakt, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "61",
+				  "label": {
+					"en": "Periodic report, Mold, Contact, Tamper, Acceleration",
+					"de": "Periodischer Bericht, Schimmel, Kontakt, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "62",
+				  "label": {
+					"en": "Wake Up, Mold, Contact, Tamper, Acceleration",
+					"de": "Aufwachen, Schimmel, Kontakt, Sabotage, Beschleunigung"
+				  }
+				},
+				{
+				  "id": "63",
+				  "label": {
+					"en": "All reports activated",
+					"de": "Alle Berichte aktiviert"
+				  }
+				}
+			  ],
+		"zwave": {
+            "index": 4,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "5",
+        "type": "dropdown",
+        "label": {
+            "en": "State When Magnet Is Close",
+            "de": "Zustand bei nahendem Magnet"
+        },
+        "hint": {
+            "en": "Parameter 5: Defines door/window state mapping when magnet is near.",
+            "de": "Parameter 5: Legt die Tür-/Fensterzustände fest, wenn der Magnet nahe ist."
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Open when magnet away, Closed when magnet near",
+                    "de": "Geöffnet bei entferntem Magnet, Geschlossen bei nahem Magnet"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Closed when magnet away, Open when magnet near",
+                    "de": "Geschlossen bei entferntem Magnet, Geöffnet bei nahem Magnet"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 5,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "6",
+        "type": "dropdown",
+        "label": {
+            "en": "Group 2 Trigger (Magnet)",
+            "de": "Gruppen‑2‑Trigger (Magnet)"
+        },
+        "hint": {
+            "en": "Parameter 6: Defines magnet status that causes sending BASIC to Association Group 2.",
+            "de": "Parameter 6: Legt den Magnetstatus fest, der BASIC an Assoziationsgruppe 2 auslöst."
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Switch after magnet away AND magnet close",
+                    "de": "Umschalten nach Magnet entfernt UND Magnet nahe"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Switch after magnet away",
+                    "de": "Umschalten nach Magnet entfernt"
+                }
+            },
+            {
+                "id": "2",
+                "label": {
+                    "en": "Switch after magnet close",
+                    "de": "Umschalten nach Magnet nahe"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 6,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "7",
+        "type": "dropdown",
+        "label": {
+            "en": "Commands Sent to Group 2",
+            "de": "Befehle an Gruppe 2"
+        },
+        "hint": {
+            "en": "Parameter 7: Defines which BASIC commands are sent.",
+            "de": "Parameter 7: Legt fest, welche BASIC‑Befehle gesendet werden."
+        },
+        "value": "2",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "On",
+                    "de": "Ein"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Off",
+                    "de": "Aus"
+                }
+            },
+            {
+                "id": "2",
+                "label": {
+                    "en": "On and Off",
+                    "de": "Ein und Aus"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "8",
+        "type": "number",
+        "label": {
+            "en": "Group 2 BASIC On Value",
+            "de": "Gruppe 2 BASIC‑Wert Ein"
+        },
+        "hint": {
+            "en": "Parameter 8: BASIC value sent on On event (0–255).",
+            "de": "Parameter 8: BASIC‑Wert, der beim Ein‑Ereignis gesendet wird (0–255)."
+        },
+        "value": 255,
+        "zwave": {
+            "index": 8,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "9",
+        "type": "number",
+        "label": {
+            "en": "Group 2 BASIC Off Value",
+            "de": "Gruppe 2 BASIC‑Wert Aus"
+        },
+        "hint": {
+            "en": "Parameter 9: BASIC value sent on Off event (0–255).",
+            "de": "Parameter 9: BASIC‑Wert, der beim Aus‑Ereignis gesendet wird (0–255)."
+        },
+        "value": 0,
+        "zwave": {
+            "index": 9,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "10",
+        "type": "number",
+        "label": {
+            "en": "Delay for On Command",
+            "de": "Verzögerung für Ein‑Befehl"
+        },
+        "hint": {
+            "en": "Parameter 10: Sends On after delay in seconds (0–32400).",
+            "de": "Parameter 10: Sendet Ein nach Verzögerung in Sekunden (0–32400)."
+        },
+        "value": 0,
+        "zwave": {
+            "index": 10,
+            "size": 2,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 32400
+        }
+    },
+    {
+        "id": "11",
+        "type": "number",
+        "label": {
+            "en": "Delay for Off Command",
+            "de": "Verzögerung für Aus‑Befehl"
+        },
+        "hint": {
+            "en": "Parameter 11: Sends Off after delay in seconds (0–32400).",
+            "de": "Parameter 11: Sendet Aus nach Verzögerung in Sekunden (0–32400)."
+        },
+        "value": 0,
+        "zwave": {
+            "index": 11,
+            "size": 2,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 32400
+        }
+    },
+	    {
+        "id": "12",
+        "type": "dropdown",
+        "label": {
+            "en": "Sensor Limit Enable",
+            "de": "Sensor-Grenzwerte aktivieren"
+        },
+        "hint": {
+            "en": "Parameter 12: Activate limits for humidity and temperature range.",
+            "de": "Parameter 12: Grenzwerte für Luftfeuchtigkeit und Temperatuberich aktivieren."
+        },
+        "value": "0",
+		  "values": [
+			{
+			  "id": "0",
+			  "label": {
+				"en": "All disabled",
+				"de": "Alles deaktiviert"
+			  }
+			},
+			{
+			  "id": "1",
+			  "label": {
+				"en": "Temperature upper",
+				"de": "Temperatur oberer Grenzwert"
+			  }
+			},
+			{
+			  "id": "2",
+			  "label": {
+				"en": "Humidity upper",
+				"de": "Luftfeuchtigkeit oberer Grenzwert"
+			  }
+			},
+			{
+			  "id": "3",
+			  "label": {
+				"en": "Temperature and Humidity upper",
+				"de": "Temperatur und Luftfeuchtigkeit oberer Grenzwert"
+			  }
+			},
+			{
+			  "id": "4",
+			  "label": {
+				"en": "Temperature lower",
+				"de": "Temperatur unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "5",
+			  "label": {
+				"en": "Temperature upper, Temperature lower",
+				"de": "Temperatur oberer und unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "6",
+			  "label": {
+				"en": "Humidity upper, Temperature lower",
+				"de": "Luftfeuchtigkeit oberer und Temperatur unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "7",
+			  "label": {
+				"en": "Temperature upper, Humidity upper, Temperature lower",
+				"de": "Temperatur und Luftfeuchtigkeit oberer, Temperatur unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "8",
+			  "label": {
+				"en": "Humidity lower",
+				"de": "Luftfeuchtigkeit unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "9",
+			  "label": {
+				"en": "Temperature upper, Humidity lower",
+				"de": "Temperatur oberer und Luftfeuchtigkeit unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "10",
+			  "label": {
+				"en": "Humidity upper, Humidity lower",
+				"de": "Luftfeuchtigkeit oberer und unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "11",
+			  "label": {
+				"en": "Temperature upper, Humidity upper, Humidity lower",
+				"de": "Temperatur oberer, Luftfeuchtigkeit oberer und unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "12",
+			  "label": {
+				"en": "Temperature lower, Humidity lower",
+				"de": "Temperatur und Luftfeuchtigkeit unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "13",
+			  "label": {
+				"en": "Temperature upper, Temperature lower, Humidity lower",
+				"de": "Temperatur oberer und unterer, Luftfeuchtigkeit unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "14",
+			  "label": {
+				"en": "Humidity upper, Temperature lower, Humidity lower",
+				"de": "Luftfeuchtigkeit oberer und unterer, Temperatur unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "15",
+			  "label": {
+				"en": "All activated",
+				"de": "Alle aktiviert"
+			  }
+			}
+		  ],
+
+        "zwave": {
+            "index": 12,
+            "size": 1,
+            "signed": false
+        }
+    },
+     {
+        "id": "13",
+        "type": "number",
+        "label": {
+            "en": "Offset for Mold danger alarm",
+            "de": "Offset für Schimmelgefahr-Alarm"
+        },
+        "hint": {
+            "en": "Parameter 13: The default Relative Humidity to trigger Mold danger alarm is 60%. ",
+            "de": "Parameter 13: Die Standard-relative Luftfeuchtigkeit, bei der der Schimmelgefahrenalarm ausgelöst wird, beträgt 60%."
+        },
+        "value": 10,
+		  "units": {
+            "en": "+XX%",
+            "de": "+XX%"
+        },
+        "zwave": {
+            "index": 13,
+            "size": 1,
+            "signed": true
+        },
+        "attr": {
+            "min": 0,
+            "max": 40
+        }
+    },
+    {
+        "id": "14",
+        "type": "number",
+        "label": {
+            "en": "Temperature Upper Watermark",
+            "de": "Temperatur‑Obere Schwelle"
+        },
+        "hint": {
+            "en": "Parameter 14: Send BASIC to Group 6 if exceeded.",
+            "de": "Parameter 14: Sendet BASIC an Gruppe 6, wenn überschritten."
+        },
+        "value": 300,
+		 "units": {
+            "en": "×0.1°",
+            "de": "×0,1°"
+        },
+        "zwave": {
+            "index": 14,
+            "size": 2,
+            "signed": false
+        },
+        "attr": {
+            "min": 1,
+            "max": 1000
+        }
+    },
+    {
+        "id": "15",
+        "type": "number",
+        "label": {
+            "en": "Temperature Lower Watermark",
+            "de": "Temperatur‑Untere Schwelle"
+        },
+        "hint": {
+            "en": "Parameter 15: Send BASIC to Group 7 if below.",
+            "de": "Parameter 15: Sendet BASIC an Gruppe 7, wenn unterschritten."
+        },
+        "value": 0,
+		 "units": {
+            "en": "×0.1°",
+            "de": "×0,1°"
+        },
+        "zwave": {
+            "index": 15,
+            "size": 2,
+            "signed": true
+        },
+        "attr": {
+            "min": -200,
+            "max": 1000
+        }
+    },
+    {
+        "id": "16",
+        "type": "number",
+        "label": {
+            "en": "Humidity Upper Watermark",
+            "de": "Feuchte‑Obere Schwelle"
+        },
+        "hint": {
+            "en": "Parameter 16: Send BASIC to Group 8 if exceeded.",
+            "de": "Parameter 16: Sendet BASIC an Gruppe 8, wenn überschritten."
+        },
+        "value": 700,
+		  "units": {
+            "en": "×0.1%",
+            "de": "×0,1%"
+        },
+        "zwave": {
+            "index": 16,
+            "size": 2,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 1000
+        }
+    },
+    {
+        "id": "17",
+        "type": "number",
+        "label": {
+            "en": "Humidity Lower Watermark",
+            "de": "Feuchte‑Untere Schwelle"
+        },
+        "hint": {
+            "en": "Parameter 17: Send BASIC to Group 9 if below.",
+            "de": "Parameter 17: Sendet BASIC an Gruppe 9, wenn unterschritten."
+        },
+        "value": 300,
+		  "units": {
+            "en": "×0.1%",
+            "de": "×0,1%"
+        },
+        "zwave": {
+            "index": 17,
+            "size": 2,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 1000
+        }
+    },
+    {
+        "id": "18",
+        "type": "number",
+        "label": {
+            "en": "High Temperature BASIC Value (Group 6)",
+            "de": "BASIC‑Wert bei hoher Temperatur (Gruppe 6)"
+        },
+        "hint": {
+            "en": "Parameter 18: BASIC value sent on high temperature trigger (0–255).",
+            "de": "Parameter 18: BASIC‑Wert, der bei Hochtemperatur‑Auslösung gesendet wird (0–255)."
+        },
+        "value": 0,
+        "zwave": {
+            "index": 18,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "19",
+        "type": "number",
+        "label": {
+            "en": "Low Temperature BASIC Value (Group 7)",
+            "de": "BASIC‑Wert bei niedriger Temperatur (Gruppe 7)"
+        },
+        "hint": {
+            "en": "Parameter 19: BASIC value sent on low temperature trigger (0–255).",
+            "de": "Parameter 19: BASIC‑Wert, der bei Niedrigtemperatur‑Auslösung gesendet wird (0–255)."
+        },
+        "value": 255,
+        "zwave": {
+            "index": 19,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "20",
+        "type": "number",
+        "label": {
+            "en": "High Humidity BASIC Value (Group 8)",
+            "de": "BASIC‑Wert bei hoher Feuchte (Gruppe 8)"
+        },
+        "hint": {
+            "en": "Parameter 20: BASIC value sent on high humidity trigger (0–255).",
+            "de": "Parameter 20: BASIC‑Wert, der bei hoher Feuchte gesendet wird (0–255)."
+        },
+        "value": 0,
+        "zwave": {
+            "index": 20,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "21",
+        "type": "number",
+        "label": {
+            "en": "Low Humidity BASIC Value (Group 9)",
+            "de": "BASIC‑Wert bei niedriger Feuchte (Gruppe 9)"
+        },
+        "hint": {
+            "en": "Parameter 21: BASIC value sent on low humidity trigger (0–255).",
+            "de": "Parameter 21: BASIC‑Wert, der bei niedriger Feuchte gesendet wird (0–255)."
+        },
+        "value": 255,
+        "zwave": {
+            "index": 21,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "22",
+        "type": "dropdown",
+        "label": {
+            "en": "Enable Binary Sensor Reports",
+            "de": "Binary‑Sensor‑Reports aktivieren"
+        },
+        "hint": {
+            "en": "Parameter 22: Backwards compatibility for door/tilt/mold as Binary Sensor.",
+            "de": "Parameter 22: Abwärtskompatibilität für Tür/Neigung/Schimmel als Binary Sensor."
+        },
+        "value": "1",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Disable",
+                    "de": "Deaktiviert"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Enable",
+                    "de": "Aktiviert"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 22,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "23",
+        "type": "number",
+        "label": {
+            "en": "Low Battery Threshold",
+            "de": "Schwelle für niedrigen Batteriestand"
+        },
+        "hint": {
+            "en": "Parameter 23: Report low battery when level goes under threshold (10–50%).",
+            "de": "Parameter 23: Meldet niedrigen Batteriestand, wenn der Wert unter die Schwelle fällt (10–50 %)."
+        },
+        "value": 20,
+		  "units": {
+            "en": "%",
+            "de": "%"
+        },
+        "zwave": {
+            "index": 23,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 10,
+            "max": 50
+        }
+    },
+    {
+        "id": "24",
+        "type": "number",
+        "label": {
+            "en": "Periodic Reports Interval",
+            "de": "Intervall für periodische Reports"
+        },
+        "hint": {
+            "en": "Parameter 24: Period for battery, temperature, humidity, acceleration reports. 0 disables. Min 30 s.",
+            "de": "Parameter 24: Periode für Batterie‑, Temperatur‑, Feuchte‑ und Beschleunigungs‑Reports. 0 deaktiviert. Minimum 30 s."
+        },
+        "value": 43200,
+		  "units": {
+            "en": "seconds",
+            "de": "Sekunden"
+        },
+        "zwave": {
+            "index": 24,
+            "size": 4,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 2678400
+        }
+    },
+    {
+        "id": "25",
+        "type": "number",
+        "label": {
+            "en": "Temperature Offset",
+            "de": "Temperatur‑Offset"
+        },
+        "hint": {
+            "en": "Parameter 25: Calibration offset in tenths of a degree.",
+            "de": "Parameter 25: Kalibrier‑Offset in Zehntelgrad."
+        },
+        "value": 0,
+		  "units": {
+            "en": "×0.1°",
+            "de": "×0,1°"
+        },
+        "zwave": {
+            "index": 25,
+            "size": 2,
+            "signed": true
+        },
+        "attr": {
+            "min": -200,
+            "max": 200
+        }
+    },
+    {
+        "id": "26",
+        "type": "number",
+        "label": {
+            "en": "Humidity Offset",
+            "de": "Feuchte‑Offset"
+        },
+        "hint": {
+            "en": "Parameter 26: Calibration offset in tenths of percent. ",
+            "de": "Parameter 26: Kalibrier‑Offset in Zehntelprozent."
+        },
+        "value": 0,
+		 "units": {
+            "en": "×0.1%",
+            "de": "×0,1%"
+        },
+        "zwave": {
+            "index": 26,
+            "size": 2,
+            "signed": true
+        },
+        "attr": {
+            "min": -200,
+            "max": 200
+        }
+    },
+    {
+        "id": "27",
+        "type": "dropdown",
+        "label": {
+            "en": "Tilt Sensor Mode",
+            "de": "Neigungssensor‑Modus"
+        },
+        "hint": {
+            "en": "Parameter 27: Tilt Sensor Mode (requires orientation recognition).",
+            "de": "Parameter 27: Neigungssensor‑Modus (erfordert Lageerkennung)."
+        },
+        "value": "1",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Disabled",
+                    "de": "Deaktiviert"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Enabled (with magnet)",
+                    "de": "Aktiviert (mit Magnet)"
+                }
+            },
+            {
+                "id": "2",
+                "label": {
+                    "en": "Enabled (stand‑alone)",
+                    "de": "Aktiviert (eigenständig)"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 27,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "28",
+        "type": "dropdown",
+        "label": {
+            "en": "State Mapping for Tilt (Mode 2)",
+            "de": "Zustandszuordnung für Neigung (Modus 2)"
+        },
+        "hint": {
+            "en": "Parameter 28: Defines door/window state mapping when sensor is tilted (Mode 2).",
+            "de": "Parameter 28: Legt die Tür-/Fensterzuordnung fest, wenn der Sensor geneigt ist (Modus 2)."
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Opened when tilted, Closed when not tilted",
+                    "de": "Geöffnet bei Neigung, Geschlossen ohne Neigung"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Closed when tilted, Opened when not tilted",
+                    "de": "Geschlossen bei Neigung, Geöffnet ohne Neigung"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 28,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "29",
+        "type": "dropdown",
+        "label": {
+            "en": "Group 5 Trigger (Tilt)",
+            "de": "Gruppen‑5‑Trigger (Neigung)"
+        },
+        "hint": {
+            "en": "Parameter 29: Defines tilt status that causes sending BASIC to Association Group 5.",
+            "de": "Parameter 29: Legt den Neigungsstatus fest, der BASIC an Assoziationsgruppe 5 auslöst."
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Switch after tilted AND not tilted",
+                    "de": "Umschalten nach geneigt UND nicht geneigt"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Switch after tilted",
+                    "de": "Umschalten nach geneigt"
+                }
+            },
+            {
+                "id": "2",
+                "label": {
+                    "en": "Switch after not tilted",
+                    "de": "Umschalten nach nicht geneigt"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 29,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "30",
+        "type": "dropdown",
+        "label": {
+            "en": "Commands Sent to Group 5",
+            "de": "Befehle an Gruppe 5"
+        },
+        "hint": {
+            "en": "Parameter 30: Defines which BASIC commands are sent.",
+            "de": "Parameter 30: Legt fest, welche BASIC‑Befehle gesendet werden."
+        },
+        "value": "2",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "On",
+                    "de": "Ein"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Off",
+                    "de": "Aus"
+                }
+            },
+            {
+                "id": "2",
+                "label": {
+                    "en": "On and Off",
+                    "de": "Ein und Aus"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 30,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "31",
+        "type": "number",
+        "label": {
+            "en": "Group 5 BASIC On Value",
+            "de": "Gruppe 5 BASIC‑Wert Ein"
+        },
+        "hint": {
+            "en": "Parameter 31: BASIC value sent on On event (0–255).",
+            "de": "Parameter 31: BASIC‑Wert, der beim Ein‑Ereignis gesendet wird (0–255)."
+        },
+        "value": 255,
+        "zwave": {
+            "index": 31,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "32",
+        "type": "number",
+        "label": {
+            "en": "Group 5 BASIC Off Value",
+            "de": "Gruppe 5 BASIC‑Wert Aus"
+        },
+        "hint": {
+            "en": "Parameter 32: BASIC value sent on Off event (0–255).",
+            "de": "Parameter 32: BASIC‑Wert, der beim Aus‑Ereignis gesendet wird (0–255)."
+        },
+        "value": 0,
+        "zwave": {
+            "index": 32,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "33",
+        "type": "number",
+        "label": {
+            "en": "Tilt Trigger Angle",
+            "de": "Neigungsauslösewinkel"
+        },
+        "hint": {
+            "en": "Parameter 33: Adjust tilt trigger angle if too low/strong (1–90°, default 5°).",
+            "de": "Parameter 33: Passe den Auslösewinkel an, falls zu niedrig/stark (1–90°, Standard 5°)."
+        },
+        "value": 3,
+		  "units": {
+            "en": "°",
+            "de": "°"
+        },
+        "zwave": {
+            "index": 33,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 1,
+            "max": 90
+        }
+    },
+    {
+        "id": "34",
+        "type": "number",
+        "label": {
+            "en": "Timeout of Tilt Detection (Mode 1)",
+            "de": "Timeout Neigungserkennung (Modus 1)"
+        },
+        "hint": {
+            "en": "Parameter 34: Timeout in seconds (5–60).",
+            "de": "Parameter 34: Timeout in Sekunden (5–60)."
+        },
+        "value": 5,
+		  "units": {
+            "en": "seconds",
+            "de": "Sekunden"
+        },
+        "zwave": {
+            "index": 34,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 5,
+            "max": 60
+        }
+    },
+    {
+        "id": "35",
+        "type": "number",
+        "label": {
+            "en": "Timeout of Tilt Detection (Mode 2)",
+            "de": "Timeout Neigungserkennung (Modus 2)"
+        },
+        "hint": {
+            "en": "Parameter 35: Timeout in seconds (5–60).",
+            "de": "Parameter 35: Timeout in Sekunden (5–60)."
+        },
+        "value": 8,
+		  "units": {
+            "en": "seconds",
+            "de": "Sekunden"
+        },
+        "zwave": {
+            "index": 35,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 5,
+            "max": 60
+        }
+    },
+    {
+        "id": "36",
+        "type": "number",
+        "label": {
+            "en": "Minimum Acceleration Change to Report",
+            "de": "Min. Beschleunigungsänderung für Report"
+        },
+        "hint": {
+            "en": "Parameter 36: Triggers acceleration report to lifeline.",
+            "de": "Parameter 36: Löst Beschleunigungs‑Report zur Lifeline aus."
+        },
+        "value": 0,
+		  "units": {
+            "en": "m/s²",
+            "de": "m/s²"
+        },
+        "zwave": {
+            "index": 36,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "64",
+        "type": "dropdown",
+        "label": {
+            "en": "Temperature & Dew Point Scale",
+            "de": "Skala für Temperatur & Taupunkt"
+        },
+        "hint": {
+            "en": "Parameter 64: Scale used for auto reports and settings.",
+            "de": "Parameter 64: Skala für automatische Reports und Einstellungen."
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Celsius (°C)",
+                    "de": "Celsius (°C)"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Fahrenheit (°F)",
+                    "de": "Fahrenheit (°F)"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 64,
+            "size": 1,
+            "signed": false
+        }
+    }
+]

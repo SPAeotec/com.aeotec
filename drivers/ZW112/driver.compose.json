@@ -1,7 +1,9 @@
 {
   "id": "ZW112",
+  "platforms": [ "local", "cloud" ],
   "name": {
-    "en": "Door/Window Sensor 6"
+    "en": "Door/Window Sensor 6",
+	"de": "Tür/Fenster Sensor 6"
   },
   "class": "sensor",
   "capabilities": [
@@ -12,25 +14,47 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [
+      "INTERNAL"
+    ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
-    "manufacturerId": 134,
+    "manufacturerId": [
+     134,
+     362
+    ],
     "productTypeId": [
       2,
       2562,
-      514
+      514,
+	  257,
+	  258,
+	  7426
     ],
     "productId": [
       112
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 2770,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2770/Door Window Sensor 6 manual.pdf",
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Short press the action button on the back of the {{driverNameEn}}.",
-        "nl": "Druk kort op de actie knop op de achterkant van de {{driverNameNl}}."
+        "en": "Press the action button on the back of the {{driverNameEn}}.",
+        "nl": "Druk kort  op de actie knop op de achterkant van de {{driverNameNl}}.",
+		"de": "Drücken Sie kurz die Aktionstaste auf der Rückseite des {{driverNameEn}}."
       }
     },
+	"learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Short press the action button on the back of the {{driverNameEn}}.",
+        "nl": "Druk kort op de actie knop op de achterkant van de {{driverNameNl}}.",
+		"de": "Drücken Sie kurz die Aktionstaste auf der Rückseite des {{driverNameEn}}."
+      }
+	},
     "associationGroups": [
       1
     ]

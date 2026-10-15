@@ -1,0 +1,29 @@
+{
+  "triggers": [
+    {
+      "id": "btn_scene",
+	  "highlight": true,
+      "title": { "de": "Taste: Szene", "en": "Button scene" },
+      "titleFormatted": { "de": "Button wurde [[scene]]", "en": "Button was [[scene]]" },
+
+      "args": [
+        {
+          "title": "Scene",
+		  "name": "scene",
+          "type": "dropdown",
+          "values": [
+            { "id": "single", "label": { "de": "Einmal gedrückt",  "en": "Press once" } },
+            { "id": "double", "label": { "de": "Doppelt gedrückt", "en": "Pressed twice" } },
+            { "id": "hold",   "label": { "de": "Gedückt und gehalten",  "en": "Pressed and held" } }
+          ]
+        }
+      ],
+
+      "tokens": [
+        { "name": "scene", "type": "string", "title": { "de": "Szene", "en": "Scene" } }
+      ]
+    }
+  ],
+  "conditions": [],
+  "actions": []
+}

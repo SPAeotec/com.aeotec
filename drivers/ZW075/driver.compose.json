@@ -1,36 +1,58 @@
 {
   "id": "ZW075",
+  "platforms": [ "local", "cloud" ],
   "name": {
-    "en": "Smart Switch"
+    "en": "Smart Switch Gen5",
+	"de": "Smart Switch Gen5"
   },
   "class": "socket",
   "capabilities": [
     "measure_power",
     "meter_power",
-    "onoff"
+	"measure_voltage",
+	"measure_current",
+    "onoff",
+	"button.reset_meter"
   ],
+   "capabilitiesOptions": {
+    "button.reset_meter": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter",
+		"de": "Messwerte zurücksetzen"
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    }
+  },
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
       3,
       27,
-      515
+      515,
+	  258
     ],
     "productId": [
       24,
       72,
       75
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 1416,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1416/Aeon Labs Smart Switch Gen5 manual.pdf",
     "learnmode": {
       "instruction": {
-        "en": "Press the action button on the Smart Switch to enter learn mode",
-        "nl": "Druk op de actie knop op de Smart Switch om de leer modus te activeren"
+        "en": "Press the action button on the Smart Switch",
+        "nl": "Druk op de actie knop op de Smart Switch",
+		"de": "Drücken Sie die Aktionstaste am Smart Switch"
       }
     },
     "associationGroups": [
@@ -40,9 +62,10 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the switch is turned on or off using the action button, the switch will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n"
+          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the switch is turned on or off using the action button, the switch will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n",
+		  "de": "Gruppe 1 ist der Lifeline-Assoziationsgruppe zugewiesen, und jedes Gerät hat 5 Knoten zu assoziieren.\nWenn der Schalter über die Aktionstaste ein- oder ausgeschaltet wird, sendet der Schalter einen grundlegenden Bericht über seinen Status an die Knoten in der Assoziationsgruppe 1. Um zu ändern, welche Art von Signal an die Knoten in Gruppe 1 gesendet wird, lesen Sie bitte die detaillierte Beschreibung des Konfigurationsparameters 80.\n"
         }
-      }
+      }		  
     },
     "defaultConfiguration": [
       {
@@ -58,7 +81,7 @@
       {
         "id": 90,
         "size": 1,
-        "value": 1
+        "value": 0
       },
       {
         "id": 91,
@@ -73,12 +96,32 @@
       {
         "id": 101,
         "size": 4,
-        "value": 12
+        "value": 6
       },
       {
         "id": 111,
         "size": 4,
         "value": 30
+      },
+	  {
+        "id": 102,
+        "size": 4,
+        "value": 1
+      },
+      {
+        "id": 112,
+        "size": 4,
+        "value": 600
+      },
+	  {
+        "id": 103,
+        "size": 4,
+        "value": 8
+      },
+      {
+        "id": 113,
+        "size": 4,
+        "value": 3600
       }
     ]
   }

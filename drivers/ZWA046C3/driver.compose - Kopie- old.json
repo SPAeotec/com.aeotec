@@ -1,0 +1,415 @@
+{
+  "id": "ZWA046C3",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Home Energy Meter 8 C3",
+	"de": "Home Energy Meter 8 C3",
+	"nl": "Home Energy Meter 8 C3"
+  },
+  "class": "sensor",
+  "capabilities": [
+		"button.reset_meter_import",
+		"button.reset_meter_export",
+		"button.reset_meter_apparent_import",
+		"button.reset_meter_apparent_export"
+		],
+   
+    "capabilitiesOptions": {
+	
+	
+    "button.reset_meter_import": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter consumption",
+		"de": "Verbrauchsmesswerte zurücksetzen "
+      },
+      "desc": {
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+		"de": "Setzen Sie den kumulierten Stromverbrauch (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    },
+	"button.reset_meter_export": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset power meter production",
+		"de": "Produktionsmesswerte zurücksetzen "
+      },
+      "desc": {
+        "en": "Reset the cumulative value for power generation (kWh). Please note that this cannot be undone.",
+		"de": "Setzen Sie den kumulierten Wert für Stromerzeugung (kWh) zurück. Beachten Sie, dass dies nicht rückgängig gemacht werden kann."
+      }
+    },
+	"button.reset_meter_apparent_import": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset total power values (import)",
+		"de": "Gesamt Leistungswerte zurücksetzen (Verbrauch)"
+      },
+      "desc": {
+        "en": "Resets the cumulative reactive and apparent power (kVAh, kVARh). This cannot be reversed.",
+		"de": "Setzt den kumulierte Blind und Scheinleistung (kVAh, kVARh) zurück. Dies kann nicht rückgängig gemacht werden."
+      }
+    },
+	"button.reset_meter_apparent_export": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Reset total power values (export)",
+		"de": "Gesamt Leistungswerte zurücksetzen (Produktion)"
+      },
+      "desc": {
+        "en": "Resets the cumulative reactive and apparent power (kVAh, kVARh). This cannot be reversed.",
+		"de": "Setzt den kumulierte Blind und Scheinleistung (kVAh, kVARh) zurück. Dies kann nicht rückgängig gemacht werden."
+      }
+    }
+  },
+
+		
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+	    "cumulative": true
+		},
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      3
+    ],
+    "productId": [
+      
+      52
+    ],
+    "learnmode": {
+	  "image": "{{driverAssetsPath}}/learnmode.svg",	
+      "instruction": {
+        "en": "Press the action button once.",
+		"de": "Drücken Sie die Taste einmal."
+      }
+    },
+	"unlearnmode": {
+	  "image": "{{driverAssetsPath}}/learnmode.svg",	
+      "instruction": {
+        "en": "Press the action button once.",
+		"de": "Drücken Sie die Taste einmal."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+		"defaultConfiguration": [
+      {
+        "id": 252,
+        "value": 0,
+        "size": 1
+      },
+	  {
+        "id": 103,
+        "value": 4042321920,
+        "size": 4
+      },
+	  {
+        "id": 102,
+        "value": 202116096,
+        "size": 4
+      },
+	  {
+        "id": 106,
+        "value": 4042321920,
+        "size": 4
+      },
+	  {
+        "id": 105,
+        "value": 202116096,
+        "size": 4
+      }
+    ],
+  
+	
+	    "multiChannelNodes": {
+      "1": {
+        "name": {
+          "en": "Phase 1 consumption",
+		  "de": "Phase 1 Verbrauch"
+        },
+        "icon": "{{driverAssetsPath}}/import.svg",
+        "class": "sensor",
+        "capabilities": [
+          "measure_power",
+          "meter_power",
+	      "measure_voltage",
+	      "measure_current",
+		  "powerFactor",
+		  "powerReactive",
+		  "powerTotalApparent",
+		  "powerTotalReactive"
+		  
+        ],
+		"energy": {
+	    "cumulative": true
+		},
+		"settings": [
+		{
+		"id": "cumulative1",
+		"type": "dropdown",
+				  "label": {
+					"en": "Energy meter mode)",
+					"de": "Energiezähler Modus"
+				  },
+				  "hint": {
+		  "en": "Sets whether the unit is a master meter or measures a consumer. Please restart the Aeotec app. ",
+		  "de": "Legt fest, ob das Gerät ein Hauptzähler ist oder einen Verbraucher misst. Um die Einstellung wirksam zu machen, muss die Aeotec App neugestartet werden."
+		},
+			"value": "1",
+			"values": [
+			  {
+				"id": "0",
+				"label": {
+				  "en": "Consumer",
+				  "de": "Verbraucher"
+				}
+			  },
+			  {
+				"id": "1",
+				"label": {
+				  "en": "Main counter",
+				  "de": "Hauptzähler"
+				}
+			  }		  
+			]
+		  }]
+      },
+      "2": {
+        "name": {
+          "en": "Phase 1 production",
+		  "de": "Phase 1 Produktion"
+        },
+        "icon": "{{driverAssetsPath}}/export.svg",
+        "class": "solarpanel",
+		
+        "capabilities": [
+         "measure_power",
+          "meter_power",
+	      "measure_voltage",
+	      "measure_current",
+		  "powerFactor",
+		  "powerReactive",
+		  "powerTotalApparent",
+		  "powerTotalReactive"
+        ],
+		"settings": []
+		},
+      
+	        "3": {
+        "name": {
+          "en": "Phase 2 consumption",
+		  "de": "Phase 2 Verbrauch"
+        },
+        "icon": "{{driverAssetsPath}}/import.svg",
+        "class": "sensor",
+        "capabilities": [
+         "measure_power",
+          "meter_power",
+	      "measure_voltage",
+	      "measure_current",
+		  "powerFactor",
+		  "powerReactive",
+		  "powerTotalApparent",
+		  "powerTotalReactive"
+        ],
+		"energy": {
+	    "cumulative": true
+		},
+		"settings": [
+		{
+		"id": "cumulative2",
+		"type": "dropdown",
+				  "label": {
+					"en": "Energy meter mode)",
+					"de": "Energiezähler Modus"
+				  },
+				  "hint": {
+		  "en": "Sets whether the unit is a master meter or measures a consumer. Please restart the Aeotec app. ",
+		  "de": "Legt fest, ob das Gerät ein Hauptzähler ist oder einen Verbraucher misst. Um die Einstellung wirksam zu machen, muss die Aeotec App neugestartet werden."
+		},
+			"value": "1",
+			"values": [
+			  {
+				"id": "0",
+				"label": {
+				  "en": "Consumer",
+				  "de": "Verbraucher"
+				}
+			  },
+			  {
+				"id": "1",
+				"label": {
+				  "en": "Main counter",
+				  "de": "Hauptzähler"
+				}
+			  }		  
+			]
+		  }]
+      },
+	        "4": {
+        "name": {
+          "en": "Phase 2 production",
+		  "de": "Phase 2 Produktion"
+        },
+        "icon": "{{driverAssetsPath}}/export.svg",
+        "class": "solarpanel",
+        "capabilities": [
+         "measure_power",
+          "meter_power",
+	      "measure_voltage",
+	      "measure_current",
+		  "powerFactor",
+		  "powerReactive",
+		  "powerTotalApparent",
+		  "powerTotalReactive"
+        ],
+		"settings": []
+			},
+      
+	        "5": {
+        "name": {
+          "en": "Phase 3 consumption",
+		  "de": "Phase 3 Verbrauch"
+        },
+        "icon": "{{driverAssetsPath}}/import.svg",
+        "class": "sensor",
+        "capabilities": [
+         "measure_power",
+          "meter_power",
+	      "measure_voltage",
+	      "measure_current",
+		  "powerFactor",
+		  "powerReactive",
+		  "powerTotalApparent",
+		  "powerTotalReactive"
+        ],
+		"energy": {
+	    "cumulative": true
+		},
+		"settings": [
+		{
+		"id": "cumulative3",
+		"type": "dropdown",
+				  "label": {
+					"en": "Energy meter mode)",
+					"de": "Energiezähler Modus"
+				  },
+				  "hint": {
+		  "en": "Sets whether the unit is a master meter or measures a consumer. Please restart the Aeotec app. ",
+		  "de": "Legt fest, ob das Gerät ein Hauptzähler ist oder einen Verbraucher misst. Um die Einstellung wirksam zu machen, muss die Aeotec App neugestartet werden."
+		},
+			"value": "1",
+			"values": [
+			  {
+				"id": "0",
+				"label": {
+				  "en": "Consumer",
+				  "de": "Verbraucher"
+				}
+			  },
+			  {
+				"id": "1",
+				"label": {
+				  "en": "Main counter",
+				  "de": "Hauptzähler"
+				}
+			  }		  
+			]
+		  }]
+      },
+	        "6": {
+        "name": {
+          "en": "Phase 3 production",
+		  "de": "Phase 3 Produktion"
+        },
+        "icon": "{{driverAssetsPath}}/export.svg",
+        "class": "solarpanel",
+        "capabilities": [
+         "measure_power",
+          "meter_power",
+	      "measure_voltage",
+	      "measure_current",
+		  "powerFactor",
+		  "powerReactive",
+		  "powerTotalApparent",
+		  "powerTotalReactive"
+        ],
+		"settings": []
+			},
+	        "7": {
+        "name": {
+          "en": "Algebraic sum consumption",
+		  "de": "Algebr. Summe Verbrauch"
+        },
+		"energy": {
+	    "cumulative": true
+		},
+        "icon": "{{driverAssetsPath}}/import.svg",
+        "class": "socket",
+        "capabilities": [
+         "measure_power",
+          "meter_power"
+        ],
+			"settings": []
+			},
+	        "8": {
+        "name": {
+          "en": "Algebraic sum production",
+		  "de": "Algebr. Summe Produktion"
+        },
+		"energy": {
+	    "cumulative": true
+		},
+        "icon": "{{driverAssetsPath}}/export.svg",
+        "class": "socket",
+        "capabilities": [
+         "measure_power",
+          "meter_power"
+        ],
+		"settings": []
+			},
+	        "9": {
+        "name": {
+          "en": "Net consumption",
+		  "de": "Netto Verbrauch"
+        },
+		
+        "icon": "{{driverAssetsPath}}/import.svg",
+        "class": "socket",
+        "capabilities": [
+         "measure_power",
+          "meter_power"
+        ],
+		"energy": {
+	    "cumulative": true
+		},
+		"settings": []
+		},
+	        "10": {
+        "name": {
+          "en": "Net production",
+		  "de": "Netto Produktion"
+        },
+		"energy": {
+	    "cumulative": true
+		},
+        "icon": "{{driverAssetsPath}}/export.svg",
+        "class": "socket",
+        "capabilities": [
+         "measure_power",
+         "meter_power"
+        ],
+		"settings": []
+      }	  	  
+			}
+  }
+
+	
+	
+}

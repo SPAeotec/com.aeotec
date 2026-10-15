@@ -1,0 +1,18 @@
+[
+    
+  
+  {
+	"id": "label",
+	"type": "label",
+    "label": {
+      "en": "Only via Serial API.",
+	  "de": "Nur über Serial API."
+		},
+	"hint": {
+		"en": "A configuration of the stick is only possible via Seriel API. More information is available on support.aeotec.com",
+		"de": "Eine Konfiguration des Sticks ist nur über Seriel API möglich. Weitere Information gibte es auf support.aeotec.com"
+	    }
+  }
+]	
+	
+	

@@ -1,0 +1,53 @@
+{
+  "id": "DSB04",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Door/Window Sensor G1"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_contact"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
+  "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      2,
+      2562,
+      514
+    ],
+    "productId": [
+      4
+    ],
+    "zwaveAllianceProductId": 114,
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Short press the action button on the back of the {{driverNameEn}}.",
+        "nl": "Druk kort op de actie knop op de achterkant van de {{driverNameNl}}.",
+		"de": "Drücken Sie die Taste auf der Rückseite des {{driverNameEn}} einmal."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+	 "defaultConfiguration": [
+      {
+        "id": 121,
+        "value": 17,
+        "size": 4
+      }
+	]
+  }
+}

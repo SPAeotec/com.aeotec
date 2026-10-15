@@ -1,0 +1,15 @@
+{
+  "title": {
+    "en": "Button 2 battery alarm turned off",
+    "nl": "Knop 2 batterijwaarschuwing gaat uit",
+	"de": "Taste 2 Batteriealarm wurde deaktiviert"
+  },
+  "platforms": [ "local", "cloud" ],
+  "args": [
+    {
+      "name": "doorbell_2",
+      "type": "device",
+      "filter": "driver_id=ZW162-C|ZW164-C&capabilities=alarm_battery.button_2"
+    }
+  ]
+}

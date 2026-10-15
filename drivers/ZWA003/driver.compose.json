@@ -1,0 +1,117 @@
+{
+  "id": "ZWA003",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "NanoMote Quad",
+	"de": "NanoMote Quad",
+	"nl": "NanoMote Quad"
+  },
+  "class": "button",
+  "capabilities": [
+    "measure_battery"
+   
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "energy": {
+    "batteries": [
+      "INTERNAL"
+    ]
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+	"security": ["none"],
+    "productTypeId": [
+      2,
+      258,
+      513,
+      514
+    ],
+    "productId": [
+      3
+    ],
+    "zwaveAllianceProductId": 2820,
+    "zwaveAllianceProductDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/2820/NanoMote%20Quad%20USER%20MANUAL%20.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press a button 3 times in quick succession.",
+        "nl": "Druk 3 keer snel achter elkaar op een knop.",
+		"de": "Drücken Sie eine Tatse 3x schnell hintereinander"
+      }
+    },
+    "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+       "en": "Press a button 3 times in quick succession.",
+        "nl": "Druk 3 keer snel achter elkaar op een knop.",
+		"de": "Drücken Sie eine Tatse 3x schnell hintereinander"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "This is the Z-Wave Lifeline group, it is not recommended to change this.",
+          "nl": "Dit is de Z-Wave Lifeline groep, het is niet aangeraden deze te veranderen.",
+	      "de": "Dies ist die Z-Wave Lifeline-Gruppe, es wird nicht empfohlen, dies zu ändern."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the button 1 is triggered",
+		  "de": "NanoMote Quad sendet den Basic-Set-Befehl, wenn die Taste 1 ausgelöst wird"
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 1 is triggered.",
+		  "de": "NanoMote Quad sendet beim Auslösen der Taste 1 den Befehl für das beginnen und stoppen des Dimmvorgangs."
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the button 2 is triggered.",
+		  "de": "NanoMote Quad sendet den Basic-Set-Befehl, wenn die Taste 2 ausgelöst wird"
+        }
+      },
+      "5": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 2 is triggered.",
+		  "de": "NanoMote Quad sendet beim Auslösen der Taste 2 den Befehl für das beginnen und stoppen des Dimmvorgangs."
+        }
+      },
+      "6": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the button 3 is triggered.",
+		  "de": "NanoMote Quad sendet den Basic-Set-Befehl, wenn die Taste 3 ausgelöst wird"
+        }
+      },
+      "7": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 3 is triggered.",
+		  "de": "NanoMote Quad sendet beim Auslösen der Taste 3 den Befehl für das beginnen und stoppen des Dimmvorgangs."
+        }
+      },
+      "8": {
+        "hint": {
+          "en": "NanoMote Quad sends basic set command when the button 4 is triggered.",
+		  "de": "NanoMote Quad sendet den Basic-Set-Befehl, wenn die Taste 4 ausgelöst wird"
+        }
+      },
+      "9": {
+        "hint": {
+          "en": "NanoMote Quad sends switch multilevel set, multilevel start level change and multilevel stop level change command when the button 4 is triggered.",
+		  "de": "NanoMote Quad sendet beim Auslösen der Taste 4 den Befehl für das beginnen und stoppen des Dimmvorgangs."
+        }
+      }
+    }
+    
+   
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "lightEfftectOn",
+  "type": "number",
+  "label": {
+    "en": "Off duration",
+    "nl": "Uit duratie",
+	"de": "Abschaltzeit"
+  },
+  "hint": {
+    "en": "Determine the time the light is off.",
+    "nl": "Bepaal de tijd het licht uit is.",
+	"de": "Bestimmen Sie die Zeit, in der das Licht ausgeschaltet ist."
+  },
+  "attr": {
+    "min": 0,
+    "max": 255
+  },
+  "value": 50,
+  "units": {
+    "en": "x 100 mS",
+    "nl": "x 100 mS",
+	"de": "x 100 mS"
+  }
+}

@@ -1,26 +1,25 @@
 {
   "name": "com.aeotec",
-  "version": "1.0.0",
+  "version": "3.4.0",
   "description": "This app adds support for Aeotec devices in Homey.",
   "main": "app.js",
   "dependencies": {
-    "homey-log": "^1.0.6",
-    "homey-meshdriver": "^1.2.28",
-    "tinycolor2": "^1.4.1"
+    "homey-zigbeedriver": "^1.6.12",
+    "homey-zwavedriver": "^2.2.3",
+    "zigbee-clusters": "^1.5.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "eslint": "^7.32.0",
+    "eslint-config-athom": "^2.1.0",
+    "globals": "^16.3.0"
+  },
   "scripts": {
-    "run": "homeyConfig compose; athom project --run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/athombv/com.aeotec.git"
+  "engines": {
+    "node": ">=12.16.1"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/athombv/com.aeotec/issues"
-  },
-  "homepage": "https://github.com/athombv/com.aeotec#readme"
+  "license": "ISC"
 }

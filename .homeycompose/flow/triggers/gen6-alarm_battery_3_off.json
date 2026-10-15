@@ -1,0 +1,15 @@
+{
+  "title": {
+    "en": "Button 3 battery alarm turned off",
+    "nl": "Knop 3 batterijwaarschuwing gaat uit",
+	"de": "Taste 1 Batteriealarm wurde deaktiviert"
+  },
+  "platforms": [ "local", "cloud" ],
+  "args": [
+    {
+      "name": "doorbell_3",
+      "type": "device",
+      "filter": "driver_id=ZW162-C|ZW164-C&capabilities=alarm_battery.button_3"
+    }
+  ]
+}

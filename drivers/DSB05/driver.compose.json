@@ -1,5 +1,6 @@
 {
   "id": "DSB05",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Multisensor 4-in-1"
   },
@@ -15,10 +16,21 @@
     "large": "{{driverAssetsPath}}/images/large.jpg",
     "small": "{{driverAssetsPath}}/images/small.jpg"
   },
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA",
+      "AAA",
+      "AAA"
+    ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
-      2
+      2,
+	  258,
+	  514
     ],
     "productId": [
       5
@@ -28,7 +40,8 @@
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
         "en": "Press the action button on the {{driverNameEn}}",
-        "nl": "Druk op de actie knop van de {{driverNameNl}}"
+        "nl": "Druk op de actie knop van de {{driverNameEn}}",
+		"de": "Drücken Sie die Taste am Multisensor"
       }
     },
     "associationGroups": [

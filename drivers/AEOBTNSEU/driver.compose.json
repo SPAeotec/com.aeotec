@@ -1,0 +1,42 @@
+{
+    "id": "AeotecButton",
+	"platforms": [ "local", "cloud" ],
+    "name": {
+      "en": "Button (IM6001)",
+	  "de": "Button (IM6001)"
+    },
+    "class": "button",
+    "capabilities": [
+      "measure_battery",
+      "measure_temperature",
+	  "btn_button"
+	  
+    ],
+    "energy": {
+      "batteries": [ "CR2450" ]
+    },
+	"connectivity": ["zigbee"],
+    "zigbee": {
+      "manufacturerName": "Samjin",
+      "productId": [ "button" ],
+      "deviceId": 1026,
+      "profileId": 260,
+      "endpoints": {
+        "1": {
+          "clusters": [0, 1, 1026, 1280, 2821],
+          "bindings": [0, 1, 1026, 1280, 2821]
+        }
+      },
+	"learnmode": {
+	  "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the hidden button on the down side of the button for 5 seconds.",
+		"de": "Drücken Sie den versteckten Taster an der Unterseite des Tasters für 5 Sekunden."
+      }
+    }	  
+    },
+    "images": {
+      "large": "/drivers/AEOBTNSEU/assets/images/large.jpg",
+      "small": "/drivers/AEOBTNSEU/assets/images/small.jpg"
+    }
+  }

@@ -1,0 +1,739 @@
+[
+	{
+        "id": "1",
+        "type": "number",
+        "label": {
+            "en": "Threshold Check Time",
+            "de": "Schwellenprüfintervall"
+        },
+        "hint": {
+            "en": "Parameter 1: Interval used by several threshold parameters (battery: min 30 s; USB: real-time). 0 disables.",
+            "de": "Parameter 1: Intervall, das von mehreren Schwellenparametern genutzt wird (Batterie: min. 30 s; USB: Echtzeit). 0 deaktiviert."
+        },
+        "value": 900,
+		  "units": {
+            "en": "seconds",
+            "de": "Sekunden"
+        },
+        "zwave": {
+            "index": 1,
+            "size": 4,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 2678400
+        }
+    },
+	 {
+        "id": "2",
+        "type": "number",
+        "label": {
+            "en": "Minimum Temperature Change to Report",
+            "de": "Min. Temperaturänderung für Report"
+        },
+        "hint": {
+            "en": "Parameter 2: Triggers temperature report to lifeline.",
+            "de": "Parameter 2: Löst Temperatur-Report zur Lifeline aus."
+        },
+        "value": 20,
+		  "units": {
+            "en": "×0.1°",
+            "de": "×0,1°"
+        },
+        "zwave": {
+            "index": 2,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+	{
+        "id": "3",
+        "type": "number",
+        "label": {
+            "en": "Minimum Humidity Change to Report",
+            "de": "Min. Feuchteänderung für Report"
+        },
+        "hint": {
+            "en": "Parameter 3: Triggers humidity report to lifeline.",
+            "de": "Parameter 3: Löst Feuchte-Report zur Lifeline aus."
+        },
+        "value": 50,
+		"units": {
+            "en": "×0.1%",
+            "de": "×0,1%"
+        },
+        "zwave": {
+            "index": 3,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+	{
+        "id": "4",
+        "type": "dropdown",
+        "label": {
+            "en": "Enable LED indication",
+            "de": "LED-Anzeige aktivieren"
+        },
+        "hint": {
+            "en": "Parameter 4: Activate the LED for individual reports.",
+            "de": "Parameter 4: Aktivieren der LED für einzene Berichte."
+        },
+        "value": "15",
+		  "values": [
+			{
+			  "id": "0",
+			  "label": {
+				"en": "All disabled",
+				"de": "Alles deaktiviert"
+			  }
+			},
+			{
+			  "id": "1",
+			  "label": {
+				"en": "Periodic report",
+				"de": "Periodischer Bericht"
+			  }
+			},
+			{
+			  "id": "2",
+			  "label": {
+				"en": "Wake Up",
+				"de": "Aufwachen"
+			  }
+			},
+			{
+			  "id": "3",
+			  "label": {
+				"en": "Periodic report, Wake Up",
+				"de": "Periodischer Bericht, Aufwachen"
+			  }
+			},
+
+			{
+			  "id": "4",
+			  "label": {
+				"en": "Mold",
+				"de": "Schimmel"
+			  }
+			},
+			{
+			  "id": "5",
+			  "label": {
+				"en": "Periodic report, Mold",
+				"de": "Periodischer Bericht, Schimmel"
+			  }
+			},
+			{
+			  "id": "6",
+			  "label": {
+				"en": "Wake Up, Mold",
+				"de": "Aufwachen, Schimmel"
+			  }
+			},
+			{
+			  "id": "7",
+			  "label": {
+				"en": "Periodic report, Wake Up, Mold",
+				"de": "Periodischer Bericht, Aufwachen, Schimmel"
+			  }
+			},
+			{
+			  "id": "8",
+			  "label": {
+				"en": "Tamper",
+				"de": "Sabotage"
+			  }
+			},
+			{
+			  "id": "9",
+			  "label": {
+				"en": "Periodic report, Tamper",
+				"de": "Periodischer Bericht, Sabotage"
+			  }
+			},
+			{
+			  "id": "10",
+			  "label": {
+				"en": "Wake Up, Tamper",
+				"de": "Aufwachen, Sabotage"
+			  }
+			},
+			{
+			  "id": "11",
+			  "label": {
+				"en": "Periodic report, Wake Up, Tamper",
+				"de": "Periodischer Bericht, Aufwachen, Sabotage"
+			  }
+			},
+
+			{
+			  "id": "12",
+			  "label": {
+				"en": "Mold, Tamper",
+				"de": "Schimmel, Sabotage"
+			  }
+			},
+			{
+			  "id": "13",
+			  "label": {
+				"en": "Periodic report, Mold, Tamper",
+				"de": "Periodischer Bericht, Schimmel, Sabotage"
+			  }
+			},
+			{
+			  "id": "14",
+			  "label": {
+				"en": "Wake Up, Mold, Tamper",
+				"de": "Aufwachen, Schimmel, Sabotage"
+			  }
+			},
+			{
+			  "id": "15",
+			  "label": {
+				"en": "All reports activated",
+				"de": "Alle Berichte aktiviert"
+			  }
+			}
+		  ],
+        "zwave": {
+            "index": 4,
+            "size": 1,
+            "signed": false
+        }      
+    },
+	{
+        "id": "12",
+        "type": "dropdown",
+        "label": {
+            "en": "Sensor Limit Enable",
+            "de": "Sensor-Grenzwerte aktivieren"
+        },
+        "hint": {
+            "en": "Parameter 12: Activate limits for humidity and temperature range.",
+            "de": "Parameter 12: Grenzwerte für Luftfeuchtigkeit und Temperatuberich aktivieren."
+        },
+        "value": "0",
+		  "values": [
+			{
+			  "id": "0",
+			  "label": {
+				"en": "All disabled",
+				"de": "Alles deaktiviert"
+			  }
+			},
+			{
+			  "id": "1",
+			  "label": {
+				"en": "Temperature upper",
+				"de": "Temperatur oberer Grenzwert"
+			  }
+			},
+			{
+			  "id": "2",
+			  "label": {
+				"en": "Humidity upper",
+				"de": "Luftfeuchtigkeit oberer Grenzwert"
+			  }
+			},
+			{
+			  "id": "3",
+			  "label": {
+				"en": "Temperature and Humidity upper",
+				"de": "Temperatur und Luftfeuchtigkeit oberer Grenzwert"
+			  }
+			},
+			{
+			  "id": "4",
+			  "label": {
+				"en": "Temperature lower",
+				"de": "Temperatur unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "5",
+			  "label": {
+				"en": "Temperature upper, Temperature lower",
+				"de": "Temperatur oberer und unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "6",
+			  "label": {
+				"en": "Humidity upper, Temperature lower",
+				"de": "Luftfeuchtigkeit oberer und Temperatur unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "7",
+			  "label": {
+				"en": "Temperature upper, Humidity upper, Temperature lower",
+				"de": "Temperatur und Luftfeuchtigkeit oberer, Temperatur unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "8",
+			  "label": {
+				"en": "Humidity lower",
+				"de": "Luftfeuchtigkeit unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "9",
+			  "label": {
+				"en": "Temperature upper, Humidity lower",
+				"de": "Temperatur oberer und Luftfeuchtigkeit unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "10",
+			  "label": {
+				"en": "Humidity upper, Humidity lower",
+				"de": "Luftfeuchtigkeit oberer und unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "11",
+			  "label": {
+				"en": "Temperature upper, Humidity upper, Humidity lower",
+				"de": "Temperatur oberer, Luftfeuchtigkeit oberer und unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "12",
+			  "label": {
+				"en": "Temperature lower, Humidity lower",
+				"de": "Temperatur und Luftfeuchtigkeit unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "13",
+			  "label": {
+				"en": "Temperature upper, Temperature lower, Humidity lower",
+				"de": "Temperatur oberer und unterer, Luftfeuchtigkeit unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "14",
+			  "label": {
+				"en": "Humidity upper, Temperature lower, Humidity lower",
+				"de": "Luftfeuchtigkeit oberer und unterer, Temperatur unterer Grenzwert"
+			  }
+			},
+			{
+			  "id": "15",
+			  "label": {
+				"en": "All activated",
+				"de": "Alle aktiviert"
+			  }
+			}
+		  ],
+
+        "zwave": {
+            "index": 12,
+            "size": 1,
+            "signed": false
+        }
+    },
+	{
+        "id": "13",
+        "type": "number",
+        "label": {
+            "en": "Offset for Mold danger alarm",
+            "de": "Offset für Schimmelgefahr-Alarm"
+        },
+        "hint": {
+            "en": "Parameter 13: The default Relative Humidity to trigger Mold danger alarm is 60%. ",
+            "de": "Parameter 13: Die Standard-relative Luftfeuchtigkeit, bei der der Schimmelgefahrenalarm ausgelöst wird, beträgt 60%."
+        },
+        "value": 10,
+		  "units": {
+            "en": "+XX%",
+            "de": "+XX%"
+        },
+        "zwave": {
+            "index": 13,
+            "size": 1,
+            "signed": true
+        },
+        "attr": {
+            "min": 0,
+            "max": 40
+        }
+    },
+	{
+        "id": "14",
+        "type": "number",
+        "label": {
+            "en": "Temperature Upper Watermark",
+            "de": "Temperatur-Obergrenze"
+        },
+        "hint": {
+            "en": "Parameter 14: Sends BASIC to Group 5 when exceeded.",
+            "de": "Parameter 14: Sendet BASIC an Gruppe 5, wenn überschritten."
+        },
+        "value": 300,
+        "units": {
+            "en": "×0.1°",
+            "de": "×0,1°"
+        },
+        "zwave": {
+            "index": 14,
+            "size": 2,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 1000
+        }
+    },
+	{
+        "id": "15",
+        "type": "number",
+        "label": {
+            "en": "Temperature Lower Watermark",
+            "de": "Temperatur-Untergrenze"
+        },
+        "hint": {
+            "en": "Parameter 15: Sends BASIC to Group 6 when below.",
+            "de": "Parameter 15: Sendet BASIC an Gruppe 6, wenn unterschritten."
+        },
+        "value": 0,
+        "units": {
+            "en": "×0.1°",
+            "de": "×0,1°"
+        },
+        "zwave": {
+            "index": 15,
+            "size": 2,
+            "signed": true
+        },
+        "attr": {
+            "min": -200,
+            "max": 1000
+        }
+    },
+	{
+        "id": "16",
+        "type": "number",
+        "label": {
+            "en": "Humidity Upper Watermark",
+            "de": "Feuchtigkeit-Obergrenze"
+        },
+        "hint": {
+            "en": "Parameter 16: Sends BASIC to Group 7 when exceeded.",
+            "de": "Parameter 16: Sendet BASIC an Gruppe 7, wenn überschritten."
+        },
+        "value": 700,
+        "units": {
+            "en": "×0.1%",
+            "de": "×0,1%"
+        },
+        "zwave": {
+            "index": 16,
+            "size": 2,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 1000
+        }
+    },
+    {
+        "id": "17",
+        "type": "number",
+        "label": {
+            "en": "Humidity Lower Watermark",
+            "de": "Feuchtigkeit-Untergrenze"
+        },
+        "hint": {
+            "en": "Parameter 17: Sends BASIC to Group 8 when below.",
+            "de": "Parameter 17: Sendet BASIC an Gruppe 8, wenn unterschritten."
+        },
+        "value": 300,
+        "units": {
+            "en": "×0.1%",
+            "de": "×0,1%"
+        },
+        "zwave": {
+            "index": 17,
+            "size": 2,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 1000
+        }
+    },
+	 {
+        "id": "18",
+        "type": "number",
+        "label": {
+            "en": "High Temperature trigger BASIC Set",
+            "de": "BASIC-Wert bei hoher Temperatur"
+        },
+        "hint": {
+            "en": "Parameter 18: BASIC value (0–255) sent to Group 5 on upper watermark alarm.",
+            "de": "Parameter 18: BASIC-Wert (0–255), der bei Obergrenzen-Alarm an Gruppe 5 gesendet wird."
+        },
+        "value": 0,
+        "zwave": {
+            "index": 18,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "19",
+        "type": "number",
+        "label": {
+            "en": "Low Temperature trigger BASIC Set",
+            "de": "BASIC-Wert bei niedriger Temperatur"
+        },
+        "hint": {
+            "en": "Parameter 19: BASIC value (0–255) sent to Group 6 on lower watermark alarm.",
+            "de": "Parameter 19: BASIC-Wert (0–255), der bei Untergrenzen-Alarm an Gruppe 6 gesendet wird."
+        },
+        "value": 255,
+        "zwave": {
+            "index": 19,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+	{
+        "id": "20",
+        "type": "number",
+        "label": {
+            "en": "High Humidity trigger BASIC Set",
+            "de": "BASIC-Wert bei hoher Feuchtigkeit"
+        },
+        "hint": {
+            "en": "Parameter 20: BASIC value (0–255) sent to Group 7 on upper watermark alarm.",
+            "de": "Parameter 20: BASIC-Wert (0–255), der bei Obergrenzen-Alarm an Gruppe 7 gesendet wird."
+        },
+        "value": 0,
+        "zwave": {
+            "index": 20,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+    {
+        "id": "21",
+        "type": "number",
+        "label": {
+            "en": "Low Humidity trigger BASIC Set",
+            "de": "BASIC-Wert bei niedriger Feuchtigkeit"
+        },
+        "hint": {
+            "en": "Parameter 21: BASIC value (0–255) sent to Group 8 on lower watermark alarm.",
+            "de": "Parameter 21: BASIC-Wert (0–255), der bei Untergrenzen-Alarm an Gruppe 8 gesendet wird."
+        },
+        "value": 255,
+        "min": 0,
+        "max": 255,
+        "zwave": {
+            "index": 21,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 255
+        }
+    },
+	{
+        "id": "22",
+        "type": "dropdown",
+        "label": {
+            "en": "Enable Binary Sensor Report",
+            "de": "Binärsensor-Bericht aktivieren"
+        },
+        "hint": {
+            "en": "Parameter 22: Backwards compatibility: Binary Sensor for alarm state.",
+            "de": "Parameter 22: Abwärtskompatibilität: Binärsensor für Alarmzustand."
+        },
+        "value": "1",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Disable",
+                    "de": "Deaktivieren"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Enable",
+                    "de": "Aktivieren"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 22,
+            "size": 1,
+            "signed": false
+        }
+    },
+    {
+        "id": "23",
+        "type": "number",
+        "label": {
+            "en": "Low battery threshold",
+            "de": "Schwelle für niedrigen Batteriestand"
+        },
+        "hint": {
+            "en": "Parameter 23: Reports low battery when level goes under threshold (10–50%).",
+            "de": "Parameter 23: Meldet niedrigen Batteriestand, wenn der Wert unter die Schwelle fällt (10–50 %)."
+        },
+        "value": 20,
+        "units": {
+            "en": "%",
+            "de": "%"
+        },
+        "zwave": {
+            "index": 23,
+            "size": 1,
+            "signed": false
+        },
+        "attr": {
+            "min": 10,
+            "max": 50
+        }
+    },
+    {
+        "id": "24",
+        "type": "number",
+        "label": {
+            "en": "Periodic Reports interval",
+            "de": "Intervall für periodische Berichte"
+        },
+        "hint": {
+            "en": "Parameter 24: Period for battery/temperature/humidity reports; min 30s on battery. 0 = disable.",
+            "de": "Parameter 24: Periode für Batterie/Temperatur/Feuchtigkeitsberichte; min. 30 s bei Batterie. 0 = deaktiviert."
+        },
+        "value": 43200,
+        "units": {
+            "en": "seconds",
+            "de": "Sekunden"
+        },
+        "zwave": {
+            "index": 24,
+            "size": 4,
+            "signed": false
+        },
+        "attr": {
+            "min": 0,
+            "max": 2678400
+        }
+    },
+    {
+        "id": "25",
+        "type": "number",
+        "label": {
+            "en": "Offset value for Temperature",
+            "de": "Temperatur-Offset"
+        },
+        "hint": {
+            "en": "Parameter 25: Calibration offset. Scale defined by Param 64. Example: 15 → 1.5°.",
+            "de": "Parameter 25: Kalibrier-Offset. Skala über Param 64. Beispiel: 15 → 1,5°."
+        },
+        "value": 0,
+        "units": {
+            "en": "×0.1°",
+            "de": "×0,1°"
+        },
+        "zwave": {
+            "index": 25,
+            "size": 2,
+            "signed": true
+        },
+        "attr": {
+            "min": -200,
+            "max": 200
+        }
+    },
+    {
+        "id": "26",
+        "type": "number",
+        "label": {
+            "en": "Offset value for Humidity",
+            "de": "Feuchtigkeits-Offset"
+        },
+        "hint": {
+            "en": "Parameter 26: Calibration offset in 0.1% RH.",
+            "de": "Parameter 26: Kalibrier-Offset in 0,1 % rF."
+        },
+        "value": 0,
+        "units": {
+            "en": "×0.1%",
+            "de": "×0,1 %"
+        },
+        "zwave": {
+            "index": 26,
+            "size": 2,
+            "signed": true
+        },
+        "attr": {
+            "min": -200,
+            "max": 200
+        }
+    },
+    {
+        "id": "64",
+        "type": "dropdown",
+        "label": {
+            "en": "Temperature & Dew Point scale",
+            "de": "Skala für Temperatur & Taupunkt"
+        },
+        "hint": {
+            "en": "Parameter 64: Scale for auto reports and settings.",
+            "de": "Parameter 64: Skala für automatische Berichte und Einstellungen."
+        },
+        "value": "0",
+        "values": [
+            {
+                "id": "0",
+                "label": {
+                    "en": "Celsius",
+                    "de": "Celsius"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Fahrenheit",
+                    "de": "Fahrenheit"
+                }
+            }
+        ],
+        "zwave": {
+            "index": 64,
+            "size": 1,
+            "signed": false
+        }
+    }	
+]

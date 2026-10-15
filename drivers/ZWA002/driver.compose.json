@@ -1,0 +1,65 @@
+{
+    "id": "ZWA002",
+	  "platforms": [ "local", "cloud" ],
+    "name": {
+        "en": "LED Bulb 6 MC",
+        "nl": "LED Lamp 6 MC"
+
+        
+    },
+	 "connectivity": ["zwave"],
+    "zwave": {
+        "manufacturerId": 881,
+        "productTypeId": [
+      3,
+      515,
+	  259
+    ],
+        "productId": 2,
+		"requireSecure": false,
+        "learnmode": {
+		"image": "{{driverAssetsPath}}/learnmode.svg",
+            "instruction": {
+                "en": "Quickly turn the {{driverNameEn}} off and on again.",
+				"de": "Schalten Sie die {{driverNameEn}} aus und wieder ein."
+            }
+        },
+		"unlearnmode": {
+		"image": "{{driverAssetsPath}}/unlearnmode.svg",
+      "instruction": {
+			"en": "Quickly turn the {{driverNameEn}} off and on again 3 times.",
+			"de": "Schalten Sie die {{driverNameEn}} 3 mal aus und wieder ein."
+      }
+    },
+        "associationGroups": [
+            1
+        ],
+        "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "The association group 1 is the Z-Wave Lifeline group. The Hail CC and Basic Report CC (configurable) will be sent to the associated nodes.",
+		  "de": "Die Assoziationsgruppe 1 ist die Z-Wave-Lifeline-Gruppe. Die Hail CC und Basic Report CC (konfigurierbar) werden an die assoziierten Knoten gesendet"
+        }
+      }
+    }
+    },
+    "class": "light",
+    "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+    ],
+	"energy": {
+    "approximation": {
+      "usageOn": 10, 
+      "usageOff": 0 
+    }
+  },
+    "images": {
+         "large": "{{driverAssetsPath}}/images/large.png",
+         "small": "{{driverAssetsPath}}/images/small.png"
+    }
+}

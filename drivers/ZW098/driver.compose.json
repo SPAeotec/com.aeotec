@@ -1,8 +1,9 @@
 {
   "id": "ZW098",
+  "platforms": [ "local", "cloud" ],
   "name": {
-    "en": "LED Bulb",
-    "nl": "LED lamp"
+    "en": "LED Bulb Gen5",
+    "nl": "LED lamp Gen5"
   },
   "class": "light",
   "capabilities": [
@@ -13,32 +14,43 @@
     "light_mode",
     "onoff"
   ],
+  "energy": {
+    "approximation": {
+      "usageOn": 9, 
+      "usageOff": 1 
+    }
+  },
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
       3,
-      515
+      515,
+	  258
     ],
     "productId": [
       98
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 1851,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1851/LED Bulb manual.pdf",
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Quickly turn the {{driverNameEn}} off and on again. For secure pairing quickly turn the {{driverNameEn}} off and on 5 times.",
-        "nl": "Schakel de {{driverNameNl}} snel uit en aan. Voor beveiligd koppelen schakel de {{driverNameNl}} 5 keer snel uit en aan."
+        "en": "Turn the {{driverNameNl}} off and on  to activate the pairing mode.",
+        "nl": "Schakel de {{driverNameNL}} uit en aan om de leer modus te activeren",
+		"de": "Schalten Sie die {{driverNameNl}} aus und ein um den Kopplungsmodus zu aktivieren."
       }
     },
     "unlearnmode": {
       "instruction": {
         "en": "Quickly turn the {{driverNameEn}} off and on again 5 times.",
-        "nl": "Schakel de {{driverNameNl}} vijf maal snel uit en aan."
+        "nl": "Schakel de {{driverNameNl}} vijf maal snel uit en aan.",
+		"de": "Schalten Sie den {{driverNameEn}} 5 Mal schnell aus und wieder ein."
       }
     },
     "associationGroups": [
@@ -48,13 +60,15 @@
       "1": {
         "hint": {
           "en": "The association group 1 is the Z-Wave Lifeline group. The Hail CC and Basic Report CC (configurable) will be sent to the associated nodes.",
-          "nl": "De 1e associatie groep is de Z-Wave levenslijn groep. De Hail CC en Basic Report CC (configureerbaar) worden verzonden naar de apparaten in deze groep."
+          "nl": "De 1e associatie groep is de Z-Wave levenslijn groep. De Hail CC en Basic Report CC (configureerbaar) worden verzonden naar de apparaten in deze groep.",
+		  "de": "Die Assoziationsgruppe 1 ist die Z-Wave-Lifeline-Gruppe. Die Hail CC und Basic Report CC (konfigurierbar) werden an die zugehörigen Knoten gesendet."
         }
       },
       "2": {
         "hint": {
           "en": "Forwarding group for all commands sent to the {{driverNameEn}} by the main controller.",
-          "nl": "Doorstuur groep voor alle commando's verstuurd naar de {{driverNameNl}} door de main controller."
+          "nl": "Doorstuur groep voor alle commando's verstuurd naar de {{driverNameNl}} door de main controller.",
+		  "de": "Weiterleitungsgruppe für alle Befehle, die von der Hauptsteuerung an den {{driverNameEn}} gesendet werden."
         }
       }
     },

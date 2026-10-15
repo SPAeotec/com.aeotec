@@ -1,0 +1,285 @@
+[
+  {
+    "id": "90",
+    "value": false,
+    "label": {
+      "en": "Enable automatic reports",
+      "nl": "Schakel automatische rapportage in",
+	  "de": "Aktivieren des automatischen Berichtes."
+    },
+    "hint": {
+      "en": "Parameter 90: Determines whether or not automatic reports are enabled.",
+      "nl": "Parameter 90: Bepaalt of automatische rapportage is ingeschakeld.",
+	  "de": "Parameter 90: Bestimmt, ob automatische Berichte aktiviert sind oder nicht."
+    },
+    "zwave": {
+      "index": 90,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "91",
+    "value": 50,
+    "label": {
+      "en": "Wattage report change threshold",
+      "nl": "Wattage rapportage drempel",
+	  "de": "Watt Bericht Schwellwert"
+    },
+    "hint": {
+      "en": "Parameter 91: Determines the minimum value change in wattage before an automatic report is send to Homey.",
+      "nl": "Parameter 91: Bepaalt de minimum verandering in wattage voordat er een automatisch rapport naar Homey wordt verzonden.",
+	  "de": "Parameter 91: Bestimmt die minimale Wertänderung der Wattzahl, bevor ein automatischer Bericht an Homey gesendet wird." 
+    },
+    "zwave": {
+      "index": 91,
+      "size": 2,
+	  "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 60000
+    },
+    "type": "number"
+  },
+  {
+    "id": "92",
+    "type": "number",
+    "label": {
+      "en": "Minimum wattage change (%) needed before an update report is send",
+      "nl": "Minimale verandering in wattage (%) nodig voor het verzenden van een update",
+	  "de": "Mindestwattageänderung (%), die erforderlich ist, bevor ein Update-Report gesendet wird"
+    },
+    "hint": {
+      "en": "Parameter 92: Determines the minimum percentage change before a report is being send to Homey.",
+      "nl": "Parameter 92: Bepaalt de minimale verandering in percentage voordat er een rapport wordt verzonden naar Homey",
+	  "de": "Parameter 92: Bestimmt die minimale prozentuale Änderung, bevor ein Bericht an Homey gesendet wird."
+    },
+    "zwave": {
+      "index": 92,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "value": 10
+  },
+  {
+    "id": "101",
+    "type": "dropdown",
+    "label": {
+      "en": "Information reports send to report group 1",
+      "nl": "Informatie updates naar rapport groep 1",
+	  "de": "Informationen welche an Berichtsgruppe 1 gesendet werden"
+    },
+    "hint": {
+      "en": "Parameter 101: Determines what information is sent to the devices in report group 1.",
+      "nl": "Parameter 101: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 1e rapport groep.",
+	  "de": "Parameter 101: Wählen Sie welche Informationen an die Geräte der Berichtsgruppe 1 gesendet werden."
+    },
+    "zwave": {
+      "index": 101,
+      "size": 4
+    },
+    "value": "4",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Geen",
+		  "de": "Nichts"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Power (Watt)",
+          "nl": "Vermogen (Watt)",
+		  "de": "Leistung (Watt)"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Energy (kWh)",
+          "nl": "Energie (kWh)",
+		  "de": "Verbrauch (kWh)"
+        }
+      },
+      {
+        "id": "12",
+        "label": {
+          "en": "Power (Watt) & Energy (kWh)",
+          "nl": "Vermogen (Watt) & Energie (kWh)",
+		  "de": "Leistung (Watt) & Verbrauch (kWh)"
+        }
+      }
+    ]
+  },
+  {
+    "id": "102",
+    "type": "dropdown",
+    "label": {
+      "en": "Information reports send to report group 2",
+      "nl": "Informatie updates naar rapport groep 2",
+	  "de": "Informationen welche an Berichtsgruppe 2 gesendet werden"
+    },
+    "hint": {
+      "en": "Parameter 102: Determines what information is sent to the devices in report group 2.",
+      "nl": "Parameter 102: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 2e rapport groep.",
+	  "de": "Parameter 102: Wählen Sie welche Informationen an die Geräte der Berichtsgruppe 2 gesendet werden."
+    },
+    "zwave": {
+      "index": 102,
+      "size": 4
+    },
+    "value": "8",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Geen",
+		  "de": "Nichts"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Power (Watt)",
+          "nl": "Vermogen (Watt)",
+		  "de": "Leistung (Watt)"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Energy (kWh)",
+          "nl": "Energie (kWh)",
+		  "de": "Verbrauch (kWh)"
+        }
+      },
+      {
+        "id": "12",
+        "label": {
+          "en": "Power (Watt) & Energy (kWh)",
+          "nl": "Vermogen (Watt) & Energie (kWh)",
+		  "de": "Leistung (Watt) & Verbrauch (kWh)"
+        }
+      }
+      
+    ]
+  },
+  {
+    "id": "103",
+    "type": "dropdown",
+    "label": {
+      "en": "Information reports send to report group 3",
+      "nl": "Informatie updates naar rapport groep 3",
+	  "de": "Informationen welche an Berichtsgruppe 3 gesendet werden"
+    },
+    "hint": {
+      "en": "Parameter 103: Determines what information is sent to the devices in report group 3.",
+      "nl": "Parameter 103: Bepaalt welke informatie er wordt verstuurd naar de apparaten in de 3e rapport groep.",
+	  "de": "Parameter 103: Wählen Sie welche Informationen an die Geräte der Berichtsgruppe 3 gesendet werden."
+    },
+    "zwave": {
+      "index": 103,
+      "size": 4
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Nothing",
+          "nl": "Geen",
+		  "de": "Nichts"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Power (Watt)",
+          "nl": "Vermogen (Watt)",
+		  "de": "Leistung (Watt)"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Energy (kWh)",
+          "nl": "Energie (kWh)",
+		  "de": "Verbrauch (kWh)"
+        }
+      },
+      {
+        "id": "12",
+        "label": {
+          "en": "Power (Watt) & Energy (kWh)",
+          "nl": "Vermogen (Watt) & Energie (kWh)",
+		  "de": "Leistung (Watt) & Verbrauch (kWh)"
+        }
+      }
+    ]
+  },
+  {
+    "id": "111",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 1",
+      "nl": "Rapportage interval groep 1",
+	  "de": "Sendeintervall für Berichtsgruppe 1"
+    },
+    "hint": {
+      "en": "Parameter 111: Determines the interval for sending report to devices in report group 1.",
+      "nl": "Parameter 111: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 1ste groep.",
+	  "de": "Parameter 111: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 1."
+    },
+    "zwave": {
+      "index": 111,
+      "size": 4
+    },
+    "value": 30
+  },
+  {
+    "id": "112",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 2",
+      "nl": "Rapportage interval groep 2",
+	  "de": "Sendeintervall für Berichtsgruppe 2"
+    },
+    "hint": {
+      "en": "Parameter 112: Determines the interval for sending report to devices in report group 2.",
+      "nl": "Parameter 112: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 2e groep.",
+	  "de": "Parameter 112: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 2."
+    },
+    "zwave": {
+      "index": 112,
+      "size": 4
+    },
+    "value": 3600
+  },
+  {
+    "id": "113",
+    "type": "number",
+    "label": {
+      "en": "Report interval report group 3",
+      "nl": "Rapportage interval groep 3",
+	  "de": "Sendeintervall für Berichtsgruppe 3"
+    },
+    "hint": {
+      "en": "Parameter 112: Determines the interval for sending report to devices in report group 3.",
+      "nl": "Parameter 112: Bepaalt de interval voor het versturen van rapporten naar apparaten in de 3e groep.",
+	  "de": "Parameter 112: Bestimmt das Intervall für das Senden von Berichten an Geräte in Berichtsgruppe 3."
+    },
+    "zwave": {
+      "index": 113,
+      "size": 4
+    },
+    "value": 3600
+  }
+ ]

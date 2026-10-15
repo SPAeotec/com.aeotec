@@ -1,12 +1,12 @@
 'use strict';
 
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class AeotecRepeaterDevice extends ZwaveDevice {
-	
-	onMeshInit() {
-	}
-	
+
+  onNodeInit() {
+  }
+
 }
 
 module.exports = AeotecRepeaterDevice;

@@ -1,0 +1,19 @@
+{
+  "id": "repeat",
+  "type": "number",
+  "label": {
+    "en": "Tone repeat",
+    "nl": "Geluid herhaling",
+	"de": "Wiederholung des Tones"
+  },
+  "hint": {
+    "en": "Determine the amount of times the tone is repeated.",
+    "nl": "Bepaal het aantal dat keer het geluid zich herhaald.",
+	"de": "Bestimmen Sie die Anzahl der Wiederholungen des Tons."
+  },
+  "attr": {
+    "min": 0,
+    "max": 30
+  },
+  "value": 1
+}

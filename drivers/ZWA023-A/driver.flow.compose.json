@@ -1,0 +1,21 @@
+{
+  "triggers": [],
+  "conditions": [],
+  "actions": [
+    {
+      "id": "ZWA023_reset_meter",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Reset meter values"
+        
+      },
+      "hint": {
+        "en": "Reset the accumulated power usage (kWh). Can not be reversed."
+      },
+	   "titleFormatted": {
+		"en": "Resets the total consumption"
+		},
+      "args": []
+    }
+  ]
+}

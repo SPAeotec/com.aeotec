@@ -1,0 +1,14 @@
+{
+  "triggers": [    
+    {
+      "id": "system_alarm_on",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Hardware failure is on",
+		"de": "Hardwarefehler ist angegangen"
+      }
+    }
+],
+  "conditions": [],
+  "actions": []
+}

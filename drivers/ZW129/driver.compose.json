@@ -1,17 +1,23 @@
 {
   "id": "ZW129",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Wallmote Duo"
   },
   "class": "button",
   "capabilities": [
-    "measure_battery",
-    "alarm_battery"
+    "measure_battery"
   ],
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "energy": {
+    "batteries": [
+      "INTERNAL"
+    ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
@@ -23,19 +29,22 @@
     "productId": [
       129
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 2234,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2234/Aeon Labs WallMote manual.pdf",
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Secure inclusion: Double press the action button on the {{driverNameEn}}. Non-secure inclusion: Single press the action button on the {{driverNameEn}}.",
-        "nl": "Beveiligd toevoegen: Druk tweemaal op de actie knop op de {{driverNameNl}}. Onbeveiligd toevoegen: Druk eenmaal op de actie knop op de {{driverNameNl}}."
+        "en": "Press the action button on the {{driverNameEn}}.",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie die Aktionstaste auf dem {{driverNameEn}} einmal."
       }
     },
     "unlearnmode": {
       "instruction": {
         "en": "Press the action button on the {{driverNameEn}}.",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}."
+        "nl": "Druk op de actie knop op de {{driverNameNl}}.",
+		"de": "Drücken Sie die Tatse auf der Rückseite des {{driverNameEn}} einmal."
       }
     },
     "associationGroups": [
@@ -45,31 +54,36 @@
       "1": {
         "hint": {
           "en": "This is the Z-Wave Lifeline group, it is not recommended to change this.",
-          "nl": "Dit is de Z-Wave Lifeline groep, het is niet aangeraden deze te veranderen."
+          "nl": "Dit is de Z-Wave Lifeline groep, het is niet aangeraden deze te veranderen.",
+		  "de": "Dies ist die Z-Wave Lifeline Gruppe, es wird nicht empfohlen, dies zu ändern."
         }
       },
       "2": {
         "hint": {
           "en": "Devices here will receive on and off commands from the left touch part.",
-          "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linkse aanraak gedeelte."
+          "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het linkse aanraak gedeelte.",
+		  "de": "Geräte erhalten hier Ein- und Ausschaltbefehle von der linken Taste."
         }
       },
       "3": {
         "hint": {
           "en": "Devices here will receive dimming commands from the left touch part.",
-          "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linkse aanraak gedeelte."
+          "nl": "Apparaten hier zullen de dimmen commando's krijgen van het linkse aanraak gedeelte.",
+		  "de": "Geräte, die hier stehen, erhalten Dimmbefehle vom der linken Taste."
         }
       },
       "4": {
         "hint": {
           "en": "Devices here will receive on and off commands from the right touch part.",
-          "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtse aanraak gedeelte."
+          "nl": "Apparaten hier zullen de aan en uit commando's krijgen van het rechtse aanraak gedeelte.",
+		  "de": "Geräte erhalten hier Ein- und Ausschaltbefehle von der rechten Taste."
         }
       },
       "5": {
         "hint": {
           "en": "Devices here will receive dimming commands from the right touch part.",
-          "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtse aanraak gedeelte."
+          "nl": "Apparaten hier zullen de dimmen commando's krijgen van het rechtse aanraak gedeelte.",
+		  "de": "Geräte, die hier stehen, erhalten Dimmbefehle vom der rechten Taste."
         }
       }
     },

@@ -1,0 +1,610 @@
+[
+{
+		"id": "1",
+		"type": "dropdown",
+		"label": {
+			"en": "LED Setting"
+		},
+		"hint": {
+			"en": "Parameter 1: This parameter is used to change the reaction of LED setting."
+		},
+		"zwave": {
+			"index": 1,
+			"size": 1
+		},
+		"value": "2",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Disable LED completely."
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Turn on between particular times only (act as night light)."
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Display On/Off Status."
+				}
+			}
+		]
+	},
+	{
+		"id": "2",
+		"type": "number",
+		"label": {
+			"en": "Night Light On Time"
+		},
+		"hint": {
+			"en": "Parameter 2: This parameter is used to configure the Night Light on time. User can use Color CC to change the Night Light color(default Red). Only useful when parameter 1 is set to 1."
+		},
+		"zwave": {
+			"index": 2,
+			"size": 4,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 2316613
+		},
+		"value": 1572864
+	},
+	{
+		"id": "3",
+		"type": "number",
+		"label": {
+			"en": "Night Light Off Time"
+		},
+		"hint": {
+			"en": "Parameter 3: This parameter is used to configure the Night Light off time. Only useful when parameter 1 is set to 1."
+		},
+		"zwave": {
+			"index": 3,
+			"size": 4,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 2316613
+		},
+		"value": 693216
+	},
+	{
+		"id": "4",
+		"type": "number",
+		"label": {
+			"en": "LED Blink Duration"
+		},
+		"hint": {
+			"en": "Parameter 4: Set the duration of blink, unit second."
+		},
+		"zwave": {
+			"index": 4,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 255
+		},
+		"value": 0
+	},
+	{
+		"id": "5",
+		"type": "number",
+		"label": {
+			"en": "LED Blink Speed"
+		},
+		"hint": {
+			"en": "Parameter 5: Set amount of blinks per second."
+		},
+		"zwave": {
+			"index": 5,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 1,
+			"max": 24
+		},
+		"value": 5
+	},
+	{
+		"id": "6",
+		"type": "number",
+		"label": {
+			"en": "Send Alert When In Use"
+		},
+		"hint": {
+			"en": "Parameter 6: Send alert when in use. A Scene Activation Set command will be sent when energy draw is above this setting value."
+		},
+		"zwave": {
+			"index": 6,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 3000
+		},
+		"value": 100
+	},
+	{
+		"id": "7",
+		"type": "dropdown",
+		"label": {
+			"en": "Plug Always On"
+		},
+		"hint": {
+			"en": "Parameter 7: Prevents the plug from being turned off via its button."
+		},
+		"zwave": {
+			"index": 7,
+			"size": 1
+		},
+		"value": "0",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "On and Off"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Only Add and Remove"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Ignore all actions"
+				}
+			}
+		]
+	},
+	{
+		"id": "8",
+		"type": "dropdown",
+		"label": {
+			"en": "Power Out Action"
+		},
+		"hint": {
+			"en": "Parameter 8: Set the plug’s action in case of power out."
+		},
+		"zwave": {
+			"index": 8,
+			"size": 1
+		},
+		"value": "0",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Last status"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Power on"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Power off"
+				}
+			}
+		]
+	},
+	{
+		"id": "9",
+		"type": "number",
+		"label": {
+			"en": "Group 3 Scene Id"
+		},
+		"hint": {
+			"en": "Parameter 9: Set the scene id when Scene Activation Set Command sent through group3. Refer parameter 6 for more information."
+		},
+		"zwave": {
+			"index": 9,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 1,
+			"max": 255
+		},
+		"value": 255
+	},
+	{
+		"id": "10",
+		"type": "number",
+		"label": {
+			"en": "Over-load Protection"
+		},
+		"hint": {
+			"en": "Parameter 10: Turn off switch when current of load connected bypasses the maximum allowed power regardless of always on setting. Unit W."
+		},
+		"zwave": {
+			"index": 10,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 1800
+		},
+		"value": 1800
+	},
+	{
+		"id": "11",
+		"type": "number",
+		"label": {
+			"en": "This parameter is used to set the over-voltage protect value, unit V."
+		},
+		"hint": {
+			"en": "Parameter 11: Turn off switch when current of load connected bypasses the maximum allowed power regardless of always on setting. Unit W."
+		},
+		"zwave": {
+			"index": 11,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 255
+		},
+		"value": 135
+	},
+	{
+		"id": "19",
+		"type": "number",
+		"label": {
+			"en": "Threshold Check Time"
+		},
+		"hint": {
+			"en": "Parameter 19: Set the period of threshold check. Unit second."
+		},
+		"zwave": {
+			"index": 19,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 255
+		},
+		"value": 5
+	},
+	{
+		"id": "20",
+		"type": "number",
+		"label": {
+			"en": "kWh Report Threshold"
+		},
+		"hint": {
+			"en": "Parameter 20: Energy kWh threshold reporting enable/disable. Unit kWh."
+		},
+		"zwave": {
+			"index": 20,
+			"size": 2
+		},
+		"attr": {
+			"min": 0,
+			"max": 10000
+		},
+		"value": 100
+	},
+		{
+		"id": "21",
+		"type": "number",
+		"label": {
+			"en": "Watt Report Threshold"
+		},
+		"hint": {
+			"en": "Parameter 21: Threshold setting for Watt for inducing automatic report. Unit W."
+		},
+		"zwave": {
+			"index": 21,
+			"size": 2
+		},
+		"attr": {
+			"min": 0,
+			"max": 2500
+		},
+		"value": 0
+	},
+	{
+		"id": "22",
+		"type": "number",
+		"label": {
+			"en": "Current Report Threshold"
+		},
+		"hint": {
+			"en": "Parameter 22: Threshold settings for current for inducing automatic report. Unit A."
+		},
+		"zwave": {
+			"index": 22,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 150
+		},
+		"value": 0
+	},
+	{
+		"id": "23",
+		"type": "number",
+		"label": {
+			"en": "Watt Automatic Report Time"
+		},
+		"hint": {
+			"en": "Parameter 23: Set the automatic report time of Watt. Unit second."
+		},
+		"zwave": {
+			"index": 23,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 65535
+		},
+		"value": 35
+	},
+	{
+		"id": "24",
+		"type": "number",
+		"label": {
+			"en": "kWh Automatic Report Time"
+		},
+		"hint": {
+			"en": "Parameter 24: Set the automatic report time of kWh. Unit second."
+		},
+		"zwave": {
+			"index": 24,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 65535
+		},
+		"value": 600
+	},
+		{
+		"id": "25",
+		"type": "number",
+		"label": {
+			"en": "Voltage Automatic Report Time"
+		},
+		"hint": {
+			"en": "Parameter 25: Set the automatic report time of Voltage. Unit second."
+		},
+		"zwave": {
+			"index": 25,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 65535
+		},
+		"value": 600
+	},
+	{
+		"id": "26",
+		"type": "number",
+		"label": {
+			"en": "Current Automatic Report Time"
+		},
+		"hint": {
+			"en": "Parameter 26: Set the automatic report time of Current. Unit second."
+		},
+		"zwave": {
+			"index": 26,
+			"size": 2,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 65535
+		},
+		"value": 60
+	},
+	{
+		"id": "30",
+		"type": "dropdown",
+		"label": {
+			"en": "Alarm Settings"
+		},
+		"hint": {
+			"en": "Parameter 30: Determines if alarms are enabled in Switch, and what Switch will react to which alarms."
+		},
+		"zwave": {
+			"index": 30,
+			"size": 1
+		},
+		"value": "0",
+		"values": [{
+				"id": "0",
+				"label": {
+					"en": "Disabled"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Smoke Alarm"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "CO Alarm"
+				}
+			},
+			{
+				"id": "4",
+				"label": {
+					"en": "CO2 Alarm"
+				}
+			},
+			{
+				"id": "8",
+				"label": {
+					"en": "Heat Alarm"
+				}
+			},
+			{
+				"id": "16",
+				"label": {
+					"en": "Water Alarm"
+				}
+			},
+			{
+				"id": "32",
+				"label": {
+					"en": "Access Control"
+				}
+			},
+			{
+				"id": "64",
+				"label": {
+					"en": "Home Security"
+				}
+			},
+			{
+				"id": "128",
+				"label": {
+					"en": "Motion Sensor Trigger"
+				}
+			}
+		]
+	},
+	{
+		"id": "31",
+		"type": "number",
+		"label": {
+			"en": "Alarm Response"
+		},
+		"hint": {
+			"en": "Parameter 31: Enabled by Alarm Settings, and determines what the switch does in the case an alarm is triggered.\n 0 - disable, no reaction to alarm settings\n1 - Switch is ON\n2 - Switch is OFF\n3~255 - Sets rate at which Switch turns ON and OFF in seconds. (i.e. If set to 3, then Switch will turn ON in 0.3 seconds, and then turn OFF in 0.3 seconds in a cycle until user disables the alarm manually. If set to 255, then it will cycle every 25.5 seconds)"
+		},
+		"zwave": {
+			"index": 31,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 255
+		},
+		"value": 0
+	},
+	{
+		"id": "32",
+		"type": "number",
+		"label": {
+			"en": "Alarm Disable Setting"
+		},
+		"hint": {
+			"en": "Parameter 32: Determines the method of disabling the alarm of the device.\n0 - Can be disabled by 1 tapping Switches action button once.\n1 - Can be disabled by 2 tapping Switches action button within 1 second.\n2 - Can be disabled by 4 tapping Switches action button within 2 seconds.\n4 - Can be disabled by pressing and holding Switches action button about 4 seconds.\n5~255 - Sets the duration of the alarm in seconds (i.e Sets this setting to 50, the alarm state of the switch will disable after 50 seconds)"
+		},
+		"zwave": {
+			"index": 32,
+			"size": 1,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 255
+		},
+		"value": 1
+	},
+	{
+		"id": "40",
+		"type": "number",
+		"label": {
+			"en": "Automatic Off Timer"
+		},
+		"hint": {
+			"en": "Parameter 40: Acts as auto off after as soon as the switch turns ON, setting is set in seconds."
+		},
+		"zwave": {
+			"index": 40,
+			"size": 4,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 86400
+		},
+		"value": 0
+	},
+	{
+		"id": "41",
+		"type": "number",
+		"label": {
+			"en": "Automatic On Timer"
+		},
+		"hint": {
+			"en": "Parameter 41: Acts as auto on after as soon as the switch turns OFF, setting is set in seconds."
+		},
+		"zwave": {
+			"index": 41,
+			"size": 4,
+			"signed": false
+		},
+		"attr": {
+			"min": 0,
+			"max": 86400
+		},
+		"value": 0
+	},
+	{
+		"id": "42",
+		"type": "dropdown",
+		"label": {
+			"en": "Report Command Setting"
+		},
+		"hint": {
+			"en": "Parameter 42: Which report will be sent to lifeline group when the output state is changed."
+		},
+		"zwave": {
+			"index": 42,
+			"size": 1
+		},
+		"value": "2",
+		"values": [
+			{
+				"id": "0",
+				"label": {
+					"en": "Send nothing"
+				}
+			},
+			{
+				"id": "1",
+				"label": {
+					"en": "Basic Set Report"
+				}
+			},
+			{
+				"id": "2",
+				"label": {
+					"en": "Switch Binary Report"
+				}
+			}
+		]
+	}
+]

@@ -1,0 +1,355 @@
+[
+  {
+    "id": "1",
+    "type": "dropdown",
+    "label": {
+      "en": "Define button output"
+    },
+    "hint": {
+      "en": "Parameter 1: Enable or disable association group command and central scene command."
+    },
+    "zwave": {
+      "index": 1,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Group Association only"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Central Scene only"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Group Association and Central Scene"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "type": "dropdown",
+    "label": {
+      "en": "Definite Switch Group Control"
+    },
+    "hint": {
+      "en": "Parameter 2: Select association group 2/4/6's reports type: basic or binary set."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Basic Set"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Binary Switch Set"
+        }
+      }
+    ]
+  },
+{
+    "id": "3",
+    "type": "dropdown",
+    "label": {
+      "en": "Definite DimmerGroup Control"
+    },
+    "hint": {
+      "en": "Parameter 3: Select the association group 3/5/7's behavior when double tap the paddle."
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "2x Tap = toggle full 100% or full 0%"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "2x Tap = toggle custom brightness level or 0%"
+        }
+      }
+    ]
+  },
+     {
+    "id": "4",
+    "type": "number",
+    "label": {
+      "en": "Define custom brightness"
+    },
+    "hint": {
+      "en": "Parameter 4: Define custom brightness for parameter 3."
+    },
+    "zwave": {
+      "index": 4,
+      "size": 1,
+	  "signed": false
+    },
+    "value": 50,
+    "attr": {
+      "min": 0,
+      "max": 100
+    }
+  },
+  {
+    "id": "39",
+    "type": "number",
+    "label": {
+      "en": "Low battery level"
+    },
+    "hint": {
+      "en": "Parameter 39: Setting Low battery level."
+    },
+    "zwave": {
+      "index": 39,
+      "size": 1
+    },
+    "value": 20,
+    "attr": {
+      "min": 5,
+      "max": 50
+    }
+  },
+    {
+    "id": "81",
+    "type": "checkbox",
+    "label": {
+      "en": "Enable/Disable Wakeup LED"
+    },
+    "hint": {
+      "en": "Parameter 81: Set the LED state for Wake-Up event."
+    },
+    "zwave": {
+      "index": 81,
+      "size": 1
+    },
+    "value": true
+  },
+      {
+    "id": "82",
+    "type": "checkbox",
+    "label": {
+      "en": "Enable/Disable Communication failure LED"
+    },
+    "hint": {
+      "en": "Parameter 82: Set the LED state for communication failure event."
+    },
+    "zwave": {
+      "index": 82,
+      "size": 1
+    },
+    "value": true
+  },
+      {
+    "id": "84",
+    "type": "checkbox",
+    "label": {
+      "en": "Enable/Disable LED indicator"
+    },
+    "hint": {
+      "en": "Parameter 84: Enable/Disable LED indicator."
+    },
+    "zwave": {
+      "index": 84,
+      "size": 1
+    },
+    "value": true
+  },  
+  {
+    "id": "85",
+    "type": "dropdown",
+    "label": {
+      "en": "Led Indicator Color For Top button"
+    },
+    "hint": {
+      "en": "Parameter 86: Led Indicator Color For Top button."
+    },
+    "zwave": {
+      "index": 85,
+      "size": 1
+    },
+    "value": "9",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "Blue"
+        }
+      },
+	  {
+        "id": "3",
+        "label": {
+          "en": "Green"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Pink"
+        }
+      },
+	  {
+        "id": "5",
+        "label": {
+          "en": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White"
+        }
+      }
+    ]
+  },
+  {
+    "id": "86",
+    "type": "dropdown",
+    "label": {
+      "en": "Led Indicator Color For Bottom button"
+    },
+    "hint": {
+      "en": "Parameter 86: Led Indicator Color For Bottom button."
+    },
+    "zwave": {
+      "index": 86,
+      "size": 1
+    },
+    "value": "5",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Red"
+        }
+      },
+	  {
+        "id": "2",
+        "label": {
+          "en": "Blue"
+        }
+      },
+	  {
+        "id": "3",
+        "label": {
+          "en": "Green"
+        }
+      },
+	  {
+        "id": "4",
+        "label": {
+          "en": "Pink"
+        }
+      },
+	  {
+        "id": "5",
+        "label": {
+          "en": "Cyan"
+        }
+      },
+	  {
+        "id": "6",
+        "label": {
+          "en": "Purple"
+        }
+      },
+	  {
+        "id": "7",
+        "label": {
+          "en": "Orange"
+        }
+      },
+	  {
+        "id": "8",
+        "label": {
+          "en": "Yellow"
+        }
+      },
+	  {
+        "id": "9",
+        "label": {
+          "en": "White"
+        }
+      }
+    ]
+  },
+    {
+    "id": "87",
+    "type": "checkbox",
+    "label": {
+      "en": "Enable/Disable FLiRs command"
+    },
+    "hint": {
+      "en": "Parameter 87: Enable/Disable FLiRs command."
+    },
+    "zwave": {
+      "index": 87,
+      "size": 1
+    },
+    "value": false
+  }
+  
+]

@@ -1,0 +1,87 @@
+[
+ 
+  {
+    "id": "121",
+    "value": "257",
+	
+    "label": {
+      "en": "On/off report command",
+      "nl": "Report bij aan/uit",
+	  "de": "Berichte"
+    },
+    "hint": {
+      "en": "Parameter 121: Determines what report will be sent when the sensor is triggered on/off.",
+      "nl": "Parameter 121: Bepaalt welk type report er wordt verzonden wanneer de sensor aan/uit geschakelt is.",
+	  "de": "Parameter 121: Bestimmt, welcher Bericht gesendet wird, wenn der Sensor ein/ausgelöst wird."
+    },
+    "zwave": {
+      "index": 121,
+      "size": 4,
+	  "signed": false
+    },
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Battery CC is selected.",
+		  "de": "Nur Batteriebericht"
+		  }
+      },
+	  
+	  {
+        "id": "256",
+        "label": {
+          "en": "Basic Set report CC is selected.",
+		  "de": "Tür- / Fensterbericht"
+        }
+      },
+      {
+        "id": "257",
+        "label": {
+          "en": "Basic Set CC and Battery CC are selected.",
+		  "de": "Tür- / Fensterbericht und Batteriebericht"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "2",
+    "value": false,
+    "label": {
+      "en": "Enable 10 minute wake-up on re-power.",
+      "nl": "Schakel 10 minuten wakker zijn bij stroomherstel in.",
+	  "de": "Wake Up Modus nach Neustart"
+    },
+    "hint": {
+      "en": "Parameter 2: Determines whether or not the device will stay awake for 10 minutes after re-power.",
+      "nl": "Parameter 2: Bepaalt of het apparaat na stroomherstel 10 minuten in wakker modus blijft.",
+	  "de": "Parameter 2: Bestimmt, ob das Gerät nach dem Wiedereinschalten 10 Minuten lang wach bleibt oder nicht."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+   {
+    "id": "3",
+    "value": false,
+    "label": {
+      "en": "Reported Basic Set values when opened/closed.",
+      "nl": "Gerapporteerde Basic Set waarde bij het openen/sluiten.",
+	  "de": "Bericht bei Statuswechsel invertieren"
+    },
+    "hint": {
+      "en": "Parameter 3: Determines what value will be sent in the Basic Set report when the door is opened/closed.",
+      "nl": "Parameter 3: Bepaalt welke waarde er wordt verzonden in het Basic Set report wanneer de deur opent/sluit.",
+	  "de": "Parameter 3: Bestimmt, welcher Wert im Basic-Set-Bericht gesendet wird, wenn die Tür geöffnet/geschlossen wird. "
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "type": "checkbox"
+  }
+  
+]

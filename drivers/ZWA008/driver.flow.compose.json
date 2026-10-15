@@ -1,0 +1,134 @@
+{
+  "triggers": [
+    {
+      "id": "ZWA008_tilt_info_on",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Has been tilted",
+		"nl": "Is gekanteld",
+		"de": "Ist gekippt worden"
+      }
+    },
+    {
+      "id": "ZWA008_tilt_info_off",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Is not tilted anymore",
+		"nl": "Is niet meer gekanteld",
+		"de": "Ist nicht mehr gekippt"
+      }
+    },
+	
+ {
+      "id": "ZWA008_binary_contact_trigger",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Button/binary contact",
+        "nl": "Drukknop/binair contact",
+		"de": "Taster/Binärkontakt"
+      },
+	  "titleFormatted": {
+		"en": "Button/binary contact is [[scene]]",
+        "nl": "Drukknop/binair contact is [[scene]]",
+		"de": "Taster/Binärkontakt wird [[scene]]"
+			},
+      "args": [
+        {
+          "name": "scene",
+          "type": "dropdown",
+		  "title": {
+			  "en": "Select a aktion",
+			  "de": "Aktionsauswahl"
+		  },
+          "values": [
+            {
+              "id": "Key Pressed 1 time",
+              "label": {
+                "en": "Pressed 1x",
+                "nl": "1x Ingedrukt",
+				"de": "1x gedrückt"
+              }
+            },
+            {
+              "id": "Key Pressed 2 times",
+              "label": {
+                "en": "Pressed 2x",
+				"nl": "2x Ingedrukt",
+                "de": "2x gedrückt"
+              }
+            },
+            {
+              "id": "Key Pressed 3 times",
+              "label": {
+                "en": "Pressed 3x",
+				"nl": "3x Ingedrukt",
+                "de": "3x gedrückt"
+              }
+            },
+            {
+              "id": "Key Pressed 4 times",
+              "label": {
+                "en": "Pressed 4x",
+                "nl": "4x Ingedrukt",
+				"de": "4x gedrückt"
+              }
+            },
+			{
+		     "id": "Key Pressed 5 times",
+              "label": {
+                "en": "Pressed 5x",
+                "nl": "5x Ingedrukt",
+				"de": "5x gedrückt"
+              }
+			  },
+			 {
+              "id": "Key Held Down",
+              "label": {
+                "en": "Hold switch",
+                "nl": "Lang ingedrukt",
+				"de": "Lang gedrückt"
+              }
+			},
+            {
+              "id": "Key Released",
+              "label": {
+                "en": "Hold released",
+                "nl": "Lang ingedrukt los gelaten",
+				"de": "Lang gedrückt losgelassen"
+              }
+            }
+          ]
+        }
+      ]
+}
+  ],
+    "conditions": [
+      {
+        "id": "ZWA008_is_tilted",
+		"platforms": [ "local", "cloud" ],
+        "title": {
+          "en": "Is !{{|not}} tilted",
+		  "nl": "Is {{|niet}} gekanteld",
+          "de": "Ist !{{|nicht}} gekippt"
+        },
+        "args": []
+      }
+],
+  "actions": [			
+  {
+      "id": "ZWA008_disabletampercontact",
+	  "platforms": [ "local", "cloud" ],
+      "title": {
+        "en": "Switch off Tamper alert",
+		"de": "Het sabotagealarm uitschakelen",
+        "de": "Sabotage-Alarm ausschalten"
+      },
+      "hint": {
+        "en": "Tamper alert set to off",
+		"de": "Sabotage-alarm is ingesteld op Nee",
+        "de": "Sabotage-Alarm-Alarm wird auf Nein gesetzt"
+      },
+      "args": []
+    }
+	]
+}

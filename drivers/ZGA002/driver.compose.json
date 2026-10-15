@@ -1,0 +1,62 @@
+{
+  "$extends": [
+    "zigbee"
+  ],
+  "name": {
+    "en": "Pico Switch"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff",
+    "measure_voltage",
+    "measure_current",
+    "measure_power",
+    "meter_power"
+  ],
+  "zigbee": {
+    "manufacturerName": "AEOTEC",
+    "productId": [
+      "ZGA002"
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Tap the action button twice, after which the indicator will blink rapidly. If this doesn't work, you can reset the switch by holding the action button for more than 10 seconds and try again.",
+		"de": "Tippen Sie zweimal auf die Aktionstaste, woraufhin die Anzeige schnell blinkt. Wenn dies nicht funktioniert, können Sie den Schalter zurücksetzen, indem Sie die Aktionstaste mehr als 10 Sekunden lang gedrückt halten und es erneut versuchen."
+      }
+    },
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          6,
+          1794,
+          2820
+        ],
+        "bindings": [
+          6,
+          1794,
+          2820
+        ]
+      },
+      "2": {
+        "clusters": [
+          64768
+        ],
+        "bindings": [
+          6,
+          8
+        ]
+      },
+      "3": {
+        "clusters": [
+          64768
+        ],
+        "bindings": [
+          6,
+          8
+        ]
+      }
+    }
+  }
+}

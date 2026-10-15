@@ -1,38 +1,32 @@
 {
   "id": "ZW080",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Siren Gen5",
-    "nl": "Sirene Gen5"
+    "nl": "Sirene Gen5",
+	"de": "Sirene Gen5"
   },
-  "class": "other",
+  "class": "homealarm",
   "capabilities": [
     "onoff"
   ],
-  "mobile": {
-    "components": [
-      {
-        "capabilities": [
-          "onoff"
-        ],
-        "id": "icon"
-      },
-      {
-        "capabilities": [
-          "onoff"
-        ],
-        "id": "toggle"
-      }
-    ]
+  "energy": {
+    "approximation": {
+      "usageOn": 2, 
+      "usageOff": 1 
+    }
   },
   "images": {
     "large": "{{driverAssetsPath}}/images/large.jpg",
     "small": "{{driverAssetsPath}}/images/small.jpg"
   },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
       4,
-      516
+      516,
+	  260
     ],
     "productId": [
       80
@@ -41,8 +35,9 @@
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1141/Siren Gen5 Manual.pdf",
     "learnmode": {
       "instruction": {
-        "en": "Press the action button on the {{driverNameEn}}",
-        "nl": "Druk op de actie knop op de {{driverNameNl}}"
+        "en": "Press the action button once",
+        "nl": "Druk op de actie knop op de {{driverNameNl}}",
+		"de": "Drücken Sie die Taste einmal"
       }
     },
     "associationGroups": [
@@ -51,7 +46,8 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the Siren is received the commands sent by controller to be turned on or off, the Siren will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n"
+          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.",
+		  "de": "Lifeline-Assoziationsgruppe es lassen sich 5 Knoten assoziieren"
         }
       }
     },

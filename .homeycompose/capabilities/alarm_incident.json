@@ -1,0 +1,13 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Incident",
+    "de": "Vorfall"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "insightsTitleTrue": { "en": "Incident", "de": "Vorfall" },
+  "insightsTitleFalse": { "en": "Reset incident", "de": "Vorfall zurückgesetzt" },
+  "icon": "/assets/alarm_incident.svg"
+}

@@ -1,0 +1,10 @@
+{
+  "title": {
+    "en": "Supports switch actions",
+	"de": "Unterstützt Schalteraktionen"
+  },
+  "type": "boolean",
+  "getable": false,
+  "setable": false,
+  "uiComponent": null
+}

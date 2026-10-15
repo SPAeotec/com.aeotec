@@ -1,0 +1,21 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Total Reactive Power",
+    "nl": "Totaal Reactief Vermogen",
+	"de": "Gesamtblindleistung"
+  },
+  "decimals": 2,
+  "chartType": "spline",
+  "units": {
+    "en": "kVARh"
+  },
+  "desc": {
+    "en": "Total Reactive Power (kVARh)",
+    "nl": "Totaal Reactief Vermogen (kVARh)",
+	"de": "Gesamtblindleistung (kVARh)"
+  },
+  "icon": "/assets/meter_power.svg",
+  "getable": true,
+  "setable": false
+}

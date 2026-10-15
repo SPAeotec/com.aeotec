@@ -1,0 +1,55 @@
+{
+  "id": "ZWA042",
+    "platforms": [ "local","cloud" ],
+  "name": {
+    "en": "Outdoor Smart Plug (US)"
+  },
+  "class": "socket",
+  "capabilities": [
+      "onoff"
+  ],
+ 
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId": [
+      259
+    ],
+    "productId": [
+      42
+    ],
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button one time and the led will be a solid yellow status."
+      }
+    },
+	 "unlearnmode": {
+	 "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button two times and the led will be a solid purple status. It indicates the device has enter learn mode."
+		}
+	},
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline. Mirror of root device, but without node count."
+        }
+      }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 7,
+        "size": 1,
+        "value": 0
+      }
+    ]
+  }
+}

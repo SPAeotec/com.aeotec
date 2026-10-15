@@ -1,0 +1,24 @@
+{
+  "id": "lightEfftectOn",
+  "type": "number",
+  "label": {
+    "en": "On duration",
+    "nl": "Aan duratie",
+	"de": "Einschaltzeit"
+  },
+  "hint": {
+    "en": "Determine the time the light is on.",
+    "nl": "Bepaal de tijd het licht aan is.",
+	"de": "Bestimmen Sie die Zeit, die das Licht eingeschaltet ist."
+  },
+  "attr": {
+    "min": 0,
+    "max": 255
+  },
+  "value": 50,
+  "units": {
+    "en": "x 100 mS",
+    "nl": "x 100 mS",
+	"de": "x 100 mS"
+  }
+}

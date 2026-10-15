@@ -1,0 +1,43 @@
+{
+    "id": "AeotecMotion",
+	"platforms": [ "local", "cloud" ],
+    "name": {
+      "en": "Motion Sensor (IM6001) Aeotec SmartThings",
+	  "de": "Bewegungsmelder (IM6001) Aeotec SmartThings"
+    },
+    "class": "sensor",
+    "capabilities": [
+      "measure_battery",
+      "alarm_motion",
+      "measure_temperature"
+    ],
+    "energy": {
+      "batteries": [ "CR2" ]
+    },
+	"connectivity": ["zigbee"],
+    "zigbee": {
+      "manufacturerName": "Samjin",
+      "productId": [
+        "motion"
+      ],
+      "deviceId": 1026,
+      "profileId": 260,
+      "endpoints": {
+        "1": {
+          "clusters": [0, 1, 1026, 1280, 2821],
+          "bindings": [0, 1, 1026, 1280, 2821]
+        }
+      },
+	"learnmode": {
+	  "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Use a pin to press the button on the back side of the sensor for 5 seconds.",
+		"de": "Drücken Sie mit einem Pin den Taster an der Rückseite des Sensors für 5 Sekunden."
+      }
+    }	  
+    },
+    "images": {
+      "large": "/drivers/AEOMSSEU/assets/images/large.png",
+      "small": "/drivers/AEOMSSEU/assets/images/small.png"
+    }
+  }

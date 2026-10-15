@@ -1,0 +1,31 @@
+
+{
+  "wakeInstruction": {
+    "en": "Hold the button for three seconds.",
+	"de": "Halte den Knopf des Moduls gedückt"
+  },
+  "updates": [
+    {
+      "version": "1.1.0",
+      "changelog": {
+        "en": "- Fixes issue with new SmokeSensors X\n- Adds Heat Alarm Support Y",
+		"de": "- Behebt ein Problem mit den neuen Rauchmeldern\n- Fügt Unterstützung für Wärmewarnmelder hinzu"
+      },
+      "device": {
+        "manufacturerId": 881,
+        "productTypeId": 2,
+        "productId": 50
+      },
+      "files": [
+        {
+          "targetId": 0,
+          "size": 159892,
+          "name": "ZWA050_EU_1_01.gbl",
+          "integrity": "sha256:E968C74A22757271895A4F4D77D79CB6E757EFA2341DEB7D251A0EFE41CA14AA",
+		  "region": "EU"
+        }
+      ],
+	  "applicableTo": ">0.54.0"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "momentary_toggle": "When using the momentary switch type, the switch action must be set to toggle.",
+  "mode": {
+		"Off": "Uit",
+		"Heat": "Comfortabel",
+		"Energy Save Heat": "Economische",
+		"FULL POWER": "Boost",
+		"MANUFACTURER SPECIFC": "Handmatig"
+	},
+	"error": {
+		"valve": {
+			"0": "Fout opgelost",
+			"1": "Motor beweging niet mogelijk",
+			"2": "Niet gemonteerd op een kraan",
+			"3": "Kraan gesloten positie kon niet worden bepaald",
+			"4": "Ventiel positionering mislukt"
+		}
+	},
+	"protection": {
+		"0": "Ontgrendeld",
+		"1": "Ontgrendelbaar",
+		"2": "Vergrendeld"
+	}
+}

@@ -1,13 +1,13 @@
 'use strict';
 
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class ZW117 extends ZwaveDevice {
-	
-	onMeshInit() {
-		this.registerSetting('82', value => new Buffer( [Number(!value)]))
-	}
-	
+
+  onNodeInit() {
+    this.registerSetting('82', value => Buffer.from([Number(!value)]));
+  }
+
 }
 
 module.exports = ZW117;

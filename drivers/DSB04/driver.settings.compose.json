@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "type": "dropdown",
+    "label": {
+      "en": "Sensor behaviour",
+      "nl": "Sensor gedrag"
+    },
+    "hint": {
+      "en": "Parameter 3: Determines when the sensor triggers the contact alarm.",
+      "nl": "Parameter 3: Bepaalt wanneer het contact alarm van de sensor afgaat.",
+	  "de": "Parameter 3: Legt fest, wann der Kontaktalarm des Sensors ausgelöst wird."
+    },
+    "zwave": {
+      "index": 1,
+      "size": 1
+    },
+    "value": "0",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "No contact = on, contact = off",
+          "nl": "Geen contact = aan, contact = uit",
+		  "de": "Kein kontakt = ein, kontakt = aus"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "No contact = off, contact = on",
+          "nl": "Geen contact = uit, contact = aan",
+		  "de": "Kein konatkt = aus, kontakt = ein"
+        }
+      },
+	  {
+		"id": "2",
+		"type": "checkbox",
+		"label": {
+		  "en": "10 Minutes Wake-Up",
+		  "nl": "10 Minuten Wakker",
+		  "de": "10 Minuten Aufwachen"
+		},
+		"hint": {
+		  "en": "If this option is enabled, the device will stay awake for 10 minutes when the batteries are replaced",
+		  "nl": "Als deze optie is ingeschakeld zal het apparaat voor 10 minuten wakker blijven wanneer de batterijen zijn vervangen",
+		  "de": "Wenn diese Option aktiviert ist, bleibt das Gerät für 10 Minuten wach, wenn die Batterien ausgetauscht werden"
+		},
+		"zwave": {
+		  "index": 2,
+		  "size": 1
+		},
+		"value": false
+		}
+    ]
+  }
+]

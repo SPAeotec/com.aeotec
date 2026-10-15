@@ -1,14 +1,14 @@
 'use strict';
 
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class ZW112 extends ZwaveDevice {
-	
-	onMeshInit() {
-		this.registerCapability('alarm_contact', 'BASIC');
-		this.registerCapability('measure_batttery', 'BATTERY');
-	}
-	
+
+  onNodeInit() {
+    this.registerCapability('alarm_contact', 'BASIC');
+    this.registerCapability('measure_battery', 'BATTERY');
+  }
+
 }
 
 module.exports = ZW112;

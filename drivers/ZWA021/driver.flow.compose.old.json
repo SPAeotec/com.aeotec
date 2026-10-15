@@ -1,0 +1,530 @@
+{
+	"actions": [
+		{
+			"id": "spirit_set_euro_mode",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Set thermostat mode",
+				"nl": "Zet thermostaat modus",
+				"de": "Thermostat Modus einstellen"
+			},
+			"hint": {
+				"en": "Set the mode of the thermostatic",
+				"nl": "Zet de modus van de thermostaat kraan",
+				"de": "Stellt den Modus des Thermostats ein"
+			},
+			 "titleFormatted": {
+				"en": "Set thermostat mode to [[euro_mode]]",
+				"nl": "Zet thermostaat modus naar [[euro_mode]] ",
+				"de": "Stelle das Thermostat auf [[euro_mode]]"
+			},
+			"args": [
+				{
+					"name": "euro_mode",
+					 "title": {
+						"en": "Thermostat mode",
+						"de": "Thermostatmodus"
+						},
+					"type": "dropdown",
+					"values": [
+						{
+							"id": "Off",
+							"label": {
+								"en": "Off (6°C)",
+								"nl": "Uit (6°C)",
+								"de": "Aus (6°C)"
+							}
+						},
+						{
+							"id": "Heat",
+							"label": {
+								"en": "Comfortable",
+								"nl": "Comfortabel",
+								"de": "Komfortabel"
+							}
+						},
+						{
+							"id": "Energy Save Heat",
+							"label": {
+								"en": "Economic",
+								"nl": "Economische",
+								"de": "Ökonomisch"
+							}
+						},
+						{
+							"id": "FULL POWER",
+							"label": {
+								"en": "Boost",
+								"nl": "Boost",
+								"de": "Volle Leistung"
+							}
+						},
+						{
+							"id": "MANUFACTURER SPECIFC",
+							"label": {
+								"en": "Manual",
+								"nl": "Handmatig",
+								"de": "Manuell"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "spirit_eco_temperature",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Set economy temperature",
+				"nl": "Zet economie temperatuur",
+				"de": "Ökönomische Temperatureinstellung"
+			},
+			"hint": {
+				"en": "This sets the temperature for the Economy mode",
+				"nl": "Dit zet de temperatuur voor de Economie modus",
+				"de": "Dies setzt die Temperatur auf einen ökonimischen Wert"
+			},
+			"titleFormatted": {
+				"en": "Set economy temperature to [[temperature]]°C",
+				"nl": "Zet economie temperatuur naar [[temperature]]°C",
+				"de": "Setze ökonomische Temperatur auf [[temperature]]°C"
+			},
+			"args": [
+				{
+					"name": "temperature",
+					 "title": {
+						"en": "Temperature",
+						"de": "Temperatur"
+					},
+					"type": "range",
+					"min": 8,
+					"max": 28,
+					"step": 0.5,
+					"label": "°C"
+				}
+			]
+		},
+		{
+			"id": "spirit_manual_control",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Set thermostatic position",
+				"nl": "Zet thermostaatkraan postitie",
+				"de": "Thermostatposition einstellen"
+			},
+			"hint": {
+				"en": "This will set the manual thermostatic's valve position.\n0 = fully closed, 100 = fully open.",
+				"nl": "Dit zet de Handmatige postitie van de thermostaatkraan.\n0 = volledig gesloten, 100 = volledig open.",
+				"de": "Dadurch wird die Ventilstellung des Thermostats manuell eingestellt. \n0 = vollständig geschlossen, 100 = vollständig geöffnet"
+			},
+			"titleFormatted": {
+				"en": "Set thermostatic position to [[value]]",
+				"nl": "Zet thermostaatkraan postitie naar [[value]] ",
+				"de": "Stelle Thermostat auf den Wert [[value]]"
+			},
+			"args": [
+				{
+					"name": "value",
+					 "title": {
+						"en": "Value",
+						"de": "Wert"
+						},
+					"type": "range",
+					"min": 0,
+					"max": 1,
+					"step": 0.01,
+					"label": "%",
+					"labelMultiplier": 100
+				}
+			]
+		},
+		{
+			"id": "spirit_protection",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Set protection state",
+				"nl": "Zet beveiliging status",
+				"de": "Kindersicherung einstellen"
+			},
+			"hint": {
+				"en": "With this card you can set the (child) protection state.\nYou can unlock by holding the plus and minus buttons.",
+				"nl": "Met deze kaart kan je de (kinder) beveiligings status instellen.\nJe kan ontgrendelen door de plus en min knoppen in te houden.",
+				"de": "Mit dieser Karte können Sie die (Kinder-)Sicherung einstellen.\nSie können dies durch Halten der Plus- und Minustaste wieder entsperren."
+			},
+			"titleFormatted": {
+				"en": "Set protection state to [[state]]",
+				"nl": "Zet beveiliging status naar [[state]]",
+				"de": "Stelle Kindersicherung auf [[state]]"
+			},
+			"args": [
+				{
+					"name": "state",
+					 "title": {
+						"en": "Protection mode",
+						"de": "Schutzmodus"
+					},
+					"type": "dropdown",
+					"values": [
+						{
+							"id": "unprotected",
+							"label": {
+								"en": "Unprotected",
+								"nl": "Onbeveiligd",
+								"de": "Ungesichert"
+							}
+						},
+						{
+							"id": "unlockable",
+							"label": {
+								"en": "Unlockable protected",
+								"nl": "Ontgrendelbaar beveiligd",
+								"de": "Entsperrbar gesichert"
+							}
+						},
+						{
+							"id": "protected",
+							"label": {
+								"en": "Protected",
+								"nl": "Beveiligd",
+								"de": "Gesperrt"
+								
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "spirit_external_temperature",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Send room temperature",
+				"nl": "Zend kamer temperatuur",
+				"de": "Raumtemperatur senden"
+			},
+			"hint": {
+				"en": "Send an (external) temperature to the thermostat so it knows the room temperature.\nThe setting \"(External) Room Temperature\" does need to be active to use this.",
+				"nl": "Stuur een (externe) temperatuur naar de thermostat zodat het de kamer temperatuur weet.\nDe setting \"(Externe) Kamer Temperatuur\" moet wel geactiveerd zijn.",
+				"de": "Senden Sie eine (externe) Temperatur an das Thermostat, damit es die Raumtemperatur kennt.\nDie Einstellung \"(Externe) Raumtemperatur\" muss aktiv sein, um diese zu verwenden"
+			},
+			"titleFormatted": {
+				"en": "Send external room temperature calue of [[value]]°C",
+				"nl": "Zend kamer temperatuur waarde van [[value]]°C",
+				"de": "Sende externe Raumtemperaturwert von [[value]]°C"
+			},
+			"args": [
+				{
+					"name": "value",
+					 "title": {
+						"en": "Temperature value",
+						"de": "Temperaturwert"
+					},
+					"type": "number",
+					"min": 0,
+					"max": 40,
+					"step": 0.01,
+					"placeholder": {
+						"en": "In degree celcius",
+						"nl": "In graden celcius",
+						"de": "In Grad Celsius"
+					}
+				}
+			]
+		}
+	],
+	"conditions": [
+		{
+			"id": "spirit_euro_mode",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Thermostat mode !{{is|isn't}}",
+				"nl": "Thermostaat modus !{{is|is niet}}",
+				"de": "Thermostat Modus !{{ist|ist nicht}}"
+			},
+			"titleFormatted": {
+				"en": "Thermostat mode is [[mode]]",
+				"nl": "Thermostaat modus is [[mode]]",
+				"de": "Thermostat Modus ist [[mode]]"
+			},
+			"args": [
+				{
+					"name": "mode",
+					 "title": {
+						"en": "Thermostat mode",
+						"de": "Thermostatmodus"
+					},
+					"type": "dropdown",
+					"values": [
+												{
+							"id": "Off",
+							"label": {
+								"en": "Off (6°C)",
+								"nl": "Uit (6°C)",
+								"de": "Aus (6°C)"
+							}
+						},
+						{
+							"id": "Heat",
+							"label": {
+								"en": "Comfortable",
+								"nl": "Comfortabel",
+								"de": "Komfortabel"
+							}
+						},
+						{
+							"id": "Energy Save Heat",
+							"label": {
+								"en": "Economic",
+								"nl": "Economische",
+								"de": "Ökonomisch"
+							}
+						},
+						{
+							"id": "FULL POWER",
+							"label": {
+								"en": "Boost",
+								"nl": "Boost",
+								"de": "Volle Leistung"
+							}
+						},
+						{
+							"id": "MANUFACTURER SPECIFC",
+							"label": {
+								"en": "Manual",
+								"nl": "Handmatig",
+								"de": "Manuell"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "spirit_protection",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Protection state !{{is|isn't}}",
+				"nl": "beveiliging status !{{is|is niet}}",
+				"de": "Kindersicherung !{{ist|ist nicht}}"
+			},
+			"titleFormatted": {
+				"en": "Protection state is [[state]]",
+				"nl": "beveiliging status is [[state]]",
+				"de": "Kindersicherung ist [[state]]"
+			},
+			"args": [
+				{
+					"name": "state",
+					"title": {
+						"en": "Protection mode",
+						"de": "Schutzmodus"
+					},
+					"type": "dropdown",
+					"values": [
+						{
+							"id": "unprotected",
+							"label": {
+								"en": "Unprotected",
+								"nl": "Onbeveiligd",
+								"de": "Ungesichert"
+							}
+						},
+						{
+							"id": "unlockable",
+							"label": {
+								"en": "Unlockable protected",
+								"nl": "Ontgrendelbaar beveiligd",
+								"de": "Entsperrbar gesichert"
+							}
+						},
+						{
+							"id": "protected",
+							"label": {
+								"en": "Protected",
+								"nl": "Beveiligd",
+								"de": "Gesperrt"
+								
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"triggers": [
+		{
+			"id": "spirit_euro_mode_changed",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Thermostatic mode has changed",
+				"nl": "Thermostaat modus is veranderd",
+				"de": "Thermostat Modus hat sich geändert"
+			},
+			"tokens": [
+				{
+					"name": "mode",
+					"type": "string",
+					"title": {
+						"en": "ID",
+						"nl": "ID",
+						"de": "ID"
+					},
+					"example": {
+						"en": "Heat",
+						"de": "Heizen"
+					}
+				},
+				{
+					"name": "mode_name",
+					"type": "string",
+					"title": {
+						"en": "Name",
+						"nl": "Naam",
+						"de": "Name"
+					},
+					"example": {
+						"en": "Comfortable",
+						"nl": "Comfortabel",
+						"de": "Komfortabel"
+					}
+				}
+			]
+		},
+		{
+			"id": "spirit_euro_mode_changed_to",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Thermostatic mode has changed to",
+				"nl": "Thermostaat modus is veranderd naar",
+				"de": "Thermostat Modus hat sich geändert zu"
+			},
+			"titleFormatted": {
+				"en": "Thermostatic mode has changed to [[mode]]",
+				"nl": "Thermostaat modus is veranderd naar [[mode]]",
+				"de": "Thermostat Modus hat sich geändert zu [[mode]]"
+			},
+			"args": [
+				{
+					"name": "mode",
+					"title": {
+						"en": "Thermostat mode",
+						"de": "Thermostatmodus"
+					},
+					"type": "dropdown",
+					"values": [
+						{
+							"id": "Off",
+							"label": {
+								"en": "Off (6°C)",
+								"nl": "Uit (6°C)",
+								"de": "Aus (6°C)"
+							}
+						},
+						{
+							"id": "Heat",
+							"label": {
+								"en": "Comfortable",
+								"nl": "Comfortabel",
+								"de": "Komfortabel"
+							}
+						},
+						{
+							"id": "Energy Save Heat",
+							"label": {
+								"en": "Economic",
+								"nl": "Economische",
+								"de": "Ökonomisch"
+							}
+						},
+						{
+							"id": "FULL POWER",
+							"label": {
+								"en": "Boost",
+								"nl": "Boost",
+								"de": "Volle Leistung"
+							}
+						},
+						{
+							"id": "MANUFACTURER SPECIFC",
+							"label": {
+								"en": "Manual",
+								"nl": "Handmatig",
+								"de": "Manuell"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "spirit_euro_manual_position",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Manual position changed",
+				"nl": "Handmatige positie veranderd",
+				"de": "Manuell Position geändert"
+			},
+			"tokens": [
+				{
+					"name": "value",
+					"type": "number",
+					"title": {
+						"en": "position",
+						"nl": "positie",
+						"de": "Position"
+					},
+					"example": 0.5
+				}
+			]
+		},
+		{
+			"id": "spirit_protection_changed",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "Protection state changed",
+				"nl": "Beveiliging status veranderd",
+				"de": "Kindersicherung verändert"
+			},
+			"tokens": [
+				{
+					"name": "state",
+					"type": "number",
+					"title": {
+						"en": "state",
+						"de": "Status"
+					},
+					"example": {
+						"en": "unprotected",
+						"nl": "onbeveiligd",
+						"de": "ungesichert"
+					}
+				}
+			]
+		},
+		{
+			"id": "spirit_error_occurred",
+			"platforms": [ "local", "cloud" ],
+			"title": {
+				"en": "A valve error occurred",
+				"nl": "Een fout opgetreden in de kraan",
+				"de": "Ein Fehler am Ventil ist aufgetreten"
+			},
+			"tokens": [
+				{
+					"name": "error",
+					"type": "string",
+					"title": {
+						"en": "error",
+						"nl": "fout",
+						"de": "Störung"
+					},
+					"example": {
+						"en": "Motor movement not possible",
+						"nl": "Motor beweging niet mogelijk",
+						"de": "Motor bewegt sich nicht"
+					}
+				}
+			]
+		}
+	]
+}

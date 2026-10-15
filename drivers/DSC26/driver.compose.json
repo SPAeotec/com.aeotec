@@ -1,0 +1,54 @@
+{
+  "id": "DSC026",
+    "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Micro Switch (2nd Edition)"
+  },
+  "class": "socket",
+  "capabilities": [
+       "onoff"
+  ],
+    
+
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      3,
+	  259,
+	  515      
+    ],
+    "productId": [
+      26
+    ],
+    
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Short press the action button.",
+        "nl": "Druk kort op de actie knop.",
+		"de": "Drücken Sie einmal auf die Taste am Gerät."
+      }
+    },
+    "associationGroups": [
+      1,2
+      
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      },
+      {
+        "id": 3,
+        "size": 1,
+        "value": 1
+      }
+    ]
+  }
+}

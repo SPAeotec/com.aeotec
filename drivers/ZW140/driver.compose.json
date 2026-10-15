@@ -1,0 +1,82 @@
+{
+  "id": "ZW140",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "Dual Nano Switch (ZW140)"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+   "connectivity": ["zwave"],
+  "zwave": {
+        "manufacturerId": [
+     134,
+     362
+    ],
+    "productTypeId": [
+      3,
+      515,
+	  259
+    ],
+    "productId": [
+      140
+    ],
+	"requireSecure": false,
+    "zwaveAllianceProductId": 2286,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2286/Oomi Dual In-Wall Switch manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "Press the action button on the back of the {{driverNameEn}}.",
+        "nl": "Druk op de actie knop op de achterkant van de {{driverNameNl}}.",
+		"de": "Drücken Sie die Aktionstaste auf der Rückseite des {{driverNameEn}} einmal." 
+      }
+    },
+	"unlearnmode": {
+      "instruction": {
+        "en": "Press the action button on the back of the {{driverNameEn}}.",
+        "nl": "Druk op de actie knop op de achterkant van de {{driverNameNl}}.",
+		"de": "Drücken Sie die Aktionstaste auf der Rückseite des {{driverNameEn}}." 
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "defaultConfiguration": [
+      {
+        "id": 80,
+        "value": 2,
+        "size": 1
+      }
+    ],
+    "associationGroupsMultiChannel": [ 3, 4 ],
+    "multiChannelNodes": {
+      "1": {
+        "name": {
+          "en": "Dual Nano Switch 1"
+        },
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "class": "light",
+		"settings": [],
+        "capabilities": [
+          "onoff"
+        ]
+      },
+      "2": {
+        "name": {
+          "en": "Dual Nano Switch 2"
+        },
+        "icon": "{{driverAssetsPath}}/icon.svg",
+        "class": "light",
+		"settings": [],
+        "capabilities": [
+          "onoff"
+        ]
+      }
+    }
+  }
+}

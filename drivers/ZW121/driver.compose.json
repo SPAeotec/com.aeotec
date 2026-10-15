@@ -1,5 +1,6 @@
 {
   "id": "ZW121",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "LED Strip"
   },
@@ -22,26 +23,48 @@
       }
     }
   },
+  "energy": {
+    "approximation": {
+      "usageOn": 10, 
+      "usageOff": 1 
+    }
+  },
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+   "connectivity": ["zwave"],
   "zwave": {
-    "manufacturerId": 134,
+    "manufacturerId": [
+	134
+	],
     "productTypeId": [
       3,
-      515
+      515,
+	  259
     ],
     "productId": [
       121
     ],
+	"requireSecure": false,
     "zwaveAllianceProductId": 2000,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2000/LED Strip manual.pdf",
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Press the action button on the {{driverNameEn}} Controller. For secure pairing press the button twice.",
-        "nl": "Druk eenmaal op de actie knop op de {{driverNameNl}} Controller. Voor beveiligd koppelen drukt u tweemaal op de knop."
+        "en": "Press the action button on the {{driverNameEn}} Controller.",
+        "nl": "Druk op de actie knop op de {{driverNameNl}} Controller.",
+		"de": "Drücken Sie die Taste am {{driverNameEN}} Controller einmal." 
+		
+      }
+    },
+	"unlearnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Press the action button on the {{driverNameEn}} Controller.",
+        "nl": "Druk eenmaal op de actie knop op de {{driverNameNl}} Controller.",
+		"de": "Drücken Sie die Taste am {{driverNameEn}} Controller einmal."
+		
       }
     },
     "associationGroups": [

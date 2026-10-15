@@ -1,0 +1,142 @@
+{
+  "id": "ZWA057",
+  "platforms": [ "local", "cloud" ],
+  "name": {
+    "en": "AerQ 8 Temperature & Humidity Sensor",
+	"de": "AerQ 8 Temperatur- und Luftfeuchtigkeitssensor"
+  },
+"class": "sensor",
+  "capabilities": [
+    "measure_temperature",
+	"measure_humidity",
+	"measure_dewpoint",
+	"alarm_generic.mold",
+	"measure_battery",
+	"info_power",
+	"alarm_tamper"
+  ],
+  "energy": {
+    "batteries": [ "CR14250" ]
+  },
+    "capabilitiesOptions": {
+    "alarm_generic.mold": {
+      "title": {
+        "en": "Mold Alert",
+        "nl": "Schimmel Alarm",
+		"de": "Schimmel Alarm"
+      }
+	}
+},
+
+  "images": {
+    "large": "/drivers/ZWA057/assets/images/large.jpg",
+    "small": "/drivers/ZWA057/assets/images/small.jpg"
+  },
+ "connectivity": ["zwave"],
+  "zwave": {
+    "manufacturerId": 881,
+    "productTypeId":[
+	2,
+	258,
+	514
+	],
+    "productId": 57,
+    "learnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Clicking the button twice adds the device. \nThe LED flashes green.",
+        "nl": "Als je twee keer op de knop klikt, wordt het apparaat toegevoegd. \nDe LED knippert groen..",
+		"de": "Ein zweifaches Anklicken des Knopfes fügt das Gerät hinzu. \nDie LED blinkt grün."
+      }
+    },
+	"unlearnmode": {
+	"image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Clicking the button twice removes the device. \nThe LED flashes green.",
+        "nl": "Als je twee keer op de knop klikt, wordt het apparaat verwijderd. \nDe LED knippert groen.",
+		"de": "Ein zweifaches Anklicken des Knopfes entfernt das Gerät. \nDie LED blinkt grün."
+      }
+    },
+	"defaultConfiguration": [
+			{
+				"id": 22,
+				"size": 1,
+				"value": 1
+			},	
+			{
+				"id": 2,
+				"size": 1,
+				"value": 20
+			},
+			{
+				"id": 13,
+				"size": 1,
+				"value": 10
+			},
+			{
+				"id": 14,
+				"size": 2,
+				"value": 300
+			},
+			{
+				"id": 15,
+				"size": 2,
+				"value": 0
+			}
+			
+	],
+	
+    "associationGroups": [1, 1],
+	 "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline (Max. Nodes: 5)",
+			  "nl": "Lifeline",
+			  "de": "Lifeline"
+            }
+		},
+		"2": {
+		  "hint": {
+			"en": "Temperature High Trigger (Max. Nodes: 5). Sends BASIC SET when temperature exceeds parameter 14 (heat alarm).",
+			"de": "Temperatur – Hochschwelle (Max. Knoten: 5). Sendet BASIC SET, wenn die Temperatur Parameter 14 überschreitet (Hitzealarm)."
+		  }
+		},
+		"3": {
+		  "hint": {
+			"en": "Temperature Low Trigger (Max. Nodes: 5). Sends BASIC SET when temperature goes below parameter 15 (underheat).",
+			"de": "Temperatur – Niedrigschwelle (Max. Knoten: 5). Sendet BASIC SET, wenn die Temperatur unter Parameter 15 fällt (Unterkühlung)."
+		  }
+		},
+		"4": {
+		  "hint": {
+			"en": "Humidity High Trigger (Max. Nodes: 5). Sends BASIC SET when humidity exceeds parameter 16 (weather alarm).",
+			"de": "Luftfeuchte – Hochschwelle (Max. Knoten: 5). Sendet BASIC SET, wenn die Luftfeuchte Parameter 16 überschreitet (Wetteralarm)."
+		  }
+		},
+		"5": {
+		  "hint": {
+			"en": "Humidity Low Trigger (Max. Nodes: 5). Sends BASIC SET when humidity goes below parameter 17 (weather alarm).",
+			"de": "Luftfeuchte – Niedrigschwelle (Max. Knoten: 5). Sendet BASIC SET, wenn die Luftfeuchte unter Parameter 17 fällt (Wetteralarm)."
+		  }
+		},
+		"6": {
+		  "hint": {
+			"en": "Air Temperature (Max. Nodes: 5). Sends Multilevel Sensor Report (periodic/threshold/limit).",
+			"de": "Lufttemperatur (Max. Knoten: 5). Sendet Multilevel Sensor Report (periodisch/Schwelle/Grenzwert)."
+		  }
+		},		
+		"7": {
+		  "hint": {
+			"en": "Mold danger (Max. Nodes: 5). Sends Notification Report when mold danger condition is detected.",
+			"de": "Schimmelgefahr (Max. Knoten: 5). Sendet Notification Report bei erkannter Schimmelgefahr."
+		  }
+		},
+		"8": {
+		  "hint": {
+			"en": "Tamper (Max. Nodes: 5). Sends Notification Report when tamper is triggered or released.",
+			"de": "Manipulation (Max. Knoten: 5). Sendet Notification Report bei ausgelöster oder aufgehobener Manipulation."
+		  }
+		}
+	  }
+	}
+}

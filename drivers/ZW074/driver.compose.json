@@ -1,5 +1,6 @@
 {
   "id": "ZW074",
+  "platforms": [ "local", "cloud" ],
   "name": {
     "en": "Multisensor 4-in-1 Gen5"
   },
@@ -15,11 +16,21 @@
     "large": "{{driverAssetsPath}}/images/large.jpg",
     "small": "{{driverAssetsPath}}/images/small.jpg"
   },
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA",
+      "AAA",
+      "AAA"
+    ]
+  },
+   "connectivity": ["zwave"],
   "zwave": {
     "manufacturerId": 134,
     "productTypeId": [
       2,
-      514
+      514,
+	  258
     ],
     "productId": [
       74
@@ -30,7 +41,8 @@
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
         "en": "Press the action button on the {{driverNameEn}}",
-        "nl": "Druk op de actie knop van de {{driverNameNl}}"
+        "nl": "Druk op de actie knop van de {{driverNameEn}}",
+		"de": "Drücken Sie den Knopf auf der Rückseite des {{driverNameEn}}"
       }
     },
     "associationGroups": [
